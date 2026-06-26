@@ -1,19 +1,14 @@
 # Daily Medical-AI Research Paper Digest Bot
 
-这是一个“医学影像 AI 每日论文雷达”MVP：每天自动检索 **PubMed + arXiv + Semantic Scholar**，按主题和顶刊顶会加权打分，去重后发送邮件摘要。
+这是一个 Medical Imaging AI 每日论文邮件机器人。它每天自动检索 PubMed、arXiv、Semantic Scholar、Crossref 顶刊家族与专业期刊来源，按研究方向和顶刊顶会权重筛选新论文，然后把摘要发送到默认邮箱：
 
-默认研究方向：
+```text
+dlmu.p.l.zhu@gmail.com
+```
 
-- Medical imaging + AI
-- Brain / neuroimaging 优先
-- Brain-gut axis / gut-brain axis / microbiome + neuroimage
-- Multi-organ guided diagnosis
-- Alzheimer's disease diagnosis
-- Medical image synthesis / enhancement
-- Brain MRI / fMRI / PET / dementia / MCI / neurodegenerative disease
-- 顶刊顶会加权：Nature / Science / Cell / Lancet 正刊与医学、神经、数字健康相关子刊，MICCAI、MIDL、ISBI、IEEE TMI、Medical Image Analysis、Radiology、NeurIPS、CVPR 等
+`MAIL_TO` 环境变量或 GitHub Secret 的优先级高于 `config.yaml`；如果没有设置 `MAIL_TO`，脚本会回退到 `config.yaml` 里的 `email.to`。
 
-## 文件说明
+## 文件结构
 
 ```text
 paper_bot.py
@@ -22,39 +17,45 @@ requirements.txt
 .env.example
 README.md
 .github/workflows/daily-paper-digest.yml
-data/sent_papers.json   # 自动生成，用于避免重复发送
+data/.gitkeep
 ```
 
-## 你的默认收件邮箱
+`data/sent_papers.json` 会在运行时自动创建，用于记录已成功发送的论文，避免重复推送。
 
-本包已把默认收件人写为：
+## 数据源
 
-```text
-dlmu.p.l.zhu@gmail.com
-```
+- PubMed / NCBI E-utilities：正式医学与生命科学论文，适合抓取 neuroimaging、Alzheimer、MRI/PET、brain-gut axis 等医学主题。
+- arXiv API：预印本，适合抓取 diffusion model、foundation model、vision-language model、super-resolution、denoising 等 AI 方法论文。
+- Semantic Scholar Graph API：补充跨学科论文、venue、citation、TLDR 和 DOI 信息。
+- Crossref REST API：按 Nature / Science / Cell / Lancet 家族及专业期刊检索 DOI 元数据，补足数据库索引延迟。
 
-GitHub Secrets 里的 `MAIL_TO` 会覆盖配置文件；如果你不想在 secrets 里重复填，也可以保留 `config.yaml` 的 `email.to`。
+## 研究方向
 
-## 核心设计
+重点方向在 `config.yaml` 中配置，包括：
 
-### 1. 为什么用 14 天窗口？
+- medical imaging + AI
+- brain / neuroimage / neuroimaging
+- brain-gut axis / gut-brain axis
+- microbiome + neuroimaging
+- multi-organ guided diagnosis
+- Alzheimer’s disease diagnosis
+- dementia / MCI / MRI / fMRI / PET / amyloid / tau
+- medical image synthesis / enhancement
+- diffusion model / generative AI / super-resolution / denoising
+- foundation model / vision-language model / large multimodal model for radiology or neuroimaging
 
-每日任务容易遇到数据库索引延迟。脚本用 `lookback_days: 14` 检索最近 14 天，然后用 `data/sent_papers.json` 去重，这样可以减少漏掉新文章的概率。
+默认 `lookback_days: 14`，配合 `data/sent_papers.json` 去重，降低 PubMed、Semantic Scholar、Crossref 索引延迟造成的漏报概率。默认 `min_score: 8`；论文太少可以降到 7，噪音太多可以升到 10 或更高。
 
-### 2. 为什么加 PubMed？
+## 顶刊顶会来源
 
-医学方向只靠 arXiv 会漏掉大量临床/放射/神经影像文章。PubMed 用 NCBI E-utilities 检索，适合抓正式发表论文；arXiv 抓预印本；Semantic Scholar 补 venue、引用和 TLDR。
+配置中保留并增强了以下来源或加权：
 
-### 3. “Nature / Science / Cell / Lancet 正刊和子刊”怎么抓？
-
-新版有两层：
-
-1. **PubMed 顶刊家族检索**：在 PubMed 查询里加入 Nature、Science、Cell、Lancet 正刊与相关子刊的 `[Journal]` 限定，再叠加 brain/neuroimaging/AI/Alzheimer/gut-brain 等主题词。
-2. **Crossref 顶刊 DOI 元数据检索**：按 journal title + 主题词 + 最近日期窗口查 Crossref，补足 PubMed 索引延迟或非医学数据库中的新 DOI 记录。
-
-### 4. “顶刊顶会”怎么识别？
-
-在 `config.yaml` 的 `top_venue_boosts` 里做 pattern 匹配。命中 Nature、Science、Cell、Lancet 家族，Medical Image Analysis、IEEE TMI、Radiology、MICCAI、MIDL、ISBI、NeurIPS、CVPR 等，会额外加分。这个不是绝对过滤，因为很多新预印本还没有 venue。
+- Nature、Nature Medicine、Nature Neuroscience、Nature Biomedical Engineering、Nature Methods、Nature Communications、Communications Medicine、npj Digital Medicine
+- Science、Science Translational Medicine、Science Advances
+- Cell、Neuron、Cell Reports Medicine、Patterns
+- The Lancet、The Lancet Digital Health、The Lancet Neurology、eBioMedicine、eClinicalMedicine
+- Medical Image Analysis、IEEE Transactions on Medical Imaging、Radiology
+- MICCAI、MIDL、ISBI、NeurIPS、ICLR、ICML、CVPR
 
 ## 本地测试
 
@@ -63,114 +64,89 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-cp .env.example .env
-# 编辑 .env，填入 SMTP 信息
-
-# 只打印，不发邮件
-DRY_RUN=true python paper_bot.py --config config.yaml --dry-run
+python -m py_compile paper_bot.py
+python paper_bot.py --config config.yaml --dry-run
 ```
 
-正式发送：
-
-```bash
-export SMTP_HOST=smtp.gmail.com
-export SMTP_PORT=587
-export SMTP_USER=your_email@gmail.com
-export SMTP_PASSWORD=your_16_digit_app_password
-export MAIL_FROM=your_email@gmail.com
-export MAIL_TO=dlmu.p.l.zhu@gmail.com
-export NCBI_EMAIL
-CROSSREF_MAILTO=dlmu.p.l.zhu@gmail.com
-CROSSREF_MAILTO=dlmu.p.l.zhu@gmail.com
-
-python paper_bot.py --config config.yaml
-```
+`--dry-run` 只打印摘要，不发送邮件，也不会把论文标记为已发送。
 
 ## GitHub Actions 部署
 
-1. 新建一个私有 GitHub 仓库，例如 `medical-ai-paper-digest`
-2. 把本压缩包内容上传到仓库根目录
-3. 进入 `Settings` → `Secrets and variables` → `Actions` → `New repository secret`
-4. 添加必要 secrets：
+1. 打开仓库的 `Settings` → `Secrets and variables` → `Actions`。
+2. 添加必填 secrets：
 
 ```text
 SMTP_HOST
 SMTP_PORT
 SMTP_USER
 SMTP_PASSWORD
+```
+
+3. 建议添加：
+
+```text
+MAIL_TO=dlmu.p.l.zhu@gmail.com
 MAIL_FROM
-MAIL_TO
+NCBI_EMAIL=dlmu.p.l.zhu@gmail.com
+CROSSREF_MAILTO=dlmu.p.l.zhu@gmail.com
 ```
 
-5. 建议添加：
+4. 可选添加：
 
 ```text
-NCBI_EMAIL
-CROSSREF_MAILTO
-```
-
-6. 可选添加：
-
-```text
-NCBI_API_KEY
 S2_API_KEY
+NCBI_API_KEY
 OPENAI_API_KEY
 OPENAI_MODEL
 ```
 
-7. 到 `Actions` 页面打开 `Daily Medical-AI Paper Digest`，点 `Run workflow` 手动跑一次。
-8. 没问题后，它会每天新加坡时间约 07:15 自动运行。
+5. 到 `Actions` → `Daily Medical-AI Paper Digest` → `Run workflow`。
+6. 第一次手动运行保持 `dry_run=true`，确认日志里能抓到论文并生成摘要。
+7. 确认无误后，再手动选择 `dry_run=false` 做真实发信。
 
-## 调参建议
-
-收到太少：
-
-```yaml
-scoring:
-  min_score: 7
-```
-
-收到太多无关：
+工作流每天新加坡/香港时间约 07:15 自动运行。GitHub cron 使用 UTC，因此配置为：
 
 ```yaml
-scoring:
-  min_score: 10
-  exclude_keywords:
-    - "某个噪音方向"
+15 23 * * *
 ```
 
-希望更偏脑/神经影像：
+工作流使用 `permissions: contents: write`，真实发送成功后会自动提交 `data/sent_papers.json`。如果没有状态变化，commit 步骤会正常跳过。
+
+## Gmail SMTP 示例
+
+```text
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=我的 Gmail
+SMTP_PASSWORD=Google App Password，不是 Gmail 登录密码
+MAIL_FROM=我的 Gmail
+MAIL_TO=dlmu.p.l.zhu@gmail.com
+```
+
+不要把真实 SMTP 密码、Google App Password、OpenAI key、NCBI key 或 Semantic Scholar key 写入代码、README、日志或普通文件。请只放在 GitHub Secrets 或本地 `.env` 中；`.env` 已被 `.gitignore` 忽略。
+
+## 常见错误处理
+
+- SMTP 登录失败：检查 Gmail App Password、`SMTP_USER`、`SMTP_PASSWORD`、`SMTP_HOST`、`SMTP_PORT`。
+- workflow 无法 push `data/sent_papers.json`：到仓库 `Settings` → `Actions` → `General` → `Workflow permissions`，开启 `Read and write permissions`。
+- Semantic Scholar 限流：添加 `S2_API_KEY`，或降低 query 数、`max_results_per_query`、运行频率。
+- PubMed 限流：添加 `NCBI_EMAIL` 和 `NCBI_API_KEY`。
+- Crossref 限流：添加 `CROSSREF_MAILTO`，并降低 `crossref_top_journals.max_calls`。
+- 没有论文：降低 `scoring.min_score`，增加 query，或暂时提高 `lookback_days`。
+- 噪音太多：提高 `scoring.min_score`，增加 `exclude_keywords`，或提高 `soft_must_have_penalty`。
+
+## 配置开关
+
+四个来源都可以在 `config.yaml` 单独开启或关闭：
 
 ```yaml
-scoring:
-  soft_must_have_penalty: 5
+sources:
+  pubmed:
+    enabled: true
+  arxiv:
+    enabled: true
+  semantic_scholar:
+    enabled: true
+  crossref_top_journals:
+    enabled: true
 ```
-
-希望不要漏掉 multi-organ：
-
-```yaml
-scoring:
-  soft_must_have_penalty: 1
-```
-
-希望更看重顶刊顶会：
-
-```yaml
-scoring:
-  top_venue_boosts:
-    "Medical Image Analysis": 10
-    "IEEE Transactions on Medical Imaging": 10
-    "MICCAI": 10
-```
-
-## 邮件摘要风格
-
-如果设置了 `OPENAI_API_KEY` 和 `OPENAI_MODEL`，邮件会让模型按如下结构总结：
-
-- 属于哪类主题
-- 数据/模态
-- 方法
-- 核心结论
-- 为什么值得读/是否像顶刊顶会候选
-
-不设置 OpenAI 也能跑，只是邮件会直接使用论文摘要或 Semantic Scholar TLDR。
