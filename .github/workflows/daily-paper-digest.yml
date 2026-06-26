@@ -1,9 +1,9 @@
 name: Daily Medical-AI Paper Digest
 
 on:
-  # 16:00 Singapore / Hong Kong / China time is 08:00 UTC.
+  # 16:10 Singapore / Hong Kong / China time is 08:10 UTC.
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "10 8 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
