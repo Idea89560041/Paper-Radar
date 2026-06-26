@@ -7,20 +7,20 @@ state_path: data/sent_papers.json
 openai_sleep_seconds: 0.5
 
 site:
-  title: "Medical Imaging AI Paper Radar"
+  title: "Medical Imaging Deep Learning Paper Radar"
   output_dir: site
   max_papers: 30
 
 research_profile:
-  name: "Medical Imaging AI - Brain & Neuroimage"
+  name: "Medical Imaging Deep Learning - Brain & Neuroimage"
 
   queries:
-    - "medical imaging artificial intelligence neuroimaging brain"
-    - "brain gut axis neuroimaging artificial intelligence"
+    - "medical imaging deep learning neuroimaging brain"
+    - "brain gut axis neuroimaging deep learning artificial intelligence"
     - "gut brain axis microbiome neuroimaging machine learning"
-    - "microbiome neuroimaging Alzheimer dementia MRI"
-    - "multi organ medical imaging diagnosis artificial intelligence"
-    - "multi organ guided diagnosis multimodal medical imaging"
+    - "microbiome neuroimaging Alzheimer dementia MRI machine learning"
+    - "multi organ medical imaging diagnosis deep learning artificial intelligence"
+    - "multi organ guided diagnosis multimodal medical imaging deep learning"
     - "Alzheimer disease diagnosis MRI PET deep learning"
     - "dementia mild cognitive impairment neuroimaging foundation model"
     - "brain MRI medical image synthesis diffusion model"
@@ -40,11 +40,11 @@ research_profile:
     - '("foundation model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "large language model"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract])'
 
   arxiv_queries:
-    - "brain neuroimaging medical imaging AI"
+    - "brain neuroimaging medical imaging deep learning"
     - "Alzheimer MRI PET deep learning"
     - "brain MRI diffusion model synthesis"
-    - "medical image enhancement neuroimaging"
-    - "multi organ medical imaging diagnosis"
+    - "medical image enhancement neuroimaging deep learning"
+    - "multi organ medical imaging diagnosis deep learning"
     - "foundation model medical imaging brain"
     - "vision language model radiology brain"
     - "large multimodal model medical imaging"
@@ -133,7 +133,7 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "diffusion model"[Title/Abstract])'
+  pubmed_topic_block: '(("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR radiomics[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
@@ -165,11 +165,11 @@ top_journal_families:
     - "Radiology: Artificial Intelligence"
 
   crossref_topic_queries:
-    - "neuroimaging brain MRI artificial intelligence"
+    - "neuroimaging brain MRI deep learning artificial intelligence"
     - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
-    - "brain-gut gut-brain microbiome neuroimaging"
+    - "brain-gut gut-brain microbiome neuroimaging machine learning"
     - "medical image synthesis enhancement brain MRI diffusion model"
-    - "multi-organ multimodal medical imaging diagnosis"
+    - "multi-organ multimodal medical imaging diagnosis deep learning"
     - "foundation model vision-language large multimodal model radiology brain"
 
 scoring:
@@ -181,6 +181,41 @@ scoring:
   citation_boost: 1
   influential_citation_boost_threshold: 5
   influential_citation_boost: 1.5
+
+  hard_must_have_any:
+    - artificial intelligence
+    - AI
+    - deep learning
+    - machine learning
+    - neural network
+    - neural networks
+    - convolutional neural
+    - graph neural
+    - CNN
+    - U-Net
+    - UNet
+    - transformer
+    - foundation model
+    - vision-language
+    - vision language
+    - large multimodal model
+    - large language model
+    - diffusion model
+    - generative AI
+    - generative adversarial
+    - GAN
+    - self-supervised
+    - contrastive learning
+    - radiomics
+    - computer-aided
+    - automated diagnosis
+    - automated detection
+    - segmentation
+    - reconstruction
+    - denoising
+    - super-resolution
+    - super resolution
+    - synthesis
 
   soft_must_have_any:
     - brain

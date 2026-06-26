@@ -701,16 +701,27 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     focus_weights = scoring.get("brain_neuro_focus_weights", {})
     venue_boosts = scoring.get("top_venue_boosts", {})
     exclude_keywords = [str(keyword).lower() for keyword in scoring.get("exclude_keywords", [])]
+    hard_must_have_any = [str(keyword).lower() for keyword in scoring.get("hard_must_have_any", [])]
     soft_must_have_any = [str(keyword).lower() for keyword in scoring.get("soft_must_have_any", [])]
 
     text_title = (paper.title or "").lower()
+    # Score only paper-owned metadata. The search query itself is intentionally
+    # excluded so a traditional neuroscience article cannot inherit AI terms.
+    text_content = " ".join(
+        [paper.title or "", paper.abstract or "", paper.tldr or "", paper.venue or ""]
+    ).lower()
     text_all = " ".join(
-        [paper.title or "", paper.abstract or "", paper.tldr or "", paper.venue or "", paper.query or ""]
+        [paper.title or "", paper.abstract or "", paper.tldr or "", paper.venue or ""]
     ).lower()
     venue_text = (paper.venue or "").lower()
 
     score = 0.0
     reasons: List[str] = []
+
+    if hard_must_have_any and not any(contains_term(text_content, keyword) for keyword in hard_must_have_any):
+        paper.score = -999.0
+        paper.reasons = ["missing-ai-dl-method"]
+        return paper
 
     keyword_score, keyword_reasons = add_keyword_scores(text_title, text_all, keyword_weights)
     score += keyword_score
@@ -1051,7 +1062,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         source_counts[paper.source] = source_counts.get(paper.source, 0) + 1
 
     focus_terms = [
-        "medical imaging + AI",
+        "medical imaging + deep learning",
         "brain / neuroimaging",
         "brain-gut axis",
         "microbiome + neuroimaging",
@@ -1146,7 +1157,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
-  <meta name="description" content="Daily Medical Imaging AI paper radar for neuroimaging, brain-gut axis, dementia, synthesis, and foundation models.">
+  <meta name="description" content="Daily Medical Imaging deep learning paper radar for neuroimaging, brain-gut axis, dementia, synthesis, and foundation models.">
   <style>
     :root {{
       color-scheme: light;
@@ -1378,7 +1389,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for medical imaging AI, neuroimaging, brain-gut axis, Alzheimer diagnosis, medical image synthesis, and radiology foundation models.</p>
+        <p class="subtitle">Daily radar for deep learning and machine learning papers in medical imaging, neuroimaging, brain-gut axis, Alzheimer diagnosis, image synthesis, and radiology foundation models.</p>
       </header>
     </div>
   </div>
