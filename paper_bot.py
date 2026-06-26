@@ -202,7 +202,7 @@ def contains_term(text: str, term: str) -> bool:
     term_l = term.lower().strip()
     if not term_l:
         return False
-    if re.fullmatch(r"[a-z0-9]+", term_l) and len(term_l) <= 4:
+    if re.fullmatch(r"[a-z0-9]+", term_l):
         return re.search(rf"(?<![a-z0-9]){re.escape(term_l)}(?![a-z0-9])", text) is not None
     return term_l in text
 
@@ -701,6 +701,7 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     focus_weights = scoring.get("brain_neuro_focus_weights", {})
     venue_boosts = scoring.get("top_venue_boosts", {})
     exclude_keywords = [str(keyword).lower() for keyword in scoring.get("exclude_keywords", [])]
+    hard_exclude_keywords = [str(keyword).lower() for keyword in scoring.get("hard_exclude_keywords", [])]
     hard_must_have_any = [str(keyword).lower() for keyword in scoring.get("hard_must_have_any", [])]
     soft_must_have_any = [str(keyword).lower() for keyword in scoring.get("soft_must_have_any", [])]
 
@@ -717,6 +718,12 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
 
     score = 0.0
     reasons: List[str] = []
+
+    for keyword in hard_exclude_keywords:
+        if keyword and contains_term(text_content, keyword):
+            paper.score = -999.0
+            paper.reasons = [f"hard-exclude:{keyword}"]
+            return paper
 
     if hard_must_have_any and not any(contains_term(text_content, keyword) for keyword in hard_must_have_any):
         paper.score = -999.0

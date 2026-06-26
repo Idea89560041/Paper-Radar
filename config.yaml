@@ -182,6 +182,22 @@ scoring:
   influential_citation_boost_threshold: 5
   influential_citation_boost: 1.5
 
+  hard_exclude_keywords:
+    - review
+    - systematic review
+    - scoping review
+    - narrative review
+    - umbrella review
+    - meta-analysis
+    - meta analysis
+    - advances and challenges
+    - perspective
+    - editorial
+    - commentary
+    - protocol
+    - guideline
+    - consensus
+
   hard_must_have_any:
     - deep learning
     - deep-learning
@@ -205,7 +221,12 @@ scoring:
     - vision language
     - large multimodal model
     - large language model
-    - diffusion model
+    - denoising diffusion
+    - latent diffusion
+    - diffusion-based generative
+    - diffusion generative
+    - score-based generative
+    - flow matching
     - generative AI
     - generative adversarial
     - GAN
