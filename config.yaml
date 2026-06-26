@@ -1,0 +1,321 @@
+# Daily Medical-AI Research Paper Digest Bot config
+# 研究方向：medical image + AI，重点 brain/neuroimage
+# 每天跑一次时，用 14 天窗口 + sent_papers.json 去重，能避免 PubMed/S2 索引延迟导致漏掉新文章。
+
+lookback_days: 14
+state_path: data/sent_papers.json
+openai_sleep_seconds: 0.5
+
+research_profile:
+  name: "Medical Imaging AI｜Brain & Neuroimage"
+
+  # 通用自然语言检索：Semantic Scholar 主要使用这组；也可被其他源 fallback。
+  queries:
+    - "brain gut axis neuroimaging artificial intelligence"
+    - "gut brain axis microbiome neuroimaging machine learning"
+    - "multi organ medical imaging diagnosis artificial intelligence"
+    - "multi organ guided diagnosis multimodal medical imaging"
+    - "Alzheimer disease diagnosis MRI PET deep learning"
+    - "dementia neuroimaging foundation model medical imaging"
+    - "brain MRI medical image synthesis diffusion model"
+    - "neuroimage enhancement super resolution denoising deep learning"
+    - "medical image synthesis enhancement brain MRI"
+    - "multimodal brain MRI PET diagnosis artificial intelligence"
+    - "foundation model medical imaging brain MRI"
+    - "generative AI neuroimaging synthesis"
+
+  # PubMed 用更严谨的布尔检索，尽量压住医学噪音。
+  pubmed_queries:
+    - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
+    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract])'
+    - '("medical image synthesis"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "super resolution"[Title/Abstract] OR denoising[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
+    - '("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR multimodal[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (diagnosis[Title/Abstract] OR classification[Title/Abstract] OR prediction[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
+    - '("foundation model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract])'
+
+  # arXiv 更偏预印本，关键词不要太长，否则会漏。
+  arxiv_queries:
+    - "brain neuroimaging medical imaging AI"
+    - "Alzheimer MRI PET deep learning"
+    - "brain MRI diffusion model synthesis"
+    - "medical image enhancement neuroimaging"
+    - "multi organ medical imaging diagnosis"
+    - "foundation model medical imaging brain"
+    - "vision language model radiology brain"
+
+  semantic_scholar_queries:
+    - "brain-gut axis neuroimaging artificial intelligence"
+    - "gut microbiome neuroimaging Alzheimer's machine learning"
+    - "multi-organ guided diagnosis medical imaging AI"
+    - "Alzheimer's disease diagnosis MRI PET deep learning"
+    - "brain MRI medical image synthesis diffusion model"
+    - "neuroimage enhancement super-resolution denoising"
+    - "medical imaging foundation model brain MRI"
+    - "vision-language model radiology neuroimaging"
+
+sources:
+  pubmed:
+    enabled: true
+    max_results_per_query: 40
+    sleep_seconds: 0.55
+    top_journal_family_search: true
+    top_journal_chunk_size: 18
+    tool: "medical-ai-paper-digest-bot"
+    # 建议在 GitHub Secrets 里设置 NCBI_EMAIL；这里也可以直接填。
+    email: "dlmu.p.l.zhu@gmail.com"
+
+  arxiv:
+    enabled: true
+    max_results_per_query: 25
+    sleep_seconds: 3.1
+    # cs.CV/cs.AI/cs.LG 适合抓医学影像AI预印本；q-bio.NC/q-bio.QM 兼顾神经和生物医学。
+    categories:
+      - "cs.CV"
+      - "cs.AI"
+      - "cs.LG"
+      - "eess.IV"
+      - "q-bio.NC"
+      - "q-bio.QM"
+
+  semantic_scholar:
+    enabled: true
+    max_results_per_query: 30
+    sleep_seconds: 1.2
+
+  crossref_top_journals:
+    enabled: true
+    rows_per_query: 5
+    max_calls: 90
+    sleep_seconds: 0.9
+
+top_journal_families:
+  # PubMed 顶刊家族检索：用 [Journal] 限定 Nature/Science/Cell/Lancet 正刊与医学/神经/AI 相关子刊。
+  # 注意：不同数据库对期刊名缩写/全称支持略有差异，所以这里保留常用全称。
+  pubmed_journals:
+    - "Nature"
+    - "Nature Medicine"
+    - "Nature Neuroscience"
+    - "Nature Biomedical Engineering"
+    - "Nature Methods"
+    - "Nature Communications"
+    - "Communications Medicine"
+    - "Communications Biology"
+    - "npj Digital Medicine"
+    - "npj Parkinson's Disease"
+    - "npj Aging"
+    - "Scientific Reports"
+    - "Science"
+    - "Science Translational Medicine"
+    - "Science Advances"
+    - "Science Robotics"
+    - "Cell"
+    - "Neuron"
+    - "Cell Reports"
+    - "Cell Reports Medicine"
+    - "Cell Reports Methods"
+    - "Patterns"
+    - "iScience"
+    - "The Lancet"
+    - "The Lancet Digital Health"
+    - "The Lancet Neurology"
+    - "The Lancet Healthy Longevity"
+    - "eBioMedicine"
+    - "eClinicalMedicine"
+
+  pubmed_topic_block: '("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract])'
+
+  # Crossref 顶刊家族检索：用于捕捉 DOI 元数据中已经出现、但 PubMed 未必马上完整索引的新文章。
+  crossref_journals:
+    - "Nature"
+    - "Nature Medicine"
+    - "Nature Neuroscience"
+    - "Nature Biomedical Engineering"
+    - "Nature Methods"
+    - "Nature Communications"
+    - "Communications Medicine"
+    - "npj Digital Medicine"
+    - "npj Parkinson's Disease"
+    - "npj Aging"
+    - "Science"
+    - "Science Translational Medicine"
+    - "Science Advances"
+    - "Cell"
+    - "Neuron"
+    - "Cell Reports"
+    - "Cell Reports Medicine"
+    - "Patterns"
+    - "iScience"
+    - "The Lancet"
+    - "The Lancet Digital Health"
+    - "The Lancet Neurology"
+    - "The Lancet Healthy Longevity"
+    - "eBioMedicine"
+    - "eClinicalMedicine"
+
+  crossref_topic_queries:
+    - "neuroimaging brain MRI artificial intelligence"
+    - "Alzheimer dementia MRI PET deep learning"
+    - "brain-gut gut-brain microbiome neuroimaging"
+    - "medical image synthesis enhancement brain MRI"
+    - "multi-organ multimodal medical imaging diagnosis"
+    - "foundation model medical imaging radiology brain"
+
+scoring:
+  # 收到太少就降到 7；收到太多无关就升到 10-12。
+  min_score: 8
+
+  fresh_0_3_days_boost: 2
+  fresh_4_14_days_boost: 1
+  citation_boost_threshold: 30
+  citation_boost: 1
+  influential_citation_boost_threshold: 5
+  influential_citation_boost: 1.5
+
+  # 软约束：没有这些 brain/neuro 方向词会扣分，但不是直接删除，避免漏掉 multi-organ guided diagnosis 好文。
+  soft_must_have_any:
+    - brain
+    - neuro
+    - neuroimaging
+    - MRI
+    - fMRI
+    - PET
+    - Alzheimer
+    - dementia
+    - gut-brain
+    - brain-gut
+    - microbiome
+  soft_must_have_penalty: 3
+
+  keyword_weights:
+    "medical imaging": 4
+    radiology: 3
+    "artificial intelligence": 4
+    AI: 3
+    "deep learning": 4
+    "machine learning": 3
+    "foundation model": 6
+    "large multimodal model": 6
+    "vision-language": 5
+    "multimodal": 4
+    "multi-organ": 6
+    "multi organ": 6
+    diagnosis: 3
+    classification: 2
+    prediction: 2
+    biomarker: 3
+    "image synthesis": 5
+    "medical image synthesis": 6
+    "image enhancement": 5
+    "super resolution": 5
+    super-resolution: 5
+    denoising: 4
+    reconstruction: 3
+    registration: 2
+    segmentation: 2
+    "diffusion model": 5
+    generative: 4
+    GAN: 3
+    transformer: 3
+    "self-supervised": 4
+    "contrastive learning": 4
+    "domain adaptation": 3
+
+  # 这是你的主轴：brain/neuroimage 强加权。
+  brain_neuro_focus_weights:
+    brain: 4
+    neuroimaging: 7
+    neuroimage: 7
+    MRI: 4
+    fMRI: 5
+    PET: 4
+    "brain MRI": 7
+    "brain imaging": 6
+    "structural MRI": 5
+    "functional MRI": 5
+    connectome: 5
+    "brain-gut": 9
+    "gut-brain": 9
+    microbiome: 6
+    "brain gut axis": 10
+    "gut brain axis": 10
+    Alzheimer: 8
+    Alzheimer's: 8
+    dementia: 6
+    "mild cognitive impairment": 6
+    MCI: 5
+    neurodegenerative: 5
+    hippocampus: 5
+    amyloid: 4
+    tau: 4
+
+  # 顶刊顶会/高质量 venue 加权。这里是 pattern 匹配，不需要完全一致。
+  top_venue_boosts:
+    "Nature": 9
+    "Nature Medicine": 10
+    "Nature Neuroscience": 10
+    "Nature Biomedical Engineering": 10
+    "Nature Methods": 8
+    "Nature Communications": 7
+    "Communications Medicine": 7
+    "npj Digital Medicine": 8
+    "Science": 9
+    "Science Translational Medicine": 9
+    "Science Advances": 7
+    "Cell": 9
+    "Neuron": 10
+    "Cell Reports Medicine": 8
+    "Cell Reports": 6
+    "Patterns": 7
+    "The Lancet": 10
+    "Lancet Digital Health": 9
+    "The Lancet Digital Health": 9
+    "Lancet Neurology": 10
+    "The Lancet Neurology": 10
+    "eBioMedicine": 7
+    "eClinicalMedicine": 7
+    "Medical Image Analysis": 8
+    "Med Image Anal": 8
+    "IEEE Transactions on Medical Imaging": 8
+    "IEEE Trans Med Imaging": 8
+    "Radiology": 7
+    "Nature Biomedical Engineering": 8
+    "Nature Medicine": 9
+    "Lancet Digital Health": 8
+    "npj Digital Medicine": 7
+    "MICCAI": 8
+    "Medical Image Computing and Computer Assisted Intervention": 8
+    "MIDL": 7
+    "Medical Imaging with Deep Learning": 7
+    "ISBI": 6
+    "International Symposium on Biomedical Imaging": 6
+    "NeurIPS": 7
+    "ICLR": 6
+    "ICML": 6
+    "CVPR": 6
+    "ICCV": 6
+    "ECCV": 6
+    "AAAI": 4
+    "KDD": 4
+    "Proceedings of Machine Learning Research": 5
+
+  exclude_penalty: 5
+  exclude_keywords:
+    - agriculture
+    - plant disease
+    - crop
+    - traffic
+    - remote sensing
+    - satellite
+    - autonomous driving
+    - sentiment analysis
+    - face recognition
+    - histopathology only
+    - dermatology only
+
+email:
+  # 默认收件人；GitHub Secrets 里的 MAIL_TO 会覆盖这里。
+  to: "dlmu.p.l.zhu@gmail.com"
+  from: ""
+  subject_prefix: "每日医学影像AI论文雷达"
+  max_papers: 15
+  max_ai_summaries: 12
+  send_empty_digest: true
