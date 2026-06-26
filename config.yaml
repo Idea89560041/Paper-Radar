@@ -53,7 +53,7 @@ research_profile:
   semantic_scholar_queries:
     - "brain-gut axis neuroimaging artificial intelligence"
     - "gut microbiome neuroimaging Alzheimer's machine learning"
-    - "microbiome MRI dementia neuroimaging"
+    - "microbiome MRI dementia neuroimaging deep learning"
     - "multi-organ guided diagnosis medical imaging AI"
     - "Alzheimer's disease diagnosis MRI PET deep learning"
     - "brain MRI medical image synthesis diffusion model"
@@ -183,18 +183,23 @@ scoring:
   influential_citation_boost: 1.5
 
   hard_must_have_any:
-    - artificial intelligence
-    - AI
     - deep learning
-    - machine learning
+    - deep-learning
+    - deep neural
+    - deep generative
     - neural network
     - neural networks
     - convolutional neural
     - graph neural
     - CNN
+    - convolutional network
+    - graph convolutional
     - U-Net
     - UNet
     - transformer
+    - masked autoencoder
+    - autoencoder
+    - encoder-decoder
     - foundation model
     - vision-language
     - vision language
@@ -204,18 +209,12 @@ scoring:
     - generative AI
     - generative adversarial
     - GAN
+    - variational autoencoder
+    - VAE
     - self-supervised
     - contrastive learning
-    - radiomics
-    - computer-aided
-    - automated diagnosis
-    - automated detection
-    - segmentation
-    - reconstruction
-    - denoising
-    - super-resolution
-    - super resolution
-    - synthesis
+    - representation learning
+    - transfer learning
 
   soft_must_have_any:
     - brain
