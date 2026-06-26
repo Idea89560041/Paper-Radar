@@ -1,27 +1,24 @@
-name: Daily Medical-AI Paper Digest
+name: Daily Medical-AI Paper Radar Site
 
 on:
   # 16:10 Singapore / Hong Kong / China time is 08:10 UTC.
   schedule:
     - cron: "10 8 * * *"
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Print the digest without sending email"
-        required: true
-        default: "true"
-        type: choice
-        options:
-          - "true"
-          - "false"
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
-  send-digest:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
 
     steps:
       - name: Check out repository
@@ -37,37 +34,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run medical-AI paper digest bot
+      - name: Build paper radar site
         env:
-          DRY_RUN_INPUT: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'false' }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          MAIL_FROM: ${{ secrets.MAIL_FROM }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-          SMTP_USE_TLS: "true"
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-        run: |
-          if [ "$DRY_RUN_INPUT" = "true" ]; then
-            python paper_bot.py --config config.yaml --dry-run
-          else
-            python paper_bot.py --config config.yaml
-          fi
+        run: python paper_bot.py --config config.yaml --web --output-dir site
 
-      - name: Commit sent-state file
-        run: |
-          git config user.name "medical-ai-paper-digest-bot"
-          git config user.email "medical-ai-paper-digest-bot@users.noreply.github.com"
-          git add data/sent_papers.json || true
-          if git diff --cached --quiet; then
-            echo "No sent-state changes to commit."
-          else
-            git commit -m "Update sent paper state"
-            git push
-          fi
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

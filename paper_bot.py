@@ -3,7 +3,8 @@
 """Daily Medical Imaging AI paper digest bot.
 
 The bot searches PubMed, arXiv, Semantic Scholar, and Crossref, scores papers
-against the research profile in config.yaml, and sends an email digest.
+against the research profile in config.yaml, and sends an email digest or
+builds a static web dashboard.
 """
 
 from __future__ import annotations
@@ -1017,6 +1018,416 @@ def make_email_text(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def paper_to_dict(paper: Paper) -> Dict[str, Any]:
+    return {
+        "id": paper.uid(),
+        "title": paper.title,
+        "source": paper.source,
+        "venue": paper.venue or "",
+        "published_date": paper.published_date or "",
+        "authors": paper.authors,
+        "summary": paper.ai_summary or fallback_summary(paper),
+        "abstract": clean_text(paper.abstract or paper.tldr or ""),
+        "url": paper.url or "",
+        "doi": normalize_doi(paper.doi),
+        "pmid": normalize_pmid(paper.pmid),
+        "score": paper.score,
+        "reasons": paper.reasons,
+        "citation_count": paper.citation_count,
+        "influential_citation_count": paper.influential_citation_count,
+        "query": paper.query,
+    }
+
+
+def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
+    profile = cfg.get("research_profile", {})
+    scoring = cfg.get("scoring", {})
+    site_cfg = cfg.get("site", {})
+    title = site_cfg.get("title") or f"{profile.get('name', 'Medical Imaging AI')} Paper Radar"
+    generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M UTC+8")
+    min_score = scoring.get("min_score", 8)
+    source_counts: Dict[str, int] = {}
+    for paper in papers:
+        source_counts[paper.source] = source_counts.get(paper.source, 0) + 1
+
+    focus_terms = [
+        "medical imaging + AI",
+        "brain / neuroimaging",
+        "brain-gut axis",
+        "microbiome + neuroimaging",
+        "Alzheimer / dementia / MCI",
+        "MRI / fMRI / PET / amyloid / tau",
+        "image synthesis / enhancement",
+        "diffusion / generative AI",
+        "foundation & vision-language models",
+        "top journals and conferences",
+    ]
+
+    source_badges = "".join(
+        f'<span class="metric"><strong>{html.escape(source)}</strong>{count}</span>'
+        for source, count in sorted(source_counts.items())
+    )
+    if not source_badges:
+        source_badges = '<span class="metric"><strong>No matches</strong>0</span>'
+
+    topic_chips = "".join(f'<span class="chip">{html.escape(term)}</span>' for term in focus_terms)
+    query_preview = " / ".join(profile.get("queries", [])[:6])
+
+    rows = []
+    for index, paper in enumerate(papers, 1):
+        authors = ", ".join(paper.authors[:10]) or "N/A"
+        if len(paper.authors) > 10:
+            authors += " et al."
+        reasons = ", ".join(paper.reasons or []) or "N/A"
+        summary = paper.ai_summary or fallback_summary(paper)
+        abstract = clean_text(paper.abstract or paper.tldr or "") or "No abstract available."
+        url = paper.url or "#"
+        doi = normalize_doi(paper.doi)
+        ids = []
+        if doi:
+            ids.append(f"DOI: {doi}")
+        if paper.pmid:
+            ids.append(f"PMID: {normalize_pmid(paper.pmid)}")
+        if paper.citation_count is not None:
+            ids.append(f"Citations: {paper.citation_count}")
+        id_line = " | ".join(ids)
+        rows.append(
+            f"""
+      <article class="paper">
+        <div class="paper-head">
+          <div class="rank">{index}</div>
+          <div class="paper-title-block">
+            <a class="paper-title" href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{html.escape(paper.title)}</a>
+            <div class="meta">
+              <span>{html.escape(paper.source)}</span>
+              <span>{html.escape(paper.venue or 'N/A')}</span>
+              <span>{html.escape(paper.published_date or 'N/A')}</span>
+            </div>
+          </div>
+          <div class="score" title="Relevance score">{html.escape(str(paper.score))}</div>
+        </div>
+        <div class="authors">{html.escape(authors)}</div>
+        <p class="summary">{html.escape(summary)}</p>
+        <details>
+          <summary>Abstract and match details</summary>
+          <p>{html.escape(abstract)}</p>
+          <div class="details-grid">
+            <div><strong>Match reasons</strong><br>{html.escape(reasons)}</div>
+            <div><strong>Identifiers</strong><br>{html.escape(id_line or 'N/A')}</div>
+          </div>
+        </details>
+      </article>
+            """
+        )
+
+    if not rows:
+        rows.append(
+            """
+      <section class="empty">
+        No papers passed the current score threshold in this run.
+      </section>
+            """
+        )
+
+    payload = json.dumps(
+        {
+            "generated_at": generated_at,
+            "min_score": min_score,
+            "paper_count": len(papers),
+            "papers": [paper_to_dict(paper) for paper in papers],
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(title)}</title>
+  <meta name="description" content="Daily Medical Imaging AI paper radar for neuroimaging, brain-gut axis, dementia, synthesis, and foundation models.">
+  <style>
+    :root {{
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #64717d;
+      --line: #d8e0e7;
+      --panel: #ffffff;
+      --bg: #f5f7f9;
+      --blue: #0b5cad;
+      --teal: #0f766e;
+      --amber: #b45309;
+      --soft-blue: #e8f1fb;
+      --soft-teal: #e6f4f1;
+      --soft-amber: #fff3df;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }}
+    a {{ color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }}
+    .topbar {{
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }}
+    .wrap {{
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }}
+    header {{
+      padding: 28px 0 20px;
+    }}
+    h1 {{
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.18;
+      font-weight: 760;
+      letter-spacing: 0;
+    }}
+    .subtitle {{
+      margin: 0;
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 15px;
+    }}
+    .dashboard {{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      padding: 18px 0 24px;
+    }}
+    .status-band, .focus-band {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }}
+    .metrics {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }}
+    .metric {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .metric strong {{ color: var(--ink); font-weight: 650; }}
+    .chips {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }}
+    .chip {{
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: var(--soft-teal);
+      color: #0f4f49;
+      font-size: 13px;
+    }}
+    main {{
+      padding: 22px 0 42px;
+    }}
+    .section-title {{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }}
+    h2 {{
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }}
+    .small {{
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .paper {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 17px;
+      margin-bottom: 12px;
+    }}
+    .paper-head {{
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+    }}
+    .rank {{
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 760;
+      font-size: 15px;
+    }}
+    .paper-title {{
+      display: inline;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 720;
+      color: var(--ink);
+    }}
+    .meta {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .meta span {{
+      padding: 3px 8px;
+      border-radius: 8px;
+      background: #f0f3f6;
+    }}
+    .score {{
+      min-width: 52px;
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: var(--soft-amber);
+      color: var(--amber);
+      text-align: center;
+      font-weight: 760;
+    }}
+    .authors {{
+      margin: 10px 0 0 50px;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .summary {{
+      margin: 12px 0 0 50px;
+      font-size: 15px;
+    }}
+    details {{
+      margin: 12px 0 0 50px;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }}
+    summary {{
+      cursor: pointer;
+      color: var(--blue);
+      font-weight: 650;
+      font-size: 14px;
+    }}
+    details p {{
+      color: #33414d;
+      font-size: 14px;
+    }}
+    .details-grid {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .empty {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      color: var(--muted);
+    }}
+    footer {{
+      border-top: 1px solid var(--line);
+      padding: 18px 0 26px;
+      color: var(--muted);
+      font-size: 12px;
+    }}
+    script[type="application/json"] {{
+      display: none;
+    }}
+    @media (max-width: 780px) {{
+      .wrap {{ width: min(100% - 24px, 1180px); }}
+      .dashboard {{ grid-template-columns: 1fr; }}
+      .paper-head {{ grid-template-columns: 34px minmax(0, 1fr); }}
+      .score {{ grid-column: 2; width: fit-content; }}
+      .authors, .summary, details {{ margin-left: 0; }}
+      .details-grid {{ grid-template-columns: 1fr; }}
+      h1 {{ font-size: 25px; }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <header>
+        <h1>{html.escape(title)}</h1>
+        <p class="subtitle">Daily radar for medical imaging AI, neuroimaging, brain-gut axis, Alzheimer diagnosis, medical image synthesis, and radiology foundation models.</p>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+    <section class="dashboard" aria-label="Digest status">
+      <div class="status-band">
+        <strong>Updated {html.escape(generated_at)}</strong>
+        <div class="metrics">
+          <span class="metric"><strong>Papers</strong>{len(papers)}</span>
+          <span class="metric"><strong>Min score</strong>{html.escape(str(min_score))}</span>
+          {source_badges}
+        </div>
+      </div>
+      <div class="focus-band">
+        <strong>Research focus</strong>
+        <div class="chips">{topic_chips}</div>
+      </div>
+    </section>
+    <main>
+      <div class="section-title">
+        <h2>Latest Matches</h2>
+        <a class="small" href="papers.json">JSON</a>
+      </div>
+      {''.join(rows)}
+    </main>
+    <footer>
+      Query preview: {html.escape(query_preview)}. Generated automatically from PubMed, arXiv, Semantic Scholar, and Crossref metadata. Verify important claims in the original papers.
+    </footer>
+  </div>
+  <script id="paper-data" type="application/json">{html.escape(payload)}</script>
+</body>
+</html>
+"""
+
+
+def write_site(papers: List[Paper], cfg: Dict[str, Any], output_dir: str) -> None:
+    out_dir = Path(output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).isoformat()
+    payload = {
+        "generated_at": generated_at,
+        "paper_count": len(papers),
+        "papers": [paper_to_dict(paper) for paper in papers],
+    }
+    (out_dir / ".nojekyll").write_text("", encoding="utf-8")
+    (out_dir / "papers.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "index.html").write_text(make_site_html(papers, cfg), encoding="utf-8")
+
+
 def send_email(subject: str, html_body: str, text_body: str, cfg: Dict[str, Any]) -> None:
     host = os.getenv("SMTP_HOST", "smtp.gmail.com")
     port = int(os.getenv("SMTP_PORT", "587"))
@@ -1061,16 +1472,7 @@ def env_truthy(name: str) -> bool:
     return os.getenv(name, "").lower() in ("1", "true", "yes", "y")
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", default="config.yaml")
-    parser.add_argument("--dry-run", action="store_true", help="Print digest instead of sending email.")
-    args = parser.parse_args()
-
-    cfg = load_config(args.config)
-    state_path = cfg.get("state_path", "data/sent_papers.json")
-    state = load_state(state_path)
-
+def fetch_score_sort_papers(cfg: Dict[str, Any]) -> List[Paper]:
     papers: List[Paper] = []
     for label, fetcher in [
         ("PubMed", fetch_pubmed),
@@ -1083,13 +1485,39 @@ def main() -> int:
     papers = [score_paper(paper, cfg) for paper in dedupe(papers)]
     min_score = float(cfg.get("scoring", {}).get("min_score", 8))
     papers = [paper for paper in papers if paper.score >= min_score]
-
-    sent_keys = state_keys_from_records(state)
-    papers = [paper for paper in papers if not already_sent(paper, state, sent_keys)]
     papers.sort(
         key=lambda paper: (paper.score, parse_date(paper.published_date) or dt.date(1900, 1, 1)),
         reverse=True,
     )
+    return papers
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", default="config.yaml")
+    parser.add_argument("--dry-run", action="store_true", help="Print digest instead of sending email.")
+    parser.add_argument("--web", action="store_true", help="Build the static web dashboard instead of sending email.")
+    parser.add_argument("--output-dir", default=None, help="Output directory for --web mode.")
+    args = parser.parse_args()
+
+    cfg = load_config(args.config)
+    papers = fetch_score_sort_papers(cfg)
+
+    if args.web:
+        site_cfg = cfg.get("site", {})
+        output_dir = args.output_dir or site_cfg.get("output_dir", "site")
+        max_papers = int(site_cfg.get("max_papers", cfg.get("email", {}).get("max_papers", 30)))
+        papers = papers[:max_papers]
+        summarize_with_openai(papers, cfg)
+        write_site(papers, cfg, output_dir)
+        print(f"[info] Wrote static site with {len(papers)} papers to {output_dir}.")
+        return 0
+
+    state_path = cfg.get("state_path", "data/sent_papers.json")
+    state = load_state(state_path)
+
+    sent_keys = state_keys_from_records(state)
+    papers = [paper for paper in papers if not already_sent(paper, state, sent_keys)]
     max_papers = int(cfg.get("email", {}).get("max_papers", 15))
     papers = papers[:max_papers]
 

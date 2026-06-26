@@ -1,54 +1,46 @@
-# Daily Medical-AI Research Paper Digest Bot
+# Medical Imaging AI Paper Radar
 
-这是一个 Medical Imaging AI 每日论文邮件机器人。它每天自动检索 PubMed、arXiv、Semantic Scholar、Crossref 顶刊家族与专业期刊来源，按研究方向和顶刊顶会权重筛选新论文，然后把摘要发送到默认邮箱：
+这是一个每天自动更新的 Medical Imaging AI 论文雷达网页。它会检索 PubMed、arXiv、Semantic Scholar 和 Crossref 顶刊来源，按 `config.yaml` 里的研究方向打分，然后部署到 GitHub Pages。
 
-```text
-dlmu.p.l.zhu@gmail.com
-```
+默认现在不再发送邮件，因此不需要 SMTP Secret。
 
-`MAIL_TO` 环境变量或 GitHub Secret 的优先级高于 `config.yaml`；如果没有设置 `MAIL_TO`，脚本会回退到 `config.yaml` 里的 `email.to`。
+## 网页地址
 
-## 文件结构
+启用 GitHub Pages 后，网页通常在：
 
 ```text
-paper_bot.py
-config.yaml
-requirements.txt
-.env.example
-README.md
-.github/workflows/daily-paper-digest.yml
-data/.gitkeep
+https://idea89560041.github.io/Paper-Radar/
 ```
 
-`data/sent_papers.json` 会在运行时自动创建，用于记录已成功发送的论文，避免重复推送。
-
-## 数据源
-
-- PubMed / NCBI E-utilities：正式医学与生命科学论文，适合抓取 neuroimaging、Alzheimer、MRI/PET、brain-gut axis 等医学主题。
-- arXiv API：预印本，适合抓取 diffusion model、foundation model、vision-language model、super-resolution、denoising 等 AI 方法论文。
-- Semantic Scholar Graph API：补充跨学科论文、venue、citation、TLDR 和 DOI 信息。
-- Crossref REST API：按 Nature / Science / Cell / Lancet 家族及专业期刊检索 DOI 元数据，补足数据库索引延迟。
+页面会显示标题、来源、期刊/会议、日期、作者、摘要、链接、匹配原因和 score。机器可读数据在同目录的 `papers.json`。
 
 ## 研究方向
 
-重点方向在 `config.yaml` 中配置，包括：
+重点方向保留在 `config.yaml`：
 
 - medical imaging + AI
 - brain / neuroimage / neuroimaging
 - brain-gut axis / gut-brain axis
 - microbiome + neuroimaging
 - multi-organ guided diagnosis
-- Alzheimer’s disease diagnosis
+- Alzheimer disease diagnosis
 - dementia / MCI / MRI / fMRI / PET / amyloid / tau
 - medical image synthesis / enhancement
 - diffusion model / generative AI / super-resolution / denoising
 - foundation model / vision-language model / large multimodal model for radiology or neuroimaging
 
-默认 `lookback_days: 14`，配合 `data/sent_papers.json` 去重，降低 PubMed、Semantic Scholar、Crossref 索引延迟造成的漏报概率。默认 `min_score: 8`；论文太少可以降到 7，噪音太多可以升到 10 或更高。
+默认 `lookback_days: 14`，默认 `scoring.min_score: 8`。论文太少可以把 `min_score` 调到 7；噪音太多可以调到 9 或 10。
 
-## 顶刊顶会来源
+## 数据源
 
-配置中保留并增强了以下来源或加权：
+- PubMed / NCBI E-utilities：医学、生物医学和神经影像方向。
+- arXiv API：AI、计算机视觉、医学图像生成和 foundation model 预印本。
+- Semantic Scholar Graph API：补充 citation、venue、TLDR 和跨学科论文。
+- Crossref REST API：按 Nature、Science、Cell、Lancet、Medical Image Analysis、IEEE TMI、Radiology 等来源抓 DOI 元数据。
+
+## 顶刊顶会
+
+配置保留并加权以下来源：
 
 - Nature、Nature Medicine、Nature Neuroscience、Nature Biomedical Engineering、Nature Methods、Nature Communications、Communications Medicine、npj Digital Medicine
 - Science、Science Translational Medicine、Science Advances
@@ -57,41 +49,47 @@ data/.gitkeep
 - Medical Image Analysis、IEEE Transactions on Medical Imaging、Radiology
 - MICCAI、MIDL、ISBI、NeurIPS、ICLR、ICML、CVPR
 
-## 本地测试
+## GitHub Actions
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-
-python -m py_compile paper_bot.py
-python paper_bot.py --config config.yaml --dry-run
-```
-
-`--dry-run` 只打印摘要，不发送邮件，也不会把论文标记为已发送。
-
-## GitHub Actions 部署
-
-1. 打开仓库的 `Settings` → `Secrets and variables` → `Actions`。
-2. 添加必填 secrets：
+workflow 文件：
 
 ```text
-SMTP_HOST
-SMTP_PORT
-SMTP_USER
-SMTP_PASSWORD
+.github/workflows/daily-paper-digest.yml
 ```
 
-3. 建议添加：
+它会：
+
+1. 每天中国/香港/新加坡时间约 16:10 自动运行。
+2. 手动运行时也会立即刷新网页。
+3. 执行 `python paper_bot.py --config config.yaml --web --output-dir site`。
+4. 用 GitHub Pages 发布静态网页。
+
+GitHub cron 使用 UTC，所以配置为：
+
+```yaml
+10 8 * * *
+```
+
+## GitHub Pages 设置
+
+如果页面第一次打开是 404，到仓库：
+
+`Settings` -> `Pages` -> `Build and deployment`
+
+把 Source 设为 `GitHub Actions`。之后重新运行一次 workflow。
+
+## Secrets
+
+网页模式没有必填 Secret。
+
+建议添加：
 
 ```text
-MAIL_TO=dlmu.p.l.zhu@gmail.com
-MAIL_FROM
 NCBI_EMAIL=dlmu.p.l.zhu@gmail.com
 CROSSREF_MAILTO=dlmu.p.l.zhu@gmail.com
 ```
 
-4. 可选添加：
+可选添加：
 
 ```text
 S2_API_KEY
@@ -100,53 +98,56 @@ OPENAI_API_KEY
 OPENAI_MODEL
 ```
 
-5. 到 `Actions` → `Daily Medical-AI Paper Digest` → `Run workflow`。
-6. 第一次手动运行保持 `dry_run=true`，确认日志里能抓到论文并生成摘要。
-7. 确认无误后，再手动选择 `dry_run=false` 做真实发信。
+说明：
 
-工作流每天新加坡/香港时间约 07:15 自动运行。GitHub cron 使用 UTC，因此配置为：
+- `S2_API_KEY` 可以减少 Semantic Scholar 429 限流。
+- `NCBI_API_KEY` 可以提高 PubMed 请求额度。
+- `OPENAI_API_KEY` 和 `OPENAI_MODEL` 只用于生成更好的中文摘要；不填也会使用原始摘要。
 
-```yaml
-15 23 * * *
-```
-
-工作流使用 `permissions: contents: write`，真实发送成功后会自动提交 `data/sent_papers.json`。如果没有状态变化，commit 步骤会正常跳过。
-
-## Gmail SMTP 示例
+SMTP 相关 Secret 现在不再需要：
 
 ```text
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=我的 Gmail
-SMTP_PASSWORD=Google App Password，不是 Gmail 登录密码
-MAIL_FROM=我的 Gmail
-MAIL_TO=dlmu.p.l.zhu@gmail.com
+SMTP_HOST
+SMTP_PORT
+SMTP_USER
+SMTP_PASSWORD
+MAIL_FROM
+MAIL_TO
 ```
 
-不要把真实 SMTP 密码、Google App Password、OpenAI key、NCBI key 或 Semantic Scholar key 写入代码、README、日志或普通文件。请只放在 GitHub Secrets 或本地 `.env` 中；`.env` 已被 `.gitignore` 忽略。
+保留它们也没关系，新的网页 workflow 不会读取这些值。
 
-## 常见错误处理
+## 手动刷新
 
-- SMTP 登录失败：检查 Gmail App Password、`SMTP_USER`、`SMTP_PASSWORD`、`SMTP_HOST`、`SMTP_PORT`。
-- workflow 无法 push `data/sent_papers.json`：到仓库 `Settings` → `Actions` → `General` → `Workflow permissions`，开启 `Read and write permissions`。
-- Semantic Scholar 限流：添加 `S2_API_KEY`，或降低 query 数、`max_results_per_query`、运行频率。
+进入仓库：
+
+`Actions` -> `Daily Medical-AI Paper Radar Site` -> `Run workflow`
+
+运行完成后打开 GitHub Pages 地址查看最新网页。
+
+## 本地测试
+
+Windows 可以用你的 conda 环境：
+
+```powershell
+D:\Users\plzhu\anaconda3\envs\pet\python.exe -m py_compile paper_bot.py
+D:\Users\plzhu\anaconda3\envs\pet\python.exe paper_bot.py --config config.yaml --web --output-dir site
+```
+
+然后打开：
+
+```text
+site/index.html
+```
+
+## 常见问题
+
+- 页面 404：检查 GitHub Pages Source 是否为 `GitHub Actions`，然后重新运行 workflow。
+- workflow 没有按时出现：GitHub schedule 不是精确闹钟，可能延迟几分钟；手动 `Run workflow` 可以立即刷新。
+- Semantic Scholar 429：添加 `S2_API_KEY`，或降低 query 数和频率。
 - PubMed 限流：添加 `NCBI_EMAIL` 和 `NCBI_API_KEY`。
-- Crossref 限流：添加 `CROSSREF_MAILTO`，并降低 `crossref_top_journals.max_calls`。
-- 没有论文：降低 `scoring.min_score`，增加 query，或暂时提高 `lookback_days`。
-- 噪音太多：提高 `scoring.min_score`，增加 `exclude_keywords`，或提高 `soft_must_have_penalty`。
+- Crossref 限流：添加 `CROSSREF_MAILTO`，必要时降低 `crossref_top_journals.max_calls`。
+- 论文太少：降低 `scoring.min_score` 或增加 query。
+- 噪音太多：提高 `scoring.min_score`，或增加 `exclude_keywords`。
 
-## 配置开关
-
-四个来源都可以在 `config.yaml` 单独开启或关闭：
-
-```yaml
-sources:
-  pubmed:
-    enabled: true
-  arxiv:
-    enabled: true
-  semantic_scholar:
-    enabled: true
-  crossref_top_journals:
-    enabled: true
-```
+不要把任何 API key、SMTP 密码、Google App Password、OpenAI key、NCBI key 或 Semantic Scholar key 写入代码、README、日志或普通文件。

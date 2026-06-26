@@ -6,6 +6,11 @@ lookback_days: 14
 state_path: data/sent_papers.json
 openai_sleep_seconds: 0.5
 
+site:
+  title: "Medical Imaging AI Paper Radar"
+  output_dir: site
+  max_papers: 30
+
 research_profile:
   name: "Medical Imaging AI - Brain & Neuroimage"
 
