@@ -430,7 +430,7 @@ def build_arxiv_query(query: str, categories: List[str] | None = None) -> str:
     terms = [term for term in re.split(r"\s+", query.strip()) if len(term) > 1]
     if not terms:
         terms = [query.strip()]
-    term_query = "+AND+".join(f'all:"{term}"' for term in terms[:7])
+    term_query = "+AND+".join(f"all:{term}" for term in terms[:7])
     if categories:
         category_query = "+OR+".join(f"cat:{category}" for category in categories)
         return f"({term_query})+AND+({category_query})"
@@ -459,7 +459,7 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
             "sortBy": "submittedDate",
             "sortOrder": "descending",
         }
-        url = "https://export.arxiv.org/api/query?" + urllib.parse.urlencode(params, safe=':+()"')
+        url = "https://export.arxiv.org/api/query?" + urllib.parse.urlencode(params, safe=':+()+"')
         try:
             feed = feedparser.parse(url)
             if getattr(feed, "bozo", False) and not getattr(feed, "entries", []):
