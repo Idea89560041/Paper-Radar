@@ -702,6 +702,7 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     venue_boosts = scoring.get("top_venue_boosts", {})
     exclude_keywords = [str(keyword).lower() for keyword in scoring.get("exclude_keywords", [])]
     hard_exclude_keywords = [str(keyword).lower() for keyword in scoring.get("hard_exclude_keywords", [])]
+    hard_exclude_venues = [str(keyword).lower() for keyword in scoring.get("hard_exclude_venues", [])]
     hard_must_have_any = [str(keyword).lower() for keyword in scoring.get("hard_must_have_any", [])]
     soft_must_have_any = [str(keyword).lower() for keyword in scoring.get("soft_must_have_any", [])]
 
@@ -718,6 +719,12 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
 
     score = 0.0
     reasons: List[str] = []
+
+    for venue in hard_exclude_venues:
+        if venue and contains_term(venue_text, venue):
+            paper.score = -999.0
+            paper.reasons = [f"hard-exclude-venue:{venue}"]
+            return paper
 
     for keyword in hard_exclude_keywords:
         if keyword and contains_term(text_content, keyword):
@@ -1070,15 +1077,16 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 
     focus_terms = [
         "medical imaging + deep learning",
-        "brain / neuroimaging",
-        "brain-gut axis",
-        "microbiome + neuroimaging",
+        "MRI harmonization",
+        "DWI / q-space synthesis",
+        "noise correction",
+        "quality assessment",
+        "unpaired image translation",
         "Alzheimer / dementia / MCI",
-        "MRI / fMRI / PET / amyloid / tau",
         "image synthesis / enhancement",
-        "diffusion / generative AI",
+        "conditional diffusion / flow models",
         "foundation & vision-language models",
-        "top journals and conferences",
+        "top journals, conferences, and arXiv",
     ]
 
     source_badges = "".join(
@@ -1396,7 +1404,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning and machine learning papers in medical imaging, neuroimaging, brain-gut axis, Alzheimer diagnosis, image synthesis, and radiology foundation models.</p>
+        <p class="subtitle">Daily radar for deep learning papers in medical image synthesis, MRI harmonization, diffusion-weighted imaging, noise correction, quality assessment, Alzheimer diagnosis, and radiology foundation models.</p>
       </header>
     </div>
   </div>

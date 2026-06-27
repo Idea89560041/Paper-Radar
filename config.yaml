@@ -26,6 +26,11 @@ research_profile:
     - "brain MRI medical image synthesis diffusion model"
     - "neuroimage enhancement super resolution denoising deep learning"
     - "medical image synthesis enhancement brain MRI"
+    - "MRI harmonization invertible flow deep learning"
+    - "diffusion-weighted image synthesis q-space deep learning"
+    - "DWI noise correction conditional diffusion unpaired data"
+    - "medical image quality assessment transformer deep learning"
+    - "segment anything model medical image synthesis"
     - "multimodal brain MRI PET diagnosis artificial intelligence"
     - "foundation model medical imaging brain MRI"
     - "vision language model radiology neuroimaging"
@@ -36,6 +41,7 @@ research_profile:
     - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
     - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR radiomics[Title/Abstract])'
     - '("medical image synthesis"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "super resolution"[Title/Abstract] OR super-resolution[Title/Abstract] OR denoising[Title/Abstract] OR "diffusion model"[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
+    - '("MRI harmonization"[Title/Abstract] OR harmonization[Title/Abstract] OR "diffusion-weighted image"[Title/Abstract] OR DWI[Title/Abstract] OR q-space[Title/Abstract] OR "noise correction"[Title/Abstract] OR "quality assessment"[Title/Abstract]) AND (MRI[Title/Abstract] OR "medical image"[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "flow model"[Title/Abstract] OR "foundation model"[Title/Abstract])'
     - '("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR multimodal[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (diagnosis[Title/Abstract] OR classification[Title/Abstract] OR prediction[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "large language model"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract])'
 
@@ -43,6 +49,12 @@ research_profile:
     - "brain neuroimaging medical imaging deep learning"
     - "Alzheimer MRI PET deep learning"
     - "brain MRI diffusion model synthesis"
+    - "MRI harmonization invertible flow model"
+    - "diffusion weighted image synthesis q-space"
+    - "conditional diffusion noise correction MRI"
+    - "unpaired medical image translation diffusion"
+    - "medical image quality assessment transformer"
+    - "segment anything medical image synthesis"
     - "medical image enhancement neuroimaging deep learning"
     - "multi organ medical imaging diagnosis deep learning"
     - "foundation model medical imaging brain"
@@ -57,6 +69,11 @@ research_profile:
     - "multi-organ guided diagnosis medical imaging AI"
     - "Alzheimer's disease diagnosis MRI PET deep learning"
     - "brain MRI medical image synthesis diffusion model"
+    - "MRI harmonization invertible hierarchy flow"
+    - "diffusion-weighted image synthesis q-space deep learning"
+    - "conditional diffusion model noise correction MRI unpaired"
+    - "medical image quality assessment transformer"
+    - "segment anything model medical image synthesis"
     - "neuroimage enhancement super-resolution denoising"
     - "medical imaging foundation model brain MRI"
     - "vision-language model radiology neuroimaging"
@@ -110,7 +127,6 @@ top_journal_families:
     - "npj Digital Medicine"
     - "npj Parkinson's Disease"
     - "npj Aging"
-    - "Scientific Reports"
     - "Science"
     - "Science Translational Medicine"
     - "Science Advances"
@@ -169,6 +185,11 @@ top_journal_families:
     - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
     - "brain-gut gut-brain microbiome neuroimaging machine learning"
     - "medical image synthesis enhancement brain MRI diffusion model"
+    - "MRI harmonization invertible flow model deep learning"
+    - "diffusion-weighted image synthesis q-space deep learning"
+    - "conditional diffusion noise correction MRI unpaired data"
+    - "medical image quality assessment transformer deep learning"
+    - "segment anything model medical image synthesis"
     - "multi-organ multimodal medical imaging diagnosis deep learning"
     - "foundation model vision-language large multimodal model radiology brain"
 
@@ -198,6 +219,19 @@ scoring:
     - guideline
     - consensus
 
+  hard_exclude_venues:
+    - Scientific Reports
+    - Frontiers
+    - Frontiers in
+    - Frontiers of
+    - Diagnostics
+    - Applied Sciences
+    - Sensors
+    - Cureus
+    - Heliyon
+    - PLOS ONE
+    - IEEE Access
+
   hard_must_have_any:
     - deep learning
     - deep-learning
@@ -221,12 +255,18 @@ scoring:
     - vision language
     - large multimodal model
     - large language model
+    - conditional diffusion
     - denoising diffusion
     - latent diffusion
+    - diffusion model
     - diffusion-based generative
     - diffusion generative
     - score-based generative
     - flow matching
+    - flow model
+    - invertible flow
+    - invertible hierarchy flow
+    - normalizing flow
     - generative AI
     - generative adversarial
     - GAN
@@ -278,6 +318,23 @@ scoring:
     "image synthesis": 5
     "medical image synthesis": 6
     "image enhancement": 5
+    "MRI harmonization": 7
+    harmonization: 4
+    "diffusion-weighted": 7
+    "diffusion weighted": 7
+    DWI: 7
+    "q-space": 7
+    "noise correction": 7
+    "quality assessment": 6
+    "no-reference": 4
+    "conditional diffusion": 8
+    "invertible flow": 7
+    "invertible hierarchy flow": 8
+    "flow model": 6
+    "unpaired data": 6
+    unpaired: 4
+    "image translation": 5
+    "segment anything": 4
     "super resolution": 5
     super-resolution: 5
     denoising: 4
@@ -301,6 +358,10 @@ scoring:
     MRI: 4
     fMRI: 5
     PET: 4
+    DWI: 6
+    "diffusion-weighted": 6
+    "q-space": 6
+    "MRI harmonization": 6
     "brain MRI": 7
     "brain imaging": 6
     "structural MRI": 5
@@ -349,8 +410,12 @@ scoring:
     "Med Image Anal": 8
     "IEEE Transactions on Medical Imaging": 8
     "IEEE Trans Med Imaging": 8
+    "Pattern Recognition": 7
+    "IEEE Transactions on Pattern Analysis and Machine Intelligence": 8
+    "IEEE Trans Pattern Anal Mach Intell": 8
     "Radiology: Artificial Intelligence": 8
     "Radiology": 7
+    "arXiv": 4
     "MICCAI": 8
     "Medical Image Computing and Computer Assisted Intervention": 8
     "MIDL": 7
