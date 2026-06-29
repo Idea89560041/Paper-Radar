@@ -845,41 +845,55 @@ def dedupe(papers: Iterable[Paper]) -> List[Paper]:
 
 
 VENUE_CATEGORY_LABELS = {
-    "flagship": "Flagship & Society Journals",
+    "flagship_main": "Flagship Main Journals",
+    "flagship_subjournal": "Flagship Family Journals",
+    "flagship": "Flagship Family Journals",
     "top_imaging_ai": "Top Imaging / AI Venues",
     "preprint": "Preprints",
     "other": "Other Journals",
 }
 
 VENUE_CATEGORY_DESCRIPTIONS = {
-    "flagship": "Nature, Science, Cell, Lancet and selected high-impact family journals.",
+    "flagship_main": "Nature, Science, Cell, and The Lancet main journals.",
+    "flagship_subjournal": "Nature, Science, Cell, and Lancet family journals such as Nature Communications and npj journals.",
+    "flagship": "Nature, Science, Cell, and Lancet family journals such as Nature Communications and npj journals.",
     "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
     "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
     "other": "Relevant deep-learning papers from broader indexed journals.",
 }
 
 DEFAULT_VENUE_CATEGORIES = {
-    "flagship": [
+    "flagship_main": [
         "Nature",
+        "Science",
+        "Cell",
+        "The Lancet",
+    ],
+    "flagship_subjournal": [
         "Nature Medicine",
         "Nature Neuroscience",
         "Nature Biomedical Engineering",
         "Nature Methods",
         "Nature Communications",
         "Communications Medicine",
+        "Communications Biology",
         "npj Digital Medicine",
-        "Science",
+        "npj Parkinson's Disease",
+        "npj Aging",
         "Science Translational Medicine",
         "Science Advances",
-        "Cell",
+        "Science Robotics",
         "Neuron",
+        "Cell Reports",
         "Cell Reports Medicine",
+        "Cell Reports Methods",
         "Patterns",
-        "The Lancet",
+        "iScience",
         "Lancet Digital Health",
         "The Lancet Digital Health",
         "Lancet Neurology",
         "The Lancet Neurology",
+        "The Lancet Healthy Longevity",
         "eBioMedicine",
         "eClinicalMedicine",
     ],
@@ -1057,14 +1071,30 @@ def cfg_venue_terms(cfg: Dict[str, Any], category: str) -> List[str]:
     return DEFAULT_VENUE_CATEGORIES.get(category, [])
 
 
+def normalize_venue_name(value: str | None) -> str:
+    text = clean_text(value).lower()
+    text = re.sub(r"^the\s+", "", text)
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def venue_exact_match(venue: str | None, terms: Iterable[str]) -> bool:
+    venue_name = normalize_venue_name(venue)
+    if not venue_name:
+        return False
+    return any(venue_name == normalize_venue_name(term) for term in terms)
+
+
 def classify_venue_category(paper: Paper, cfg: Dict[str, Any]) -> str:
     text = " ".join([paper.source or "", paper.venue or "", paper.url or ""]).lower()
     for term in cfg_venue_terms(cfg, "preprint"):
         if contains_term(text, term):
             return "preprint"
-    for term in cfg_venue_terms(cfg, "flagship"):
+    for term in cfg_venue_terms(cfg, "flagship_subjournal") + cfg_venue_terms(cfg, "flagship"):
         if contains_term(text, term):
-            return "flagship"
+            return "flagship_subjournal"
+    if venue_exact_match(paper.venue, cfg_venue_terms(cfg, "flagship_main")):
+        return "flagship_main"
     for term in cfg_venue_terms(cfg, "top_imaging_ai"):
         if contains_term(text, term):
             return "top_imaging_ai"
@@ -1522,7 +1552,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 
     indexed_papers = list(enumerate(papers, 1))
     rows = []
-    section_order = ["flagship", "top_imaging_ai", "preprint", "other"]
+    section_order = ["flagship_main", "flagship_subjournal", "top_imaging_ai", "preprint", "other"]
     for category in section_order:
         grouped = [(index, paper) for index, paper in indexed_papers if classify_venue_category(paper, cfg) == category]
         if not grouped:

@@ -246,25 +246,35 @@ top_journal_families:
     - "radiology foundation model report generation vision-language"
 
 venue_categories:
-  flagship:
+  flagship_main:
     - "Nature"
+    - "Science"
+    - "Cell"
+    - "The Lancet"
+
+  flagship_subjournal:
     - "Nature Medicine"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
     - "Nature Methods"
     - "Nature Communications"
     - "Communications Medicine"
+    - "Communications Biology"
     - "npj Digital Medicine"
-    - "Science"
+    - "npj Parkinson's Disease"
+    - "npj Aging"
     - "Science Translational Medicine"
     - "Science Advances"
-    - "Cell"
+    - "Science Robotics"
     - "Neuron"
+    - "Cell Reports"
     - "Cell Reports Medicine"
+    - "Cell Reports Methods"
     - "Patterns"
-    - "The Lancet"
+    - "iScience"
     - "The Lancet Digital Health"
     - "The Lancet Neurology"
+    - "The Lancet Healthy Longevity"
     - "eBioMedicine"
     - "eClinicalMedicine"
 
