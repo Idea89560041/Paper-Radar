@@ -939,12 +939,7 @@ TOPIC_RULES = [
         [
             "image synthesis",
             "medical image synthesis",
-            "harmonization",
-            "DWI",
-            "diffusion-weighted",
-            "q-space",
             "denoising",
-            "noise correction",
             "super resolution",
             "super-resolution",
             "enhancement",
@@ -966,6 +961,20 @@ TOPIC_RULES = [
             "GAN",
             "VAE",
             "generative",
+        ],
+    ),
+    (
+        "Agentic Neuroimaging",
+        [
+            "AI agent",
+            "artificial intelligence agent",
+            "agentic AI",
+            "LLM agent",
+            "large language model agent",
+            "multi-agent",
+            "autonomous agent",
+            "neuroimaging agent",
+            "radiology agent",
         ],
     ),
     (
@@ -998,11 +1007,22 @@ TOPIC_RULES = [
         ],
     ),
     (
-        "Multi-organ / Radiology",
+        "Whole-body / Multi-organ Imaging",
         [
             "multi-organ",
             "multi organ",
             "whole-body",
+            "whole body",
+            "total-body",
+            "total body",
+            "whole-body PET",
+            "whole body PET",
+            "total-body PET",
+            "total body PET",
+            "whole-body MRI",
+            "whole body MRI",
+            "PET/MRI",
+            "PET-MRI",
             "radiology",
             "diagnosis",
             "classification",
@@ -1263,7 +1283,8 @@ def summarize_with_openai(
         prompt = f"""You are a research assistant for {profile_name}.
 Summarize the paper in concise Chinese for a medical imaging AI researcher.
 Please classify it as one of: brain-gut axis, multi-organ diagnosis, Alzheimer diagnosis,
-image synthesis/enhancement, foundation model, radiology/neuroimaging AI, or other.
+image synthesis/enhancement, agentic neuroimaging, whole-body PET/MRI, foundation model,
+radiology/neuroimaging AI, or other.
 Include the research problem, data/modality, method, key finding, and why it is worth reading.
 Do not invent claims not supported by the abstract.
 
@@ -1420,10 +1441,11 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 
     focus_terms = [
         "medical imaging + deep learning",
-        "MRI harmonization",
-        "DWI / q-space synthesis",
-        "noise correction",
-        "quality assessment",
+        "neuroimaging / brain MRI / PET",
+        "agentic AI for neuroimaging",
+        "whole-body PET / MRI",
+        "multi-organ imaging diagnosis",
+        "image quality assessment",
         "unpaired image translation",
         "Alzheimer / dementia / MCI",
         "image synthesis / enhancement",
@@ -1817,7 +1839,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers in medical image synthesis, MRI harmonization, diffusion-weighted imaging, noise correction, quality assessment, Alzheimer diagnosis, and radiology foundation models.</p>
+        <p class="subtitle">Daily radar for deep learning papers in neuroimaging, brain MRI/PET, agentic AI for imaging, whole-body PET/MRI, multi-organ diagnosis, image synthesis, Alzheimer diagnosis, and radiology foundation models.</p>
       </header>
     </div>
   </div>

@@ -2,7 +2,7 @@
 
 This repository powers a daily GitHub Pages dashboard for recent deep learning papers related to Pengli Zhu's medical image analysis research.
 
-The radar focuses on medical image synthesis, MRI harmonization, diffusion-weighted imaging, noise correction, image quality assessment, Alzheimer disease diagnosis, brain-gut / microbiome neuroimaging, conditional diffusion and flow models, foundation models, and vision-language or multimodal models for radiology.
+The radar focuses on neuroimaging, brain MRI/PET, agentic AI for medical imaging, whole-body PET/MRI, multi-organ imaging diagnosis, medical image synthesis, image quality assessment, Alzheimer disease diagnosis, brain-gut / microbiome neuroimaging, foundation models, and vision-language or multimodal models for radiology.
 
 The site is updated automatically every day at about 16:10 China/Hong Kong/Singapore time:
 
