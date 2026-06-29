@@ -10,6 +10,11 @@ site:
   title: "Medical Imaging Deep Learning Paper Radar"
   output_dir: site
   max_papers: 30
+  min_preprints: 6
+  max_per_topic: 6
+  max_per_source: 18
+  max_per_venue_category: 12
+  max_ai_summaries: 0
 
 research_profile:
   name: "Medical Imaging Deep Learning - Brain & Neuroimage"
@@ -36,6 +41,12 @@ research_profile:
     - "vision language model radiology neuroimaging"
     - "large multimodal model radiology brain imaging"
     - "generative AI neuroimaging synthesis"
+    - "self-supervised medical image representation learning"
+    - "domain generalization medical imaging deep learning"
+    - "uncertainty calibration medical imaging deep learning"
+    - "federated learning medical imaging MRI"
+    - "radiology foundation model report generation"
+    - "multimodal radiology vision-language model"
 
   pubmed_queries:
     - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
@@ -44,6 +55,7 @@ research_profile:
     - '("MRI harmonization"[Title/Abstract] OR harmonization[Title/Abstract] OR "diffusion-weighted image"[Title/Abstract] OR DWI[Title/Abstract] OR q-space[Title/Abstract] OR "noise correction"[Title/Abstract] OR "quality assessment"[Title/Abstract]) AND (MRI[Title/Abstract] OR "medical image"[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "flow model"[Title/Abstract] OR "foundation model"[Title/Abstract])'
     - '("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR multimodal[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (diagnosis[Title/Abstract] OR classification[Title/Abstract] OR prediction[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "large language model"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract])'
+    - '("self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR "domain generalization"[Title/Abstract] OR "domain adaptation"[Title/Abstract] OR "uncertainty"[Title/Abstract] OR calibration[Title/Abstract] OR "federated learning"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR MRI[Title/Abstract] OR neuroimaging[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR transformer[Title/Abstract] OR "neural network"[Title/Abstract] OR "foundation model"[Title/Abstract])'
 
   arxiv_queries:
     - "brain neuroimaging medical imaging deep learning"
@@ -61,31 +73,48 @@ research_profile:
     - "vision language model radiology brain"
     - "large multimodal model medical imaging"
     - "MICCAI brain MRI diffusion model"
+    - "self supervised medical image representation learning"
+    - "domain generalization medical imaging deep learning"
+    - "uncertainty calibration medical imaging deep learning"
+    - "federated learning medical imaging MRI"
+    - "radiology foundation model report generation"
+    - "multimodal radiology vision language model"
+    - "medical image registration diffusion model"
+    - "3D medical image generative model"
 
   semantic_scholar_queries:
+    - "Alzheimer's disease diagnosis MRI PET deep learning"
+    - "brain MRI medical image synthesis diffusion model"
+    - "medical imaging foundation model brain MRI"
+    - "self-supervised medical image representation learning"
+    - "domain generalization medical imaging deep learning"
     - "brain-gut axis neuroimaging artificial intelligence"
     - "gut microbiome neuroimaging Alzheimer's machine learning"
     - "microbiome MRI dementia neuroimaging deep learning"
     - "multi-organ guided diagnosis medical imaging AI"
-    - "Alzheimer's disease diagnosis MRI PET deep learning"
-    - "brain MRI medical image synthesis diffusion model"
     - "MRI harmonization invertible hierarchy flow"
     - "diffusion-weighted image synthesis q-space deep learning"
     - "conditional diffusion model noise correction MRI unpaired"
     - "medical image quality assessment transformer"
     - "segment anything model medical image synthesis"
     - "neuroimage enhancement super-resolution denoising"
-    - "medical imaging foundation model brain MRI"
     - "vision-language model radiology neuroimaging"
     - "large multimodal model radiology medical imaging"
     - "MICCAI neuroimaging deep learning"
     - "Medical Image Analysis brain MRI artificial intelligence"
+    - "uncertainty calibration medical imaging deep learning"
+    - "federated learning medical imaging MRI"
+    - "radiology foundation model report generation"
+    - "multimodal radiology vision-language model"
+    - "medical image registration diffusion model"
 
 sources:
   pubmed:
     enabled: true
-    max_results_per_query: 40
+    max_queries: 12
+    max_results_per_query: 30
     sleep_seconds: 0.55
+    timeout_seconds: 20
     top_journal_family_search: true
     top_journal_chunk_size: 18
     tool: "medical-ai-paper-digest-bot"
@@ -93,8 +122,10 @@ sources:
 
   arxiv:
     enabled: true
-    max_results_per_query: 25
+    max_queries: 21
+    max_results_per_query: 20
     sleep_seconds: 3.1
+    timeout_seconds: 20
     categories:
       - "cs.CV"
       - "cs.AI"
@@ -105,14 +136,18 @@ sources:
 
   semantic_scholar:
     enabled: true
-    max_results_per_query: 30
-    sleep_seconds: 1.2
+    max_queries: 14
+    max_queries_without_api_key: 6
+    max_results_per_query: 20
+    sleep_seconds: 1.0
+    timeout_seconds: 20
 
   crossref_top_journals:
     enabled: true
-    rows_per_query: 5
-    max_calls: 90
-    sleep_seconds: 0.9
+    rows_per_query: 2
+    max_calls: 16
+    sleep_seconds: 0.3
+    timeout_seconds: 8
 
 top_journal_families:
   pubmed_journals:
@@ -192,6 +227,62 @@ top_journal_families:
     - "segment anything model medical image synthesis"
     - "multi-organ multimodal medical imaging diagnosis deep learning"
     - "foundation model vision-language large multimodal model radiology brain"
+    - "self-supervised representation learning medical imaging"
+    - "domain generalization domain adaptation medical imaging deep learning"
+    - "uncertainty calibration medical imaging deep learning"
+    - "federated learning medical imaging MRI"
+    - "radiology foundation model report generation vision-language"
+
+venue_categories:
+  flagship:
+    - "Nature"
+    - "Nature Medicine"
+    - "Nature Neuroscience"
+    - "Nature Biomedical Engineering"
+    - "Nature Methods"
+    - "Nature Communications"
+    - "Communications Medicine"
+    - "npj Digital Medicine"
+    - "Science"
+    - "Science Translational Medicine"
+    - "Science Advances"
+    - "Cell"
+    - "Neuron"
+    - "Cell Reports Medicine"
+    - "Patterns"
+    - "The Lancet"
+    - "The Lancet Digital Health"
+    - "The Lancet Neurology"
+    - "eBioMedicine"
+    - "eClinicalMedicine"
+
+  top_imaging_ai:
+    - "Medical Image Analysis"
+    - "Med Image Anal"
+    - "IEEE Transactions on Medical Imaging"
+    - "IEEE Trans Med Imaging"
+    - "Radiology"
+    - "Radiology: Artificial Intelligence"
+    - "Pattern Recognition"
+    - "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    - "IEEE Trans Pattern Anal Mach Intell"
+    - "MICCAI"
+    - "Medical Image Computing and Computer Assisted Intervention"
+    - "MIDL"
+    - "Medical Imaging with Deep Learning"
+    - "ISBI"
+    - "International Symposium on Biomedical Imaging"
+    - "NeurIPS"
+    - "ICLR"
+    - "ICML"
+    - "CVPR"
+    - "ICCV"
+    - "ECCV"
+
+  preprint:
+    - "arXiv"
+    - "bioRxiv"
+    - "medRxiv"
 
 scoring:
   min_score: 8
@@ -276,6 +367,12 @@ scoring:
     - contrastive learning
     - representation learning
     - transfer learning
+    - domain adaptation
+    - domain generalization
+    - federated learning
+    - uncertainty estimation
+    - masked image modeling
+    - pretraining
 
   soft_must_have_any:
     - brain
@@ -348,7 +445,17 @@ scoring:
     transformer: 3
     "self-supervised": 4
     "contrastive learning": 4
+    "representation learning": 4
     "domain adaptation": 3
+    "domain generalization": 4
+    "federated learning": 3
+    uncertainty: 3
+    calibration: 2
+    "uncertainty estimation": 4
+    "masked image modeling": 4
+    pretraining: 3
+    "flow matching": 5
+    "report generation": 3
 
   brain_neuro_focus_weights:
     brain: 4

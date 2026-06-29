@@ -290,6 +290,8 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
     profile = cfg.get("research_profile", {})
     queries = list(profile.get("pubmed_queries") or profile.get("queries") or [])
     queries.extend(build_pubmed_top_journal_queries(cfg))
+    max_queries = int(source_cfg.get("max_queries", len(queries)))
+    queries = queries[:max_queries]
     if not queries:
         return []
 
@@ -303,6 +305,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
     email = os.getenv("NCBI_EMAIL") or source_cfg.get("email") or resolve_mail_to(cfg)
     tool = source_cfg.get("tool", "medical-ai-paper-digest-bot")
     sleep_seconds = float(source_cfg.get("sleep_seconds", 0.35 if api_key else 0.55))
+    timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
 
     base_params = {"tool": tool}
     if email:
@@ -327,6 +330,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
             data = requests_get_json(
                 "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
                 params=esearch_params,
+                timeout=timeout_seconds,
             )
         except Exception as exc:
             print(f"[warn] PubMed esearch failed for {query!r}: {exc}", file=sys.stderr)
@@ -343,6 +347,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
             xml_text = requests_get_text(
                 "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
                 params=efetch_params,
+                timeout=timeout_seconds,
             )
             root = ET.fromstring(xml_text)
         except Exception as exc:
@@ -444,11 +449,14 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
         return []
 
     profile = cfg.get("research_profile", {})
-    queries = profile.get("arxiv_queries") or profile.get("queries") or []
+    queries = list(profile.get("arxiv_queries") or profile.get("queries") or [])
+    max_queries = int(source_cfg.get("max_queries", len(queries)))
+    queries = queries[:max_queries]
     max_results = int(source_cfg.get("max_results_per_query", 25))
     categories = source_cfg.get("categories", [])
     lookback_days = int(cfg.get("lookback_days", 14))
     sleep_seconds = float(source_cfg.get("sleep_seconds", 3.1))
+    timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
 
     papers: List[Paper] = []
     for query in queries:
@@ -461,7 +469,12 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
         }
         url = "https://export.arxiv.org/api/query?" + urllib.parse.urlencode(params, safe=':+()+"')
         try:
-            feed = feedparser.parse(url)
+            feed_xml = requests_get_text(
+                url,
+                headers={"User-Agent": "daily-medical-ai-paper-digest-bot/1.2"},
+                timeout=timeout_seconds,
+            )
+            feed = feedparser.parse(feed_xml)
             if getattr(feed, "bozo", False) and not getattr(feed, "entries", []):
                 raise RuntimeError(getattr(feed, "bozo_exception", "unknown feed parse error"))
         except Exception as exc:
@@ -504,7 +517,7 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
         return []
 
     profile = cfg.get("research_profile", {})
-    queries = profile.get("semantic_scholar_queries") or profile.get("queries") or []
+    queries = list(profile.get("semantic_scholar_queries") or profile.get("queries") or [])
     max_results = int(source_cfg.get("max_results_per_query", 20))
     fields = (
         "title,abstract,authors,year,venue,url,publicationDate,citationCount,"
@@ -514,12 +527,17 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
     api_key = os.getenv("S2_API_KEY")
     if api_key:
         headers["x-api-key"] = api_key
+    max_queries = int(source_cfg.get("max_queries", len(queries)))
+    if not api_key:
+        max_queries = min(max_queries, int(source_cfg.get("max_queries_without_api_key", 4)))
+    queries = queries[:max_queries]
 
     lookback_days = int(cfg.get("lookback_days", 14))
     today_utc = dt.datetime.now(dt.timezone.utc).date()
     start_year = today_utc.year - (1 if today_utc.timetuple().tm_yday <= lookback_days + 2 else 0)
     year_param = f"{start_year}-"
     sleep_seconds = float(source_cfg.get("sleep_seconds", 1.2))
+    timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
 
     papers: List[Paper] = []
     for query in queries:
@@ -529,9 +547,17 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
                 "https://api.semanticscholar.org/graph/v1/paper/search",
                 headers=headers,
                 params=params,
+                timeout=timeout_seconds,
             )
         except Exception as exc:
             print(f"[warn] Semantic Scholar query failed for {query!r}: {exc}", file=sys.stderr)
+            status_code = getattr(getattr(exc, "response", None), "status_code", None)
+            if status_code == 429 and not api_key:
+                print(
+                    "[warn] Semantic Scholar is rate-limited without S2_API_KEY; skipping remaining Semantic Scholar queries.",
+                    file=sys.stderr,
+                )
+                break
             time.sleep(sleep_seconds)
             continue
 
@@ -591,6 +617,7 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
     from_date = (today - dt.timedelta(days=lookback_days)).isoformat()
     until_date = today.isoformat()
     sleep_seconds = float(source_cfg.get("sleep_seconds", 1.0))
+    timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
 
     mailto = os.getenv("CROSSREF_MAILTO") or os.getenv("NCBI_EMAIL") or resolve_mail_to(cfg)
     headers = {
@@ -622,7 +649,12 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
                 params["mailto"] = mailto
 
             try:
-                data = requests_get_json("https://api.crossref.org/works", headers=headers, params=params)
+                data = requests_get_json(
+                    "https://api.crossref.org/works",
+                    headers=headers,
+                    params=params,
+                    timeout=timeout_seconds,
+                )
             except Exception as exc:
                 print(f"[warn] Crossref query failed for {journal!r} / {topic_query!r}: {exc}", file=sys.stderr)
                 time.sleep(sleep_seconds)
@@ -812,6 +844,298 @@ def dedupe(papers: Iterable[Paper]) -> List[Paper]:
     return out
 
 
+VENUE_CATEGORY_LABELS = {
+    "flagship": "Flagship & Society Journals",
+    "top_imaging_ai": "Top Imaging / AI Venues",
+    "preprint": "Preprints",
+    "other": "Other Journals",
+}
+
+VENUE_CATEGORY_DESCRIPTIONS = {
+    "flagship": "Nature, Science, Cell, Lancet and selected high-impact family journals.",
+    "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
+    "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
+    "other": "Relevant deep-learning papers from broader indexed journals.",
+}
+
+DEFAULT_VENUE_CATEGORIES = {
+    "flagship": [
+        "Nature",
+        "Nature Medicine",
+        "Nature Neuroscience",
+        "Nature Biomedical Engineering",
+        "Nature Methods",
+        "Nature Communications",
+        "Communications Medicine",
+        "npj Digital Medicine",
+        "Science",
+        "Science Translational Medicine",
+        "Science Advances",
+        "Cell",
+        "Neuron",
+        "Cell Reports Medicine",
+        "Patterns",
+        "The Lancet",
+        "Lancet Digital Health",
+        "The Lancet Digital Health",
+        "Lancet Neurology",
+        "The Lancet Neurology",
+        "eBioMedicine",
+        "eClinicalMedicine",
+    ],
+    "top_imaging_ai": [
+        "Medical Image Analysis",
+        "Med Image Anal",
+        "IEEE Transactions on Medical Imaging",
+        "IEEE Trans Med Imaging",
+        "Radiology",
+        "Radiology: Artificial Intelligence",
+        "Pattern Recognition",
+        "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "IEEE Trans Pattern Anal Mach Intell",
+        "MICCAI",
+        "Medical Image Computing and Computer Assisted Intervention",
+        "MIDL",
+        "Medical Imaging with Deep Learning",
+        "ISBI",
+        "International Symposium on Biomedical Imaging",
+        "NeurIPS",
+        "ICLR",
+        "ICML",
+        "CVPR",
+        "ICCV",
+        "ECCV",
+    ],
+    "preprint": ["arXiv", "bioRxiv", "medRxiv"],
+}
+
+TOPIC_RULES = [
+    (
+        "Brain-Gut / Microbiome",
+        [
+            "brain-gut",
+            "gut-brain",
+            "brain gut axis",
+            "gut brain axis",
+            "microbiome",
+            "microbiota",
+        ],
+    ),
+    (
+        "AD / Dementia Diagnosis",
+        [
+            "Alzheimer",
+            "Alzheimer's",
+            "dementia",
+            "mild cognitive impairment",
+            "MCI",
+            "amyloid",
+            "tau",
+            "neurodegenerative",
+        ],
+    ),
+    (
+        "Synthesis / Restoration",
+        [
+            "image synthesis",
+            "medical image synthesis",
+            "harmonization",
+            "DWI",
+            "diffusion-weighted",
+            "q-space",
+            "denoising",
+            "noise correction",
+            "super resolution",
+            "super-resolution",
+            "enhancement",
+            "reconstruction",
+            "image translation",
+            "unpaired",
+        ],
+    ),
+    (
+        "Generative Methods",
+        [
+            "diffusion model",
+            "conditional diffusion",
+            "latent diffusion",
+            "flow matching",
+            "flow model",
+            "invertible flow",
+            "normalizing flow",
+            "GAN",
+            "VAE",
+            "generative",
+        ],
+    ),
+    (
+        "Foundation / VLM",
+        [
+            "foundation model",
+            "vision-language",
+            "vision language",
+            "large multimodal model",
+            "large language model",
+            "Segment Anything",
+            "report generation",
+            "multimodal",
+        ],
+    ),
+    (
+        "Generalization / Learning",
+        [
+            "self-supervised",
+            "contrastive learning",
+            "representation learning",
+            "domain adaptation",
+            "domain generalization",
+            "federated learning",
+            "transfer learning",
+            "pretraining",
+            "masked autoencoder",
+            "uncertainty",
+            "calibration",
+        ],
+    ),
+    (
+        "Multi-organ / Radiology",
+        [
+            "multi-organ",
+            "multi organ",
+            "whole-body",
+            "radiology",
+            "diagnosis",
+            "classification",
+            "prediction",
+        ],
+    ),
+    (
+        "Neuroimaging Methods",
+        [
+            "neuroimaging",
+            "neuroimage",
+            "brain MRI",
+            "brain imaging",
+            "MRI",
+            "fMRI",
+            "PET",
+            "connectome",
+            "segmentation",
+            "registration",
+            "quality assessment",
+        ],
+    ),
+]
+
+
+def cfg_venue_terms(cfg: Dict[str, Any], category: str) -> List[str]:
+    configured = cfg.get("venue_categories", {})
+    if isinstance(configured, dict):
+        terms = configured.get(category)
+        if isinstance(terms, list):
+            return [str(term) for term in terms]
+    return DEFAULT_VENUE_CATEGORIES.get(category, [])
+
+
+def classify_venue_category(paper: Paper, cfg: Dict[str, Any]) -> str:
+    text = " ".join([paper.source or "", paper.venue or "", paper.url or ""]).lower()
+    for term in cfg_venue_terms(cfg, "preprint"):
+        if contains_term(text, term):
+            return "preprint"
+    for term in cfg_venue_terms(cfg, "flagship"):
+        if contains_term(text, term):
+            return "flagship"
+    for term in cfg_venue_terms(cfg, "top_imaging_ai"):
+        if contains_term(text, term):
+            return "top_imaging_ai"
+    return "other"
+
+
+def venue_category_label(category: str) -> str:
+    return VENUE_CATEGORY_LABELS.get(category, VENUE_CATEGORY_LABELS["other"])
+
+
+def infer_topic(paper: Paper) -> str:
+    text = " ".join(
+        [
+            paper.title or "",
+            paper.abstract or "",
+            paper.tldr or "",
+            paper.venue or "",
+            " ".join(paper.reasons or []),
+        ]
+    ).lower()
+    for label, terms in TOPIC_RULES:
+        if any(contains_term(text, term) for term in terms):
+            return label
+    return "Other Deep Learning"
+
+
+def select_diverse_papers(papers: List[Paper], cfg: Dict[str, Any]) -> List[Paper]:
+    site_cfg = cfg.get("site", {})
+    max_papers = int(site_cfg.get("max_papers", cfg.get("email", {}).get("max_papers", 30)))
+    min_preprints = int(site_cfg.get("min_preprints", 6))
+    max_per_topic = int(site_cfg.get("max_per_topic", 7))
+    max_per_source = int(site_cfg.get("max_per_source", 18))
+    max_per_venue_category = int(site_cfg.get("max_per_venue_category", 14))
+
+    selected: List[Paper] = []
+    selected_ids: set[str] = set()
+    topic_counts: Dict[str, int] = {}
+    source_counts: Dict[str, int] = {}
+    category_counts: Dict[str, int] = {}
+
+    def add(paper: Paper, strict: bool = True, enforce_topic_cap: bool = True) -> bool:
+        if len(selected) >= max_papers:
+            return False
+        uid = paper.uid()
+        if uid in selected_ids:
+            return False
+        topic = infer_topic(paper)
+        source = paper.source or "Unknown"
+        category = classify_venue_category(paper, cfg)
+        if enforce_topic_cap and topic_counts.get(topic, 0) >= max_per_topic:
+            return False
+        if strict:
+            if source_counts.get(source, 0) >= max_per_source:
+                return False
+            if category_counts.get(category, 0) >= max_per_venue_category:
+                return False
+        selected.append(paper)
+        selected_ids.add(uid)
+        topic_counts[topic] = topic_counts.get(topic, 0) + 1
+        source_counts[source] = source_counts.get(source, 0) + 1
+        category_counts[category] = category_counts.get(category, 0) + 1
+        return True
+
+    preprints = [paper for paper in papers if classify_venue_category(paper, cfg) == "preprint"]
+    for paper in preprints:
+        if len([item for item in selected if classify_venue_category(item, cfg) == "preprint"]) >= min_preprints:
+            break
+        add(paper, strict=False, enforce_topic_cap=True)
+
+    for paper in papers:
+        if len(selected) >= max_papers:
+            break
+        add(paper, strict=True)
+
+    for paper in papers:
+        if len(selected) >= max_papers:
+            break
+        add(paper, strict=False, enforce_topic_cap=True)
+
+    for paper in papers:
+        if len(selected) >= max_papers:
+            break
+        add(paper, strict=False, enforce_topic_cap=False)
+
+    selected.sort(
+        key=lambda paper: (paper.score, parse_date(paper.published_date) or dt.date(1900, 1, 1)),
+        reverse=True,
+    )
+    return selected[:max_papers]
+
+
 def new_state() -> Dict[str, Any]:
     return {"sent_ids": {}, "sent_keys": {}, "updated_at": None}
 
@@ -901,10 +1225,19 @@ def fallback_summary(paper: Paper) -> str:
     return summary or "No abstract available."
 
 
-def summarize_with_openai(papers: List[Paper], cfg: Dict[str, Any]) -> None:
+def summarize_with_openai(
+    papers: List[Paper],
+    cfg: Dict[str, Any],
+    max_ai_summaries: int | None = None,
+) -> None:
     api_key = os.getenv("OPENAI_API_KEY")
     model = os.getenv("OPENAI_MODEL")
-    if not api_key or not model or not papers:
+    max_ai = int(
+        max_ai_summaries
+        if max_ai_summaries is not None
+        else cfg.get("email", {}).get("max_ai_summaries", 10)
+    )
+    if max_ai <= 0 or not api_key or not model or not papers:
         for paper in papers:
             paper.ai_summary = fallback_summary(paper)
         return
@@ -919,7 +1252,6 @@ def summarize_with_openai(papers: List[Paper], cfg: Dict[str, Any]) -> None:
             paper.ai_summary = fallback_summary(paper)
         return
 
-    max_ai = int(cfg.get("email", {}).get("max_ai_summaries", 10))
     profile_name = cfg.get("research_profile", {}).get("name", "Medical Imaging AI")
     sleep_seconds = float(cfg.get("openai_sleep_seconds", 0.5))
 
@@ -1043,12 +1375,17 @@ def make_email_text(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def paper_to_dict(paper: Paper) -> Dict[str, Any]:
+def paper_to_dict(paper: Paper, cfg: Dict[str, Any] | None = None) -> Dict[str, Any]:
+    cfg = cfg or {}
+    category = classify_venue_category(paper, cfg)
     return {
         "id": paper.uid(),
         "title": paper.title,
         "source": paper.source,
         "venue": paper.venue or "",
+        "venue_category": category,
+        "venue_category_label": venue_category_label(category),
+        "topic": infer_topic(paper),
         "published_date": paper.published_date or "",
         "authors": paper.authors,
         "summary": paper.ai_summary or fallback_summary(paper),
@@ -1072,8 +1409,14 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M UTC+8")
     min_score = scoring.get("min_score", 8)
     source_counts: Dict[str, int] = {}
+    category_counts: Dict[str, int] = {}
+    topic_counts: Dict[str, int] = {}
     for paper in papers:
         source_counts[paper.source] = source_counts.get(paper.source, 0) + 1
+        category = classify_venue_category(paper, cfg)
+        category_counts[category] = category_counts.get(category, 0) + 1
+        topic = infer_topic(paper)
+        topic_counts[topic] = topic_counts.get(topic, 0) + 1
 
     focus_terms = [
         "medical imaging + deep learning",
@@ -1096,11 +1439,18 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     if not source_badges:
         source_badges = '<span class="metric"><strong>No matches</strong>0</span>'
 
+    category_badges = "".join(
+        f'<span class="metric"><strong>{html.escape(venue_category_label(category))}</strong>{count}</span>'
+        for category, count in sorted(category_counts.items(), key=lambda item: venue_category_label(item[0]))
+    )
+    topic_badges = "".join(
+        f'<span class="chip alt">{html.escape(topic)} ({count})</span>'
+        for topic, count in sorted(topic_counts.items(), key=lambda item: (-item[1], item[0]))[:8]
+    )
     topic_chips = "".join(f'<span class="chip">{html.escape(term)}</span>' for term in focus_terms)
     query_preview = " / ".join(profile.get("queries", [])[:6])
 
-    rows = []
-    for index, paper in enumerate(papers, 1):
+    def render_paper(index: int, paper: Paper) -> str:
         authors = ", ".join(paper.authors[:10]) or "N/A"
         if len(paper.authors) > 10:
             authors += " et al."
@@ -1117,8 +1467,9 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         if paper.citation_count is not None:
             ids.append(f"Citations: {paper.citation_count}")
         id_line = " | ".join(ids)
-        rows.append(
-            f"""
+        category = classify_venue_category(paper, cfg)
+        topic = infer_topic(paper)
+        return f"""
       <article class="paper">
         <div class="paper-head">
           <div class="rank">{index}</div>
@@ -1128,6 +1479,8 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
               <span>{html.escape(paper.source)}</span>
               <span>{html.escape(paper.venue or 'N/A')}</span>
               <span>{html.escape(paper.published_date or 'N/A')}</span>
+              <span>{html.escape(venue_category_label(category))}</span>
+              <span>{html.escape(topic)}</span>
             </div>
           </div>
           <div class="score" title="Relevance score">{html.escape(str(paper.score))}</div>
@@ -1143,6 +1496,28 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
           </div>
         </details>
       </article>
+            """
+
+    indexed_papers = list(enumerate(papers, 1))
+    rows = []
+    section_order = ["flagship", "top_imaging_ai", "preprint", "other"]
+    for category in section_order:
+        grouped = [(index, paper) for index, paper in indexed_papers if classify_venue_category(paper, cfg) == category]
+        if not grouped:
+            continue
+        description = VENUE_CATEGORY_DESCRIPTIONS.get(category, "")
+        rows.append(
+            f"""
+      <section class="category-section" aria-label="{html.escape(venue_category_label(category), quote=True)}">
+        <div class="category-title">
+          <div>
+            <h3>{html.escape(venue_category_label(category))}</h3>
+            <p>{html.escape(description)}</p>
+          </div>
+          <span class="count-pill">{len(grouped)} papers</span>
+        </div>
+        {''.join(render_paper(index, paper) for index, paper in grouped)}
+      </section>
             """
         )
 
@@ -1160,7 +1535,10 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
             "generated_at": generated_at,
             "min_score": min_score,
             "paper_count": len(papers),
-            "papers": [paper_to_dict(paper) for paper in papers],
+            "source_counts": source_counts,
+            "venue_category_counts": {venue_category_label(key): value for key, value in category_counts.items()},
+            "topic_counts": topic_counts,
+            "papers": [paper_to_dict(paper, cfg) for paper in papers],
         },
         ensure_ascii=False,
         indent=2,
@@ -1268,6 +1646,10 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       color: #0f4f49;
       font-size: 13px;
     }}
+    .chip.alt {{
+      background: #eef2f7;
+      color: #445160;
+    }}
     main {{
       padding: 22px 0 42px;
     }}
@@ -1285,6 +1667,36 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       letter-spacing: 0;
     }}
     .small {{
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .category-section {{
+      margin: 0 0 26px;
+    }}
+    .category-title {{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 6px 0 10px;
+    }}
+    h3 {{
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }}
+    .category-title p {{
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .count-pill {{
+      flex: 0 0 auto;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
       color: var(--muted);
       font-size: 13px;
     }}
@@ -1395,6 +1807,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       .score {{ grid-column: 2; width: fit-content; }}
       .authors, .summary, details {{ margin-left: 0; }}
       .details-grid {{ grid-template-columns: 1fr; }}
+      .category-title {{ flex-direction: column; }}
       h1 {{ font-size: 25px; }}
     }}
   </style>
@@ -1416,11 +1829,13 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
           <span class="metric"><strong>Papers</strong>{len(papers)}</span>
           <span class="metric"><strong>Min score</strong>{html.escape(str(min_score))}</span>
           {source_badges}
+          {category_badges}
         </div>
       </div>
       <div class="focus-band">
         <strong>Research focus</strong>
         <div class="chips">{topic_chips}</div>
+        <div class="chips">{topic_badges}</div>
       </div>
     </section>
     <main>
@@ -1447,7 +1862,7 @@ def write_site(papers: List[Paper], cfg: Dict[str, Any], output_dir: str) -> Non
     payload = {
         "generated_at": generated_at,
         "paper_count": len(papers),
-        "papers": [paper_to_dict(paper) for paper in papers],
+        "papers": [paper_to_dict(paper, cfg) for paper in papers],
     }
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
     (out_dir / "papers.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1532,9 +1947,8 @@ def main() -> int:
     if args.web:
         site_cfg = cfg.get("site", {})
         output_dir = args.output_dir or site_cfg.get("output_dir", "site")
-        max_papers = int(site_cfg.get("max_papers", cfg.get("email", {}).get("max_papers", 30)))
-        papers = papers[:max_papers]
-        summarize_with_openai(papers, cfg)
+        papers = select_diverse_papers(papers, cfg)
+        summarize_with_openai(papers, cfg, max_ai_summaries=int(site_cfg.get("max_ai_summaries", 0)))
         write_site(papers, cfg, output_dir)
         print(f"[info] Wrote static site with {len(papers)} papers to {output_dir}.")
         return 0
