@@ -1999,9 +1999,23 @@ def main() -> int:
     if args.web:
         site_cfg = cfg.get("site", {})
         output_dir = args.output_dir or site_cfg.get("output_dir", "site")
+        if bool(site_cfg.get("use_sent_state", True)):
+            state_path = cfg.get("state_path", "data/sent_papers.json")
+            state = load_state(state_path)
+            sent_keys = state_keys_from_records(state)
+            before_count = len(papers)
+            papers = [paper for paper in papers if not already_sent(paper, state, sent_keys)]
+            print(f"[info] Web mode sent-state filter: {before_count} candidates, {len(papers)} new papers.")
+        else:
+            state_path = ""
+            state = {}
         papers = select_diverse_papers(papers, cfg)
         summarize_with_openai(papers, cfg, max_ai_summaries=int(site_cfg.get("max_ai_summaries", 0)))
         write_site(papers, cfg, output_dir)
+        if bool(site_cfg.get("use_sent_state", True)) and papers:
+            mark_sent(papers, state)
+            save_state(state_path, state)
+            print(f"[info] Updated sent-paper state with {len(papers)} web papers.")
         print(f"[info] Wrote static site with {len(papers)} papers to {output_dir}.")
         return 0
 

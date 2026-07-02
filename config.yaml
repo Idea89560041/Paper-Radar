@@ -10,6 +10,7 @@ site:
   title: "Medical Imaging Deep Learning Paper Radar"
   output_dir: site
   max_papers: 30
+  use_sent_state: true
   min_preprints: 6
   max_per_topic: 6
   max_per_source: 18
@@ -164,8 +165,10 @@ top_journal_families:
   pubmed_journals:
     - "Nature"
     - "Nature Medicine"
+    - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
+    - "Nature Computational Science"
     - "Nature Methods"
     - "Nature Communications"
     - "Communications Medicine"
@@ -184,7 +187,10 @@ top_journal_families:
     - "Cell Reports Methods"
     - "Patterns"
     - "iScience"
+    - "Advanced Science"
+    - "Advanced Science (Weinh)"
     - "The Lancet"
+    - "Lancet Digital Health"
     - "The Lancet Digital Health"
     - "The Lancet Neurology"
     - "The Lancet Healthy Longevity"
@@ -200,8 +206,10 @@ top_journal_families:
   crossref_journals:
     - "Nature"
     - "Nature Medicine"
+    - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
+    - "Nature Computational Science"
     - "Nature Methods"
     - "Nature Communications"
     - "Communications Medicine"
@@ -215,7 +223,9 @@ top_journal_families:
     - "Neuron"
     - "Cell Reports Medicine"
     - "Patterns"
+    - "Advanced Science"
     - "The Lancet"
+    - "Lancet Digital Health"
     - "The Lancet Digital Health"
     - "The Lancet Neurology"
     - "The Lancet Healthy Longevity"
@@ -227,6 +237,8 @@ top_journal_families:
     - "Radiology: Artificial Intelligence"
 
   crossref_topic_queries:
+    - "brain neuroimaging MRI PET artificial intelligence deep learning"
+    - "brain imaging foundation model MRI PET"
     - "neuroimaging brain MRI deep learning artificial intelligence"
     - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
     - "brain-gut gut-brain microbiome neuroimaging machine learning"
@@ -254,8 +266,10 @@ venue_categories:
 
   flagship_subjournal:
     - "Nature Medicine"
+    - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
+    - "Nature Computational Science"
     - "Nature Methods"
     - "Nature Communications"
     - "Communications Medicine"
@@ -273,12 +287,15 @@ venue_categories:
     - "Patterns"
     - "iScience"
     - "The Lancet Digital Health"
+    - "Lancet Digital Health"
     - "The Lancet Neurology"
     - "The Lancet Healthy Longevity"
     - "eBioMedicine"
     - "eClinicalMedicine"
 
   top_imaging_ai:
+    - "Advanced Science"
+    - "Advanced Science (Weinh)"
     - "Medical Image Analysis"
     - "Med Image Anal"
     - "IEEE Transactions on Medical Imaging"
@@ -531,8 +548,10 @@ scoring:
 
   top_venue_boosts:
     "Nature Medicine": 10
+    "Nature Machine Intelligence": 9
     "Nature Neuroscience": 10
     "Nature Biomedical Engineering": 10
+    "Nature Computational Science": 8
     "Nature Methods": 8
     "Nature Communications": 7
     "Communications Medicine": 7
@@ -553,6 +572,8 @@ scoring:
     "The Lancet": 10
     "eBioMedicine": 7
     "eClinicalMedicine": 7
+    "Advanced Science": 7
+    "Advanced Science (Weinh)": 7
     "Medical Image Analysis": 8
     "Med Image Anal": 8
     "IEEE Transactions on Medical Imaging": 8

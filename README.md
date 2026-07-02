@@ -8,6 +8,6 @@ The site is updated automatically every day at about 16:10 China/Hong Kong/Singa
 
 https://idea89560041.github.io/Paper-Radar/
 
-It searches PubMed, arXiv preprints, Semantic Scholar, and Crossref metadata from major journals and conferences, scores papers against the research profile in `config.yaml`, and publishes a static web page plus `papers.json`.
+It searches PubMed, arXiv preprints, Semantic Scholar, and Crossref metadata from major journals and conferences, scores papers against the research profile in `config.yaml`, filters out papers already shown in previous runs, and publishes a static web page plus `papers.json`.
 
 The page groups papers into flagship main journals, flagship-family subjournals, top medical-imaging / AI venues, preprints, and other relevant journals. Traditional neuroscience papers, broad review papers, and low-priority venues such as Scientific Reports or Frontiers journals are filtered out.
