@@ -1250,6 +1250,60 @@
       "venue": "Ultrasound Med Biol",
       "source": "PubMed",
       "sent_at": "2026-07-04T10:26:19.930438+00:00"
+    },
+    "c0fe4ba4587e98d5": {
+      "title": "Beyond complex architectures: a streamlined CNN pipeline for robust Alzheimer's disease classification from brain MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42400646/",
+      "doi": "10.1007/s00234-026-04088-4",
+      "pmid": "42400646",
+      "venue": "Neuroradiology",
+      "source": "PubMed",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "02475a3d062f8d01": {
+      "title": "Deep learning for contrast-enhanced MRI in pediatric brain imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42400647/",
+      "doi": "10.1007/s00234-026-04073-x",
+      "pmid": "42400647",
+      "venue": "Neuroradiology",
+      "source": "PubMed",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "dd6fc444232d526c": {
+      "title": "Explainable foundation model for dementia screening and risk stratification using retinal fundus images.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42401717/",
+      "doi": "10.1038/s41746-026-02968-w",
+      "pmid": "42401717",
+      "venue": "NPJ Digit Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "16ac8e1a09b03f8f": {
+      "title": "Security Analysis of a Federated Learning Framework for Medical Image-to-Image Translation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42400864/",
+      "doi": "10.1007/s10916-026-02436-8",
+      "pmid": "42400864",
+      "venue": "J Med Syst",
+      "source": "PubMed",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "14d78b5d153f7b79": {
+      "title": "Positional interpretation of cis-regulatory code and nucleosome organization with deep learning models",
+      "url": "https://doi.org/10.1038/s41467-026-74807-1",
+      "doi": "10.1038/s41467-026-74807-1",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "c1f4e8b2ba49afd5": {
+      "title": "Deep learning-based super-resolution ultrashort echo time MRI for pulmonary nodule detection and longitudinal assessment in emphysema.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42401825/",
+      "doi": "10.1186/s12890-026-04468-9",
+      "pmid": "42401825",
+      "venue": "BMC Pulm Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-05T10:28:14.191421+00:00"
     }
   },
   "sent_keys": {
@@ -1756,7 +1810,30 @@
     "doi:10.1016/j.ultrasmedbio.2026.03.009": "2fb777e7849001dc",
     "pmid:41966937": "2fb777e7849001dc",
     "url:https://pubmed.ncbi.nlm.nih.gov/41966937": "2fb777e7849001dc",
-    "title:automated o rads risk stratification using a large language model analysis of narrative ultrasound reports": "2fb777e7849001dc"
+    "title:automated o rads risk stratification using a large language model analysis of narrative ultrasound reports": "2fb777e7849001dc",
+    "doi:10.1007/s00234-026-04088-4": "c0fe4ba4587e98d5",
+    "pmid:42400646": "c0fe4ba4587e98d5",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42400646": "c0fe4ba4587e98d5",
+    "title:beyond complex architectures a streamlined cnn pipeline for robust alzheimer s disease classification from brain mri": "c0fe4ba4587e98d5",
+    "doi:10.1007/s00234-026-04073-x": "02475a3d062f8d01",
+    "pmid:42400647": "02475a3d062f8d01",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42400647": "02475a3d062f8d01",
+    "title:deep learning for contrast enhanced mri in pediatric brain imaging": "02475a3d062f8d01",
+    "doi:10.1038/s41746-026-02968-w": "dd6fc444232d526c",
+    "pmid:42401717": "dd6fc444232d526c",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42401717": "dd6fc444232d526c",
+    "title:explainable foundation model for dementia screening and risk stratification using retinal fundus images": "dd6fc444232d526c",
+    "doi:10.1007/s10916-026-02436-8": "16ac8e1a09b03f8f",
+    "pmid:42400864": "16ac8e1a09b03f8f",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42400864": "16ac8e1a09b03f8f",
+    "title:security analysis of a federated learning framework for medical image to image translation": "16ac8e1a09b03f8f",
+    "doi:10.1038/s41467-026-74807-1": "14d78b5d153f7b79",
+    "url:https://doi.org/10.1038/s41467-026-74807-1": "14d78b5d153f7b79",
+    "title:positional interpretation of cis regulatory code and nucleosome organization with deep learning models": "14d78b5d153f7b79",
+    "doi:10.1186/s12890-026-04468-9": "c1f4e8b2ba49afd5",
+    "pmid:42401825": "c1f4e8b2ba49afd5",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42401825": "c1f4e8b2ba49afd5",
+    "title:deep learning based super resolution ultrashort echo time mri for pulmonary nodule detection and longitudinal assessment in emphysema": "c1f4e8b2ba49afd5"
   },
-  "updated_at": "2026-07-04T10:26:19.931378+00:00"
+  "updated_at": "2026-07-05T10:28:14.191749+00:00"
 }
