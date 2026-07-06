@@ -1304,6 +1304,42 @@
       "venue": "BMC Pulm Med",
       "source": "PubMed",
       "sent_at": "2026-07-05T10:28:14.191421+00:00"
+    },
+    "e6b011fcbb86479d": {
+      "title": "Guiding generative models to uncover diverse and novel crystals via reinforcement learning",
+      "url": "https://doi.org/10.1038/s42256-026-01262-4",
+      "doi": "10.1038/s42256-026-01262-4",
+      "pmid": "",
+      "venue": "Nature Machine Intelligence",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-06T12:18:37.969731+00:00"
+    },
+    "f6eb253cdbdb3755": {
+      "title": "Accelerated Deep-Learning-Based Image Reconstruction for 3D T2 Dark-Fluid in Imaging of Multiple Sclerosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42400420/",
+      "doi": "10.1097/rli.0000000000001300",
+      "pmid": "42400420",
+      "venue": "Invest Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-06T12:18:37.969731+00:00"
+    },
+    "21ab5816dae0e837": {
+      "title": "A multi-scale graph frequency network for structural and functional region analysis in spatial transcriptomics.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42402496/",
+      "doi": "10.1007/s10142-026-01960-7",
+      "pmid": "42402496",
+      "venue": "Funct Integr Genomics",
+      "source": "PubMed",
+      "sent_at": "2026-07-06T12:18:37.969731+00:00"
+    },
+    "15d0466163ce2ba8": {
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "url": "https://doi.org/10.1038/s44360-026-00164-4",
+      "doi": "10.1038/s44360-026-00164-4",
+      "pmid": "",
+      "venue": "Nature Health",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-06T12:18:37.969731+00:00"
     }
   },
   "sent_keys": {
@@ -1833,7 +1869,21 @@
     "doi:10.1186/s12890-026-04468-9": "c1f4e8b2ba49afd5",
     "pmid:42401825": "c1f4e8b2ba49afd5",
     "url:https://pubmed.ncbi.nlm.nih.gov/42401825": "c1f4e8b2ba49afd5",
-    "title:deep learning based super resolution ultrashort echo time mri for pulmonary nodule detection and longitudinal assessment in emphysema": "c1f4e8b2ba49afd5"
+    "title:deep learning based super resolution ultrashort echo time mri for pulmonary nodule detection and longitudinal assessment in emphysema": "c1f4e8b2ba49afd5",
+    "doi:10.1038/s42256-026-01262-4": "e6b011fcbb86479d",
+    "url:https://doi.org/10.1038/s42256-026-01262-4": "e6b011fcbb86479d",
+    "title:guiding generative models to uncover diverse and novel crystals via reinforcement learning": "e6b011fcbb86479d",
+    "doi:10.1097/rli.0000000000001300": "f6eb253cdbdb3755",
+    "pmid:42400420": "f6eb253cdbdb3755",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42400420": "f6eb253cdbdb3755",
+    "title:accelerated deep learning based image reconstruction for 3d t2 dark fluid in imaging of multiple sclerosis": "f6eb253cdbdb3755",
+    "doi:10.1007/s10142-026-01960-7": "21ab5816dae0e837",
+    "pmid:42402496": "21ab5816dae0e837",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42402496": "21ab5816dae0e837",
+    "title:a multi scale graph frequency network for structural and functional region analysis in spatial transcriptomics": "21ab5816dae0e837",
+    "doi:10.1038/s44360-026-00164-4": "15d0466163ce2ba8",
+    "url:https://doi.org/10.1038/s44360-026-00164-4": "15d0466163ce2ba8",
+    "title:large language models exhibit stigmatizing behaviour in contextual judgements of health conditions": "15d0466163ce2ba8"
   },
-  "updated_at": "2026-07-05T10:28:14.191749+00:00"
+  "updated_at": "2026-07-06T12:18:37.969951+00:00"
 }
