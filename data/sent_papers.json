@@ -1340,6 +1340,123 @@
       "venue": "Nature Health",
       "source": "Crossref Top Journals",
       "sent_at": "2026-07-06T12:18:37.969731+00:00"
+    },
+    "747476f82c7639cd": {
+      "title": "Comparative evaluation of automated MRI-based brain volumetry software for estimating cognitive domains in early Alzheimer's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42410536/",
+      "doi": "10.1186/s12880-026-02535-5",
+      "pmid": "42410536",
+      "venue": "BMC Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "fbb5d886659fae46": {
+      "title": "Super-resolution deep learning reconstruction for brain fluid-attenuated inversion recovery: image quality and white matter hyperintensity volume analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42406027/",
+      "doi": "10.1007/s00234-026-04104-7",
+      "pmid": "42406027",
+      "venue": "Neuroradiology",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "7ec653b2a8e33410": {
+      "title": "Multisequence MRI and clinical data-based deep learning radiomics model for predicting adjacent segment degeneration post-lumbar fusion: a retrospective multicenter study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42410387/",
+      "doi": "10.1186/s12880-026-02468-z",
+      "pmid": "42410387",
+      "venue": "BMC Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "38743105070a7d78": {
+      "title": "Graph Representation Learning of Longitudinal Medical Imaging Trajectories for Treatment Response Prediction",
+      "url": "https://arxiv.org/abs/2607.04912v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "5acbee5f5638cf84": {
+      "title": "CogRad: A Cognitively-Inspired Multi-Agent Framework for Radiology Report Generation",
+      "url": "https://arxiv.org/abs/2607.03853v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "47ef4312aa9f36c7": {
+      "title": "Vessel Wall Imaging in 1.5 T MRI Using Deep Learning Reconstruction: Prospective Evaluation of Interchangeability With Standard 3 T MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42403272/",
+      "doi": "10.1097/rli.0000000000001290",
+      "pmid": "42403272",
+      "venue": "Invest Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "f5b2e591910e0397": {
+      "title": "Re-Visible Dual-Domain Self-Supervised Deep Unfolding Network for MRI Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41433179/",
+      "doi": "10.1109/jbhi.2025.3647429",
+      "pmid": "41433179",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "a78907a6af1566c7": {
+      "title": "HiVLR: Hierarchical Vision-Language Reasoning for interpretable zero-shot radiography image understanding.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42407236/",
+      "doi": "10.1016/j.media.2026.104189",
+      "pmid": "42407236",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "4b2f890527fc2d59": {
+      "title": "Deformable multi-head cross attention-based 3D U-net for context-aware multi-modal cardiac image segmentation with uncertainty-aware maps.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42409832/",
+      "doi": "10.1038/s41598-026-51057-1",
+      "pmid": "42409832",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "c20be8cade9acf6b": {
+      "title": "IRIS: An Intelligent Vision-Language System for Ocular Surface Diseases via Topic Tree and Scene-Driven VQA Generation",
+      "url": "https://arxiv.org/abs/2607.04344v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "0680e61fbe7fc922": {
+      "title": "From Raw Segmentations to Simulation-Ready Cardiac Meshes: An Automated Framework for Anatomical Reconstruction and Virtual Cohort Generation",
+      "url": "https://arxiv.org/abs/2607.02564v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "e00196084a20668f": {
+      "title": "CONFLUX: A Latent Diusion Model for 3D Chest-CT Synthesis with RL Post-Training",
+      "url": "https://arxiv.org/abs/2607.02998v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "01d3227386f212b5": {
+      "title": "Toxicity Prediction of Landfill Leachate-Contaminated Crops Using Machine Learning Models Based on PAH and Heavy Metal Concentrations",
+      "url": "https://doi.org/10.46488/nept.2026.v25i02.b4376",
+      "doi": "10.46488/nept.2026.v25i02.b4376",
+      "pmid": "",
+      "venue": "Nature Environment and Pollution Technology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-07T11:21:57.623826+00:00"
     }
   },
   "sent_keys": {
@@ -1883,7 +2000,48 @@
     "title:a multi scale graph frequency network for structural and functional region analysis in spatial transcriptomics": "21ab5816dae0e837",
     "doi:10.1038/s44360-026-00164-4": "15d0466163ce2ba8",
     "url:https://doi.org/10.1038/s44360-026-00164-4": "15d0466163ce2ba8",
-    "title:large language models exhibit stigmatizing behaviour in contextual judgements of health conditions": "15d0466163ce2ba8"
+    "title:large language models exhibit stigmatizing behaviour in contextual judgements of health conditions": "15d0466163ce2ba8",
+    "doi:10.1186/s12880-026-02535-5": "747476f82c7639cd",
+    "pmid:42410536": "747476f82c7639cd",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42410536": "747476f82c7639cd",
+    "title:comparative evaluation of automated mri based brain volumetry software for estimating cognitive domains in early alzheimer s disease": "747476f82c7639cd",
+    "doi:10.1007/s00234-026-04104-7": "fbb5d886659fae46",
+    "pmid:42406027": "fbb5d886659fae46",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42406027": "fbb5d886659fae46",
+    "title:super resolution deep learning reconstruction for brain fluid attenuated inversion recovery image quality and white matter hyperintensity volume analysis": "fbb5d886659fae46",
+    "doi:10.1186/s12880-026-02468-z": "7ec653b2a8e33410",
+    "pmid:42410387": "7ec653b2a8e33410",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42410387": "7ec653b2a8e33410",
+    "title:multisequence mri and clinical data based deep learning radiomics model for predicting adjacent segment degeneration post lumbar fusion a retrospective multicenter study": "7ec653b2a8e33410",
+    "url:https://arxiv.org/abs/2607.04912v1": "38743105070a7d78",
+    "title:graph representation learning of longitudinal medical imaging trajectories for treatment response prediction": "38743105070a7d78",
+    "url:https://arxiv.org/abs/2607.03853v1": "5acbee5f5638cf84",
+    "title:cograd a cognitively inspired multi agent framework for radiology report generation": "5acbee5f5638cf84",
+    "doi:10.1097/rli.0000000000001290": "47ef4312aa9f36c7",
+    "pmid:42403272": "47ef4312aa9f36c7",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42403272": "47ef4312aa9f36c7",
+    "title:vessel wall imaging in 1 5 t mri using deep learning reconstruction prospective evaluation of interchangeability with standard 3 t mri": "47ef4312aa9f36c7",
+    "doi:10.1109/jbhi.2025.3647429": "f5b2e591910e0397",
+    "pmid:41433179": "f5b2e591910e0397",
+    "url:https://pubmed.ncbi.nlm.nih.gov/41433179": "f5b2e591910e0397",
+    "title:re visible dual domain self supervised deep unfolding network for mri reconstruction": "f5b2e591910e0397",
+    "doi:10.1016/j.media.2026.104189": "a78907a6af1566c7",
+    "pmid:42407236": "a78907a6af1566c7",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42407236": "a78907a6af1566c7",
+    "title:hivlr hierarchical vision language reasoning for interpretable zero shot radiography image understanding": "a78907a6af1566c7",
+    "doi:10.1038/s41598-026-51057-1": "4b2f890527fc2d59",
+    "pmid:42409832": "4b2f890527fc2d59",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42409832": "4b2f890527fc2d59",
+    "title:deformable multi head cross attention based 3d u net for context aware multi modal cardiac image segmentation with uncertainty aware maps": "4b2f890527fc2d59",
+    "url:https://arxiv.org/abs/2607.04344v1": "c20be8cade9acf6b",
+    "title:iris an intelligent vision language system for ocular surface diseases via topic tree and scene driven vqa generation": "c20be8cade9acf6b",
+    "url:https://arxiv.org/abs/2607.02564v1": "0680e61fbe7fc922",
+    "title:from raw segmentations to simulation ready cardiac meshes an automated framework for anatomical reconstruction and virtual cohort generation": "0680e61fbe7fc922",
+    "url:https://arxiv.org/abs/2607.02998v1": "e00196084a20668f",
+    "title:conflux a latent diusion model for 3d chest ct synthesis with rl post training": "e00196084a20668f",
+    "doi:10.46488/nept.2026.v25i02.b4376": "01d3227386f212b5",
+    "url:https://doi.org/10.46488/nept.2026.v25i02.b4376": "01d3227386f212b5",
+    "title:toxicity prediction of landfill leachate contaminated crops using machine learning models based on pah and heavy metal concentrations": "01d3227386f212b5"
   },
-  "updated_at": "2026-07-06T12:18:37.969951+00:00"
+  "updated_at": "2026-07-07T11:21:57.624446+00:00"
 }
