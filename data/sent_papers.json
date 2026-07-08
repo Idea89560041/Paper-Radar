@@ -1457,6 +1457,87 @@
       "venue": "Nature Environment and Pollution Technology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-07-07T11:21:57.623826+00:00"
+    },
+    "894f775cf984cfab": {
+      "title": "Optimal control for anti-abeta treatment in Alzheimer's disease using a reaction-diffusion model.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42413935/",
+      "doi": "10.1098/rsif.2025.1158",
+      "pmid": "42413935",
+      "venue": "J R Soc Interface",
+      "source": "PubMed",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "2b0f94cabe0cee90": {
+      "title": "High-resolution mri guided whole mouse brain neuronal cell type atlas using deep learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42414549/",
+      "doi": "10.1038/s42003-026-10608-y",
+      "pmid": "42414549",
+      "venue": "Commun Biol",
+      "source": "PubMed",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "71119d515f04cfd2": {
+      "title": "PIPA: Prior-Driven Prompting with Diagnosis-Oriented Retrieval-Augmentation for 3D Radiology Report Generation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42412673/",
+      "doi": "10.1109/tmi.2026.3710717",
+      "pmid": "42412673",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "c15c5eb4cadc1dfd": {
+      "title": "Harrison.Rad 1.5 Technical Report: A radiology foundation model that can draft reports from images, priors and clinical context",
+      "url": "https://arxiv.org/abs/2607.05880v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "70d645f6473c6512": {
+      "title": "CONFLUX: A Latent Diffusion Model for 3D Chest-CT Synthesis with RL Post-Training",
+      "url": "https://arxiv.org/abs/2607.02998v2",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "fa6fcc22820f037a": {
+      "title": "Spike-based alignment learning solves the weight transport problem",
+      "url": "https://doi.org/10.1038/s41467-026-74460-8",
+      "doi": "10.1038/s41467-026-74460-8",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "9e5406e8da7542e1": {
+      "title": "SparseMed3D: Foundation Models for Sparse Instance Medical Segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42414713/",
+      "doi": "10.1007/s10278-026-02077-w",
+      "pmid": "42414713",
+      "venue": "J Imaging Inform Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "c76f0d9e803d98c4": {
+      "title": "EEG fine-grained visual semantic decoding via a multimodal framework.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42413445/",
+      "doi": "10.1016/j.neunet.2026.109318",
+      "pmid": "42413445",
+      "venue": "Neural Netw",
+      "source": "PubMed",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "d25f8979b72cfab8": {
+      "title": "MSA-DCNN: A Data-Efficient Multi-Scale Deformable CNN for Medical Image Classification",
+      "url": "https://arxiv.org/abs/2607.06083v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-08T10:32:12.656816+00:00"
     }
   },
   "sent_keys": {
@@ -2041,7 +2122,36 @@
     "title:conflux a latent diusion model for 3d chest ct synthesis with rl post training": "e00196084a20668f",
     "doi:10.46488/nept.2026.v25i02.b4376": "01d3227386f212b5",
     "url:https://doi.org/10.46488/nept.2026.v25i02.b4376": "01d3227386f212b5",
-    "title:toxicity prediction of landfill leachate contaminated crops using machine learning models based on pah and heavy metal concentrations": "01d3227386f212b5"
+    "title:toxicity prediction of landfill leachate contaminated crops using machine learning models based on pah and heavy metal concentrations": "01d3227386f212b5",
+    "doi:10.1098/rsif.2025.1158": "894f775cf984cfab",
+    "pmid:42413935": "894f775cf984cfab",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42413935": "894f775cf984cfab",
+    "title:optimal control for anti abeta treatment in alzheimer s disease using a reaction diffusion model": "894f775cf984cfab",
+    "doi:10.1038/s42003-026-10608-y": "2b0f94cabe0cee90",
+    "pmid:42414549": "2b0f94cabe0cee90",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42414549": "2b0f94cabe0cee90",
+    "title:high resolution mri guided whole mouse brain neuronal cell type atlas using deep learning": "2b0f94cabe0cee90",
+    "doi:10.1109/tmi.2026.3710717": "71119d515f04cfd2",
+    "pmid:42412673": "71119d515f04cfd2",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42412673": "71119d515f04cfd2",
+    "title:pipa prior driven prompting with diagnosis oriented retrieval augmentation for 3d radiology report generation": "71119d515f04cfd2",
+    "url:https://arxiv.org/abs/2607.05880v1": "c15c5eb4cadc1dfd",
+    "title:harrison rad 1 5 technical report a radiology foundation model that can draft reports from images priors and clinical context": "c15c5eb4cadc1dfd",
+    "url:https://arxiv.org/abs/2607.02998v2": "70d645f6473c6512",
+    "title:conflux a latent diffusion model for 3d chest ct synthesis with rl post training": "70d645f6473c6512",
+    "doi:10.1038/s41467-026-74460-8": "fa6fcc22820f037a",
+    "url:https://doi.org/10.1038/s41467-026-74460-8": "fa6fcc22820f037a",
+    "title:spike based alignment learning solves the weight transport problem": "fa6fcc22820f037a",
+    "doi:10.1007/s10278-026-02077-w": "9e5406e8da7542e1",
+    "pmid:42414713": "9e5406e8da7542e1",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42414713": "9e5406e8da7542e1",
+    "title:sparsemed3d foundation models for sparse instance medical segmentation": "9e5406e8da7542e1",
+    "doi:10.1016/j.neunet.2026.109318": "c76f0d9e803d98c4",
+    "pmid:42413445": "c76f0d9e803d98c4",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42413445": "c76f0d9e803d98c4",
+    "title:eeg fine grained visual semantic decoding via a multimodal framework": "c76f0d9e803d98c4",
+    "url:https://arxiv.org/abs/2607.06083v1": "d25f8979b72cfab8",
+    "title:msa dcnn a data efficient multi scale deformable cnn for medical image classification": "d25f8979b72cfab8"
   },
-  "updated_at": "2026-07-07T11:21:57.624446+00:00"
+  "updated_at": "2026-07-08T10:32:12.657267+00:00"
 }
