@@ -1538,6 +1538,60 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-08T10:32:12.656816+00:00"
+    },
+    "bb04accc09eef9de": {
+      "title": "Heterogeneity-Adaptive Diffusion Schrodinger Bridge for PET-Guided Whole-Body MRI Translation",
+      "url": "https://arxiv.org/abs/2607.07401v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "686796a96c9ccc81": {
+      "title": "AI derived Whole-Body MRI metrics in multiple myeloma patients reveal unique insights into body composition and outcomes.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42418394/",
+      "doi": "10.1182/bloodadvances.2026020852",
+      "pmid": "42418394",
+      "venue": "Blood Adv",
+      "source": "PubMed",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "82cf37d1dac0ba28": {
+      "title": "Large language models can predict the results of social science experiments",
+      "url": "https://doi.org/10.1038/s41586-026-10742-x",
+      "doi": "10.1038/s41586-026-10742-x",
+      "pmid": "",
+      "venue": "Nature",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "0fe5d64af6ffa68a": {
+      "title": "Investigating the uncertainty of cellular microenvironment parameter estimations via diffusion MRI cytometry.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42415386/",
+      "doi": "10.1002/mp.70564",
+      "pmid": "42415386",
+      "venue": "Med Phys",
+      "source": "PubMed",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "1b36f278bb7f5e64": {
+      "title": "Seeing What Matters: Lesion-Aware High-Resolution Patch Discovery and Fusion for Chest X-ray Report Generation",
+      "url": "https://arxiv.org/abs/2607.06909v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "cfd747bdde6e6137": {
+      "title": "Anatomically Localized Detection of Six Acute Abdominal Emergencies on CT Using Multi-window Deep Learning: Development and Validation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42420647/",
+      "doi": "10.1007/s10278-026-02084-x",
+      "pmid": "42420647",
+      "venue": "J Imaging Inform Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-09T11:19:14.011697+00:00"
     }
   },
   "sent_keys": {
@@ -2151,7 +2205,26 @@
     "url:https://pubmed.ncbi.nlm.nih.gov/42413445": "c76f0d9e803d98c4",
     "title:eeg fine grained visual semantic decoding via a multimodal framework": "c76f0d9e803d98c4",
     "url:https://arxiv.org/abs/2607.06083v1": "d25f8979b72cfab8",
-    "title:msa dcnn a data efficient multi scale deformable cnn for medical image classification": "d25f8979b72cfab8"
+    "title:msa dcnn a data efficient multi scale deformable cnn for medical image classification": "d25f8979b72cfab8",
+    "url:https://arxiv.org/abs/2607.07401v1": "bb04accc09eef9de",
+    "title:heterogeneity adaptive diffusion schrodinger bridge for pet guided whole body mri translation": "bb04accc09eef9de",
+    "doi:10.1182/bloodadvances.2026020852": "686796a96c9ccc81",
+    "pmid:42418394": "686796a96c9ccc81",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42418394": "686796a96c9ccc81",
+    "title:ai derived whole body mri metrics in multiple myeloma patients reveal unique insights into body composition and outcomes": "686796a96c9ccc81",
+    "doi:10.1038/s41586-026-10742-x": "82cf37d1dac0ba28",
+    "url:https://doi.org/10.1038/s41586-026-10742-x": "82cf37d1dac0ba28",
+    "title:large language models can predict the results of social science experiments": "82cf37d1dac0ba28",
+    "doi:10.1002/mp.70564": "0fe5d64af6ffa68a",
+    "pmid:42415386": "0fe5d64af6ffa68a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42415386": "0fe5d64af6ffa68a",
+    "title:investigating the uncertainty of cellular microenvironment parameter estimations via diffusion mri cytometry": "0fe5d64af6ffa68a",
+    "url:https://arxiv.org/abs/2607.06909v1": "1b36f278bb7f5e64",
+    "title:seeing what matters lesion aware high resolution patch discovery and fusion for chest x ray report generation": "1b36f278bb7f5e64",
+    "doi:10.1007/s10278-026-02084-x": "cfd747bdde6e6137",
+    "pmid:42420647": "cfd747bdde6e6137",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42420647": "cfd747bdde6e6137",
+    "title:anatomically localized detection of six acute abdominal emergencies on ct using multi window deep learning development and validation": "cfd747bdde6e6137"
   },
-  "updated_at": "2026-07-08T10:32:12.657267+00:00"
+  "updated_at": "2026-07-09T11:19:14.012022+00:00"
 }
