@@ -1592,6 +1592,105 @@
       "venue": "J Imaging Inform Med",
       "source": "PubMed",
       "sent_at": "2026-07-09T11:19:14.011697+00:00"
+    },
+    "0efb2884d95b714f": {
+      "title": "Diagnosis of Alzheimer's disease from neuroimages using steerable quantum probabilistic hamiltonian generative modeling with adaptive chaotic satin bowerbird optimization.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42428045/",
+      "doi": "10.1007/s11571-026-10490-8",
+      "pmid": "42428045",
+      "venue": "Cogn Neurodyn",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "0a4c7aa9b0c73d16": {
+      "title": "Health system learning enables generalist neuroimaging models",
+      "url": "https://doi.org/10.1038/s41591-026-04497-1",
+      "doi": "10.1038/s41591-026-04497-1",
+      "pmid": "",
+      "venue": "Nature Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "de555661d9533bab": {
+      "title": "Autonomous biomedical research with an artificial intelligence agent.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42424436/",
+      "doi": "10.1126/science.adz4351",
+      "pmid": "42424436",
+      "venue": "Science",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "318af747ac8e7895": {
+      "title": "Prediction of microvascular invasion in hepatocellular carcinoma using contrast-enhanced ultrasound and deep learning",
+      "url": "https://doi.org/10.1038/s41467-026-74985-y",
+      "doi": "10.1038/s41467-026-74985-y",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "1bfda0b1709e0ec7": {
+      "title": "NicheTrans: spatial-aware cross-omics translation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42426404/",
+      "doi": "10.1038/s41592-026-03153-3",
+      "pmid": "42426404",
+      "venue": "Nat Methods",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "4a4f1070117f0762": {
+      "title": "BrainGAN Framework for Generating Synthetic Contrast-Enhanced Multisequence MRI in Brain Metastases.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42423850/",
+      "doi": "10.1007/s10278-026-02059-y",
+      "pmid": "42423850",
+      "venue": "J Imaging Inform Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "a1c5283df676f722": {
+      "title": "Deep learning-based generation of synthetic multiphasic MRI in hepatocellular carcinoma and cirrhosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41887530/",
+      "doi": "10.1016/j.jhepr.2026.101813",
+      "pmid": "41887530",
+      "venue": "JHEP Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "868e44b8c49fa327": {
+      "title": "GCL-RCA-Net: an RCA-RemUNet-enhanced graph-contrastive framework for hybrid data-driven and dual-branch physics-guided parallel MRI reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42425159/",
+      "doi": "10.1088/1361-6560/ae88b2",
+      "pmid": "42425159",
+      "venue": "Phys Med Biol",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "7028bd2107b39366": {
+      "title": "Projected Energy Matching for Generative 3D Priors",
+      "url": "https://arxiv.org/abs/2607.07749v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "ca9d298d7cf2496a": {
+      "title": "Dual-view fusion of log-mel spectrogram encodings for dysarthria detection: use in the context of awake brain surgery.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42426485/",
+      "doi": "10.1007/s11548-026-03743-8",
+      "pmid": "42426485",
+      "venue": "Int J Comput Assist Radiol Surg",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "21d2151f1483e7f5": {
+      "title": "Age and Social Observation Effects on Theta Synchrony and Its Role in Adolescent Post-Error Control: A Computational Approach.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42427627/",
+      "doi": "10.64898/2026.06.29.734887",
+      "pmid": "42427627",
+      "venue": "bioRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-07-10T11:19:25.997577+00:00"
     }
   },
   "sent_keys": {
@@ -2224,7 +2323,47 @@
     "doi:10.1007/s10278-026-02084-x": "cfd747bdde6e6137",
     "pmid:42420647": "cfd747bdde6e6137",
     "url:https://pubmed.ncbi.nlm.nih.gov/42420647": "cfd747bdde6e6137",
-    "title:anatomically localized detection of six acute abdominal emergencies on ct using multi window deep learning development and validation": "cfd747bdde6e6137"
+    "title:anatomically localized detection of six acute abdominal emergencies on ct using multi window deep learning development and validation": "cfd747bdde6e6137",
+    "doi:10.1007/s11571-026-10490-8": "0efb2884d95b714f",
+    "pmid:42428045": "0efb2884d95b714f",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42428045": "0efb2884d95b714f",
+    "title:diagnosis of alzheimer s disease from neuroimages using steerable quantum probabilistic hamiltonian generative modeling with adaptive chaotic satin bowerbird optimization": "0efb2884d95b714f",
+    "doi:10.1038/s41591-026-04497-1": "0a4c7aa9b0c73d16",
+    "url:https://doi.org/10.1038/s41591-026-04497-1": "0a4c7aa9b0c73d16",
+    "title:health system learning enables generalist neuroimaging models": "0a4c7aa9b0c73d16",
+    "doi:10.1126/science.adz4351": "de555661d9533bab",
+    "pmid:42424436": "de555661d9533bab",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42424436": "de555661d9533bab",
+    "title:autonomous biomedical research with an artificial intelligence agent": "de555661d9533bab",
+    "doi:10.1038/s41467-026-74985-y": "318af747ac8e7895",
+    "url:https://doi.org/10.1038/s41467-026-74985-y": "318af747ac8e7895",
+    "title:prediction of microvascular invasion in hepatocellular carcinoma using contrast enhanced ultrasound and deep learning": "318af747ac8e7895",
+    "doi:10.1038/s41592-026-03153-3": "1bfda0b1709e0ec7",
+    "pmid:42426404": "1bfda0b1709e0ec7",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42426404": "1bfda0b1709e0ec7",
+    "title:nichetrans spatial aware cross omics translation": "1bfda0b1709e0ec7",
+    "doi:10.1007/s10278-026-02059-y": "4a4f1070117f0762",
+    "pmid:42423850": "4a4f1070117f0762",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42423850": "4a4f1070117f0762",
+    "title:braingan framework for generating synthetic contrast enhanced multisequence mri in brain metastases": "4a4f1070117f0762",
+    "doi:10.1016/j.jhepr.2026.101813": "a1c5283df676f722",
+    "pmid:41887530": "a1c5283df676f722",
+    "url:https://pubmed.ncbi.nlm.nih.gov/41887530": "a1c5283df676f722",
+    "title:deep learning based generation of synthetic multiphasic mri in hepatocellular carcinoma and cirrhosis": "a1c5283df676f722",
+    "doi:10.1088/1361-6560/ae88b2": "868e44b8c49fa327",
+    "pmid:42425159": "868e44b8c49fa327",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42425159": "868e44b8c49fa327",
+    "title:gcl rca net an rca remunet enhanced graph contrastive framework for hybrid data driven and dual branch physics guided parallel mri reconstruction": "868e44b8c49fa327",
+    "url:https://arxiv.org/abs/2607.07749v1": "7028bd2107b39366",
+    "title:projected energy matching for generative 3d priors": "7028bd2107b39366",
+    "doi:10.1007/s11548-026-03743-8": "ca9d298d7cf2496a",
+    "pmid:42426485": "ca9d298d7cf2496a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42426485": "ca9d298d7cf2496a",
+    "title:dual view fusion of log mel spectrogram encodings for dysarthria detection use in the context of awake brain surgery": "ca9d298d7cf2496a",
+    "doi:10.64898/2026.06.29.734887": "21d2151f1483e7f5",
+    "pmid:42427627": "21d2151f1483e7f5",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42427627": "21d2151f1483e7f5",
+    "title:age and social observation effects on theta synchrony and its role in adolescent post error control a computational approach": "21d2151f1483e7f5"
   },
-  "updated_at": "2026-07-09T11:19:14.012022+00:00"
+  "updated_at": "2026-07-10T11:19:25.998153+00:00"
 }
