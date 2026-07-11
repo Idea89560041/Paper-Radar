@@ -1691,6 +1691,15 @@
       "venue": "bioRxiv",
       "source": "PubMed",
       "sent_at": "2026-07-10T11:19:25.997577+00:00"
+    },
+    "ef367ff4bb9ea9f7": {
+      "title": "SMDNet: A Self-Training-Aware and Multi-Modal-Adaptive Deep Learning Network for Low-Data Aβ 42 Probe Design and Optimization.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42429744/",
+      "doi": "10.1021/acs.jmedchem.6c01102",
+      "pmid": "42429744",
+      "venue": "J Med Chem",
+      "source": "PubMed",
+      "sent_at": "2026-07-11T09:49:02.900977+00:00"
     }
   },
   "sent_keys": {
@@ -2363,7 +2372,11 @@
     "doi:10.64898/2026.06.29.734887": "21d2151f1483e7f5",
     "pmid:42427627": "21d2151f1483e7f5",
     "url:https://pubmed.ncbi.nlm.nih.gov/42427627": "21d2151f1483e7f5",
-    "title:age and social observation effects on theta synchrony and its role in adolescent post error control a computational approach": "21d2151f1483e7f5"
+    "title:age and social observation effects on theta synchrony and its role in adolescent post error control a computational approach": "21d2151f1483e7f5",
+    "doi:10.1021/acs.jmedchem.6c01102": "ef367ff4bb9ea9f7",
+    "pmid:42429744": "ef367ff4bb9ea9f7",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42429744": "ef367ff4bb9ea9f7",
+    "title:smdnet a self training aware and multi modal adaptive deep learning network for low data aβ 42 probe design and optimization": "ef367ff4bb9ea9f7"
   },
-  "updated_at": "2026-07-10T11:19:25.998153+00:00"
+  "updated_at": "2026-07-11T09:49:02.901095+00:00"
 }
