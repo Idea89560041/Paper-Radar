@@ -1700,6 +1700,87 @@
       "venue": "J Med Chem",
       "source": "PubMed",
       "sent_at": "2026-07-11T09:49:02.900977+00:00"
+    },
+    "181bc970aab6ba83": {
+      "title": "An interpretable multimodal framework using compact biomarkers and Kolmogorov-Arnold networks improves the early diagnosis of Alzheimer's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431966/",
+      "doi": "10.1038/s41598-026-59430-w",
+      "pmid": "42431966",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "3e6474adc12716e1": {
+      "title": "A unified multi-task framework enables interpretable chest radiograph analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431195/",
+      "doi": "10.1016/j.medj.2026.101223",
+      "pmid": "42431195",
+      "venue": "Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "f1f0624fe6c1152c": {
+      "title": "A hybrid GAN-PDE framework with diffusion-guided residual attention for MRI brain image denoising.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42430945/",
+      "doi": "10.1016/j.compbiolchem.2026.109243",
+      "pmid": "42430945",
+      "venue": "Comput Biol Chem",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "109b6604373b167c": {
+      "title": "Pretreatment multiparametric MRI-based habitat radiomics and 2.5D deep learning for predicting early complete response to induction chemoimmunotherapy in locally advanced nasopharyngeal carcinoma.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42435493/",
+      "doi": "10.1016/j.oraloncology.2026.108072",
+      "pmid": "42435493",
+      "venue": "Oral Oncol",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "287d49984117a372": {
+      "title": "3D and 4D Free-Breathing Abdominal T1-Weighted MRI in Clinical Practice Using Deep Learning Auto-Navigation and Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42432860/",
+      "doi": "10.1002/mrm.70505",
+      "pmid": "42432860",
+      "venue": "Magn Reson Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "14af7baa9371f4a9": {
+      "title": "A Foundation Model for Generalisable Detection of Maxillary Sinus Abnormalities: A Multicentre and Clinical Applicability Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42433128/",
+      "doi": "10.1111/joor.70250",
+      "pmid": "42433128",
+      "venue": "J Oral Rehabil",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "5d9f9d596af5c09f": {
+      "title": "UMind: A unified multitask network for zero-shot M/EEG visual decoding.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431083/",
+      "doi": "10.1016/j.neunet.2026.109314",
+      "pmid": "42431083",
+      "venue": "Neural Netw",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "1dee147177feb4b9": {
+      "title": "Anatomically and biochemically guided deep image prior for sodium MRI denoising.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42322899/",
+      "doi": "10.1016/j.compmedimag.2026.102791",
+      "pmid": "42322899",
+      "venue": "Comput Med Imaging Graph",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "2b86f5038a2f5453": {
+      "title": "Application of Deep Learning-Based Reconstruction to Magnetic Resonance Imaging of Canine Stifle Joint in Healthy Beagles: Achieving Enhanced Image Quality With Reduced Slice Thickness.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42433004/",
+      "doi": "10.1111/vru.70189",
+      "pmid": "42433004",
+      "venue": "Vet Radiol Ultrasound",
+      "source": "PubMed",
+      "sent_at": "2026-07-12T10:02:22.877178+00:00"
     }
   },
   "sent_keys": {
@@ -2376,7 +2457,43 @@
     "doi:10.1021/acs.jmedchem.6c01102": "ef367ff4bb9ea9f7",
     "pmid:42429744": "ef367ff4bb9ea9f7",
     "url:https://pubmed.ncbi.nlm.nih.gov/42429744": "ef367ff4bb9ea9f7",
-    "title:smdnet a self training aware and multi modal adaptive deep learning network for low data aβ 42 probe design and optimization": "ef367ff4bb9ea9f7"
+    "title:smdnet a self training aware and multi modal adaptive deep learning network for low data aβ 42 probe design and optimization": "ef367ff4bb9ea9f7",
+    "doi:10.1038/s41598-026-59430-w": "181bc970aab6ba83",
+    "pmid:42431966": "181bc970aab6ba83",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42431966": "181bc970aab6ba83",
+    "title:an interpretable multimodal framework using compact biomarkers and kolmogorov arnold networks improves the early diagnosis of alzheimer s disease": "181bc970aab6ba83",
+    "doi:10.1016/j.medj.2026.101223": "3e6474adc12716e1",
+    "pmid:42431195": "3e6474adc12716e1",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42431195": "3e6474adc12716e1",
+    "title:a unified multi task framework enables interpretable chest radiograph analysis": "3e6474adc12716e1",
+    "doi:10.1016/j.compbiolchem.2026.109243": "f1f0624fe6c1152c",
+    "pmid:42430945": "f1f0624fe6c1152c",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42430945": "f1f0624fe6c1152c",
+    "title:a hybrid gan pde framework with diffusion guided residual attention for mri brain image denoising": "f1f0624fe6c1152c",
+    "doi:10.1016/j.oraloncology.2026.108072": "109b6604373b167c",
+    "pmid:42435493": "109b6604373b167c",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42435493": "109b6604373b167c",
+    "title:pretreatment multiparametric mri based habitat radiomics and 2 5d deep learning for predicting early complete response to induction chemoimmunotherapy in locally advanced nasophary": "109b6604373b167c",
+    "doi:10.1002/mrm.70505": "287d49984117a372",
+    "pmid:42432860": "287d49984117a372",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42432860": "287d49984117a372",
+    "title:3d and 4d free breathing abdominal t1 weighted mri in clinical practice using deep learning auto navigation and reconstruction": "287d49984117a372",
+    "doi:10.1111/joor.70250": "14af7baa9371f4a9",
+    "pmid:42433128": "14af7baa9371f4a9",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42433128": "14af7baa9371f4a9",
+    "title:a foundation model for generalisable detection of maxillary sinus abnormalities a multicentre and clinical applicability study": "14af7baa9371f4a9",
+    "doi:10.1016/j.neunet.2026.109314": "5d9f9d596af5c09f",
+    "pmid:42431083": "5d9f9d596af5c09f",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42431083": "5d9f9d596af5c09f",
+    "title:umind a unified multitask network for zero shot m eeg visual decoding": "5d9f9d596af5c09f",
+    "doi:10.1016/j.compmedimag.2026.102791": "1dee147177feb4b9",
+    "pmid:42322899": "1dee147177feb4b9",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42322899": "1dee147177feb4b9",
+    "title:anatomically and biochemically guided deep image prior for sodium mri denoising": "1dee147177feb4b9",
+    "doi:10.1111/vru.70189": "2b86f5038a2f5453",
+    "pmid:42433004": "2b86f5038a2f5453",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42433004": "2b86f5038a2f5453",
+    "title:application of deep learning based reconstruction to magnetic resonance imaging of canine stifle joint in healthy beagles achieving enhanced image quality with reduced slice thickn": "2b86f5038a2f5453"
   },
-  "updated_at": "2026-07-11T09:49:02.901095+00:00"
+  "updated_at": "2026-07-12T10:02:22.877630+00:00"
 }
