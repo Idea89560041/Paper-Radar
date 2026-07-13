@@ -1781,6 +1781,51 @@
       "venue": "Vet Radiol Ultrasound",
       "source": "PubMed",
       "sent_at": "2026-07-12T10:02:22.877178+00:00"
+    },
+    "14e405f920942c35": {
+      "title": "Citizen science platforms must mitigate against the threat of generative AI",
+      "url": "https://doi.org/10.1038/s41559-026-03141-y",
+      "doi": "10.1038/s41559-026-03141-y",
+      "pmid": "",
+      "venue": "Nature Ecology & Evolution",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-13T11:29:19.049508+00:00"
+    },
+    "755927dab6e822c7": {
+      "title": "Large-scale multi-sequence pretraining for generalizable MRI analysis in versatile clinical applications",
+      "url": "https://doi.org/10.1038/s41551-026-01740-5",
+      "doi": "10.1038/s41551-026-01740-5",
+      "pmid": "",
+      "venue": "Nature Biomedical Engineering",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-13T11:29:19.049508+00:00"
+    },
+    "760c8f82b8fb6157": {
+      "title": "A high-resolution functional network-organized atlas of human superficial white matter from ultra-high-field diffusion MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42436984/",
+      "doi": "10.1016/j.isci.2026.116671",
+      "pmid": "42436984",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-07-13T11:29:19.049508+00:00"
+    },
+    "bf69b89621d5119b": {
+      "title": "DentiAsk: A VQA Benchmark for Multimodal Reasoning in Panoramic Dental Radiographs",
+      "url": "https://arxiv.org/abs/2607.08790v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-13T11:29:19.049508+00:00"
+    },
+    "fe385e5876ac5526": {
+      "title": "MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation",
+      "url": "https://arxiv.org/abs/2607.09142v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-13T11:29:19.049508+00:00"
     }
   },
   "sent_keys": {
@@ -2493,7 +2538,21 @@
     "doi:10.1111/vru.70189": "2b86f5038a2f5453",
     "pmid:42433004": "2b86f5038a2f5453",
     "url:https://pubmed.ncbi.nlm.nih.gov/42433004": "2b86f5038a2f5453",
-    "title:application of deep learning based reconstruction to magnetic resonance imaging of canine stifle joint in healthy beagles achieving enhanced image quality with reduced slice thickn": "2b86f5038a2f5453"
+    "title:application of deep learning based reconstruction to magnetic resonance imaging of canine stifle joint in healthy beagles achieving enhanced image quality with reduced slice thickn": "2b86f5038a2f5453",
+    "doi:10.1038/s41559-026-03141-y": "14e405f920942c35",
+    "url:https://doi.org/10.1038/s41559-026-03141-y": "14e405f920942c35",
+    "title:citizen science platforms must mitigate against the threat of generative ai": "14e405f920942c35",
+    "doi:10.1038/s41551-026-01740-5": "755927dab6e822c7",
+    "url:https://doi.org/10.1038/s41551-026-01740-5": "755927dab6e822c7",
+    "title:large scale multi sequence pretraining for generalizable mri analysis in versatile clinical applications": "755927dab6e822c7",
+    "doi:10.1016/j.isci.2026.116671": "760c8f82b8fb6157",
+    "pmid:42436984": "760c8f82b8fb6157",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42436984": "760c8f82b8fb6157",
+    "title:a high resolution functional network organized atlas of human superficial white matter from ultra high field diffusion mri": "760c8f82b8fb6157",
+    "url:https://arxiv.org/abs/2607.08790v1": "bf69b89621d5119b",
+    "title:dentiask a vqa benchmark for multimodal reasoning in panoramic dental radiographs": "bf69b89621d5119b",
+    "url:https://arxiv.org/abs/2607.09142v1": "fe385e5876ac5526",
+    "title:medrealmm a real world multimodal benchmark for chinese online medical consultation": "fe385e5876ac5526"
   },
-  "updated_at": "2026-07-12T10:02:22.877630+00:00"
+  "updated_at": "2026-07-13T11:29:19.049787+00:00"
 }
