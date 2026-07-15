@@ -992,6 +992,21 @@ TOPIC_RULES = [
         ],
     ),
     (
+        "BCI / EEG",
+        [
+            "brain-computer interface",
+            "brain computer interface",
+            "BCI",
+            "EEG",
+            "electroencephalography",
+            "electroencephalographic",
+            "neural decoding",
+            "brain signal",
+            "motor imagery",
+            "motor imagery EEG",
+        ],
+    ),
+    (
         "Foundation / VLM",
         [
             "foundation model",
@@ -1313,8 +1328,8 @@ def summarize_with_openai(
         prompt = f"""You are a research assistant for {profile_name}.
 Summarize the paper in concise Chinese for a medical imaging AI researcher.
 Please classify it as one of: brain-gut axis, multi-organ diagnosis, Alzheimer diagnosis,
-image synthesis/enhancement, agentic neuroimaging, whole-body PET/MRI, foundation model,
-radiology/neuroimaging AI, or other.
+image synthesis/enhancement, brain-computer interface, EEG, agentic neuroimaging,
+whole-body PET/MRI, foundation model, radiology/neuroimaging AI, or other.
 Include the research problem, data/modality, method, key finding, and why it is worth reading.
 Do not invent claims not supported by the abstract.
 
@@ -1472,6 +1487,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     focus_terms = [
         "medical imaging + deep learning",
         "neuroimaging / brain MRI / PET",
+        "brain-computer interface / EEG",
         "agentic AI for neuroimaging",
         "whole-body PET / MRI",
         "multi-organ imaging diagnosis",
@@ -1869,7 +1885,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers in neuroimaging, brain MRI/PET, agentic AI for imaging, whole-body PET/MRI, multi-organ diagnosis, image synthesis, Alzheimer diagnosis, and radiology foundation models.</p>
+        <p class="subtitle">Daily radar for deep learning papers in neuroimaging, brain MRI/PET, brain-computer interfaces, EEG, agentic AI for imaging, whole-body PET/MRI, multi-organ diagnosis, image synthesis, Alzheimer diagnosis, and radiology foundation models.</p>
       </header>
     </div>
   </div>

@@ -22,6 +22,9 @@ research_profile:
 
   queries:
     - "medical imaging deep learning neuroimaging brain"
+    - "brain-computer interface EEG deep learning"
+    - "BCI electroencephalography neural decoding machine learning"
+    - "EEG foundation model brain signal artificial intelligence"
     - "neuroimaging brain MRI PET AI agent agentic AI"
     - "brain image large language model agent radiology"
     - "whole-body PET MRI multi-organ deep learning"
@@ -52,6 +55,7 @@ research_profile:
     - "multimodal radiology vision-language model"
 
   pubmed_queries:
+    - '("brain-computer interface"[Title/Abstract] OR "brain computer interface"[Title/Abstract] OR BCI[Title/Abstract] OR EEG[Title/Abstract] OR electroencephalography[Title/Abstract] OR electroencephalographic[Title/Abstract] OR "neural decoding"[Title/Abstract] OR "brain signal"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
     - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
     - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR radiomics[Title/Abstract])'
     - '("medical image synthesis"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "super resolution"[Title/Abstract] OR super-resolution[Title/Abstract] OR denoising[Title/Abstract] OR "diffusion model"[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
@@ -64,6 +68,10 @@ research_profile:
 
   arxiv_queries:
     - "brain neuroimaging medical imaging deep learning"
+    - "brain computer interface EEG deep learning"
+    - "BCI electroencephalography neural decoding machine learning"
+    - "EEG foundation model brain signal"
+    - "motor imagery EEG transformer"
     - "neuroimaging brain MRI PET AI agent"
     - "agentic AI medical imaging radiology"
     - "large language model agent radiology imaging"
@@ -92,6 +100,9 @@ research_profile:
     - "3D medical image generative model"
 
   semantic_scholar_queries:
+    - "brain-computer interface EEG deep learning"
+    - "BCI electroencephalography neural decoding machine learning"
+    - "EEG foundation model brain signal artificial intelligence"
     - "Alzheimer's disease diagnosis MRI PET deep learning"
     - "neuroimaging brain MRI PET AI agent"
     - "agentic AI medical imaging radiology"
@@ -123,7 +134,7 @@ research_profile:
 sources:
   pubmed:
     enabled: true
-    max_queries: 12
+    max_queries: 14
     max_results_per_query: 30
     sleep_seconds: 0.55
     timeout_seconds: 20
@@ -134,7 +145,7 @@ sources:
 
   arxiv:
     enabled: true
-    max_queries: 28
+    max_queries: 32
     max_results_per_query: 20
     sleep_seconds: 3.1
     timeout_seconds: 20
@@ -148,8 +159,8 @@ sources:
 
   semantic_scholar:
     enabled: true
-    max_queries: 18
-    max_queries_without_api_key: 8
+    max_queries: 21
+    max_queries_without_api_key: 10
     max_results_per_query: 20
     sleep_seconds: 1.0
     timeout_seconds: 20
@@ -201,7 +212,7 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '(("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR radiomics[Title/Abstract]))'
+  pubmed_topic_block: '(("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR EEG[Title/Abstract] OR electroencephalography[Title/Abstract] OR "brain-computer interface"[Title/Abstract] OR BCI[Title/Abstract] OR "neural decoding"[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR radiomics[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
@@ -237,6 +248,9 @@ top_journal_families:
     - "Radiology: Artificial Intelligence"
 
   crossref_topic_queries:
+    - "brain-computer interface EEG deep learning"
+    - "BCI electroencephalography neural decoding machine learning"
+    - "EEG foundation model brain signal artificial intelligence"
     - "brain neuroimaging MRI PET artificial intelligence deep learning"
     - "brain imaging foundation model MRI PET"
     - "neuroimaging brain MRI deep learning artificial intelligence"
@@ -423,12 +437,21 @@ scoring:
     - agentic AI
     - LLM agent
     - multi-agent
+    - neural decoding
+    - brain-computer interface
+    - brain computer interface
 
   soft_must_have_any:
     - brain
     - neuro
     - neuroimaging
     - neuroimage
+    - EEG
+    - electroencephalography
+    - brain-computer
+    - brain computer
+    - BCI
+    - neural decoding
     - MRI
     - fMRI
     - PET
@@ -459,6 +482,16 @@ scoring:
     "LLM agent": 5
     "large language model agent": 5
     "multi-agent": 4
+    "brain-computer interface": 8
+    "brain computer interface": 8
+    BCI: 7
+    EEG: 7
+    electroencephalography: 7
+    electroencephalographic: 6
+    "neural decoding": 7
+    "brain signal": 5
+    "motor imagery": 5
+    "motor imagery EEG": 7
     "vision-language": 5
     "vision language": 5
     multimodal: 4
@@ -523,6 +556,13 @@ scoring:
     neuro: 4
     neuroimaging: 7
     neuroimage: 7
+    EEG: 6
+    electroencephalography: 6
+    "brain-computer interface": 8
+    "brain computer interface": 8
+    BCI: 7
+    "neural decoding": 7
+    "brain signal": 5
     MRI: 4
     fMRI: 5
     PET: 4
