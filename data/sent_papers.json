@@ -2204,6 +2204,15 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-15T03:12:52.702052+00:00"
+    },
+    "c00e8e82e49763a8": {
+      "title": "Sensory-guided human-machine joint learning accelerates the acquisition of motor imagery brain computer interface control",
+      "url": "https://doi.org/10.1038/s41467-026-75435-5",
+      "doi": "10.1038/s41467-026-75435-5",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-15T10:17:07.647305+00:00"
     }
   },
   "sent_keys": {
@@ -3078,7 +3087,10 @@
     "url:https://pubmed.ncbi.nlm.nih.gov/42447240": "4b78513ce61a9a4f",
     "title:large language model ensemble for automated tnm staging from radiology reports": "4b78513ce61a9a4f",
     "url:https://arxiv.org/abs/2607.12896v1": "eb367479b8650f48",
-    "title:unimedseg unified in context learning for multi paradigm 2d 3d medical image segmentation": "eb367479b8650f48"
+    "title:unimedseg unified in context learning for multi paradigm 2d 3d medical image segmentation": "eb367479b8650f48",
+    "doi:10.1038/s41467-026-75435-5": "c00e8e82e49763a8",
+    "url:https://doi.org/10.1038/s41467-026-75435-5": "c00e8e82e49763a8",
+    "title:sensory guided human machine joint learning accelerates the acquisition of motor imagery brain computer interface control": "c00e8e82e49763a8"
   },
-  "updated_at": "2026-07-15T03:12:52.703069+00:00"
+  "updated_at": "2026-07-15T10:17:07.647404+00:00"
 }
