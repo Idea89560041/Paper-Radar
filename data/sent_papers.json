@@ -2375,6 +2375,96 @@
       "venue": "BMC Oral Health",
       "source": "PubMed",
       "sent_at": "2026-07-16T10:23:02.384702+00:00"
+    },
+    "c841524079be898a": {
+      "title": "EEG-DBNet: a dual-branch framework for temporal-spectral representation learning of motor imagery electroencephalography.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42461518/",
+      "doi": "10.1186/s40708-026-00321-1",
+      "pmid": "42461518",
+      "venue": "Brain Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "2984cf75e2ee307a": {
+      "title": "Deep Model Families for EEG-Based Multi-Class Dementia Classification.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42459054/",
+      "doi": "10.1142/s0129065727500055",
+      "pmid": "42459054",
+      "venue": "Int J Neural Syst",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "c790dfcc1324dbab": {
+      "title": "Identifying sex-specific sub-phenotypes of Alzheimer's disease progression using longitudinal electronic health records.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42462283/",
+      "doi": "10.1016/j.ebiom.2026.106391",
+      "pmid": "42462283",
+      "venue": "EBioMedicine",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "8fdf0a1a6e2d88c6": {
+      "title": "Automated detection of trigeminal neuralgia using multi-domain EEG feature analysis and CNN-attention architecture: a comparative machine learning study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42463727/",
+      "doi": "10.1038/s41598-026-62292-x",
+      "pmid": "42463727",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "ec9e1a7153c803ff": {
+      "title": "MonteRET: AI Agent Enhancing Multimodal LLMs with Multi-granularity Knowledge Retrieval for Chest CT Report Generation",
+      "url": "https://arxiv.org/abs/2607.14264v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "27513abea734275e": {
+      "title": "Exploring the Capabilities of Large Language Model Encoders for Image-Text Retrieval in Chest X-rays.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42461737/",
+      "doi": "10.1109/jbhi.2026.3713895",
+      "pmid": "42461737",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "b03df0b3b5e205bf": {
+      "title": "From stars to molecules: AI guided device-agnostic super-resolution imaging",
+      "url": "https://doi.org/10.1038/s41467-026-75584-7",
+      "doi": "10.1038/s41467-026-75584-7",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "240e3cca46852f4e": {
+      "title": "Symbal: Detecting Systematic Misalignments in Model-Generated Captions",
+      "url": "https://arxiv.org/abs/2607.15216v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "921d749ee7d6c10a": {
+      "title": "Patient and physician perspectives on large language model generated responses about brain aneurysm.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42461418/",
+      "doi": "10.1007/s00381-026-07392-9",
+      "pmid": "42461418",
+      "venue": "Childs Nerv Syst",
+      "source": "PubMed",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "5f432f09b92dcf98": {
+      "title": "AlphaGEM enables precise genome-scale metabolic modelling by integrating protein structure alignment with deep-learning-based dark metabolism mining",
+      "url": "https://doi.org/10.1038/s41467-026-75549-w",
+      "doi": "10.1038/s41467-026-75549-w",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-17T10:16:21.468989+00:00"
     }
   },
   "sent_keys": {
@@ -3318,7 +3408,41 @@
     "doi:10.1186/s12903-026-09157-x": "413f6c394b2d9f09",
     "pmid:42449335": "413f6c394b2d9f09",
     "url:https://pubmed.ncbi.nlm.nih.gov/42449335": "413f6c394b2d9f09",
-    "title:a paradigm of hybrid supervision for annotation scarce periapical film analysis": "413f6c394b2d9f09"
+    "title:a paradigm of hybrid supervision for annotation scarce periapical film analysis": "413f6c394b2d9f09",
+    "doi:10.1186/s40708-026-00321-1": "c841524079be898a",
+    "pmid:42461518": "c841524079be898a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42461518": "c841524079be898a",
+    "title:eeg dbnet a dual branch framework for temporal spectral representation learning of motor imagery electroencephalography": "c841524079be898a",
+    "doi:10.1142/s0129065727500055": "2984cf75e2ee307a",
+    "pmid:42459054": "2984cf75e2ee307a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42459054": "2984cf75e2ee307a",
+    "title:deep model families for eeg based multi class dementia classification": "2984cf75e2ee307a",
+    "doi:10.1016/j.ebiom.2026.106391": "c790dfcc1324dbab",
+    "pmid:42462283": "c790dfcc1324dbab",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42462283": "c790dfcc1324dbab",
+    "title:identifying sex specific sub phenotypes of alzheimer s disease progression using longitudinal electronic health records": "c790dfcc1324dbab",
+    "doi:10.1038/s41598-026-62292-x": "8fdf0a1a6e2d88c6",
+    "pmid:42463727": "8fdf0a1a6e2d88c6",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42463727": "8fdf0a1a6e2d88c6",
+    "title:automated detection of trigeminal neuralgia using multi domain eeg feature analysis and cnn attention architecture a comparative machine learning study": "8fdf0a1a6e2d88c6",
+    "url:https://arxiv.org/abs/2607.14264v1": "ec9e1a7153c803ff",
+    "title:monteret ai agent enhancing multimodal llms with multi granularity knowledge retrieval for chest ct report generation": "ec9e1a7153c803ff",
+    "doi:10.1109/jbhi.2026.3713895": "27513abea734275e",
+    "pmid:42461737": "27513abea734275e",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42461737": "27513abea734275e",
+    "title:exploring the capabilities of large language model encoders for image text retrieval in chest x rays": "27513abea734275e",
+    "doi:10.1038/s41467-026-75584-7": "b03df0b3b5e205bf",
+    "url:https://doi.org/10.1038/s41467-026-75584-7": "b03df0b3b5e205bf",
+    "title:from stars to molecules ai guided device agnostic super resolution imaging": "b03df0b3b5e205bf",
+    "url:https://arxiv.org/abs/2607.15216v1": "240e3cca46852f4e",
+    "title:symbal detecting systematic misalignments in model generated captions": "240e3cca46852f4e",
+    "doi:10.1007/s00381-026-07392-9": "921d749ee7d6c10a",
+    "pmid:42461418": "921d749ee7d6c10a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42461418": "921d749ee7d6c10a",
+    "title:patient and physician perspectives on large language model generated responses about brain aneurysm": "921d749ee7d6c10a",
+    "doi:10.1038/s41467-026-75549-w": "5f432f09b92dcf98",
+    "url:https://doi.org/10.1038/s41467-026-75549-w": "5f432f09b92dcf98",
+    "title:alphagem enables precise genome scale metabolic modelling by integrating protein structure alignment with deep learning based dark metabolism mining": "5f432f09b92dcf98"
   },
-  "updated_at": "2026-07-16T10:23:02.385604+00:00"
+  "updated_at": "2026-07-17T10:16:21.469491+00:00"
 }
