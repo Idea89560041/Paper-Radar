@@ -2465,6 +2465,78 @@
       "venue": "Nature Communications",
       "source": "Crossref Top Journals",
       "sent_at": "2026-07-17T10:16:21.468989+00:00"
+    },
+    "e271ffd1efab72d2": {
+      "title": "Anchor-free temporal localization of apnea events from EEG/EOG with state-space models.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42468561/",
+      "doi": "10.1088/1361-6579/ae8ca8",
+      "pmid": "42468561",
+      "venue": "Physiol Meas",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "3a7e15172650bf2c": {
+      "title": "Mamba-SUM: A Mamba-Based Framework with Wavelet Transformation for Total-Body Ultra-low-dose PET/CT Imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42467572/",
+      "doi": "10.1109/tip.2026.3712348",
+      "pmid": "42467572",
+      "venue": "IEEE Trans Image Process",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "19304c0dd5185803": {
+      "title": "Novel explainable transformer model for automated attention-deficit hyperactivity disorder detection with EEG signals.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42468441/",
+      "doi": "10.1016/j.cmpb.2026.109499",
+      "pmid": "42468441",
+      "venue": "Comput Methods Programs Biomed",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "40258edf34d3c287": {
+      "title": "Autonomous radiotherapy planning via agentic orchestration using a multimodal TPS-integrated compound AI platform.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42466075/",
+      "doi": "10.1088/3049-477x/ae7978",
+      "pmid": "42466075",
+      "venue": "Mach Learn Health",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "881459a783c222bd": {
+      "title": "Neonatal Seizure Detection Using Combined aEEG and Compressed Spectral Array Features: A Machine-Learning Proof-of-Concept Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42465892/",
+      "doi": "10.64898/2026.07.02.26354953",
+      "pmid": "42465892",
+      "venue": "medRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "74685fa1ec69cb97": {
+      "title": "Foundation Model-empowered Multimodal Prediction of Platinum Resistance in High-grade Serous Ovarian Cancer: A Multicenter Retrospective Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42469040/",
+      "doi": "10.1016/j.acra.2026.06.024",
+      "pmid": "42469040",
+      "venue": "Acad Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "a431e04b38ab17d2": {
+      "title": "Outracing antibiotic resistance with deep learning",
+      "url": "https://doi.org/10.1038/s41551-026-01761-0",
+      "doi": "10.1038/s41551-026-01761-0",
+      "pmid": "",
+      "venue": "Nature Biomedical Engineering",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "43c356abc56c7a43": {
+      "title": "Dynamic Spatio-Temporal Fusion Network Via Hierarchical Self-Attention for Seizure Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42467581/",
+      "doi": "10.1109/jbhi.2026.3714542",
+      "pmid": "42467581",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-18T09:45:59.210101+00:00"
     }
   },
   "sent_keys": {
@@ -3442,7 +3514,38 @@
     "title:patient and physician perspectives on large language model generated responses about brain aneurysm": "921d749ee7d6c10a",
     "doi:10.1038/s41467-026-75549-w": "5f432f09b92dcf98",
     "url:https://doi.org/10.1038/s41467-026-75549-w": "5f432f09b92dcf98",
-    "title:alphagem enables precise genome scale metabolic modelling by integrating protein structure alignment with deep learning based dark metabolism mining": "5f432f09b92dcf98"
+    "title:alphagem enables precise genome scale metabolic modelling by integrating protein structure alignment with deep learning based dark metabolism mining": "5f432f09b92dcf98",
+    "doi:10.1088/1361-6579/ae8ca8": "e271ffd1efab72d2",
+    "pmid:42468561": "e271ffd1efab72d2",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42468561": "e271ffd1efab72d2",
+    "title:anchor free temporal localization of apnea events from eeg eog with state space models": "e271ffd1efab72d2",
+    "doi:10.1109/tip.2026.3712348": "3a7e15172650bf2c",
+    "pmid:42467572": "3a7e15172650bf2c",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42467572": "3a7e15172650bf2c",
+    "title:mamba sum a mamba based framework with wavelet transformation for total body ultra low dose pet ct imaging": "3a7e15172650bf2c",
+    "doi:10.1016/j.cmpb.2026.109499": "19304c0dd5185803",
+    "pmid:42468441": "19304c0dd5185803",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42468441": "19304c0dd5185803",
+    "title:novel explainable transformer model for automated attention deficit hyperactivity disorder detection with eeg signals": "19304c0dd5185803",
+    "doi:10.1088/3049-477x/ae7978": "40258edf34d3c287",
+    "pmid:42466075": "40258edf34d3c287",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42466075": "40258edf34d3c287",
+    "title:autonomous radiotherapy planning via agentic orchestration using a multimodal tps integrated compound ai platform": "40258edf34d3c287",
+    "doi:10.64898/2026.07.02.26354953": "881459a783c222bd",
+    "pmid:42465892": "881459a783c222bd",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42465892": "881459a783c222bd",
+    "title:neonatal seizure detection using combined aeeg and compressed spectral array features a machine learning proof of concept study": "881459a783c222bd",
+    "doi:10.1016/j.acra.2026.06.024": "74685fa1ec69cb97",
+    "pmid:42469040": "74685fa1ec69cb97",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42469040": "74685fa1ec69cb97",
+    "title:foundation model empowered multimodal prediction of platinum resistance in high grade serous ovarian cancer a multicenter retrospective study": "74685fa1ec69cb97",
+    "doi:10.1038/s41551-026-01761-0": "a431e04b38ab17d2",
+    "url:https://doi.org/10.1038/s41551-026-01761-0": "a431e04b38ab17d2",
+    "title:outracing antibiotic resistance with deep learning": "a431e04b38ab17d2",
+    "doi:10.1109/jbhi.2026.3714542": "43c356abc56c7a43",
+    "pmid:42467581": "43c356abc56c7a43",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42467581": "43c356abc56c7a43",
+    "title:dynamic spatio temporal fusion network via hierarchical self attention for seizure prediction": "43c356abc56c7a43"
   },
-  "updated_at": "2026-07-17T10:16:21.469491+00:00"
+  "updated_at": "2026-07-18T09:45:59.210533+00:00"
 }
