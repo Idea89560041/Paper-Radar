@@ -2537,6 +2537,51 @@
       "venue": "IEEE J Biomed Health Inform",
       "source": "PubMed",
       "sent_at": "2026-07-18T09:45:59.210101+00:00"
+    },
+    "021283083c1548c4": {
+      "title": "PatientSpace: A multimodal graph-based latent representation framework for modeling neurodegenerative disease heterogeneity.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42471130/",
+      "doi": "10.1016/j.neuroimage.2026.122136",
+      "pmid": "42471130",
+      "venue": "Neuroimage",
+      "source": "PubMed",
+      "sent_at": "2026-07-19T10:02:37.588032+00:00"
+    },
+    "fdb7f4fca9996e77": {
+      "title": "SMFF-Net: Spatiotemporal-frequency Multi-domain Feature Fusion Network for EEG-based brain state detection.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42471180/",
+      "doi": "10.1016/j.neuroscience.2026.07.025",
+      "pmid": "42471180",
+      "venue": "Neuroscience",
+      "source": "PubMed",
+      "sent_at": "2026-07-19T10:02:37.588032+00:00"
+    },
+    "d1d9df0533bbdf86": {
+      "title": "Enhanced multimodal MRI classification of schizophrenia through cross-attention graph neural networks.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42470797/",
+      "doi": "10.1016/j.media.2026.104218",
+      "pmid": "42470797",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-07-19T10:02:37.588032+00:00"
+    },
+    "9c0400cedff39416": {
+      "title": "Predicting local control of brain metastases after Gamma Knife radiosurgery: a multimodal deep learning-radiomics approach.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42471553/",
+      "doi": "10.1186/s12880-026-02579-7",
+      "pmid": "42471553",
+      "venue": "BMC Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-19T10:02:37.588032+00:00"
+    },
+    "ae0c1827ac0f0802": {
+      "title": "Deep-learning CT reconstruction improves image quality but not diagnostic accuracy for sacral fragility fractures: MRI remains essential.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42470916/",
+      "doi": "10.1016/j.injury.2026.113504",
+      "pmid": "42470916",
+      "venue": "Injury",
+      "source": "PubMed",
+      "sent_at": "2026-07-19T10:02:37.588032+00:00"
     }
   },
   "sent_keys": {
@@ -3545,7 +3590,27 @@
     "doi:10.1109/jbhi.2026.3714542": "43c356abc56c7a43",
     "pmid:42467581": "43c356abc56c7a43",
     "url:https://pubmed.ncbi.nlm.nih.gov/42467581": "43c356abc56c7a43",
-    "title:dynamic spatio temporal fusion network via hierarchical self attention for seizure prediction": "43c356abc56c7a43"
+    "title:dynamic spatio temporal fusion network via hierarchical self attention for seizure prediction": "43c356abc56c7a43",
+    "doi:10.1016/j.neuroimage.2026.122136": "021283083c1548c4",
+    "pmid:42471130": "021283083c1548c4",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42471130": "021283083c1548c4",
+    "title:patientspace a multimodal graph based latent representation framework for modeling neurodegenerative disease heterogeneity": "021283083c1548c4",
+    "doi:10.1016/j.neuroscience.2026.07.025": "fdb7f4fca9996e77",
+    "pmid:42471180": "fdb7f4fca9996e77",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42471180": "fdb7f4fca9996e77",
+    "title:smff net spatiotemporal frequency multi domain feature fusion network for eeg based brain state detection": "fdb7f4fca9996e77",
+    "doi:10.1016/j.media.2026.104218": "d1d9df0533bbdf86",
+    "pmid:42470797": "d1d9df0533bbdf86",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42470797": "d1d9df0533bbdf86",
+    "title:enhanced multimodal mri classification of schizophrenia through cross attention graph neural networks": "d1d9df0533bbdf86",
+    "doi:10.1186/s12880-026-02579-7": "9c0400cedff39416",
+    "pmid:42471553": "9c0400cedff39416",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42471553": "9c0400cedff39416",
+    "title:predicting local control of brain metastases after gamma knife radiosurgery a multimodal deep learning radiomics approach": "9c0400cedff39416",
+    "doi:10.1016/j.injury.2026.113504": "ae0c1827ac0f0802",
+    "pmid:42470916": "ae0c1827ac0f0802",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42470916": "ae0c1827ac0f0802",
+    "title:deep learning ct reconstruction improves image quality but not diagnostic accuracy for sacral fragility fractures mri remains essential": "ae0c1827ac0f0802"
   },
-  "updated_at": "2026-07-18T09:45:59.210533+00:00"
+  "updated_at": "2026-07-19T10:02:37.588355+00:00"
 }
