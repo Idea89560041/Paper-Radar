@@ -2582,6 +2582,42 @@
       "venue": "Injury",
       "source": "PubMed",
       "sent_at": "2026-07-19T10:02:37.588032+00:00"
+    },
+    "07bfa40034116ace": {
+      "title": "A diffusion-conditioned representation learning framework for disease classification in medical imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42472839/",
+      "doi": "10.1186/s13104-026-07858-8",
+      "pmid": "42472839",
+      "venue": "BMC Res Notes",
+      "source": "PubMed",
+      "sent_at": "2026-07-20T11:13:39.705785+00:00"
+    },
+    "47fe581d5c2b986e": {
+      "title": "Deep learning-enhanced zero echo time MRI for femoral cortical bone quantification: A technical validation against CT.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42472589/",
+      "doi": "10.1016/j.mri.2026.110748",
+      "pmid": "42472589",
+      "venue": "Magn Reson Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-20T11:13:39.705785+00:00"
+    },
+    "c5c9365c4bbcbeff": {
+      "title": "A neural network model of free recall learns multiple memory strategies",
+      "url": "https://doi.org/10.1038/s42256-026-01274-0",
+      "doi": "10.1038/s42256-026-01274-0",
+      "pmid": "",
+      "venue": "Nature Machine Intelligence",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-20T11:13:39.705785+00:00"
+    },
+    "667233b7ad2ce84a": {
+      "title": "Training Deep Learning Based Dynamic MR Image Reconstruction Using Synthetic Fractals.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42473088/",
+      "doi": "10.1002/mrm.70521",
+      "pmid": "42473088",
+      "venue": "Magn Reson Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-20T11:13:39.705785+00:00"
     }
   },
   "sent_keys": {
@@ -3610,7 +3646,22 @@
     "doi:10.1016/j.injury.2026.113504": "ae0c1827ac0f0802",
     "pmid:42470916": "ae0c1827ac0f0802",
     "url:https://pubmed.ncbi.nlm.nih.gov/42470916": "ae0c1827ac0f0802",
-    "title:deep learning ct reconstruction improves image quality but not diagnostic accuracy for sacral fragility fractures mri remains essential": "ae0c1827ac0f0802"
+    "title:deep learning ct reconstruction improves image quality but not diagnostic accuracy for sacral fragility fractures mri remains essential": "ae0c1827ac0f0802",
+    "doi:10.1186/s13104-026-07858-8": "07bfa40034116ace",
+    "pmid:42472839": "07bfa40034116ace",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42472839": "07bfa40034116ace",
+    "title:a diffusion conditioned representation learning framework for disease classification in medical imaging": "07bfa40034116ace",
+    "doi:10.1016/j.mri.2026.110748": "47fe581d5c2b986e",
+    "pmid:42472589": "47fe581d5c2b986e",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42472589": "47fe581d5c2b986e",
+    "title:deep learning enhanced zero echo time mri for femoral cortical bone quantification a technical validation against ct": "47fe581d5c2b986e",
+    "doi:10.1038/s42256-026-01274-0": "c5c9365c4bbcbeff",
+    "url:https://doi.org/10.1038/s42256-026-01274-0": "c5c9365c4bbcbeff",
+    "title:a neural network model of free recall learns multiple memory strategies": "c5c9365c4bbcbeff",
+    "doi:10.1002/mrm.70521": "667233b7ad2ce84a",
+    "pmid:42473088": "667233b7ad2ce84a",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42473088": "667233b7ad2ce84a",
+    "title:training deep learning based dynamic mr image reconstruction using synthetic fractals": "667233b7ad2ce84a"
   },
-  "updated_at": "2026-07-19T10:02:37.588355+00:00"
+  "updated_at": "2026-07-20T11:13:39.706003+00:00"
 }
