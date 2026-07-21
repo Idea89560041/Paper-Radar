@@ -479,7 +479,7 @@ def heuristic_note(title: str, text: str, topics: List[str], figure_caption: str
         "note_model": "heuristic",
         "one_sentence": f"这篇论文围绕“{title}”，核心线索是：{lead}",
         "why_relevant": f"它与 {topic_text} 相关，且方法上涉及 {method}，数据/模态侧重 {modality}，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
-        "abstract_zh": f"未检测到本地 OpenAI 配置，暂保留摘要原文用于后续翻译：{abstract}",
+        "abstract_zh": f"未检测到 OpenAI 配置，暂保留摘要原文用于后续翻译：{abstract}",
         "abstract_original": abstract,
         "introduction_logic": [
             f"背景问题：{first_informative_sentence(intro or abstract)}",
@@ -488,7 +488,7 @@ def heuristic_note(title: str, text: str, topics: List[str], figure_caption: str
         ],
         "innovations": innovations,
         "method_summary": f"简单来看，论文使用 {method} 处理 {modality}，目标是服务于 {topic_text} 相关任务。",
-        "figure_caption_zh": f"未检测到本地 OpenAI 配置，暂保留原 caption：{figure_caption}" if figure_caption else "",
+        "figure_caption_zh": f"未检测到 OpenAI 配置，暂保留原 caption：{figure_caption}" if figure_caption else "",
         "data_modality": modality,
         "method": method,
         "key_points": innovations,
@@ -708,7 +708,7 @@ def enrich_existing_readings(readings: List[Dict[str, Any]], args: argparse.Name
             continue
         note = reading.get("interpretation") if isinstance(reading.get("interpretation"), dict) else {}
         needs_refresh = note.get("note_version") != NOTE_VERSION
-        if openai_available and note.get("note_model") == "heuristic":
+        if openai_available and note.get("note_model") != os.getenv("OPENAI_MODEL"):
             needs_refresh = True
         required_fields = ["abstract_zh", "introduction_logic", "innovations", "method_summary"]
         if any(not note.get(field) for field in required_fields):
@@ -762,6 +762,8 @@ def main() -> int:
     files_state = state.setdefault("files", {})
 
     if args.enrich_existing:
+        if not args.no_openai and not (os.getenv("OPENAI_API_KEY") and os.getenv("OPENAI_MODEL")):
+            print("[warn] OPENAI_API_KEY and OPENAI_MODEL are required for Chinese abstract translation.")
         changed = enrich_existing_readings(readings, args)
         if changed:
             save_json(readings_path, readings)
