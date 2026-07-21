@@ -1,0 +1,345 @@
+[
+  {
+    "id": "8fa70394abf3e2dc",
+    "sha256": "8fa70394abf3e2dc965e293381d27f3ab4ab890ad41d06ff68ae85e2b839ac4b",
+    "title": "EIGNN: An Explainable Imaging-Genetic Neural Network for Robust Alzheimer's Disease Risk Prediction",
+    "authors": "",
+    "source_file": "EIGNN_An_Explainable_Imaging-Genetic_Neural_Network_for_Robust_Alzheimers_Disease_Risk_Prediction.pdf",
+    "file_size": 2121460,
+    "file_mtime": "2026-06-26T09:11:18.547541+00:00",
+    "processed_at": "2026-07-21T04:43:59.076298+00:00",
+    "topics": [
+      "Neuroimaging",
+      "AD / Dementia",
+      "Foundation / VLM",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“EIGNN: An Explainable Imaging-Genetic Neural Network for Robust Alzheimer's Disease Risk Prediction”，核心线索是：—Accurate risk prediction and early diagnosis are crucial for the early intervention of Alzheimer's disease (AD)",
+      "why_relevant": "它与 Neuroimaging、AD / Dementia、Foundation / VLM、Learning Methods 相关，且方法上涉及 transformer, neural network, deep learning, machine learning，数据/模态侧重 neuroimaging，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "neuroimaging",
+      "method": "transformer, neural network, deep learning, machine learning",
+      "key_points": [
+        "—Accurate risk prediction and early diagnosis are crucial for the early intervention of Alzheimer's disease (AD)",
+        "Current prediction models usually have limited power in capturing the complex interplay s between the heterogeneous inputs or lack biological explainability required for clinical adoption and new diagnosis biomarkers discovery",
+        "The EIGNN model features a biologically - informed architecture, incorporating a multi -GWAS SNP selection strategy, enhance d explainable neural network design, and a modal attention mechanism"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/8fa70394abf3e2dc.svg",
+    "text_excerpt": "—Accurate risk prediction and early diagnosis are crucial for the early intervention of Alzheimer's disease (AD). Current prediction models usually have limited power in capturing the complex interplay s between the heterogeneous inputs or lack biological explainability required for clinical adoption and new diagnosis biomarkers discovery. Inspired by pioneering works on biologically informed network and multi-modal learning, we presented an Explainable Imaging-Genetic Neural Network (EIGNN), integrat ing genetic and neuroimaging data to generate accurate, robust, and explainable AD risk prediction. The EIGNN model features a biologically - informed architecture, incorporating a multi -GWAS SNP selection strategy, enhance d explainable neural network design, and a modal attention mechanism. Genetic variants were hierarchically mapped to their target genes and biological pathways , and fu"
+  },
+  {
+    "id": "b3bf7255f9bf6d7d",
+    "sha256": "b3bf7255f9bf6d7d385c2dbe98ac389857d0a6ab20e3a801c739c8b609120a61",
+    "title": "Delta-Diffusion: Modeling Longitudinal Brain Amyloid-PET Trajectories via Conditional Poisson Diffusion Bridge",
+    "authors": "Yongheng Sun; Minhui Yu; Mengqi Wu; Maureen Kohi; Mingxia Liu",
+    "source_file": "Delta-Diffusion.pdf",
+    "file_size": 4517323,
+    "file_mtime": "2026-06-29T02:41:05+00:00",
+    "processed_at": "2026-07-21T04:43:58.753686+00:00",
+    "topics": [
+      "Neuroimaging",
+      "AD / Dementia",
+      "Generative AI",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Delta-Diffusion: Modeling Longitudinal Brain Amyloid-PET Trajectories via Conditional Poisson Diffusion Bridge”，核心线索是：While longitudinal brain PET imaging is the gold stan- dard for quantifying the spatiotemporal accumulation ofβ-amyloid, its widespread clinical utility is constrained by high operational costs and cumulative radiation risks",
+      "why_relevant": "它与 Neuroimaging、AD / Dementia、Generative AI、Learning Methods 相关，且方法上涉及 transformer, diffusion, deep learning，数据/模态侧重 MRI, PET，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI, PET",
+      "method": "transformer, diffusion, deep learning",
+      "key_points": [
+        "While longitudinal brain PET imaging is the gold stan- dard for quantifying the spatiotemporal accumulation ofβ-amyloid, its widespread clinical utility is constrained by high operational costs and cumulative radiation risks",
+        "To this end, we propose∆-Diffusion, a novel progression-aware framework that redefines longitudinal PET synthesis as a conditional Poisson Diffusion Bridge (PDB) process",
+        "Unlike standard diffusion models that start from Gaussian noise, our PDB formulation is mathematically anchored to the subject’s baseline PET, effectively trans- forming the generative task into aconditional distribution transitionof the amyloid trajectory"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "优先关注它能否用于缺失模态补全、纵向影像预测、低剂量/低质量图像增强或跨模态合成。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/b3bf7255f9bf6d7d.svg",
+    "text_excerpt": ".While longitudinal brain PET imaging is the gold stan- dard for quantifying the spatiotemporal accumulation ofβ-amyloid, its widespread clinical utility is constrained by high operational costs and cumulative radiation risks. Recent deep generative models show promise in longitudinal image synthesis; however, they often fail to capture sub- tle pathological progression due toidentity driftand a persistent bias towardtrivially replicating baseline signal intensitiesrather than model- ing temporal transition. To this end, we propose∆-Diffusion, a novel progression-aware framework that redefines longitudinal PET synthesis as a conditional Poisson Diffusion Bridge (PDB) process. Unlike standard diffusion models that start from Gaussian noise, our PDB formulation is mathematically anchored to the subject’s baseline PET, effectively trans- forming the generative task into aconditional distrib"
+  },
+  {
+    "id": "b245cad3e8bb0514",
+    "sha256": "b245cad3e8bb0514f44435f019dcd96971b47958188812d6e40dcfd62a94c36c",
+    "title": "Unified Multimodal Model for Brain MRI Imputation and Understanding",
+    "authors": "Zhiyun Song; Che Liu; Tian Xia; Avinash Kori; Wenjia Bai",
+    "source_file": "Unified Multimodal Model for Brain MRI Imputation and Understanding.pdf",
+    "file_size": 3512958,
+    "file_mtime": "2026-06-29T03:07:33+00:00",
+    "processed_at": "2026-07-21T04:43:58.493013+00:00",
+    "topics": [
+      "Neuroimaging",
+      "Foundation / VLM",
+      "Generative AI",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Unified Multimodal Model for Brain MRI Imputation and Understanding”，核心线索是：Multimodal large language models (MLLMs) hold great po- tential for medicine, as they inherit knowledge from LLM and allow multiple data modalities to be integrated, analysed and interpreted in natural language",
+      "why_relevant": "它与 Neuroimaging、Foundation / VLM、Generative AI、Learning Methods 相关，且方法上涉及 transformer, diffusion, self-supervised，数据/模态侧重 MRI，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI",
+      "method": "transformer, diffusion, self-supervised",
+      "key_points": [
+        "Multimodal large language models (MLLMs) hold great po- tential for medicine, as they inherit knowledge from LLM and allow multiple data modalities to be integrated, analysed and interpreted in natural language",
+        "However, the field of medical MLLMs is constrained by non-trivial challenges, notably the scarcity of high-quality training data and the frequent occurrence of missing data in the real-world clin- ical setting",
+        "Here, we propose a novel unified multimodal model, Uni- Brain, for brain magnetic resonance image (MRI) analysis"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "优先关注它能否用于缺失模态补全、纵向影像预测、低剂量/低质量图像增强或跨模态合成。",
+        "关注模型是否解决跨中心、跨被试、缺失模态或小样本泛化问题。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/b245cad3e8bb0514.svg",
+    "text_excerpt": ".Multimodal large language models (MLLMs) hold great po- tential for medicine, as they inherit knowledge from LLM and allow multiple data modalities to be integrated, analysed and interpreted in natural language. However, the field of medical MLLMs is constrained by non-trivial challenges, notably the scarcity of high-quality training data and the frequent occurrence of missing data in the real-world clin- ical setting. Here, we propose a novel unified multimodal model, Uni- Brain, for brain magnetic resonance image (MRI) analysis. To address potential missing brain MRI modalities, we employ a unified training strategy to perform joint imaging modality imputation and brain image understanding. During training, an interleaved and description-enriched data flow is constructed to train the model in an autoregressive man- ner, enabling medical reasoning with generated multimodal data. A self"
+  },
+  {
+    "id": "a8174cda4800a2ec",
+    "sha256": "a8174cda4800a2ece809b2ec730e9b5d96793a92bd837f955f7e07db3f6296a7",
+    "title": "Jolia: Concept-Level Vision-Language Alignment for 3D CT Contrastive Learning",
+    "authors": "Julien Khlaut; Charles Corbière; Baptiste Callard; Amaury Prat; Leo Butsanets; Antoine Saporta; Théo Danielou; Leo Machado; Korentin Le Floch; Tom Boeken; Pierre Manceron; Corentin Dancette",
+    "source_file": "Jolia Concept-Level Vision-Language Alignment.pdf",
+    "file_size": 6602064,
+    "file_mtime": "2026-06-29T03:47:50.320319+00:00",
+    "processed_at": "2026-07-21T04:43:58.339948+00:00",
+    "topics": [
+      "Foundation / VLM",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Jolia: Concept-Level Vision-Language Alignment for 3D CT Contrastive Learning”，核心线索是：Vision-language contrastive pretraining has become the dominant recipe for 3D medical foundation models, leveraging the large volumes of paired scans and reports produced in clinical practice",
+      "why_relevant": "它与 Foundation / VLM、Learning Methods 相关，且方法上涉及 transformer, foundation model, contrastive, self-supervised，数据/模态侧重 CT，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "CT",
+      "method": "transformer, foundation model, contrastive, self-supervised",
+      "key_points": [
+        "Vision-language contrastive pretraining has become the dominant recipe for 3D medical foundation models, leveraging the large volumes of paired scans and reports produced in clinical practice",
+        "However, medical images usually span dozens of organs, and radiological reports are much longer than typical natural image captions and are composed of multiple structured sections",
+        "CLIP-style pretraining compresses this structure by encoding each modality into a single global token, at the risk of losing important details"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "关注模型是否解决跨中心、跨被试、缺失模态或小样本泛化问题。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/a8174cda4800a2ec.svg",
+    "text_excerpt": "Vision-language contrastive pretraining has become the dominant recipe for 3D medical foundation models, leveraging the large volumes of paired scans and reports produced in clinical practice. However, medical images usually span dozens of organs, and radiological reports are much longer than typical natural image captions and are composed of multiple structured sections. CLIP-style pretraining compresses this structure by encoding each modality into a single global token, at the risk of losing important details. We introduce ConQuer (Concept Queries), an image-text pretraining method that augments CLIP’s global alignment with a set of localized alignments, one perconcept. ConQuer splits the report into concept- specific sections and learns cross-attention queries that pool the matching image features without using any segmentation mask or spatial supervision. Contrastive learning is the"
+  },
+  {
+    "id": "1b6cf6c3835ebcef",
+    "sha256": "1b6cf6c3835ebcef9dd6662dae332f9f40963f431e76fe8bb08378656c16c9e7",
+    "title": "REN: Anatomically-Informed Mixture-of-Experts for Interstitial Lung Disease Diagnosis",
+    "authors": "",
+    "source_file": "REN_Reconstructing shared visual experiences from human brain activity across.pdf",
+    "file_size": 3417608,
+    "file_mtime": "2026-06-29T05:22:00.500663+00:00",
+    "processed_at": "2026-07-21T04:43:57.287268+00:00",
+    "topics": [
+      "Foundation / VLM",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“REN: Anatomically-Informed Mixture-of-Experts for Interstitial Lung Disease Diagnosis”，核心线索是：1 REN: Anatomically-Informed Mixture-of-Experts for Interstitial Lung Disease Diagnosis Alec K",
+      "why_relevant": "它与 Foundation / VLM、Learning Methods 相关，且方法上涉及 transformer, foundation model, deep learning, machine learning，数据/模态侧重 CT，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "CT",
+      "method": "transformer, foundation model, deep learning, machine learning",
+      "key_points": [
+        "1 REN: Anatomically-Informed Mixture-of-Experts for Interstitial Lung Disease Diagnosis Alec K",
+        "Peltekian, Halil Ertugrul Aktas, Gorkem Durak, Kevin Grudzinski, Bradford C",
+        "Esposito, Alexander Misharin, Alok Choudhary, Ankit Agrawal, and Ulas Bagci Abstract—Mixture-of-Experts (MoE) architectures achieve scalable learning by routing inputs to specialized subnetworks through conditional computation"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "关注模型是否解决跨中心、跨被试、缺失模态或小样本泛化问题。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/1b6cf6c3835ebcef.svg",
+    "text_excerpt": "1 REN: Anatomically-Informed Mixture-of-Experts for Interstitial Lung Disease Diagnosis Alec K. Peltekian, Halil Ertugrul Aktas, Gorkem Durak, Kevin Grudzinski, Bradford C. Bemiss, Carrie Richardson, Jane E. Dematte, G. R. Scott Budinger, Anthony J. Esposito, Alexander Misharin, Alok Choudhary, Ankit Agrawal, and Ulas Bagci Abstract—Mixture-of-Experts (MoE) architectures achieve scalable learning by routing inputs to specialized subnetworks through conditional computation. However, conventional MoE designs assume homogeneous expert capability and domain- agnostic routing—assumptions that are fundamentally mis- aligned with medical imaging, where anatomical structure and regional disease heterogeneity govern pathological patterns. We introduceRegional Expert Networks (REN), the first anatomically- informed MoE framework for medical image classification. REN encodes anatomical priors by tr"
+  },
+  {
+    "id": "dc0420f7191ac92b",
+    "sha256": "dc0420f7191ac92b861ce75a40e6fe92947406a98d28cb141468ce15cc8a6642",
+    "title": "Genetically-influenced multi-scale brain organization via self-supervised learning",
+    "authors": "Marilena De Pian; Junhao Wen; Christos Davatzikos",
+    "source_file": "Genetically-influenced multi-scale brain organization via self-supervised learning.pdf",
+    "file_size": 1235375,
+    "file_mtime": "2026-07-03T06:08:15.384727+00:00",
+    "processed_at": "2026-07-21T04:43:57.196130+00:00",
+    "topics": [
+      "Neuroimaging",
+      "AD / Dementia",
+      "Foundation / VLM",
+      "Generative AI",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Genetically-influenced multi-scale brain organization via self-supervised learning”，核心线索是：Understanding how genetic variation shapes brain struc- ture is a central goal of imaging-genetics research",
+      "why_relevant": "它与 Neuroimaging、AD / Dementia、Foundation / VLM、Generative AI、Learning Methods 相关，且方法上涉及 contrastive, self-supervised, deep learning，数据/模态侧重 MRI, neuroimaging，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI, neuroimaging",
+      "method": "contrastive, self-supervised, deep learning",
+      "key_points": [
+        "Understanding how genetic variation shapes brain struc- ture is a central goal of imaging-genetics research",
+        "While brain imaging-genetics studies increasingly leverage deep learning to model high-dimensional brain data, most ap- proaches either rely on region-level features or incorporate genetic information only after imaging representations have been learned",
+        "As a result, the learned imaging components are not explicitly optimized to capture genetically driven variability"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/dc0420f7191ac92b.svg",
+    "text_excerpt": "Understanding how genetic variation shapes brain struc- ture is a central goal of imaging-genetics research. While brain imaging-genetics studies increasingly leverage deep learning to model high-dimensional brain data, most ap- proaches either rely on region-level features or incorporate genetic information only after imaging representations have been learned. As a result, the learned imaging components are not explicitly optimized to capture genetically driven variability. Moreover, the effect of representation scale on multimodal imaging-genetic models remains poorly un- derstood. In this work, we propose a multimodal self- supervised learning framework that jointly models voxel- level brain imaging and genetic variation through a shared latent representation. The imaging modality is modeled using an autoencoder that produces interpretable spatial components inspired by non-negative m"
+  },
+  {
+    "id": "8ec307a95d9249f6",
+    "sha256": "8ec307a95d9249f6579a49862d2c68445a47120fa165b86ddd59a22a40dfb88e",
+    "title": "BoneCoT: multicentre validation of a whole-body skeleton foundation model for bone metastases guided by clinician-derived chain of thought",
+    "authors": "Hui Zhao",
+    "source_file": "BoneCoT_NBME.pdf",
+    "file_size": 5240875,
+    "file_mtime": "2026-07-04T13:12:55+00:00",
+    "processed_at": "2026-07-21T04:43:57.032445+00:00",
+    "topics": [
+      "Foundation / VLM",
+      "Multi-organ",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“BoneCoT: multicentre validation of a whole-body skeleton foundation model for bone metastases guided by clinician-derived chain of thought”，核心线索是：Accurate diagnosis of bone metastases demands comprehensive evaluation, yet divergent interpretations among specialists can result in diagnostic discrepancies",
+      "why_relevant": "它与 Foundation / VLM、Multi-organ、Learning Methods 相关，且方法上涉及 transformer, foundation model, self-supervised, neural network，数据/模态侧重 CT，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "CT",
+      "method": "transformer, foundation model, self-supervised, neural network",
+      "key_points": [
+        "Accurate diagnosis of bone metastases demands comprehensive evaluation, yet divergent interpretations among specialists can result in diagnostic discrepancies",
+        "In clinical practice, precision diagnosis of bone metastases necessitates multidisciplinary collaboration involving radiologists, pathologists and oncologists",
+        "We pretrained the model on 29.3 million computed tomography images from 30,267 patients across 12 skeletal sites and refined it over a graph of 26 clinically relevant tasks spanning diagnosis, complications, tumour type and biomarkers"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/8ec307a95d9249f6.svg",
+    "text_excerpt": "Nature Biomedical Engineering nature biomedical engineering https://doi.org/10.1038/s41551-026-01736-1 Article BoneCoT: multicentre validation of a whole-body skeleton foundation model for bone metastases guided by clinician-derived chain of thought Hui Zhao 1,5 , Ruipeng Zhang 2,5, Zhiyu Wang 1,5, Yifeng Gu2, Shengyuan Xu 3, Sheng Wang 4 & Yuehua Li 2 Given the rising incidence of bone metastases, computed tomography is widely used worldwide as the initial imaging modality for their detection. Accurate diagnosis of bone metastases demands comprehensive evaluation, yet divergent interpretations among specialists can result in diagnostic discrepancies. In clinical practice, precision diagnosis of bone metastases necessitates multidisciplinary collaboration involving radiologists, pathologists and oncologists. Here, to meet the need for an automated tool that can deliver expert-level insig"
+  },
+  {
+    "id": "fab8d1c9a4bd775f",
+    "sha256": "fab8d1c9a4bd775f76c933c4e2868b708a0fb38ba847ac4c4c29322e01c0edc9",
+    "title": "LMGDM: A Lesion-aware Mutual Guidance Diffusion Model with attenuation prior constraint for self-attenuation correction of whole-body PET",
+    "authors": "Shengjun Li",
+    "source_file": "LMGDM.pdf",
+    "file_size": 3461711,
+    "file_mtime": "2026-07-10T02:07:54.129080+00:00",
+    "processed_at": "2026-07-21T04:43:56.477911+00:00",
+    "topics": [
+      "Neuroimaging",
+      "Generative AI",
+      "Multi-organ"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“LMGDM: A Lesion-aware Mutual Guidance Diffusion Model with attenuation prior constraint for self-attenuation correction of whole-body PET”，核心线索是：Recent studies perform PET self-attenuation correction, enabling attenuation correction from PET data itself instead of using additional CT or MRI",
+      "why_relevant": "它与 Neuroimaging、Generative AI、Multi-organ 相关，且方法上涉及 diffusion, GAN, deep learning，数据/模态侧重 MRI, PET, CT，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI, PET, CT",
+      "method": "diffusion, GAN, deep learning",
+      "key_points": [
+        "Recent studies perform PET self-attenuation correction, enabling attenuation correction from PET data itself instead of using additional CT or MRI",
+        "These methods either predict attenuation-corrected PET (AC-PET) from non-attenuation- corrected PET (NAC-PET) directly or synthesize intermediate CT images to guide PET attenuation correction",
+        "However, cross-modality synthesis of CT from NAC-PET is challenging"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "优先关注它能否用于缺失模态补全、纵向影像预测、低剂量/低质量图像增强或跨模态合成。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/fab8d1c9a4bd775f.svg",
+    "text_excerpt": "Contents lists available at ScienceDirect Medical Image Analysis journal homepage: www.elsevier.com/locate/media LMGDM: A Lesion-aware Mutual Guidance Diffusion Model with attenuation prior constraint for self-attenuation correction of whole-body PET Shengjun Li a,b , Kaicong Sun b,∗, Caiwen Jiang b, Zaixin Ou b, Ruilong Dan b, Qianjin Feng a,∗, Dinggang Shen b,c,d,∗∗ a School of Biomedical Engineering, Southern Medical University, Guangzhou, 510515, China b School of Biomedical Engineering and State Key Laboratory of Advanced Medical Materials and Devices, ShanghaiTech University, Shanghai, 201210, China c Shanghai United Imaging Intelligence Co., Ltd., Shanghai, 200230, China d Shanghai Clinical Research and Trial Center, Shanghai, 201210, China A R T I C L E I N F O Keywords: Whole-body PET Self-attenuation correction Mutual guidance Lesion-aware Attenuation prior A B S T R A C T Atte"
+  },
+  {
+    "id": "977ab8e7ec7e56f9",
+    "sha256": "977ab8e7ec7e56f9ba1fbe99fb824ad74fcd96e00aa7ebc6039365a361ca8248",
+    "title": "Multi-View Hilbert Curve-Based Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer's Disease Diagnosis",
+    "authors": "",
+    "source_file": "Multi-View_Hilbert_Curve-Based_Hierarchical_Information_Aggregation_for_Incomplete_Multimodal_Alzheimers_Disease_Diagnosis.pdf",
+    "file_size": 20278670,
+    "file_mtime": "2026-07-15T02:51:47.091362+00:00",
+    "processed_at": "2026-07-21T04:43:55.938027+00:00",
+    "topics": [
+      "Neuroimaging",
+      "AD / Dementia",
+      "Generative AI",
+      "Learning Methods"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Multi-View Hilbert Curve-Based Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer's Disease Diagnosis”，核心线索是：Furthermore, conventional convolutional neural network (CNN) architectures and even Transformer-based models struggle to efﬁciently capture both local and global depen- dencies, especially when dealing with high-dimensional and highly heterogeneous medical data",
+      "why_relevant": "它与 Neuroimaging、AD / Dementia、Generative AI、Learning Methods 相关，且方法上涉及 transformer, neural network，数据/模态侧重 MRI, PET, neuroimaging，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI, PET, neuroimaging",
+      "method": "transformer, neural network",
+      "key_points": [
+        "In this study, we introduce a novel hierarchical information aggregation and dynamic fusion (HI-AD) framework for incomplete multi- modal AD diagnosis",
+        "Our method couples a multi-view Hilbert curve–guided Mamba block with hierarchical spa- tial feature extraction to retain spatial continuity, model long-range dependencies, and integrate local context in neuroimaging data",
+        "To balance semantic alignment and modality-speciﬁc information, we propose a uniﬁed mutual information-driven learning objective with an active conﬁ- dence evaluation mechanism, thereby preventing modality colla"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
+        "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/977ab8e7ec7e56f9.svg",
+    "text_excerpt": "3948 IEEE TRANSACTIONS ON MEDICAL IMAGING, VOL. 45, NO. 7, JUL Y 2026 Multi-View Hilbert Curve-Based Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer’s Disease Diagnosis Chengliang Liu , Yuanxi Que, Wai Keung Wong , Y abo Liu , and Xiaoling Luo Abstract— Timely identiﬁcation of Alzheimer’s disease (AD) beneﬁts from combining neuroimaging, ﬂuid biomark- ers, and cognitive assessments, yet in practice one or more modalities are often unavailable due to various factors such as cost, patient compliance, and procedural risks. Furthermore, conventional convolutional neural network (CNN) architectures and even Transformer-based models struggle to efﬁciently capture both local and global depen- dencies, especially when dealing with high-dimensional and highly heterogeneous medical data. In this study, we introduce a novel hierarchical information aggregation and dynamic f"
+  },
+  {
+    "id": "041d0dde3535afcb",
+    "sha256": "041d0dde3535afcb60ecc1525f44cb2194982418bf159361cbca487d76c771b9",
+    "title": "Multiscale brain development across the human lifespan",
+    "authors": "Sahar Ahmad",
+    "source_file": "Multiscale brain development across the human lifespan.pdf",
+    "file_size": 1879706,
+    "file_mtime": "2026-07-19T08:29:02+00:00",
+    "processed_at": "2026-07-21T04:43:55.181883+00:00",
+    "topics": [
+      "Neuroimaging",
+      "Generative AI"
+    ],
+    "interpretation": {
+      "one_sentence": "这篇论文围绕“Multiscale brain development across the human lifespan”，核心线索是：Understanding the complex developmental processes is essential for elucidating the biological bases of cognition and behavior, as well as the mechanisms underlying aging and neurodegenerative diseases",
+      "why_relevant": "它与 Neuroimaging、Generative AI 相关，且方法上涉及 diffusion，数据/模态侧重 MRI, fMRI, neuroimaging，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
+      "data_modality": "MRI, fMRI, neuroimaging",
+      "method": "diffusion",
+      "key_points": [
+        "Understanding the complex developmental processes is essential for elucidating the biological bases of cognition and behavior, as well as the mechanisms underlying aging and neurodegenerative diseases",
+        "Neuroimaging has enabled the mapping of nonlinear, age-related changes in brain morphology, microstructure, and connectivity from gestation to senescence",
+        "However, we lack a uni ﬁed understanding of interplay across multimodal neuroimaging measures, structure – function coupling, and the cellular and molecular drivers of network reorganization"
+      ],
+      "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
+      "ideas": [
+        "优先关注它能否用于缺失模态补全、纵向影像预测、低剂量/低质量图像增强或跨模态合成。",
+        "关注模型是否解决跨中心、跨被试、缺失模态或小样本泛化问题。",
+        "如果方法有可复用模块，可考虑和你的现有 MRI/PET/脑影像任务做组合实验。"
+      ]
+    },
+    "image_path": "data/reading_assets/041d0dde3535afcb.svg",
+    "text_excerpt": "communications biology Review article A Nature Portfolio journal https://doi.org/10.1038/s42003-026-10565-6 Multiscale brain development across the human lifespan Check for updates Sahar Ahmad 1,2 & Pew-Thian Yap 1,2 Deciphering how the human brain matures and reorganizes across the lifespan remains a central challenge in developmental neuroscience. Understanding the complex developmental processes is essential for elucidating the biological bases of cognition and behavior, as well as the mechanisms underlying aging and neurodegenerative diseases. Neuroimaging has enabled the mapping of nonlinear, age-related changes in brain morphology, microstructure, and connectivity from gestation to senescence. However, we lack a uni ﬁed understanding of interplay across multimodal neuroimaging measures, structure – function coupling, and the cellular and molecular drivers of network reorganization."
+  }
+]

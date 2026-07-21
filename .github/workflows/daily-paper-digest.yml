@@ -1,6 +1,17 @@
 name: Daily Medical-AI Paper Radar Site
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "paper_bot.py"
+      - "config.yaml"
+      - "requirements.txt"
+      - "README.md"
+      - "data/local_readings.json"
+      - "data/local_library_state.json"
+      - "data/reading_assets/**"
+      - ".github/workflows/daily-paper-digest.yml"
   # 16:10 Singapore / Hong Kong / China time is 08:10 UTC.
   schedule:
     - cron: "10 8 * * *"

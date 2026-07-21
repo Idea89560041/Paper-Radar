@@ -17,6 +17,14 @@ site:
   max_per_venue_category: 12
   max_ai_summaries: 0
 
+local_readings:
+  enabled: true
+  data_path: data/local_readings.json
+  state_path: data/local_library_state.json
+  assets_dir: data/reading_assets
+  site_assets_dir: reading-assets
+  max_home_items: 4
+
 research_profile:
   name: "Medical Imaging Deep Learning - Brain & Neuroimage"
 

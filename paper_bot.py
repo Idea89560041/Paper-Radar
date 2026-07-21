@@ -16,6 +16,7 @@ import html
 import json
 import os
 import re
+import shutil
 import smtplib
 import sys
 import time
@@ -1467,10 +1468,69 @@ def paper_to_dict(paper: Paper, cfg: Dict[str, Any] | None = None) -> Dict[str, 
     }
 
 
-def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
+def local_readings_cfg(cfg: Dict[str, Any]) -> Dict[str, Any]:
+    defaults = {
+        "enabled": True,
+        "data_path": "data/local_readings.json",
+        "assets_dir": "data/reading_assets",
+        "site_assets_dir": "reading-assets",
+        "max_home_items": 4,
+    }
+    configured = cfg.get("local_readings", {})
+    if isinstance(configured, dict):
+        defaults.update(configured)
+    return defaults
+
+
+def reading_site_image(reading: Dict[str, Any], cfg: Dict[str, Any]) -> str:
+    local_cfg = local_readings_cfg(cfg)
+    image_path = clean_text(reading.get("image_path"))
+    if not image_path:
+        return ""
+    return f"{local_cfg.get('site_assets_dir', 'reading-assets')}/{Path(image_path).name}"
+
+
+def load_local_readings(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
+    local_cfg = local_readings_cfg(cfg)
+    if not local_cfg.get("enabled", True):
+        return []
+    data_path = Path(str(local_cfg.get("data_path", "data/local_readings.json")))
+    if not data_path.exists():
+        return []
+    try:
+        readings = json.loads(data_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"[warn] Could not read local readings from {data_path}: {exc}", file=sys.stderr)
+        return []
+    if not isinstance(readings, list):
+        return []
+    readings = [reading for reading in readings if isinstance(reading, dict)]
+    readings.sort(key=lambda item: clean_text(item.get("processed_at")), reverse=True)
+    for reading in readings:
+        reading["site_image"] = reading_site_image(reading, cfg)
+    return readings
+
+
+def copy_local_reading_assets(readings: List[Dict[str, Any]], cfg: Dict[str, Any], output_dir: Path) -> None:
+    if not readings:
+        return
+    local_cfg = local_readings_cfg(cfg)
+    site_assets_dir = output_dir / str(local_cfg.get("site_assets_dir", "reading-assets"))
+    site_assets_dir.mkdir(parents=True, exist_ok=True)
+    for reading in readings:
+        image_path = clean_text(reading.get("image_path"))
+        if not image_path:
+            continue
+        source = Path(image_path)
+        if source.exists():
+            shutil.copyfile(source, site_assets_dir / source.name)
+
+
+def make_site_html(papers: List[Paper], cfg: Dict[str, Any], readings: List[Dict[str, Any]] | None = None) -> str:
     profile = cfg.get("research_profile", {})
     scoring = cfg.get("scoring", {})
     site_cfg = cfg.get("site", {})
+    readings = readings or []
     title = site_cfg.get("title") or f"{profile.get('name', 'Medical Imaging AI')} Paper Radar"
     generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M UTC+8")
     min_score = scoring.get("min_score", 8)
@@ -1517,6 +1577,32 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     )
     topic_chips = "".join(f'<span class="chip">{html.escape(term)}</span>' for term in focus_terms)
     query_preview = " / ".join(profile.get("queries", [])[:6])
+
+    def render_reading_teaser(reading: Dict[str, Any]) -> str:
+        note = reading.get("interpretation") if isinstance(reading.get("interpretation"), dict) else {}
+        topics = reading.get("topics") if isinstance(reading.get("topics"), list) else []
+        topic_line = "".join(f'<span>{html.escape(clean_text(topic))}</span>' for topic in topics[:4])
+        image = clean_text(reading.get("site_image"))
+        image_html = (
+            f'<img src="{html.escape(image, quote=True)}" alt="Visual note for {html.escape(clean_text(reading.get("title")), quote=True)}">'
+            if image
+            else ""
+        )
+        return f"""
+        <article class="reading-teaser">
+          <a class="reading-image" href="readings.html">{image_html}</a>
+          <div>
+            <a class="reading-title" href="readings.html">{html.escape(clean_text(reading.get('title')))}</a>
+            <div class="meta">{topic_line}<span>{html.escape(clean_text(reading.get('processed_at'))[:10])}</span></div>
+            <p>{html.escape(clean_text(note.get('one_sentence')))}</p>
+          </div>
+        </article>
+        """
+
+    max_home_readings = int(local_readings_cfg(cfg).get("max_home_items", 4))
+    reading_teasers = "".join(render_reading_teaser(reading) for reading in readings[:max_home_readings])
+    if not reading_teasers:
+        reading_teasers = '<section class="empty">No local reading notes have been generated yet.</section>'
 
     def render_paper(index: int, paper: Paper) -> str:
         authors = ", ".join(paper.authors[:10]) or "N/A"
@@ -1666,6 +1752,22 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       max-width: 900px;
       color: var(--muted);
       font-size: 15px;
+    }}
+    .site-nav {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }}
+    .site-nav a {{
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration: none;
     }}
     .dashboard {{
       display: grid;
@@ -1859,6 +1961,47 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       padding: 18px;
       color: var(--muted);
     }}
+    .reading-list {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 28px;
+    }}
+    .reading-teaser {{
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }}
+    .reading-image {{
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #eef2f7;
+    }}
+    .reading-image img {{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }}
+    .reading-title {{
+      display: inline;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 720;
+    }}
+    .reading-teaser p {{
+      margin: 8px 0 0;
+      color: #33414d;
+      font-size: 14px;
+    }}
     footer {{
       border-top: 1px solid var(--line);
       padding: 18px 0 26px;
@@ -1876,6 +2019,8 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       .authors, .summary, details {{ margin-left: 0; }}
       .details-grid {{ grid-template-columns: 1fr; }}
       .category-title {{ flex-direction: column; }}
+      .reading-list {{ grid-template-columns: 1fr; }}
+      .reading-teaser {{ grid-template-columns: 1fr; }}
       h1 {{ font-size: 25px; }}
     }}
   </style>
@@ -1886,6 +2031,11 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
       <header>
         <h1>{html.escape(title)}</h1>
         <p class="subtitle">Daily radar for deep learning papers in neuroimaging, brain MRI/PET, brain-computer interfaces, EEG, agentic AI for imaging, whole-body PET/MRI, multi-organ diagnosis, image synthesis, Alzheimer diagnosis, and radiology foundation models.</p>
+        <nav class="site-nav" aria-label="Site navigation">
+          <a href="index.html">Daily Radar</a>
+          <a href="readings.html">Reading Notes</a>
+          <a href="papers.json">Paper JSON</a>
+        </nav>
       </header>
     </div>
   </div>
@@ -1908,6 +2058,13 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     </section>
     <main>
       <div class="section-title">
+        <h2>Reading Notes</h2>
+        <a class="small" href="readings.html">Full column</a>
+      </div>
+      <section class="reading-list" aria-label="Latest local reading notes">
+        {reading_teasers}
+      </section>
+      <div class="section-title">
         <h2>Latest Matches</h2>
         <a class="small" href="papers.json">JSON</a>
       </div>
@@ -1923,9 +2080,210 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 """
 
 
+def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> str:
+    site_cfg = cfg.get("site", {})
+    title = f"{site_cfg.get('title', 'Medical Imaging Deep Learning Paper Radar')} - Reading Notes"
+    generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M UTC+8")
+
+    def list_items(values: Any) -> str:
+        if not isinstance(values, list):
+            values = [clean_text(values)] if values else []
+        items = [clean_text(value) for value in values if clean_text(value)]
+        return "".join(f"<li>{html.escape(item)}</li>" for item in items) or "<li>N/A</li>"
+
+    def render_reading(index: int, reading: Dict[str, Any]) -> str:
+        note = reading.get("interpretation") if isinstance(reading.get("interpretation"), dict) else {}
+        topics = reading.get("topics") if isinstance(reading.get("topics"), list) else []
+        topic_chips = "".join(f'<span>{html.escape(clean_text(topic))}</span>' for topic in topics[:6])
+        image = clean_text(reading.get("site_image"))
+        image_html = (
+            f'<img src="{html.escape(image, quote=True)}" alt="Visual note for {html.escape(clean_text(reading.get("title")), quote=True)}">'
+            if image
+            else ""
+        )
+        return f"""
+      <article class="reading-card">
+        <figure>{image_html}</figure>
+        <div class="reading-body">
+          <div class="reading-index">{index}</div>
+          <h2>{html.escape(clean_text(reading.get('title')))}</h2>
+          <div class="meta">
+            <span>{html.escape(clean_text(reading.get('source_file')))}</span>
+            <span>{html.escape(clean_text(reading.get('processed_at'))[:10])}</span>
+            {topic_chips}
+          </div>
+          <p class="lead">{html.escape(clean_text(note.get('one_sentence')))}</p>
+          <div class="note-grid">
+            <section>
+              <h3>Why It Matters</h3>
+              <p>{html.escape(clean_text(note.get('why_relevant')))}</p>
+            </section>
+            <section>
+              <h3>Data / Method</h3>
+              <p><strong>Data:</strong> {html.escape(clean_text(note.get('data_modality')) or 'N/A')}</p>
+              <p><strong>Method:</strong> {html.escape(clean_text(note.get('method')) or 'N/A')}</p>
+            </section>
+          </div>
+          <div class="note-grid">
+            <section>
+              <h3>Key Points</h3>
+              <ul>{list_items(note.get('key_points'))}</ul>
+            </section>
+            <section>
+              <h3>Follow-up Ideas</h3>
+              <ul>{list_items(note.get('ideas'))}</ul>
+            </section>
+          </div>
+          <section>
+            <h3>Reading Caution</h3>
+            <p>{html.escape(clean_text(note.get('limitations')))}</p>
+          </section>
+        </div>
+      </article>
+        """
+
+    rows = "".join(render_reading(index, reading) for index, reading in enumerate(readings, 1))
+    if not rows:
+        rows = '<section class="empty">No local reading notes have been generated yet.</section>'
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(title)}</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #64717d;
+      --line: #d8e0e7;
+      --panel: #ffffff;
+      --bg: #f5f7f9;
+      --blue: #0b5cad;
+      --teal: #0f766e;
+      --soft-blue: #e8f1fb;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }}
+    a {{ color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }}
+    .topbar {{ background: #ffffff; border-bottom: 1px solid var(--line); }}
+    .wrap {{ width: min(1180px, calc(100% - 32px)); margin: 0 auto; }}
+    header {{ padding: 28px 0 20px; }}
+    h1 {{ margin: 0 0 8px; font-size: 30px; line-height: 1.18; font-weight: 760; letter-spacing: 0; }}
+    .subtitle {{ margin: 0; max-width: 900px; color: var(--muted); font-size: 15px; }}
+    .site-nav {{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }}
+    .site-nav a {{
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration: none;
+    }}
+    main {{ padding: 24px 0 44px; }}
+    .status {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .status span {{ padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; }}
+    .reading-card {{
+      display: grid;
+      grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+      gap: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }}
+    figure {{
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eef2f7;
+      align-self: start;
+    }}
+    figure img {{ display: block; width: 100%; height: auto; }}
+    .reading-index {{
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 760;
+    }}
+    h2 {{ margin: 10px 0 8px; font-size: 21px; line-height: 1.3; letter-spacing: 0; }}
+    h3 {{ margin: 0 0 6px; font-size: 15px; line-height: 1.3; letter-spacing: 0; }}
+    .meta {{ display: flex; flex-wrap: wrap; gap: 7px; color: var(--muted); font-size: 13px; }}
+    .meta span {{ padding: 3px 8px; border-radius: 8px; background: #f0f3f6; }}
+    .lead {{ font-size: 15px; color: #33414d; }}
+    .note-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }}
+    section {{ color: #33414d; font-size: 14px; }}
+    ul {{ margin: 6px 0 0; padding-left: 18px; }}
+    li {{ margin-bottom: 6px; }}
+    .empty {{ background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; color: var(--muted); }}
+    footer {{ border-top: 1px solid var(--line); padding: 18px 0 26px; color: var(--muted); font-size: 12px; }}
+    @media (max-width: 820px) {{
+      .wrap {{ width: min(100% - 24px, 1180px); }}
+      .reading-card {{ grid-template-columns: 1fr; }}
+      .note-grid {{ grid-template-columns: 1fr; }}
+      h1 {{ font-size: 25px; }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <header>
+        <h1>Reading Notes</h1>
+        <p class="subtitle">Local PDFs added to the Paper_Radar OneDrive folder are interpreted here with Chinese reading notes and visual summary cards.</p>
+        <nav class="site-nav" aria-label="Site navigation">
+          <a href="index.html">Daily Radar</a>
+          <a href="readings.html">Reading Notes</a>
+          <a href="papers.json">Paper JSON</a>
+          <a href="readings.json">Reading JSON</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div class="wrap">
+    <main>
+      <div class="status">
+        <span>Updated {html.escape(generated_at)}</span>
+        <span>{len(readings)} notes</span>
+      </div>
+      {rows}
+    </main>
+    <footer>
+      Notes are generated from locally added PDFs. Treat them as reading aids and verify claims against the original papers.
+    </footer>
+  </div>
+</body>
+</html>
+"""
+
+
 def write_site(papers: List[Paper], cfg: Dict[str, Any], output_dir: str) -> None:
     out_dir = Path(output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+    readings = load_local_readings(cfg)
+    copy_local_reading_assets(readings, cfg, out_dir)
     generated_at = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).isoformat()
     payload = {
         "generated_at": generated_at,
@@ -1934,7 +2292,9 @@ def write_site(papers: List[Paper], cfg: Dict[str, Any], output_dir: str) -> Non
     }
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
     (out_dir / "papers.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    (out_dir / "index.html").write_text(make_site_html(papers, cfg), encoding="utf-8")
+    (out_dir / "readings.json").write_text(json.dumps(readings, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "index.html").write_text(make_site_html(papers, cfg, readings), encoding="utf-8")
+    (out_dir / "readings.html").write_text(make_readings_html(readings, cfg), encoding="utf-8")
 
 
 def send_email(subject: str, html_body: str, text_body: str, cfg: Dict[str, Any]) -> None:
