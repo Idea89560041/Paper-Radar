@@ -145,7 +145,8 @@ sources:
     max_queries: 14
     max_results_per_query: 30
     sleep_seconds: 0.55
-    timeout_seconds: 20
+    timeout_seconds: 12
+    max_runtime_seconds: 90
     top_journal_family_search: true
     top_journal_chunk_size: 18
     tool: "medical-ai-paper-digest-bot"
@@ -156,7 +157,8 @@ sources:
     max_queries: 32
     max_results_per_query: 20
     sleep_seconds: 3.1
-    timeout_seconds: 20
+    timeout_seconds: 12
+    max_runtime_seconds: 150
     categories:
       - "cs.CV"
       - "cs.AI"
@@ -171,7 +173,8 @@ sources:
     max_queries_without_api_key: 10
     max_results_per_query: 20
     sleep_seconds: 1.0
-    timeout_seconds: 20
+    timeout_seconds: 12
+    max_runtime_seconds: 90
 
   crossref_top_journals:
     enabled: true
@@ -179,6 +182,7 @@ sources:
     max_calls: 16
     sleep_seconds: 0.3
     timeout_seconds: 8
+    max_runtime_seconds: 60
 
 top_journal_families:
   pubmed_journals:

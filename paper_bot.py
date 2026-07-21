@@ -246,6 +246,32 @@ def requests_get_text(
     return response.text
 
 
+def source_deadline(source_cfg: Dict[str, Any]) -> float | None:
+    try:
+        max_seconds = float(source_cfg.get("max_runtime_seconds", 0) or 0)
+    except Exception:
+        max_seconds = 0.0
+    if max_seconds <= 0:
+        return None
+    return time.monotonic() + max_seconds
+
+
+def source_budget_exhausted(label: str, deadline: float | None) -> bool:
+    if deadline is None or time.monotonic() <= deadline:
+        return False
+    print(f"[warn] {label} max_runtime_seconds reached; skipping remaining queries.", file=sys.stderr, flush=True)
+    return True
+
+
+def bounded_sleep(seconds: float, deadline: float | None = None) -> None:
+    if seconds <= 0:
+        return
+    if deadline is not None:
+        seconds = min(seconds, max(0.0, deadline - time.monotonic()))
+    if seconds > 0:
+        time.sleep(seconds)
+
+
 def date_parts_to_iso(parts: Any) -> str:
     try:
         values = parts.get("date-parts", [[]])[0]
@@ -307,6 +333,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
     tool = source_cfg.get("tool", "medical-ai-paper-digest-bot")
     sleep_seconds = float(source_cfg.get("sleep_seconds", 0.35 if api_key else 0.55))
     timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
+    deadline = source_deadline(source_cfg)
 
     base_params = {"tool": tool}
     if email:
@@ -316,6 +343,8 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
 
     papers: List[Paper] = []
     for query in queries:
+        if source_budget_exhausted("PubMed", deadline):
+            break
         esearch_params = {
             **base_params,
             "db": "pubmed",
@@ -335,12 +364,12 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
             )
         except Exception as exc:
             print(f"[warn] PubMed esearch failed for {query!r}: {exc}", file=sys.stderr)
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
             continue
 
         ids = data.get("esearchresult", {}).get("idlist", [])
         if not ids:
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
             continue
 
         efetch_params = {**base_params, "db": "pubmed", "id": ",".join(ids), "retmode": "xml"}
@@ -353,7 +382,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
             root = ET.fromstring(xml_text)
         except Exception as exc:
             print(f"[warn] PubMed efetch/XML failed for {query!r}: {exc}", file=sys.stderr)
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
             continue
 
         for article in root.findall(".//PubmedArticle"):
@@ -428,7 +457,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
                     doi=doi,
                 )
             )
-        time.sleep(sleep_seconds)
+        bounded_sleep(sleep_seconds, deadline)
     return papers
 
 
@@ -458,9 +487,12 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
     lookback_days = int(cfg.get("lookback_days", 14))
     sleep_seconds = float(source_cfg.get("sleep_seconds", 3.1))
     timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
+    deadline = source_deadline(source_cfg)
 
     papers: List[Paper] = []
     for query in queries:
+        if source_budget_exhausted("arXiv", deadline):
+            break
         params = {
             "search_query": build_arxiv_query(query, categories=categories),
             "start": 0,
@@ -480,7 +512,7 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
                 raise RuntimeError(getattr(feed, "bozo_exception", "unknown feed parse error"))
         except Exception as exc:
             print(f"[warn] arXiv query failed for {query!r}: {exc}", file=sys.stderr)
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
             continue
 
         for entry in feed.entries:
@@ -507,7 +539,7 @@ def fetch_arxiv(cfg: Dict[str, Any]) -> List[Paper]:
                     doi=clean_text(entry.get("arxiv_doi")),
                 )
             )
-        time.sleep(sleep_seconds)
+        bounded_sleep(sleep_seconds, deadline)
     return papers
 
 
@@ -539,9 +571,12 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
     year_param = f"{start_year}-"
     sleep_seconds = float(source_cfg.get("sleep_seconds", 1.2))
     timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
+    deadline = source_deadline(source_cfg)
 
     papers: List[Paper] = []
     for query in queries:
+        if source_budget_exhausted("Semantic Scholar", deadline):
+            break
         params = {"query": query, "limit": max_results, "fields": fields, "year": year_param}
         try:
             data = requests_get_json(
@@ -559,7 +594,7 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
                     file=sys.stderr,
                 )
                 break
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
             continue
 
         for item in data.get("data", []):
@@ -596,7 +631,7 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
                     doi=doi,
                 )
             )
-        time.sleep(sleep_seconds)
+        bounded_sleep(sleep_seconds, deadline)
     return papers
 
 
@@ -619,6 +654,7 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
     until_date = today.isoformat()
     sleep_seconds = float(source_cfg.get("sleep_seconds", 1.0))
     timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
+    deadline = source_deadline(source_cfg)
 
     mailto = os.getenv("CROSSREF_MAILTO") or os.getenv("NCBI_EMAIL") or resolve_mail_to(cfg)
     headers = {
@@ -633,6 +669,8 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
     calls = 0
     for journal in journals:
         for topic_query in topic_queries:
+            if source_budget_exhausted("Crossref", deadline):
+                return papers
             if calls >= max_calls:
                 print(f"[warn] Crossref max_calls={max_calls} reached; remaining journal queries skipped.", file=sys.stderr)
                 return papers
@@ -658,7 +696,7 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
                 )
             except Exception as exc:
                 print(f"[warn] Crossref query failed for {journal!r} / {topic_query!r}: {exc}", file=sys.stderr)
-                time.sleep(sleep_seconds)
+                bounded_sleep(sleep_seconds, deadline)
                 continue
 
             for item in data.get("message", {}).get("items", []):
@@ -702,7 +740,7 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
                         doi=doi,
                     )
                 )
-            time.sleep(sleep_seconds)
+            bounded_sleep(sleep_seconds, deadline)
     return papers
 
 
@@ -2372,13 +2410,13 @@ def send_email(subject: str, html_body: str, text_body: str, cfg: Dict[str, Any]
 
 
 def safe_fetch(label: str, fetcher: Callable[[Dict[str, Any]], List[Paper]], cfg: Dict[str, Any]) -> List[Paper]:
-    print(f"[info] Fetching {label}...")
+    print(f"[info] Fetching {label}...", flush=True)
     try:
         papers = fetcher(cfg)
     except Exception as exc:
         print(f"[warn] {label} failed and will be skipped: {exc}", file=sys.stderr)
         return []
-    print(f"[info] {label} papers: {len(papers)}")
+    print(f"[info] {label} papers: {len(papers)}", flush=True)
     return papers
 
 
