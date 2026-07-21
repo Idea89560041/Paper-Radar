@@ -16,7 +16,7 @@ PDFs added to this local folder can be turned into a separate reading-notes colu
 
 `D:\OneDrive - The Chinese University of Hong Kong\Paper_Radar`
 
-GitHub Actions cannot read that local OneDrive folder directly, so the local Windows task scans the folder on this computer, detects new PDFs by file hash, creates a Chinese interpretation plus a visual summary image, commits only the generated JSON/SVG files, and pushes them to GitHub. The PDFs themselves are not committed.
+GitHub Actions cannot read that local OneDrive folder directly, so the local Windows task scans the folder on this computer, detects new PDFs by file hash, extracts the abstract, Introduction excerpt, main figure/caption when possible, commits only generated JSON/image assets, and pushes them to GitHub. The PDFs themselves are not committed.
 
 Install dependencies in the local `pet` environment:
 
@@ -36,4 +36,4 @@ Install the daily local scanner:
 powershell -ExecutionPolicy Bypass -File scripts\install_local_readings_task.ps1 -Time 16:35
 ```
 
-For richer interpretations, set `OPENAI_API_KEY` and `OPENAI_MODEL` in the local environment. Without them, the script still creates a simpler rule-based reading note.
+For richer interpretations, set `OPENAI_API_KEY` and `OPENAI_MODEL` as GitHub repository secrets. The workflow uses them to translate abstracts into Chinese and generate Introduction logic, innovation points, and method notes.

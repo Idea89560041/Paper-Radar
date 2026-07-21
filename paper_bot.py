@@ -1516,6 +1516,8 @@ def copy_local_reading_assets(readings: List[Dict[str, Any]], cfg: Dict[str, Any
         return
     local_cfg = local_readings_cfg(cfg)
     site_assets_dir = output_dir / str(local_cfg.get("site_assets_dir", "reading-assets"))
+    if site_assets_dir.exists():
+        shutil.rmtree(site_assets_dir)
     site_assets_dir.mkdir(parents=True, exist_ok=True)
     for reading in readings:
         image_path = clean_text(reading.get("image_path"))
@@ -2096,14 +2098,28 @@ def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> s
         topics = reading.get("topics") if isinstance(reading.get("topics"), list) else []
         topic_chips = "".join(f'<span>{html.escape(clean_text(topic))}</span>' for topic in topics[:6])
         image = clean_text(reading.get("site_image"))
+        figure_caption = clean_text(reading.get("figure_caption"))
+        figure_caption_zh = clean_text(note.get("figure_caption_zh"))
+        caption_parts = []
+        if figure_caption_zh:
+            caption_parts.append(f"<p>{html.escape(figure_caption_zh)}</p>")
+        if figure_caption and figure_caption != figure_caption_zh:
+            caption_parts.append(f"<details><summary>Original caption</summary><p>{html.escape(figure_caption)}</p></details>")
+        caption_html = (
+            f'<figcaption><strong>Main figure / caption</strong>{"".join(caption_parts)}</figcaption>'
+            if caption_parts
+            else ""
+        )
         image_html = (
-            f'<img src="{html.escape(image, quote=True)}" alt="Visual note for {html.escape(clean_text(reading.get("title")), quote=True)}">'
+            f'<a href="{html.escape(image, quote=True)}" target="_blank" rel="noopener noreferrer">'
+            f'<img src="{html.escape(image, quote=True)}" alt="Main figure for {html.escape(clean_text(reading.get("title")), quote=True)}">'
+            f'</a>'
             if image
             else ""
         )
         return f"""
       <article class="reading-card">
-        <figure>{image_html}</figure>
+        <figure>{image_html}{caption_html}</figure>
         <div class="reading-body">
           <div class="reading-index">{index}</div>
           <h2>{html.escape(clean_text(reading.get('title')))}</h2>
@@ -2113,22 +2129,33 @@ def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> s
             {topic_chips}
           </div>
           <p class="lead">{html.escape(clean_text(note.get('one_sentence')))}</p>
+          <section class="abstract-zh">
+            <h3>中文摘要</h3>
+            <p>{html.escape(clean_text(note.get('abstract_zh')) or clean_text(reading.get('abstract_original')) or 'N/A')}</p>
+          </section>
           <div class="note-grid">
             <section>
-              <h3>Why It Matters</h3>
-              <p>{html.escape(clean_text(note.get('why_relevant')))}</p>
+              <h3>Introduction Logic</h3>
+              <ul>{list_items(note.get('introduction_logic'))}</ul>
             </section>
             <section>
-              <h3>Data / Method</h3>
-              <p><strong>Data:</strong> {html.escape(clean_text(note.get('data_modality')) or 'N/A')}</p>
-              <p><strong>Method:</strong> {html.escape(clean_text(note.get('method')) or 'N/A')}</p>
+              <h3>Innovation Points</h3>
+              <ul>{list_items(note.get('innovations') or note.get('key_points'))}</ul>
             </section>
           </div>
           <div class="note-grid">
             <section>
-              <h3>Key Points</h3>
-              <ul>{list_items(note.get('key_points'))}</ul>
+              <h3>Method Brief</h3>
+              <p>{html.escape(clean_text(note.get('method_summary')) or 'N/A')}</p>
+              <p><strong>Data:</strong> {html.escape(clean_text(note.get('data_modality')) or 'N/A')}</p>
+              <p><strong>Method:</strong> {html.escape(clean_text(note.get('method')) or 'N/A')}</p>
             </section>
+            <section>
+              <h3>Why It Matters</h3>
+              <p>{html.escape(clean_text(note.get('why_relevant')))}</p>
+            </section>
+          </div>
+          <div class="note-grid">
             <section>
               <h3>Follow-up Ideas</h3>
               <ul>{list_items(note.get('ideas'))}</ul>
@@ -2201,7 +2228,7 @@ def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> s
     .status span {{ padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; }}
     .reading-card {{
       display: grid;
-      grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+      grid-template-columns: minmax(320px, 500px) minmax(0, 1fr);
       gap: 18px;
       background: var(--panel);
       border: 1px solid var(--line);
@@ -2214,10 +2241,20 @@ def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> s
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
-      background: #eef2f7;
+      background: #ffffff;
       align-self: start;
     }}
     figure img {{ display: block; width: 100%; height: auto; }}
+    figcaption {{
+      border-top: 1px solid var(--line);
+      padding: 10px 12px 12px;
+      color: #33414d;
+      font-size: 12.5px;
+      line-height: 1.5;
+      background: #fbfcfd;
+    }}
+    figcaption p {{ margin: 6px 0 0; }}
+    figcaption summary {{ cursor: pointer; color: var(--blue); font-weight: 650; }}
     .reading-index {{
       display: inline-grid;
       place-items: center;
@@ -2233,6 +2270,14 @@ def make_readings_html(readings: List[Dict[str, Any]], cfg: Dict[str, Any]) -> s
     .meta {{ display: flex; flex-wrap: wrap; gap: 7px; color: var(--muted); font-size: 13px; }}
     .meta span {{ padding: 3px 8px; border-radius: 8px; background: #f0f3f6; }}
     .lead {{ font-size: 15px; color: #33414d; }}
+    .abstract-zh {{
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+    }}
+    .abstract-zh p {{ margin: 0; }}
     .note-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }}
     section {{ color: #33414d; font-size: 14px; }}
     ul {{ margin: 6px 0 0; padding-left: 18px; }}

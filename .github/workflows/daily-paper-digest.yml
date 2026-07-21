@@ -45,6 +45,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Enrich local reading notes
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: python local_paper_column.py --skip-scan --enrich-existing
+
       - name: Build paper radar site
         env:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
@@ -55,15 +61,15 @@ jobs:
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
         run: python paper_bot.py --config config.yaml --web --output-dir site
 
-      - name: Commit sent paper state
+      - name: Commit generated state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/sent_papers.json
+          git add data/sent_papers.json data/local_readings.json data/reading_assets
           if git diff --cached --quiet; then
-            echo "No sent-paper state changes to commit."
+            echo "No generated state changes to commit."
           else
-            git commit -m "Update sent paper state [skip ci]"
+            git commit -m "Update generated paper state [skip ci]"
             git push
           fi
 
