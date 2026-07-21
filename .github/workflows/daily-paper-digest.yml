@@ -8,9 +8,6 @@ on:
       - "config.yaml"
       - "requirements.txt"
       - "README.md"
-      - "data/local_readings.json"
-      - "data/local_library_state.json"
-      - "data/reading_assets/**"
       - ".github/workflows/daily-paper-digest.yml"
   # 16:10 Singapore / Hong Kong / China time is 08:10 UTC.
   schedule:
@@ -45,31 +42,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Enrich local reading notes
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-        run: python local_paper_column.py --skip-scan --enrich-existing
-
       - name: Build paper radar site
         env:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
         run: python paper_bot.py --config config.yaml --web --output-dir site
 
-      - name: Commit generated state
+      - name: Commit sent paper state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/sent_papers.json data/local_readings.json data/reading_assets
+          git add data/sent_papers.json
           if git diff --cached --quiet; then
-            echo "No generated state changes to commit."
+            echo "No sent-paper state changes to commit."
           else
-            git commit -m "Update generated paper state [skip ci]"
+            git commit -m "Update sent paper state [skip ci]"
             git push
           fi
 
