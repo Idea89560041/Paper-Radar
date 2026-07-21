@@ -2735,6 +2735,15 @@
       "venue": "Sci Rep",
       "source": "PubMed",
       "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "cb5c5f65b7af51b3": {
+      "title": "Real-time optical signal equalization with a silicon photonic spatially distributed reservoir computer",
+      "url": "https://doi.org/10.1038/s41566-026-01968-2",
+      "doi": "10.1038/s41566-026-01968-2",
+      "pmid": "",
+      "venue": "Nature Photonics",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-21T10:35:40.361287+00:00"
     }
   },
   "sent_keys": {
@@ -3822,7 +3831,10 @@
     "doi:10.1038/s41598-026-63160-4": "632fb8786a9584c3",
     "pmid:42477450": "632fb8786a9584c3",
     "url:https://pubmed.ncbi.nlm.nih.gov/42477450": "632fb8786a9584c3",
-    "title:large language model accuracy in dental radiology effects of cognitive complexity and content domain": "632fb8786a9584c3"
+    "title:large language model accuracy in dental radiology effects of cognitive complexity and content domain": "632fb8786a9584c3",
+    "doi:10.1038/s41566-026-01968-2": "cb5c5f65b7af51b3",
+    "url:https://doi.org/10.1038/s41566-026-01968-2": "cb5c5f65b7af51b3",
+    "title:real time optical signal equalization with a silicon photonic spatially distributed reservoir computer": "cb5c5f65b7af51b3"
   },
-  "updated_at": "2026-07-21T04:48:39.928573+00:00"
+  "updated_at": "2026-07-21T10:35:40.361387+00:00"
 }
