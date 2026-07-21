@@ -36,4 +36,4 @@ Install the daily local scanner:
 powershell -ExecutionPolicy Bypass -File scripts\install_local_readings_task.ps1 -Time 16:35
 ```
 
-For richer interpretations, set `OPENAI_API_KEY` and `OPENAI_MODEL` as GitHub repository secrets. The workflow uses them to translate abstracts into Chinese and generate Introduction logic, innovation points, and method notes.
+Abstracts and figure captions are translated with free offline Argos Translate by default. `OPENAI_API_KEY` and `OPENAI_MODEL` are optional; when present, they are used only for richer interpretation of Introduction logic, innovation points, and method notes. You can also set `TRANSLATION_PROVIDER=libretranslate` plus `LIBRETRANSLATE_URL` if you prefer a LibreTranslate-compatible API, but that sends extracted text to the selected translation service.

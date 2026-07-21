@@ -17,12 +17,16 @@ import os
 import re
 import sys
 import textwrap
+import time
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
 
 DEFAULT_LIBRARY_DIR = r"D:\OneDrive - The Chinese University of Hong Kong\Paper_Radar"
-NOTE_VERSION = 2
+NOTE_VERSION = 4
+DEFAULT_TRANSLATION_PROVIDER = "argos"
+DEFAULT_LIBRETRANSLATE_URL = "https://translate.argosopentech.com"
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 
 
 FIGURE_KEYWORDS = [
@@ -437,9 +441,32 @@ def pick_terms(text: str, terms: Iterable[str], fallback: str) -> str:
 def first_informative_sentence(text: str) -> str:
     for sentence in re.split(r"(?<=[.!?])\s+", clean_text(text)):
         sentence = clean_text(sentence.strip(" .,-:;"))
+        if is_noise_sentence(sentence):
+            continue
         if 80 <= len(sentence) <= 320:
             return sentence
     return clean_text(text[:260])
+
+
+def is_noise_sentence(sentence: str) -> bool:
+    sentence_l = sentence.lower()
+    noise_terms = [
+        "corresponding author",
+        "contributed equally",
+        "e-mail",
+        "email:",
+        "@",
+        "supported by",
+        "copyright",
+        "all rights reserved",
+        "downloaded on",
+        "authorized licensed use",
+        "arxiv:",
+        "university",
+        "department of",
+        "institute of",
+    ]
+    return any(term in sentence_l for term in noise_terms)
 
 
 def split_points(text: str, limit: int = 3) -> List[str]:
@@ -447,6 +474,8 @@ def split_points(text: str, limit: int = 3) -> List[str]:
     points = []
     for sentence in sentences:
         sentence = clean_text(sentence.strip(" .,-:;"))
+        if is_noise_sentence(sentence):
+            continue
         if 60 <= len(sentence) <= 260:
             points.append(sentence)
         if len(points) >= limit:
@@ -454,7 +483,197 @@ def split_points(text: str, limit: int = 3) -> List[str]:
     return points or [clean_text(text[:220]) or "需要阅读全文进一步确认核心贡献。"]
 
 
-def heuristic_note(title: str, text: str, topics: List[str], figure_caption: str = "") -> Dict[str, Any]:
+def translation_chunks(text: str, max_chars: int = 1200) -> List[str]:
+    text = clean_text(text)
+    if not text:
+        return []
+    chunks: List[str] = []
+    current: List[str] = []
+    current_len = 0
+    for sentence in re.split(r"(?<=[.!?。！？])\s+", text):
+        sentence = clean_text(sentence)
+        if not sentence:
+            continue
+        if current and current_len + len(sentence) > max_chars:
+            chunks.append(" ".join(current))
+            current = []
+            current_len = 0
+        current.append(sentence)
+        current_len += len(sentence) + 1
+    if current:
+        chunks.append(" ".join(current))
+    return chunks
+
+
+def trim_to_bytes(text: str, max_bytes: int = 470) -> List[str]:
+    chunks = []
+    current = ""
+    for word in clean_text(text).split(" "):
+        candidate = f"{current} {word}".strip()
+        if current and len(candidate.encode("utf-8")) > max_bytes:
+            chunks.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def translate_with_libretranslate(text: str, args: argparse.Namespace) -> str:
+    import requests
+
+    base_url = clean_text(getattr(args, "libretranslate_url", "")) or DEFAULT_LIBRETRANSLATE_URL
+    endpoint = base_url.rstrip("/")
+    if not endpoint.endswith("/translate"):
+        endpoint = f"{endpoint}/translate"
+    api_key = clean_text(getattr(args, "libretranslate_api_key", ""))
+    translated = []
+    for chunk in translation_chunks(text):
+        payload = {
+            "q": chunk,
+            "source": "en",
+            "target": clean_text(getattr(args, "target_lang", "zh")) or "zh",
+            "format": "text",
+        }
+        if api_key:
+            payload["api_key"] = api_key
+        response = requests.post(endpoint, json=payload, timeout=45)
+        response.raise_for_status()
+        data = response.json()
+        translated_text = clean_text(data.get("translatedText"))
+        if not translated_text:
+            raise RuntimeError("LibreTranslate returned empty translatedText.")
+        translated.append(translated_text)
+        time.sleep(float(getattr(args, "translation_sleep_seconds", 0.5)))
+    return "\n".join(translated)
+
+
+def translate_with_mymemory(text: str, args: argparse.Namespace) -> str:
+    import requests
+
+    target = clean_text(getattr(args, "target_lang", "zh")) or "zh"
+    target = "zh-CN" if target in {"zh", "zh-cn", "zh_hans", "zh-Hans"} else target
+    translated = []
+    for chunk in trim_to_bytes(text):
+        response = requests.get(
+            MYMEMORY_URL,
+            params={"q": chunk, "langpair": f"en|{target}", "mt": "1"},
+            timeout=45,
+        )
+        response.raise_for_status()
+        data = response.json()
+        translated_text = clean_text((data.get("responseData") or {}).get("translatedText"))
+        if not translated_text:
+            raise RuntimeError("MyMemory returned empty translatedText.")
+        translated.append(translated_text)
+        time.sleep(float(getattr(args, "translation_sleep_seconds", 0.5)))
+    return "\n".join(translated)
+
+
+def translate_with_argos(text: str, args: argparse.Namespace) -> str:
+    import argostranslate.package
+    import argostranslate.translate
+
+    target = clean_text(getattr(args, "target_lang", "zh")) or "zh"
+    installed = argostranslate.translate.get_installed_languages()
+    has_pair = argos_has_pair(installed, "en", target)
+    if not has_pair and bool(getattr(args, "argos_auto_install", False)):
+        print(f"[info] Installing Argos Translate package en -> {target}.")
+        argostranslate.package.update_package_index()
+        packages = argostranslate.package.get_available_packages()
+        package = next((pkg for pkg in packages if pkg.from_code == "en" and pkg.to_code == target), None)
+        if package is None:
+            raise RuntimeError(f"No Argos Translate package available for en -> {target}.")
+        argostranslate.package.install_from_path(package.download())
+        installed = argostranslate.translate.get_installed_languages()
+        has_pair = argos_has_pair(installed, "en", target)
+    if not has_pair:
+        raise RuntimeError(f"Argos Translate package en -> {target} is not installed.")
+    translated = [clean_text(argostranslate.translate.translate(chunk, "en", target)) for chunk in translation_chunks(text)]
+    return "\n".join(part for part in translated if part)
+
+
+def argos_has_pair(installed_languages: List[Any], source: str, target: str) -> bool:
+    for language in installed_languages:
+        for translation in getattr(language, "translations_to", []):
+            from_code = getattr(getattr(translation, "from_lang", None), "code", "")
+            to_code = getattr(getattr(translation, "to_lang", None), "code", "")
+            if from_code == source and to_code == target:
+                return True
+    return False
+
+
+def translate_text(text: str, args: argparse.Namespace, label: str) -> str:
+    provider = clean_text(getattr(args, "translation_provider", DEFAULT_TRANSLATION_PROVIDER)).lower() or DEFAULT_TRANSLATION_PROVIDER
+    if provider in {"none", "off", "false", "0"}:
+        return ""
+    providers = ["argos", "libretranslate", "mymemory"] if provider == "auto" else [provider]
+    for candidate in providers:
+        try:
+            if candidate == "libretranslate":
+                translated = translate_with_libretranslate(text, args)
+            elif candidate == "mymemory":
+                translated = translate_with_mymemory(text, args)
+            elif candidate == "argos":
+                translated = translate_with_argos(text, args)
+            else:
+                print(f"[warn] Unknown translation provider '{candidate}'.", file=sys.stderr)
+                continue
+            if translated:
+                return postprocess_translation(translated)
+        except Exception as exc:
+            print(f"[warn] {candidate} translation failed for {label}: {exc}", file=sys.stderr)
+    return ""
+
+
+def postprocess_translation(text: str) -> str:
+    replacements = {
+        "深入学习": "深度学习",
+        "医疗形象": "医学影像",
+        "医学图像": "医学影像",
+        "神经成像": "神经影像",
+        "阿尔茨海默氏病": "阿尔茨海默病",
+        "阿尔兹海默的疾病": "阿尔茨海默病",
+        "反倾销风险": "AD 风险",
+        "反倾销诊断": "AD 诊断",
+        "反倾销": "AD",
+        "β-酰胺": "β-淀粉样蛋白",
+        "酰胺": "淀粉样蛋白",
+        "波士森": "泊松",
+        "深层基因模型": "深度生成模型",
+        "三角复制": "简单复制",
+        "QQ-Diffusion": "Δ-Diffusion",
+        "分配概况": "Δ-Diffusion 概览",
+        "T 下雨阶段": "训练阶段",
+        "多模式": "多模态",
+        "模式关注": "模态注意力",
+        "关注战略": "注意力策略",
+        "生物标记": "生物标志物",
+        "标志物物": "标志物",
+        "基因变体": "遗传变异",
+        "磁共振成像": "MRI",
+        "正电子发射断层扫描": "PET",
+        "APOE 蝗虫": "APOE 位点",
+        "效绩": "性能",
+        "有力和可解释": "稳健且可解释",
+        "生物知情": "生物知识引导",
+    }
+    text = clean_text(text)
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    text = re.sub(r"(?<=\w) \.", ".", text)
+    text = re.sub(r"\bAD病\b", "AD", text)
+    return text
+
+
+def heuristic_note(
+    title: str,
+    text: str,
+    topics: List[str],
+    figure_caption: str = "",
+    args: argparse.Namespace | None = None,
+) -> Dict[str, Any]:
     abstract = extract_abstract(text)
     intro = extract_introduction(text)
     method = pick_terms(text, METHOD_TERMS, "deep learning / machine learning")
@@ -464,7 +683,8 @@ def heuristic_note(title: str, text: str, topics: List[str], figure_caption: str
     method_l = method.lower()
     challenge = first_matching_sentence(intro, ["challenge", "limitation", "however", "although", "difficult", "lack"])
     proposal = first_matching_sentence(intro, ["we propose", "we introduce", "we present", "this paper", "our method"])
-    innovations = extract_innovation_points(intro or abstract)
+    innovations = extract_innovation_points(" ".join([intro, figure_caption, abstract]))
+    intro_lead = first_informative_sentence(intro or abstract)
     ideas = [
         "检查其数据模态、任务定义和评价指标是否能迁移到你的 neuroimaging / medical AI 方向。",
         "关注模型是否解决跨中心、跨被试、缺失模态或小样本泛化问题。",
@@ -474,24 +694,35 @@ def heuristic_note(title: str, text: str, topics: List[str], figure_caption: str
         ideas[0] = "优先关注它能否用于缺失模态补全、纵向影像预测、低剂量/低质量图像增强或跨模态合成。"
     if any(topic in topics for topic in ["AD / Dementia", "Multi-organ"]):
         ideas[1] = "可以重点看它是否能扩展到 AD/MCI 风险预测、多器官影像表征或跨疾病泛化验证。"
+    abstract_zh = translate_text(abstract, args, f"{title[:60]} abstract") if args else ""
+    caption_zh = translate_text(figure_caption, args, f"{title[:60]} figure caption") if args and figure_caption else ""
+    lead_zh = translate_text(lead, args, f"{title[:60]} lead") if args else ""
+    intro_lead_zh = translate_text(intro_lead, args, f"{title[:60]} introduction lead") if args else ""
+    challenge_zh = translate_text(challenge, args, f"{title[:60]} challenge") if args and challenge else ""
+    proposal_zh = translate_text(proposal, args, f"{title[:60]} proposal") if args and proposal else ""
+    innovations_zh = [
+        translate_text(point, args, f"{title[:40]} innovation {index}") or point
+        for index, point in enumerate(innovations, 1)
+    ]
+    note_model = "free-translation" if abstract_zh or caption_zh else "heuristic"
     return {
         "note_version": NOTE_VERSION,
-        "note_model": "heuristic",
-        "one_sentence": f"这篇论文围绕“{title}”，核心线索是：{lead}",
+        "note_model": note_model,
+        "one_sentence": f"这篇论文围绕“{title}”，核心线索是：{lead_zh or lead}",
         "why_relevant": f"它与 {topic_text} 相关，且方法上涉及 {method}，数据/模态侧重 {modality}，适合作为医学影像 AI 选题发散或方法迁移的候选文献。",
-        "abstract_zh": f"未检测到 OpenAI 配置，暂保留摘要原文用于后续翻译：{abstract}",
+        "abstract_zh": abstract_zh or f"免费翻译暂不可用，暂保留摘要原文：{abstract}",
         "abstract_original": abstract,
         "introduction_logic": [
-            f"背景问题：{first_informative_sentence(intro or abstract)}",
-            f"现有瓶颈：{challenge or '需要结合 Introduction 全文进一步确认作者强调的 gap。'}",
-            f"本文切入：{proposal or f'围绕 {topic_text} 与 {method} 建立新的分析或诊断线索。'}",
+            f"背景问题：{intro_lead_zh or intro_lead}",
+            f"现有瓶颈：{challenge_zh or challenge or '需要结合 Introduction 全文进一步确认作者强调的 gap。'}",
+            f"本文切入：{proposal_zh or proposal or f'围绕 {topic_text} 与 {method} 建立新的分析或诊断线索。'}",
         ],
-        "innovations": innovations,
+        "innovations": innovations_zh,
         "method_summary": f"简单来看，论文使用 {method} 处理 {modality}，目标是服务于 {topic_text} 相关任务。",
-        "figure_caption_zh": f"未检测到 OpenAI 配置，暂保留原 caption：{figure_caption}" if figure_caption else "",
+        "figure_caption_zh": caption_zh or (f"免费翻译暂不可用，暂保留原 caption：{figure_caption}" if figure_caption else ""),
         "data_modality": modality,
         "method": method,
-        "key_points": innovations,
+        "key_points": innovations_zh,
         "limitations": "自动解读基于 PDF 前几页文本抽取生成，建议结合全文实验设置、数据来源和外部验证结果进一步判断可靠性。",
         "ideas": ideas,
     }
@@ -501,16 +732,30 @@ def first_matching_sentence(text: str, keywords: List[str]) -> str:
     sentences = re.split(r"(?<=[.!?])\s+", clean_text(text))
     for sentence in sentences:
         sentence_clean = clean_text(sentence.strip(" .,-:;"))
+        if is_noise_sentence(sentence_clean):
+            continue
         if 60 <= len(sentence_clean) <= 320 and any(keyword in sentence_clean.lower() for keyword in keywords):
             return sentence_clean
     return ""
 
 
 def extract_innovation_points(text: str) -> List[str]:
-    keywords = ["we propose", "we introduce", "we present", "novel", "first", "contribution", "framework", "architecture"]
+    keywords = [
+        "we propose",
+        "we introduce",
+        "we present",
+        "we constructed",
+        "we developed",
+        "our contributions",
+        "main contributions",
+        "novel",
+        "first",
+    ]
     points = []
     for sentence in re.split(r"(?<=[.!?])\s+", clean_text(text)):
         sentence = clean_text(sentence.strip(" .,-:;"))
+        if is_noise_sentence(sentence):
+            continue
         if 60 <= len(sentence) <= 320 and any(keyword in sentence.lower() for keyword in keywords):
             points.append(sentence)
         if len(points) >= 4:
@@ -570,10 +815,10 @@ Main figure caption:
     return None
 
 
-def build_note(title: str, text: str, topics: List[str], figure_caption: str, no_openai: bool) -> Dict[str, Any]:
-    note = None if no_openai else openai_note(title, text, topics, figure_caption)
+def build_note(title: str, text: str, topics: List[str], figure_caption: str, args: argparse.Namespace) -> Dict[str, Any]:
+    note = None if args.no_openai else openai_note(title, text, topics, figure_caption)
     if not note:
-        note = heuristic_note(title, text, topics, figure_caption)
+        note = heuristic_note(title, text, topics, figure_caption, args)
     return note
 
 
@@ -667,7 +912,7 @@ def process_pdf(path: Path, args: argparse.Namespace) -> Dict[str, Any]:
         figure_caption = clean_text(main_figure.get("caption"))
     if not figure_caption:
         figure_caption = extract_caption_from_text(text)
-    note = build_note(title, text, topics, figure_caption, args.no_openai)
+    note = build_note(title, text, topics, figure_caption, args)
 
     processed_at = dt.datetime.now(dt.timezone.utc).isoformat()
     image_path = str(figure_path if main_figure else Path(args.assets_dir) / f"{digest[:16]}.svg").replace("\\", "/")
@@ -703,12 +948,15 @@ def scan_pdfs(library_dir: Path, recursive: bool) -> List[Path]:
 def enrich_existing_readings(readings: List[Dict[str, Any]], args: argparse.Namespace) -> int:
     changed = 0
     openai_available = bool(os.getenv("OPENAI_API_KEY") and os.getenv("OPENAI_MODEL") and not args.no_openai)
+    translation_requested = clean_text(getattr(args, "translation_provider", "auto")).lower() not in {"none", "off", "false", "0"}
     for reading in readings:
         if not isinstance(reading, dict):
             continue
         note = reading.get("interpretation") if isinstance(reading.get("interpretation"), dict) else {}
         needs_refresh = note.get("note_version") != NOTE_VERSION
         if openai_available and note.get("note_model") != os.getenv("OPENAI_MODEL"):
+            needs_refresh = True
+        if translation_requested and note.get("note_model") == "heuristic" and not openai_available:
             needs_refresh = True
         required_fields = ["abstract_zh", "introduction_logic", "innovations", "method_summary"]
         if any(not note.get(field) for field in required_fields):
@@ -724,7 +972,7 @@ def enrich_existing_readings(readings: List[Dict[str, Any]], args: argparse.Name
             continue
         topics = reading.get("topics") if isinstance(reading.get("topics"), list) else detect_topics(text)
         figure_caption = clean_text(reading.get("figure_caption"))
-        reading["interpretation"] = build_note(title, text, topics, figure_caption, args.no_openai)
+        reading["interpretation"] = build_note(title, text, topics, figure_caption, args)
         changed += 1
     return changed
 
@@ -741,6 +989,16 @@ def main() -> int:
     parser.add_argument("--max-new", type=int, default=20)
     parser.add_argument("--recursive", action="store_true")
     parser.add_argument("--no-openai", action="store_true")
+    parser.add_argument("--translation-provider", default=os.getenv("TRANSLATION_PROVIDER", DEFAULT_TRANSLATION_PROVIDER))
+    parser.add_argument("--libretranslate-url", default=os.getenv("LIBRETRANSLATE_URL", DEFAULT_LIBRETRANSLATE_URL))
+    parser.add_argument("--libretranslate-api-key", default=os.getenv("LIBRETRANSLATE_API_KEY", ""))
+    parser.add_argument("--target-lang", default=os.getenv("TRANSLATION_TARGET_LANG", "zh"))
+    parser.add_argument("--translation-sleep-seconds", type=float, default=float(os.getenv("TRANSLATION_SLEEP_SECONDS", "0.5")))
+    parser.add_argument(
+        "--argos-auto-install",
+        action="store_true",
+        default=os.getenv("ARGOS_AUTO_INSTALL", "1").lower() not in {"0", "false", "no", "off"},
+    )
     parser.add_argument("--no-figures", action="store_true")
     parser.add_argument("--skip-scan", action="store_true", help="Do not scan the local PDF folder.")
     parser.add_argument("--enrich-existing", action="store_true", help="Refresh notes already stored in local_readings.json.")
@@ -763,7 +1021,7 @@ def main() -> int:
 
     if args.enrich_existing:
         if not args.no_openai and not (os.getenv("OPENAI_API_KEY") and os.getenv("OPENAI_MODEL")):
-            print("[warn] OPENAI_API_KEY and OPENAI_MODEL are required for Chinese abstract translation.")
+            print("[warn] OPENAI_API_KEY and OPENAI_MODEL are missing; using free translation plus rule-based notes.")
         changed = enrich_existing_readings(readings, args)
         if changed:
             save_json(readings_path, readings)
