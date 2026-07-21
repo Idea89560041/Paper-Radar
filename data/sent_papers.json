@@ -2618,6 +2618,123 @@
       "venue": "Magn Reson Med",
       "source": "PubMed",
       "sent_at": "2026-07-20T11:13:39.705785+00:00"
+    },
+    "b55768706cff20a9": {
+      "title": "Brain Region-Centered MultiModal Hypergraph Fusion for MCI Conversion Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42475211/",
+      "doi": "10.1109/jbhi.2026.3715131",
+      "pmid": "42475211",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "d5e097fb1bacb8ea": {
+      "title": "BrainNext: A General-Purpose Self-Supervised Foundation Model for Brain MRI Analysis",
+      "url": "https://arxiv.org/abs/2607.17782v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "9997d2ce440d3567": {
+      "title": "Hybrid self-supervised EEG emotion representation: masked reconstruction joint with mutual information bounds.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42474682/",
+      "doi": "10.1186/s40708-026-00322-0",
+      "pmid": "42474682",
+      "venue": "Brain Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "da5641140a74a1a6": {
+      "title": "Deep learning for multimodal physiological signal based assessment of sleep disordered breathing.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42477001/",
+      "doi": "10.1038/s41598-026-56111-6",
+      "pmid": "42477001",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "66c0359548af3fbe": {
+      "title": "A Convolutional Neural Network Combining Multi-scale Convolution and Functional Connectivity for Predicting rTMS Efficacy in MUD.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42474602/",
+      "doi": "10.1007/s10439-026-04286-4",
+      "pmid": "42474602",
+      "venue": "Ann Biomed Eng",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "e459a6aa0be5f629": {
+      "title": "Single-channel EEG sleep stage classification using synchrosqueezed transform and sequential representation learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42477395/",
+      "doi": "10.1038/s41598-026-62832-5",
+      "pmid": "42477395",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "853f3ce802874472": {
+      "title": "SAMRI-3D: Adapting SAM2 for 3D MRI Segmentation with Global Volume Tokens",
+      "url": "https://arxiv.org/abs/2607.18014v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "855469113d154a90": {
+      "title": "AmygdalaGo-BOLT for boundary-aware segmentation of the human amygdala.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42229420/",
+      "doi": "10.1016/j.crmeth.2026.101473",
+      "pmid": "42229420",
+      "venue": "Cell Rep Methods",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "b9fa9a1f7cf05546": {
+      "title": "Med-OPD: Improving Medical Vision-Language Models via Evidence-Aware On-Policy Distillation",
+      "url": "https://arxiv.org/abs/2607.16303v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "d6364742b477069a": {
+      "title": "Can Multimodal Large Language Models Understand OCT?",
+      "url": "https://arxiv.org/abs/2607.16609v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "e1b4792f5c6214d4": {
+      "title": "Deep learning reconstruction versus conventional parallel imaging for sagittal T2-weighted MRI in cervical cancer: a comparison of acceleration factors.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42474716/",
+      "doi": "10.1007/s00261-026-05685-w",
+      "pmid": "42474716",
+      "venue": "Abdom Radiol (NY)",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "56cb6b3ef9fb9202": {
+      "title": "Neural categorization of visual words of alphabetic and non-alphabetic languages.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42474294/",
+      "doi": "10.7554/elife.110320",
+      "pmid": "42474294",
+      "venue": "Elife",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
+    },
+    "632fb8786a9584c3": {
+      "title": "Large language model accuracy in dental radiology: effects of cognitive complexity and content domain.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42477450/",
+      "doi": "10.1038/s41598-026-63160-4",
+      "pmid": "42477450",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-21T04:48:39.928037+00:00"
     }
   },
   "sent_keys": {
@@ -3661,7 +3778,51 @@
     "doi:10.1002/mrm.70521": "667233b7ad2ce84a",
     "pmid:42473088": "667233b7ad2ce84a",
     "url:https://pubmed.ncbi.nlm.nih.gov/42473088": "667233b7ad2ce84a",
-    "title:training deep learning based dynamic mr image reconstruction using synthetic fractals": "667233b7ad2ce84a"
+    "title:training deep learning based dynamic mr image reconstruction using synthetic fractals": "667233b7ad2ce84a",
+    "doi:10.1109/jbhi.2026.3715131": "b55768706cff20a9",
+    "pmid:42475211": "b55768706cff20a9",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42475211": "b55768706cff20a9",
+    "title:brain region centered multimodal hypergraph fusion for mci conversion prediction": "b55768706cff20a9",
+    "url:https://arxiv.org/abs/2607.17782v1": "d5e097fb1bacb8ea",
+    "title:brainnext a general purpose self supervised foundation model for brain mri analysis": "d5e097fb1bacb8ea",
+    "doi:10.1186/s40708-026-00322-0": "9997d2ce440d3567",
+    "pmid:42474682": "9997d2ce440d3567",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42474682": "9997d2ce440d3567",
+    "title:hybrid self supervised eeg emotion representation masked reconstruction joint with mutual information bounds": "9997d2ce440d3567",
+    "doi:10.1038/s41598-026-56111-6": "da5641140a74a1a6",
+    "pmid:42477001": "da5641140a74a1a6",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42477001": "da5641140a74a1a6",
+    "title:deep learning for multimodal physiological signal based assessment of sleep disordered breathing": "da5641140a74a1a6",
+    "doi:10.1007/s10439-026-04286-4": "66c0359548af3fbe",
+    "pmid:42474602": "66c0359548af3fbe",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42474602": "66c0359548af3fbe",
+    "title:a convolutional neural network combining multi scale convolution and functional connectivity for predicting rtms efficacy in mud": "66c0359548af3fbe",
+    "doi:10.1038/s41598-026-62832-5": "e459a6aa0be5f629",
+    "pmid:42477395": "e459a6aa0be5f629",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42477395": "e459a6aa0be5f629",
+    "title:single channel eeg sleep stage classification using synchrosqueezed transform and sequential representation learning": "e459a6aa0be5f629",
+    "url:https://arxiv.org/abs/2607.18014v1": "853f3ce802874472",
+    "title:samri 3d adapting sam2 for 3d mri segmentation with global volume tokens": "853f3ce802874472",
+    "doi:10.1016/j.crmeth.2026.101473": "855469113d154a90",
+    "pmid:42229420": "855469113d154a90",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42229420": "855469113d154a90",
+    "title:amygdalago bolt for boundary aware segmentation of the human amygdala": "855469113d154a90",
+    "url:https://arxiv.org/abs/2607.16303v1": "b9fa9a1f7cf05546",
+    "title:med opd improving medical vision language models via evidence aware on policy distillation": "b9fa9a1f7cf05546",
+    "url:https://arxiv.org/abs/2607.16609v1": "d6364742b477069a",
+    "title:can multimodal large language models understand oct": "d6364742b477069a",
+    "doi:10.1007/s00261-026-05685-w": "e1b4792f5c6214d4",
+    "pmid:42474716": "e1b4792f5c6214d4",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42474716": "e1b4792f5c6214d4",
+    "title:deep learning reconstruction versus conventional parallel imaging for sagittal t2 weighted mri in cervical cancer a comparison of acceleration factors": "e1b4792f5c6214d4",
+    "doi:10.7554/elife.110320": "56cb6b3ef9fb9202",
+    "pmid:42474294": "56cb6b3ef9fb9202",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42474294": "56cb6b3ef9fb9202",
+    "title:neural categorization of visual words of alphabetic and non alphabetic languages": "56cb6b3ef9fb9202",
+    "doi:10.1038/s41598-026-63160-4": "632fb8786a9584c3",
+    "pmid:42477450": "632fb8786a9584c3",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42477450": "632fb8786a9584c3",
+    "title:large language model accuracy in dental radiology effects of cognitive complexity and content domain": "632fb8786a9584c3"
   },
-  "updated_at": "2026-07-20T11:13:39.706003+00:00"
+  "updated_at": "2026-07-21T04:48:39.928573+00:00"
 }
