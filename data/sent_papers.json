@@ -3077,6 +3077,51 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-24T10:29:45.202162+00:00"
+    },
+    "e1cab94c65e76085": {
+      "title": "Development and Validation of a Machine Learning Classification Algorithm for Differentiating Frontotemporal Dementia from Alzheimer's Disease Using Automated Brain MRI Volumetry.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42498651/",
+      "doi": "10.3174/ajnr.a9546",
+      "pmid": "42498651",
+      "venue": "AJNR Am J Neuroradiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-25T10:01:53.733432+00:00"
+    },
+    "6f833115ee906710": {
+      "title": "DiffShape: Decoupling Shape Priors with Conditional Diffusion for Robust Brain Extraction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42497038/",
+      "doi": "10.1109/tmi.2026.3716658",
+      "pmid": "42497038",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-25T10:01:53.733432+00:00"
+    },
+    "5a2feead03c157fc": {
+      "title": "EEG-based automated evaluation of automotive sound quality using ensemble deep learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42498714/",
+      "doi": "10.1038/s41598-026-58127-4",
+      "pmid": "42498714",
+      "venue": "Sci Rep",
+      "source": "PubMed",
+      "sent_at": "2026-07-25T10:01:53.733432+00:00"
+    },
+    "86b4ccfe47d5b094": {
+      "title": "Accelerated 7T 3D DESS MR Neurography of the Cervical Spine Using CS-CAIPIRINHA and Deep Learning Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42494204/",
+      "doi": "10.1097/rli.0000000000001305",
+      "pmid": "42494204",
+      "venue": "Invest Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-25T10:01:53.733432+00:00"
+    },
+    "7c3294d1fa781723": {
+      "title": "Performance of multimodal large language models versus clinicians for radiographic knee osteoarthritis grading: A multiobserver study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42498839/",
+      "doi": "10.1007/s00256-026-05322-z",
+      "pmid": "42498839",
+      "venue": "Skeletal Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-25T10:01:53.733432+00:00"
     }
   },
   "sent_keys": {
@@ -4297,7 +4342,27 @@
     "url:https://pubmed.ncbi.nlm.nih.gov/42492117": "1715168a2e3f454b",
     "title:evaluating the google ct foundation model for central pulmonary embolism detection on computed tomography pulmonary angiograms": "1715168a2e3f454b",
     "url:https://arxiv.org/abs/2607.20993v1": "e828a4ea2b80b618",
-    "title:sparse concept channels in frozen 3d ct vision encoders": "e828a4ea2b80b618"
+    "title:sparse concept channels in frozen 3d ct vision encoders": "e828a4ea2b80b618",
+    "doi:10.3174/ajnr.a9546": "e1cab94c65e76085",
+    "pmid:42498651": "e1cab94c65e76085",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42498651": "e1cab94c65e76085",
+    "title:development and validation of a machine learning classification algorithm for differentiating frontotemporal dementia from alzheimer s disease using automated brain mri volumetry": "e1cab94c65e76085",
+    "doi:10.1109/tmi.2026.3716658": "6f833115ee906710",
+    "pmid:42497038": "6f833115ee906710",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42497038": "6f833115ee906710",
+    "title:diffshape decoupling shape priors with conditional diffusion for robust brain extraction": "6f833115ee906710",
+    "doi:10.1038/s41598-026-58127-4": "5a2feead03c157fc",
+    "pmid:42498714": "5a2feead03c157fc",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42498714": "5a2feead03c157fc",
+    "title:eeg based automated evaluation of automotive sound quality using ensemble deep learning": "5a2feead03c157fc",
+    "doi:10.1097/rli.0000000000001305": "86b4ccfe47d5b094",
+    "pmid:42494204": "86b4ccfe47d5b094",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42494204": "86b4ccfe47d5b094",
+    "title:accelerated 7t 3d dess mr neurography of the cervical spine using cs caipirinha and deep learning reconstruction": "86b4ccfe47d5b094",
+    "doi:10.1007/s00256-026-05322-z": "7c3294d1fa781723",
+    "pmid:42498839": "7c3294d1fa781723",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42498839": "7c3294d1fa781723",
+    "title:performance of multimodal large language models versus clinicians for radiographic knee osteoarthritis grading a multiobserver study": "7c3294d1fa781723"
   },
-  "updated_at": "2026-07-24T10:29:45.202995+00:00"
+  "updated_at": "2026-07-25T10:01:53.733737+00:00"
 }
