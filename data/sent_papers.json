@@ -3122,6 +3122,51 @@
       "venue": "Skeletal Radiol",
       "source": "PubMed",
       "sent_at": "2026-07-25T10:01:53.733432+00:00"
+    },
+    "5bfc0f00af1e8cef": {
+      "title": "TextSLIP: Text Self-Supervised CLIP for Medical Report Generation",
+      "url": "https://arxiv.org/abs/2607.21970v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-27T11:39:18.845966+00:00"
+    },
+    "21d714372414d50a": {
+      "title": "RadSight: Towards Perceptually Reliable Multimodal Radiology Image Understanding",
+      "url": "https://arxiv.org/abs/2607.22293v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-27T11:39:18.845966+00:00"
+    },
+    "8b8c7bf2b5a851e6": {
+      "title": "Patient-independent automated pediatric seizure monitoring based on expert-labeled electrographic ictal data as core reference knowledge.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42503626/",
+      "doi": "10.3345/cep.2026.01011",
+      "pmid": "42503626",
+      "venue": "Clin Exp Pediatr",
+      "source": "PubMed",
+      "sent_at": "2026-07-27T11:39:18.845966+00:00"
+    },
+    "0be421ee65613075": {
+      "title": "Large language model driven multicenter prediction and explainable risk attribution of acute kidney injury",
+      "url": "https://doi.org/10.1038/s41467-026-76029-x",
+      "doi": "10.1038/s41467-026-76029-x",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-27T11:39:18.845966+00:00"
+    },
+    "0887402aaf38280b": {
+      "title": "IQ-JEPA: A Joint-Embedding Predictive Architecture with a Hermitian Vision Transformer for Sound Speed and Attenuation Estimation from Ultrasound IQ Data",
+      "url": "https://arxiv.org/abs/2607.22351v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-27T11:39:18.845966+00:00"
     }
   },
   "sent_keys": {
@@ -4362,7 +4407,20 @@
     "doi:10.1007/s00256-026-05322-z": "7c3294d1fa781723",
     "pmid:42498839": "7c3294d1fa781723",
     "url:https://pubmed.ncbi.nlm.nih.gov/42498839": "7c3294d1fa781723",
-    "title:performance of multimodal large language models versus clinicians for radiographic knee osteoarthritis grading a multiobserver study": "7c3294d1fa781723"
+    "title:performance of multimodal large language models versus clinicians for radiographic knee osteoarthritis grading a multiobserver study": "7c3294d1fa781723",
+    "url:https://arxiv.org/abs/2607.21970v1": "5bfc0f00af1e8cef",
+    "title:textslip text self supervised clip for medical report generation": "5bfc0f00af1e8cef",
+    "url:https://arxiv.org/abs/2607.22293v1": "21d714372414d50a",
+    "title:radsight towards perceptually reliable multimodal radiology image understanding": "21d714372414d50a",
+    "doi:10.3345/cep.2026.01011": "8b8c7bf2b5a851e6",
+    "pmid:42503626": "8b8c7bf2b5a851e6",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42503626": "8b8c7bf2b5a851e6",
+    "title:patient independent automated pediatric seizure monitoring based on expert labeled electrographic ictal data as core reference knowledge": "8b8c7bf2b5a851e6",
+    "doi:10.1038/s41467-026-76029-x": "0be421ee65613075",
+    "url:https://doi.org/10.1038/s41467-026-76029-x": "0be421ee65613075",
+    "title:large language model driven multicenter prediction and explainable risk attribution of acute kidney injury": "0be421ee65613075",
+    "url:https://arxiv.org/abs/2607.22351v1": "0887402aaf38280b",
+    "title:iq jepa a joint embedding predictive architecture with a hermitian vision transformer for sound speed and attenuation estimation from ultrasound iq data": "0887402aaf38280b"
   },
-  "updated_at": "2026-07-25T10:01:53.733737+00:00"
+  "updated_at": "2026-07-27T11:39:18.846227+00:00"
 }
