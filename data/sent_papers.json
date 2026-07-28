@@ -3167,6 +3167,78 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-27T11:39:18.845966+00:00"
+    },
+    "333b7dbbbf579c69": {
+      "title": "NeuroOmics-Net: An interpretable multimodal deep learning framework for Alzheimer's disease diagnosis and progression prediction using neuroimaging, EEG, and genomic data.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42508236/",
+      "doi": "10.1016/j.compbiomed.2026.111879",
+      "pmid": "42508236",
+      "venue": "Comput Biol Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "55e3318fefd6e0ae": {
+      "title": "Interpretable Dual-Stream EEG-MRI Fusion Uncovers Structure-Function Signatures of Stroke Motor Recovery.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42507557/",
+      "doi": "10.1109/tnsre.2026.3717334",
+      "pmid": "42507557",
+      "venue": "IEEE Trans Neural Syst Rehabil Eng",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "821310186773d702": {
+      "title": "A Deep Learning Framework for EEG-Based Decoding of Visually Imagined Arrows with Different Colors and Directions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42505459/",
+      "doi": "10.3390/bios16070383",
+      "pmid": "42505459",
+      "venue": "Biosensors (Basel)",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "f9fa5eb9afca91d0": {
+      "title": "Hybrid Edge-Cloud Asymmetric Analytics for Portable Multimodal BCI Biosensors.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42505470/",
+      "doi": "10.3390/bios16070394",
+      "pmid": "42505470",
+      "venue": "Biosensors (Basel)",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "eb42a3cd244aa9a6": {
+      "title": "A Novel Depression Recognition Network Based on Brain Functional Connectivity from Prefrontal Emotional State EEG.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42512520/",
+      "doi": "10.3390/brainsci16070746",
+      "pmid": "42512520",
+      "venue": "Brain Sci",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "23ce2c374aebbf63": {
+      "title": "MEG-GPT: A transformer-based foundation model for magnetoencephalography data.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42516171/",
+      "doi": "10.1162/imag.a.1301",
+      "pmid": "42516171",
+      "venue": "Imaging Neurosci (Camb)",
+      "source": "PubMed",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "247472770a23e5b8": {
+      "title": "Autonomous bioisosteric replacement for multi-property optimization in drug design",
+      "url": "https://doi.org/10.1038/s41467-026-75512-9",
+      "doi": "10.1038/s41467-026-75512-9",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "5017aaac77089b16": {
+      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "url": "https://arxiv.org/abs/2607.24743v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-28T10:46:32.719261+00:00"
     }
   },
   "sent_keys": {
@@ -4420,7 +4492,36 @@
     "url:https://doi.org/10.1038/s41467-026-76029-x": "0be421ee65613075",
     "title:large language model driven multicenter prediction and explainable risk attribution of acute kidney injury": "0be421ee65613075",
     "url:https://arxiv.org/abs/2607.22351v1": "0887402aaf38280b",
-    "title:iq jepa a joint embedding predictive architecture with a hermitian vision transformer for sound speed and attenuation estimation from ultrasound iq data": "0887402aaf38280b"
+    "title:iq jepa a joint embedding predictive architecture with a hermitian vision transformer for sound speed and attenuation estimation from ultrasound iq data": "0887402aaf38280b",
+    "doi:10.1016/j.compbiomed.2026.111879": "333b7dbbbf579c69",
+    "pmid:42508236": "333b7dbbbf579c69",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42508236": "333b7dbbbf579c69",
+    "title:neuroomics net an interpretable multimodal deep learning framework for alzheimer s disease diagnosis and progression prediction using neuroimaging eeg and genomic data": "333b7dbbbf579c69",
+    "doi:10.1109/tnsre.2026.3717334": "55e3318fefd6e0ae",
+    "pmid:42507557": "55e3318fefd6e0ae",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42507557": "55e3318fefd6e0ae",
+    "title:interpretable dual stream eeg mri fusion uncovers structure function signatures of stroke motor recovery": "55e3318fefd6e0ae",
+    "doi:10.3390/bios16070383": "821310186773d702",
+    "pmid:42505459": "821310186773d702",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42505459": "821310186773d702",
+    "title:a deep learning framework for eeg based decoding of visually imagined arrows with different colors and directions": "821310186773d702",
+    "doi:10.3390/bios16070394": "f9fa5eb9afca91d0",
+    "pmid:42505470": "f9fa5eb9afca91d0",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42505470": "f9fa5eb9afca91d0",
+    "title:hybrid edge cloud asymmetric analytics for portable multimodal bci biosensors": "f9fa5eb9afca91d0",
+    "doi:10.3390/brainsci16070746": "eb42a3cd244aa9a6",
+    "pmid:42512520": "eb42a3cd244aa9a6",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42512520": "eb42a3cd244aa9a6",
+    "title:a novel depression recognition network based on brain functional connectivity from prefrontal emotional state eeg": "eb42a3cd244aa9a6",
+    "doi:10.1162/imag.a.1301": "23ce2c374aebbf63",
+    "pmid:42516171": "23ce2c374aebbf63",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42516171": "23ce2c374aebbf63",
+    "title:meg gpt a transformer based foundation model for magnetoencephalography data": "23ce2c374aebbf63",
+    "doi:10.1038/s41467-026-75512-9": "247472770a23e5b8",
+    "url:https://doi.org/10.1038/s41467-026-75512-9": "247472770a23e5b8",
+    "title:autonomous bioisosteric replacement for multi property optimization in drug design": "247472770a23e5b8",
+    "url:https://arxiv.org/abs/2607.24743v1": "5017aaac77089b16",
+    "title:clinfusion a vision centric multimodal llm system for holistic medical understanding": "5017aaac77089b16"
   },
-  "updated_at": "2026-07-27T11:39:18.846227+00:00"
+  "updated_at": "2026-07-28T10:46:32.719628+00:00"
 }
