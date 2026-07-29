@@ -3239,6 +3239,96 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-28T10:46:32.719261+00:00"
+    },
+    "a598b7718262cc4f": {
+      "title": "Discriminated-SDS: A Novel Hybrid Approach for Optimizing EEG Based Brain-Computer Interface Signals Faced by Metaheuristic Algorithms",
+      "url": "https://www.semanticscholar.org/paper/bd181be4733d260eb83b3e9fc9014dbab77c49a2",
+      "doi": "10.47857/irjms.2026.v07i01.09252",
+      "pmid": "",
+      "venue": "International Research Journal of Multidisciplinary Scope",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "0abf44f03d47e1d8": {
+      "title": "Neuro shield : Securing neural data with privacy-preserving algorithms for brain computer interface",
+      "url": "https://www.semanticscholar.org/paper/1f9e79c4482b5fd4634aa01b47988fb013a1c13a",
+      "doi": "10.47974/jios-2323",
+      "pmid": "",
+      "venue": "Journal of Information & Optimization Sciences",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "33127c0f5f669098": {
+      "title": "Brain Signal Variability During Rest as a Neural Mechanism Underlying Cognitive Reserve.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42521051/",
+      "doi": "10.1016/j.neuroimage.2026.122150",
+      "pmid": "42521051",
+      "venue": "Neuroimage",
+      "source": "PubMed",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "6e049fc3f7af17a0": {
+      "title": "HFG-Net: High-frequency guided multi-view graph convolution and dynamic spatio-temporal fusion for ASD diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42520836/",
+      "doi": "10.1088/1741-2552/ae9190",
+      "pmid": "42520836",
+      "venue": "J Neural Eng",
+      "source": "PubMed",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "0615d1ffc5dcf47d": {
+      "title": "Deep learning-based multi-modality image conversion for evaluating dose calculation and position correction accuracy in image-guided radiation therapy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42518091/",
+      "doi": "10.1007/s12194-026-01108-z",
+      "pmid": "42518091",
+      "venue": "Radiol Phys Technol",
+      "source": "PubMed",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "ac364a57d333abbe": {
+      "title": "OrganLens: Organ-Specific Representation Learning for CT Foundation Models",
+      "url": "https://arxiv.org/abs/2607.25164v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "22b5f79c20b44d6f": {
+      "title": "Composite reaction time and variability correlate with whole-brain white-matter characteristics.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42518980/",
+      "doi": "10.1162/imag.a.1303",
+      "pmid": "42518980",
+      "venue": "Imaging Neurosci (Camb)",
+      "source": "PubMed",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "8d76101b33555245": {
+      "title": "Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases",
+      "url": "https://arxiv.org/abs/2607.25933v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "9a0a92bf5cf72791": {
+      "title": "Mol-CADiff: text-conditional molecule generation via causality-aware autoregressive diffusion",
+      "url": "https://doi.org/10.1038/s41467-026-75702-5",
+      "doi": "10.1038/s41467-026-75702-5",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "b25432a5c80c2976": {
+      "title": "Rapid online deep artifact suppression for real-time spiral bSSFP CMR with blipped-CAIPI simultaneous multi-slice imaging at 1.5 T.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42521000/",
+      "doi": "10.1016/j.mri.2026.110751",
+      "pmid": "42521000",
+      "venue": "Magn Reson Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-29T10:50:24.231599+00:00"
     }
   },
   "sent_keys": {
@@ -4521,7 +4611,40 @@
     "url:https://doi.org/10.1038/s41467-026-75512-9": "247472770a23e5b8",
     "title:autonomous bioisosteric replacement for multi property optimization in drug design": "247472770a23e5b8",
     "url:https://arxiv.org/abs/2607.24743v1": "5017aaac77089b16",
-    "title:clinfusion a vision centric multimodal llm system for holistic medical understanding": "5017aaac77089b16"
+    "title:clinfusion a vision centric multimodal llm system for holistic medical understanding": "5017aaac77089b16",
+    "doi:10.47857/irjms.2026.v07i01.09252": "a598b7718262cc4f",
+    "url:https://www.semanticscholar.org/paper/bd181be4733d260eb83b3e9fc9014dbab77c49a2": "a598b7718262cc4f",
+    "title:discriminated sds a novel hybrid approach for optimizing eeg based brain computer interface signals faced by metaheuristic algorithms": "a598b7718262cc4f",
+    "doi:10.47974/jios-2323": "0abf44f03d47e1d8",
+    "url:https://www.semanticscholar.org/paper/1f9e79c4482b5fd4634aa01b47988fb013a1c13a": "0abf44f03d47e1d8",
+    "title:neuro shield securing neural data with privacy preserving algorithms for brain computer interface": "0abf44f03d47e1d8",
+    "doi:10.1016/j.neuroimage.2026.122150": "33127c0f5f669098",
+    "pmid:42521051": "33127c0f5f669098",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42521051": "33127c0f5f669098",
+    "title:brain signal variability during rest as a neural mechanism underlying cognitive reserve": "33127c0f5f669098",
+    "doi:10.1088/1741-2552/ae9190": "6e049fc3f7af17a0",
+    "pmid:42520836": "6e049fc3f7af17a0",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42520836": "6e049fc3f7af17a0",
+    "title:hfg net high frequency guided multi view graph convolution and dynamic spatio temporal fusion for asd diagnosis": "6e049fc3f7af17a0",
+    "doi:10.1007/s12194-026-01108-z": "0615d1ffc5dcf47d",
+    "pmid:42518091": "0615d1ffc5dcf47d",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42518091": "0615d1ffc5dcf47d",
+    "title:deep learning based multi modality image conversion for evaluating dose calculation and position correction accuracy in image guided radiation therapy": "0615d1ffc5dcf47d",
+    "url:https://arxiv.org/abs/2607.25164v1": "ac364a57d333abbe",
+    "title:organlens organ specific representation learning for ct foundation models": "ac364a57d333abbe",
+    "doi:10.1162/imag.a.1303": "22b5f79c20b44d6f",
+    "pmid:42518980": "22b5f79c20b44d6f",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42518980": "22b5f79c20b44d6f",
+    "title:composite reaction time and variability correlate with whole brain white matter characteristics": "22b5f79c20b44d6f",
+    "url:https://arxiv.org/abs/2607.25933v1": "8d76101b33555245",
+    "title:evaluating multi turn multimodal diagnostic reasoning on challenging real world clinical cases": "8d76101b33555245",
+    "doi:10.1038/s41467-026-75702-5": "9a0a92bf5cf72791",
+    "url:https://doi.org/10.1038/s41467-026-75702-5": "9a0a92bf5cf72791",
+    "title:mol cadiff text conditional molecule generation via causality aware autoregressive diffusion": "9a0a92bf5cf72791",
+    "doi:10.1016/j.mri.2026.110751": "b25432a5c80c2976",
+    "pmid:42521000": "b25432a5c80c2976",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42521000": "b25432a5c80c2976",
+    "title:rapid online deep artifact suppression for real time spiral bssfp cmr with blipped caipi simultaneous multi slice imaging at 1 5 t": "b25432a5c80c2976"
   },
-  "updated_at": "2026-07-28T10:46:32.719628+00:00"
+  "updated_at": "2026-07-29T10:50:24.232110+00:00"
 }
