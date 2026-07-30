@@ -3329,6 +3329,96 @@
       "venue": "Magn Reson Imaging",
       "source": "PubMed",
       "sent_at": "2026-07-29T10:50:24.231599+00:00"
+    },
+    "960a037848695be7": {
+      "title": "SpatialFormer: universal spatial representation learning from subcellular molecular to multicellular landscapes",
+      "url": "https://doi.org/10.1038/s43588-026-01016-7",
+      "doi": "10.1038/s43588-026-01016-7",
+      "pmid": "",
+      "venue": "Nature Computational Science",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "2085aeee53da8b98": {
+      "title": "Agentic AI for scaling diagnosis and care in neurodegenerative disease",
+      "url": "https://doi.org/10.1038/s43587-026-01186-z",
+      "doi": "10.1038/s43587-026-01186-z",
+      "pmid": "",
+      "venue": "Nature Aging",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "116aa7cc0d9e1611": {
+      "title": "A Hybrid Perception Network for Accurate and Interpretable Brain Tumor Classification Using Multi-Modal Imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42522813/",
+      "doi": "10.31557/apjcp.2026.27.7.2525",
+      "pmid": "42522813",
+      "venue": "Asian Pac J Cancer Prev",
+      "source": "PubMed",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "36aa097f6057e48c": {
+      "title": "Uncertainty-Aware Risk Stratification in Pediatric Low-Grade Glioma Using Multimodal Data.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42527308/",
+      "doi": "10.3174/ajnr.a9550",
+      "pmid": "42527308",
+      "venue": "AJNR Am J Neuroradiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "3dbb931c72fa6d20": {
+      "title": "SCALPEL: Semantic Cross-modal Alignment via LLM-Powered Encoder Learning for Medical Vision-Language Representation",
+      "url": "https://arxiv.org/abs/2607.26885v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "1462beabe80f0f33": {
+      "title": "Evaluation of generative adversarial network-based postprocessing super-resolution for lumbar spine magnetic resonance imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42525326/",
+      "doi": "10.1007/s13246-026-01768-6",
+      "pmid": "42525326",
+      "venue": "Phys Eng Sci Med",
+      "source": "PubMed",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "60b36f9d8e376dfa": {
+      "title": "Rad-JEPA 3D: Radiology Joint-Embedding Predictive Model for 3D Computed Tomography",
+      "url": "https://arxiv.org/abs/2607.26196v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "b06e26bb879fde73": {
+      "title": "MedARC: Training-Free Adaptive Redundancy Compression of Visual Tokens for 3D Medical Vision-Language Models",
+      "url": "https://arxiv.org/abs/2607.26554v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "169609bfffc20a9d": {
+      "title": "Classifying multipartite continuous-variable entanglement structures through data-augmented neural networks",
+      "url": "https://doi.org/10.1038/s42256-026-01284-y",
+      "doi": "10.1038/s42256-026-01284-y",
+      "pmid": "",
+      "venue": "Nature Machine Intelligence",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "8d3723c874008374": {
+      "title": "Bayesian insights into exchange and restriction in gray matter diffusion MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42524206/",
+      "doi": "10.1162/imag.a.1317",
+      "pmid": "42524206",
+      "venue": "Imaging Neurosci (Camb)",
+      "source": "PubMed",
+      "sent_at": "2026-07-30T10:35:41.062031+00:00"
     }
   },
   "sent_keys": {
@@ -4644,7 +4734,38 @@
     "doi:10.1016/j.mri.2026.110751": "b25432a5c80c2976",
     "pmid:42521000": "b25432a5c80c2976",
     "url:https://pubmed.ncbi.nlm.nih.gov/42521000": "b25432a5c80c2976",
-    "title:rapid online deep artifact suppression for real time spiral bssfp cmr with blipped caipi simultaneous multi slice imaging at 1 5 t": "b25432a5c80c2976"
+    "title:rapid online deep artifact suppression for real time spiral bssfp cmr with blipped caipi simultaneous multi slice imaging at 1 5 t": "b25432a5c80c2976",
+    "doi:10.1038/s43588-026-01016-7": "960a037848695be7",
+    "url:https://doi.org/10.1038/s43588-026-01016-7": "960a037848695be7",
+    "title:spatialformer universal spatial representation learning from subcellular molecular to multicellular landscapes": "960a037848695be7",
+    "doi:10.1038/s43587-026-01186-z": "2085aeee53da8b98",
+    "url:https://doi.org/10.1038/s43587-026-01186-z": "2085aeee53da8b98",
+    "title:agentic ai for scaling diagnosis and care in neurodegenerative disease": "2085aeee53da8b98",
+    "doi:10.31557/apjcp.2026.27.7.2525": "116aa7cc0d9e1611",
+    "pmid:42522813": "116aa7cc0d9e1611",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42522813": "116aa7cc0d9e1611",
+    "title:a hybrid perception network for accurate and interpretable brain tumor classification using multi modal imaging": "116aa7cc0d9e1611",
+    "doi:10.3174/ajnr.a9550": "36aa097f6057e48c",
+    "pmid:42527308": "36aa097f6057e48c",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42527308": "36aa097f6057e48c",
+    "title:uncertainty aware risk stratification in pediatric low grade glioma using multimodal data": "36aa097f6057e48c",
+    "url:https://arxiv.org/abs/2607.26885v1": "3dbb931c72fa6d20",
+    "title:scalpel semantic cross modal alignment via llm powered encoder learning for medical vision language representation": "3dbb931c72fa6d20",
+    "doi:10.1007/s13246-026-01768-6": "1462beabe80f0f33",
+    "pmid:42525326": "1462beabe80f0f33",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42525326": "1462beabe80f0f33",
+    "title:evaluation of generative adversarial network based postprocessing super resolution for lumbar spine magnetic resonance imaging": "1462beabe80f0f33",
+    "url:https://arxiv.org/abs/2607.26196v1": "60b36f9d8e376dfa",
+    "title:rad jepa 3d radiology joint embedding predictive model for 3d computed tomography": "60b36f9d8e376dfa",
+    "url:https://arxiv.org/abs/2607.26554v1": "b06e26bb879fde73",
+    "title:medarc training free adaptive redundancy compression of visual tokens for 3d medical vision language models": "b06e26bb879fde73",
+    "doi:10.1038/s42256-026-01284-y": "169609bfffc20a9d",
+    "url:https://doi.org/10.1038/s42256-026-01284-y": "169609bfffc20a9d",
+    "title:classifying multipartite continuous variable entanglement structures through data augmented neural networks": "169609bfffc20a9d",
+    "doi:10.1162/imag.a.1317": "8d3723c874008374",
+    "pmid:42524206": "8d3723c874008374",
+    "url:https://pubmed.ncbi.nlm.nih.gov/42524206": "8d3723c874008374",
+    "title:bayesian insights into exchange and restriction in gray matter diffusion mri": "8d3723c874008374"
   },
-  "updated_at": "2026-07-29T10:50:24.232110+00:00"
+  "updated_at": "2026-07-30T10:35:41.062454+00:00"
 }
