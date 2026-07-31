@@ -13,6 +13,22 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
+    inputs:
+      backfill_years:
+        description: "Manual historical lookback in years. Use 0 for normal latest mode."
+        required: false
+        type: number
+        default: "0"
+      max_papers:
+        description: "Maximum papers to publish on the site."
+        required: false
+        type: number
+        default: "25"
+      ignore_sent_state:
+        description: "For manual backfill, include papers even if they were shown before."
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,7 +64,29 @@ jobs:
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
-        run: python paper_bot.py --config config.yaml --web --output-dir site
+        run: |
+          BACKFILL_YEARS="${{ github.event.inputs.backfill_years || '0' }}"
+          MAX_PAPERS="${{ github.event.inputs.max_papers || '25' }}"
+          IGNORE_SENT_STATE="${{ github.event.inputs.ignore_sent_state || 'false' }}"
+
+          ARGS=(--config config.yaml --web --output-dir site --site-max-papers "$MAX_PAPERS")
+
+          if [[ "$BACKFILL_YEARS" != "0" ]]; then
+            LOOKBACK_DAYS=$((BACKFILL_YEARS * 365))
+            ARGS+=(
+              --lookback-days "$LOOKBACK_DAYS"
+              --state-namespace manual_backfill_recent_years_v1
+              --site-max-per-topic "$MAX_PAPERS"
+              --site-max-per-source "$MAX_PAPERS"
+              --site-max-per-venue-category "$MAX_PAPERS"
+            )
+          fi
+
+          if [[ "$IGNORE_SENT_STATE" == "true" ]]; then
+            ARGS+=(--ignore-sent-state)
+          fi
+
+          python paper_bot.py "${ARGS[@]}"
 
       - name: Commit sent paper state
         run: |

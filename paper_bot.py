@@ -1963,13 +1963,40 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Print digest instead of sending email.")
     parser.add_argument("--web", action="store_true", help="Build the static web dashboard instead of sending email.")
     parser.add_argument("--output-dir", default=None, help="Output directory for --web mode.")
+    parser.add_argument("--lookback-days", type=int, default=None, help="Override config lookback_days for one-off runs.")
+    parser.add_argument("--state-namespace", default=None, help="Override config state_namespace for one-off runs.")
+    parser.add_argument("--ignore-sent-state", action="store_true", help="In --web mode, show matching papers without filtering or writing sent state.")
+    parser.add_argument("--site-max-papers", type=int, default=None, help="Override site.max_papers for --web mode.")
+    parser.add_argument("--site-max-per-topic", type=int, default=None, help="Override site.max_per_topic for --web mode.")
+    parser.add_argument("--site-max-per-source", type=int, default=None, help="Override site.max_per_source for --web mode.")
+    parser.add_argument(
+        "--site-max-per-venue-category",
+        type=int,
+        default=None,
+        help="Override site.max_per_venue_category for --web mode.",
+    )
     args = parser.parse_args()
 
     cfg = load_config(args.config)
+    if args.lookback_days is not None:
+        cfg["lookback_days"] = max(1, args.lookback_days)
+    if args.state_namespace is not None:
+        cfg["state_namespace"] = args.state_namespace
+    site_cfg = cfg.setdefault("site", {})
+    if args.site_max_papers is not None:
+        site_cfg["max_papers"] = max(1, args.site_max_papers)
+    if args.site_max_per_topic is not None:
+        site_cfg["max_per_topic"] = max(1, args.site_max_per_topic)
+    if args.site_max_per_source is not None:
+        site_cfg["max_per_source"] = max(1, args.site_max_per_source)
+    if args.site_max_per_venue_category is not None:
+        site_cfg["max_per_venue_category"] = max(1, args.site_max_per_venue_category)
+    if args.ignore_sent_state:
+        site_cfg["use_sent_state"] = False
+
     papers = fetch_score_sort_papers(cfg)
 
     if args.web:
-        site_cfg = cfg.get("site", {})
         output_dir = args.output_dir or site_cfg.get("output_dir", "site")
         namespace = state_namespace(cfg)
         if bool(site_cfg.get("use_sent_state", True)):
