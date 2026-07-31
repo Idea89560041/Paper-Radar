@@ -9,9 +9,9 @@ on:
       - "requirements.txt"
       - "README.md"
       - ".github/workflows/daily-paper-digest.yml"
-  # 16:10 Singapore / Hong Kong / China time is 08:10 UTC.
+  # 08:00 Singapore / Hong Kong / China time is 00:00 UTC.
   schedule:
-    - cron: "10 8 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:

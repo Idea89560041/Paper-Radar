@@ -4,130 +4,67 @@
 
 lookback_days: 14
 state_path: data/sent_papers.json
+state_namespace: neurodegenerative_pet_mri_v1
 
 site:
-  title: "Medical Imaging Deep Learning Paper Radar"
+  title: "Neurodegenerative PET/MRI Deep Learning Paper Radar"
   output_dir: site
-  max_papers: 30
+  max_papers: 25
   use_sent_state: true
-  min_preprints: 6
-  max_per_topic: 6
+  min_preprints: 0
+  max_per_topic: 8
   max_per_source: 18
-  max_per_venue_category: 12
+  max_per_venue_category: 18
 
 research_profile:
-  name: "Medical Imaging Deep Learning - Brain & Neuroimage"
+  name: "Neurodegenerative Disease PET/MRI Deep Learning"
 
   queries:
-    - "medical imaging deep learning neuroimaging brain"
-    - "brain-computer interface EEG deep learning"
-    - "BCI electroencephalography neural decoding machine learning"
-    - "EEG foundation model brain signal artificial intelligence"
-    - "neuroimaging brain MRI PET AI agent agentic AI"
-    - "brain image large language model agent radiology"
-    - "whole-body PET MRI multi-organ deep learning"
-    - "total-body PET artificial intelligence multi-organ"
-    - "whole-body MRI multi-organ segmentation deep learning"
-    - "brain gut axis neuroimaging deep learning artificial intelligence"
-    - "gut brain axis microbiome neuroimaging machine learning"
-    - "microbiome neuroimaging Alzheimer dementia MRI machine learning"
-    - "multi organ medical imaging diagnosis deep learning artificial intelligence"
-    - "multi organ guided diagnosis multimodal medical imaging deep learning"
-    - "Alzheimer disease diagnosis MRI PET deep learning"
-    - "dementia mild cognitive impairment neuroimaging foundation model"
-    - "brain MRI medical image synthesis diffusion model"
-    - "neuroimage enhancement super resolution denoising deep learning"
-    - "medical image synthesis enhancement brain MRI"
-    - "medical image quality assessment transformer deep learning"
-    - "segment anything model medical image synthesis"
-    - "multimodal brain MRI PET diagnosis artificial intelligence"
-    - "foundation model medical imaging brain MRI"
-    - "vision language model radiology neuroimaging"
-    - "large multimodal model radiology brain imaging"
-    - "generative AI neuroimaging synthesis"
-    - "self-supervised medical image representation learning"
-    - "domain generalization medical imaging deep learning"
-    - "uncertainty calibration medical imaging deep learning"
-    - "federated learning medical imaging MRI"
-    - "radiology foundation model report generation"
-    - "multimodal radiology vision-language model"
+    - "Alzheimer disease dementia MCI brain MRI PET deep learning"
+    - "neurodegenerative disease brain MRI PET artificial intelligence"
+    - "amyloid tau FDG PET MRI deep learning"
+    - "Parkinson disease brain MRI PET machine learning"
+    - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
+    - "whole-body PET neurodegenerative disease deep learning"
+    - "total-body PET brain neurodegeneration artificial intelligence"
+    - "PET/MRI Alzheimer dementia deep learning"
+    - "foundation model neuroimaging dementia MRI PET"
+    - "self-supervised representation learning neuroimaging MRI PET dementia"
+    - "brain gut microbiome Alzheimer dementia neuroimaging machine learning"
 
   pubmed_queries:
-    - '("brain-computer interface"[Title/Abstract] OR "brain computer interface"[Title/Abstract] OR BCI[Title/Abstract] OR EEG[Title/Abstract] OR electroencephalography[Title/Abstract] OR electroencephalographic[Title/Abstract] OR "neural decoding"[Title/Abstract] OR "brain signal"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
-    - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
-    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR radiomics[Title/Abstract])'
-    - '("medical image synthesis"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "super resolution"[Title/Abstract] OR super-resolution[Title/Abstract] OR denoising[Title/Abstract] OR "diffusion model"[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
-    - '("quality assessment"[Title/Abstract] OR "image quality"[Title/Abstract] OR "no-reference"[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR "medical image"[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
-    - '("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR multimodal[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (diagnosis[Title/Abstract] OR classification[Title/Abstract] OR prediction[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
-    - '("AI agent"[Title/Abstract] OR "artificial intelligence agent"[Title/Abstract] OR "agentic AI"[Title/Abstract] OR "LLM agent"[Title/Abstract] OR "large language model agent"[Title/Abstract] OR "multi-agent"[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract] OR radiology[Title/Abstract])'
-    - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR segmentation[Title/Abstract] OR diagnosis[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract])'
-    - '("foundation model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "large language model"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR brain[Title/Abstract])'
-    - '("self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR "domain generalization"[Title/Abstract] OR "domain adaptation"[Title/Abstract] OR "uncertainty"[Title/Abstract] OR calibration[Title/Abstract] OR "federated learning"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR MRI[Title/Abstract] OR neuroimaging[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR transformer[Title/Abstract] OR "neural network"[Title/Abstract] OR "foundation model"[Title/Abstract])'
+    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
+    - '(Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR Huntington*[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
+    - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegeneration[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract])'
+    - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract])'
+    - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
 
   arxiv_queries:
-    - "brain neuroimaging medical imaging deep learning"
-    - "brain computer interface EEG deep learning"
-    - "BCI electroencephalography neural decoding machine learning"
-    - "EEG foundation model brain signal"
-    - "motor imagery EEG transformer"
-    - "neuroimaging brain MRI PET AI agent"
-    - "agentic AI medical imaging radiology"
-    - "large language model agent radiology imaging"
-    - "multi agent medical image analysis"
-    - "whole body PET MRI deep learning"
-    - "total body PET artificial intelligence"
-    - "whole body MRI multi organ segmentation"
-    - "Alzheimer MRI PET deep learning"
-    - "brain MRI diffusion model synthesis"
-    - "unpaired medical image translation diffusion"
-    - "medical image quality assessment transformer"
-    - "segment anything medical image synthesis"
-    - "medical image enhancement neuroimaging deep learning"
-    - "multi organ medical imaging diagnosis deep learning"
-    - "foundation model medical imaging brain"
-    - "vision language model radiology brain"
-    - "large multimodal model medical imaging"
-    - "MICCAI brain MRI diffusion model"
-    - "self supervised medical image representation learning"
-    - "domain generalization medical imaging deep learning"
-    - "uncertainty calibration medical imaging deep learning"
-    - "federated learning medical imaging MRI"
-    - "radiology foundation model report generation"
-    - "multimodal radiology vision language model"
-    - "medical image registration diffusion model"
-    - "3D medical image generative model"
+    - "Alzheimer disease MRI PET deep learning"
+    - "dementia MCI brain MRI PET transformer"
+    - "neurodegenerative disease neuroimaging deep learning"
+    - "amyloid tau FDG PET MRI artificial intelligence"
+    - "Parkinson disease brain MRI PET machine learning"
+    - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
+    - "whole body PET neurodegenerative deep learning"
+    - "total body PET brain neurodegeneration artificial intelligence"
+    - "PET MRI dementia foundation model"
+    - "self supervised neuroimaging dementia MRI PET"
+    - "multimodal brain MRI PET Alzheimer deep learning"
+    - "brain gut microbiome Alzheimer neuroimaging machine learning"
 
   semantic_scholar_queries:
-    - "brain-computer interface EEG deep learning"
-    - "BCI electroencephalography neural decoding machine learning"
-    - "EEG foundation model brain signal artificial intelligence"
     - "Alzheimer's disease diagnosis MRI PET deep learning"
-    - "neuroimaging brain MRI PET AI agent"
-    - "agentic AI medical imaging radiology"
-    - "large language model agent radiology imaging"
-    - "whole-body PET MRI deep learning"
-    - "total-body PET artificial intelligence"
-    - "whole-body MRI multi-organ segmentation"
-    - "brain MRI medical image synthesis diffusion model"
-    - "medical imaging foundation model brain MRI"
-    - "self-supervised medical image representation learning"
-    - "domain generalization medical imaging deep learning"
-    - "brain-gut axis neuroimaging artificial intelligence"
-    - "gut microbiome neuroimaging Alzheimer's machine learning"
-    - "microbiome MRI dementia neuroimaging deep learning"
-    - "multi-organ guided diagnosis medical imaging AI"
-    - "medical image quality assessment transformer"
-    - "segment anything model medical image synthesis"
-    - "neuroimage enhancement super-resolution denoising"
-    - "vision-language model radiology neuroimaging"
-    - "large multimodal model radiology medical imaging"
-    - "MICCAI neuroimaging deep learning"
-    - "Medical Image Analysis brain MRI artificial intelligence"
-    - "uncertainty calibration medical imaging deep learning"
-    - "federated learning medical imaging MRI"
-    - "radiology foundation model report generation"
-    - "multimodal radiology vision-language model"
-    - "medical image registration diffusion model"
+    - "dementia mild cognitive impairment brain MRI PET artificial intelligence"
+    - "neurodegenerative disease neuroimaging deep learning"
+    - "amyloid tau FDG PET MRI machine learning"
+    - "Parkinson disease brain MRI PET deep learning"
+    - "Lewy body dementia frontotemporal dementia MRI PET machine learning"
+    - "whole-body PET neurodegenerative disease deep learning"
+    - "total-body PET brain neurodegeneration artificial intelligence"
+    - "foundation model neuroimaging dementia MRI PET"
+    - "self-supervised representation learning neuroimaging dementia MRI PET"
+    - "brain-gut microbiome Alzheimer's neuroimaging machine learning"
 
 sources:
   pubmed:
@@ -169,15 +106,16 @@ sources:
   crossref_top_journals:
     enabled: true
     rows_per_query: 2
-    max_calls: 16
+    max_calls: 80
     sleep_seconds: 0.3
     timeout_seconds: 8
-    max_runtime_seconds: 60
+    max_runtime_seconds: 120
 
 top_journal_families:
   pubmed_journals:
     - "Nature"
     - "Nature Medicine"
+    - "Nature Aging"
     - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
@@ -214,11 +152,12 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '(("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR EEG[Title/Abstract] OR electroencephalography[Title/Abstract] OR "brain-computer interface"[Title/Abstract] OR BCI[Title/Abstract] OR "neural decoding"[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR microbiome[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-gut"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "vision-language"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image enhancement"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR radiomics[Title/Abstract]))'
+  pubmed_topic_block: '((Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR radiomics[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
     - "Nature Medicine"
+    - "Nature Aging"
     - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
@@ -250,28 +189,13 @@ top_journal_families:
     - "Radiology: Artificial Intelligence"
 
   crossref_topic_queries:
-    - "brain-computer interface EEG deep learning"
-    - "BCI electroencephalography neural decoding machine learning"
-    - "EEG foundation model brain signal artificial intelligence"
-    - "brain neuroimaging MRI PET artificial intelligence deep learning"
-    - "brain imaging foundation model MRI PET"
-    - "neuroimaging brain MRI deep learning artificial intelligence"
     - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
-    - "brain-gut gut-brain microbiome neuroimaging machine learning"
-    - "medical image synthesis enhancement brain MRI diffusion model"
-    - "AI agent neuroimaging brain MRI PET"
-    - "agentic AI radiology medical imaging"
-    - "whole-body PET MRI multi-organ deep learning"
-    - "total-body PET artificial intelligence multi-organ"
-    - "medical image quality assessment transformer deep learning"
-    - "segment anything model medical image synthesis"
-    - "multi-organ multimodal medical imaging diagnosis deep learning"
-    - "foundation model vision-language large multimodal model radiology brain"
-    - "self-supervised representation learning medical imaging"
-    - "domain generalization domain adaptation medical imaging deep learning"
-    - "uncertainty calibration medical imaging deep learning"
-    - "federated learning medical imaging MRI"
-    - "radiology foundation model report generation vision-language"
+    - "neurodegenerative disease brain MRI PET artificial intelligence"
+    - "amyloid tau FDG PET MRI machine learning"
+    - "Parkinson Lewy body frontotemporal dementia MRI PET deep learning"
+    - "whole-body total-body PET neurodegenerative disease deep learning"
+    - "foundation model self-supervised neuroimaging dementia MRI PET"
+    - "brain-gut microbiome Alzheimer dementia neuroimaging machine learning"
 
 venue_categories:
   flagship_main:
@@ -282,6 +206,7 @@ venue_categories:
 
   flagship_subjournal:
     - "Nature Medicine"
+    - "Nature Aging"
     - "Nature Machine Intelligence"
     - "Nature Neuroscience"
     - "Nature Biomedical Engineering"
@@ -371,6 +296,26 @@ scoring:
     - diffusion-weighted
     - diffusion weighted
     - noise correction
+    - brain-computer interface
+    - brain computer interface
+    - BCI
+    - EEG
+    - electroencephalography
+    - electroencephalographic
+    - neural decoding
+    - motor imagery
+    - multi-organ imaging diagnosis
+    - multi-organ diagnosis
+    - multi organ diagnosis
+    - medical image quality assessment
+    - image quality assessment
+    - quality assessment
+    - no-reference image quality
+    - conditional diffusion
+    - flow matching
+    - flow model
+    - normalizing flow
+    - invertible flow
 
   hard_exclude_venues:
     - Scientific Reports
@@ -404,27 +349,7 @@ scoring:
     - autoencoder
     - encoder-decoder
     - foundation model
-    - vision-language
-    - vision language
     - large multimodal model
-    - large language model
-    - conditional diffusion
-    - denoising diffusion
-    - latent diffusion
-    - diffusion model
-    - diffusion-based generative
-    - diffusion generative
-    - score-based generative
-    - flow matching
-    - flow model
-    - invertible flow
-    - invertible hierarchy flow
-    - normalizing flow
-    - generative AI
-    - generative adversarial
-    - GAN
-    - variational autoencoder
-    - VAE
     - self-supervised
     - contrastive learning
     - representation learning
@@ -435,25 +360,49 @@ scoring:
     - uncertainty estimation
     - masked image modeling
     - pretraining
-    - AI agent
-    - agentic AI
-    - LLM agent
-    - multi-agent
-    - neural decoding
-    - brain-computer interface
-    - brain computer interface
+
+  disease_must_have_any:
+    - Alzheimer
+    - Alzheimer's
+    - dementia
+    - mild cognitive impairment
+    - MCI
+    - neurodegenerative
+    - neurodegeneration
+    - Parkinson
+    - Lewy body
+    - frontotemporal dementia
+    - FTD
+    - Huntington
+    - amyloid
+    - tau
+    - FDG
+
+  imaging_must_have_any:
+    - MRI
+    - fMRI
+    - PET
+    - PET/MRI
+    - PET-MRI
+    - amyloid PET
+    - tau PET
+    - FDG PET
+    - neuroimaging
+    - neuroimage
+    - brain imaging
+    - brain MRI
+    - whole-body PET
+    - whole body PET
+    - total-body PET
+    - total body PET
+    - whole-body MRI
+    - whole body MRI
 
   soft_must_have_any:
     - brain
     - neuro
     - neuroimaging
     - neuroimage
-    - EEG
-    - electroencephalography
-    - brain-computer
-    - brain computer
-    - BCI
-    - neural decoding
     - MRI
     - fMRI
     - PET
@@ -477,28 +426,7 @@ scoring:
     radiomics: 3
     "foundation model": 6
     "large multimodal model": 6
-    "large language model": 4
-    "AI agent": 5
-    "artificial intelligence agent": 5
-    "agentic AI": 6
-    "LLM agent": 5
-    "large language model agent": 5
-    "multi-agent": 4
-    "brain-computer interface": 8
-    "brain computer interface": 8
-    BCI: 7
-    EEG: 7
-    electroencephalography: 7
-    electroencephalographic: 6
-    "neural decoding": 7
-    "brain signal": 5
-    "motor imagery": 5
-    "motor imagery EEG": 7
-    "vision-language": 5
-    "vision language": 5
     multimodal: 4
-    "multi-organ": 6
-    "multi organ": 6
     "whole-body": 6
     "whole body": 6
     "total-body": 6
@@ -515,29 +443,7 @@ scoring:
     classification: 2
     prediction: 2
     biomarker: 3
-    "image synthesis": 5
-    "medical image synthesis": 6
-    "image enhancement": 5
-    "quality assessment": 6
-    "no-reference": 4
-    "conditional diffusion": 8
-    "invertible flow": 7
-    "invertible hierarchy flow": 8
-    "flow model": 6
-    "unpaired data": 6
-    unpaired: 4
-    "image translation": 5
-    "segment anything": 4
-    "super resolution": 5
-    super-resolution: 5
-    denoising: 4
-    reconstruction: 3
-    registration: 2
     segmentation: 2
-    "diffusion model": 5
-    generative: 4
-    "generative AI": 5
-    GAN: 3
     transformer: 3
     "self-supervised": 4
     "contrastive learning": 4
@@ -550,21 +456,12 @@ scoring:
     "uncertainty estimation": 4
     "masked image modeling": 4
     pretraining: 3
-    "flow matching": 5
-    "report generation": 3
 
   brain_neuro_focus_weights:
     brain: 4
     neuro: 4
     neuroimaging: 7
     neuroimage: 7
-    EEG: 6
-    electroencephalography: 6
-    "brain-computer interface": 8
-    "brain computer interface": 8
-    BCI: 7
-    "neural decoding": 7
-    "brain signal": 5
     MRI: 4
     fMRI: 5
     PET: 4
@@ -583,30 +480,42 @@ scoring:
     dementia: 6
     "mild cognitive impairment": 6
     MCI: 5
-    neurodegenerative: 5
+    neurodegenerative: 8
+    neurodegeneration: 8
+    Parkinson: 7
+    "Lewy body": 7
+    "frontotemporal dementia": 7
+    FTD: 5
+    "whole-body PET": 7
+    "whole body PET": 7
+    "total-body PET": 7
+    "total body PET": 7
     hippocampus: 5
     amyloid: 4
     tau: 4
 
   top_venue_boosts:
-    "Nature Medicine": 10
-    "Nature Machine Intelligence": 9
-    "Nature Neuroscience": 10
+    "Nature Medicine": 14
+    "Nature Aging": 13
+    "Nature Machine Intelligence": 12
+    "Nature Neuroscience": 13
     "Nature Biomedical Engineering": 10
     "Nature Computational Science": 8
     "Nature Methods": 8
-    "Nature Communications": 7
+    "Nature Communications": 12
     "Communications Medicine": 7
-    "npj Digital Medicine": 8
-    "Nature": 9
-    "Science Translational Medicine": 9
-    "Science Advances": 7
-    "Science": 9
-    "Cell Reports Medicine": 8
+    "npj Digital Medicine": 12
+    "npj Parkinson's Disease": 12
+    "npj Aging": 12
+    "Nature": 15
+    "Science Translational Medicine": 12
+    "Science Advances": 11
+    "Science": 15
+    "Cell Reports Medicine": 11
     "Cell Reports": 6
     "Patterns": 7
     "Neuron": 10
-    "Cell": 9
+    "Cell": 15
     "The Lancet Digital Health": 9
     "Lancet Digital Health": 9
     "The Lancet Neurology": 10

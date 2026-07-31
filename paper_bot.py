@@ -31,6 +31,12 @@ import requests
 import yaml
 
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
+
 DEFAULT_MAIL_TO = "dlmu.p.l.zhu@gmail.com"
 STATE_KEEP_LIMIT = 3000
 
@@ -774,6 +780,8 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     hard_exclude_keywords = [str(keyword).lower() for keyword in scoring.get("hard_exclude_keywords", [])]
     hard_exclude_venues = [str(keyword).lower() for keyword in scoring.get("hard_exclude_venues", [])]
     hard_must_have_any = [str(keyword).lower() for keyword in scoring.get("hard_must_have_any", [])]
+    disease_must_have_any = [str(keyword).lower() for keyword in scoring.get("disease_must_have_any", [])]
+    imaging_must_have_any = [str(keyword).lower() for keyword in scoring.get("imaging_must_have_any", [])]
     soft_must_have_any = [str(keyword).lower() for keyword in scoring.get("soft_must_have_any", [])]
 
     text_title = (paper.title or "").lower()
@@ -805,6 +813,14 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     if hard_must_have_any and not any(contains_term(text_content, keyword) for keyword in hard_must_have_any):
         paper.score = -999.0
         paper.reasons = ["missing-ai-dl-method"]
+        return paper
+    if disease_must_have_any and not any(contains_term(text_content, keyword) for keyword in disease_must_have_any):
+        paper.score = -999.0
+        paper.reasons = ["missing-neurodegenerative-focus"]
+        return paper
+    if imaging_must_have_any and not any(contains_term(text_content, keyword) for keyword in imaging_must_have_any):
+        paper.score = -999.0
+        paper.reasons = ["missing-pet/mri-imaging-focus"]
         return paper
 
     keyword_score, keyword_reasons = add_keyword_scores(text_title, text_all, keyword_weights)
@@ -892,9 +908,9 @@ VENUE_CATEGORY_LABELS = {
 }
 
 VENUE_CATEGORY_DESCRIPTIONS = {
-    "flagship_main": "Nature, Science, Cell, and The Lancet main journals.",
-    "flagship_subjournal": "Nature, Science, Cell, and Lancet family journals such as Nature Communications and npj journals.",
-    "flagship": "Nature, Science, Cell, and Lancet family journals such as Nature Communications and npj journals.",
+    "flagship_main": "Nature, Science, and Cell main journals.",
+    "flagship_subjournal": "Nature, Science, Cell, and npj-family journals such as Nature Medicine, Nature Aging, Nature Communications, and npj Parkinson's Disease.",
+    "flagship": "Nature, Science, Cell, and npj-family journals such as Nature Medicine, Nature Aging, Nature Communications, and npj Parkinson's Disease.",
     "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
     "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
     "other": "Relevant deep-learning papers from broader indexed journals.",
@@ -909,6 +925,7 @@ DEFAULT_VENUE_CATEGORIES = {
     ],
     "flagship_subjournal": [
         "Nature Medicine",
+        "Nature Aging",
         "Nature Neuroscience",
         "Nature Biomedical Engineering",
         "Nature Methods",
@@ -963,17 +980,6 @@ DEFAULT_VENUE_CATEGORIES = {
 
 TOPIC_RULES = [
     (
-        "Brain-Gut / Microbiome",
-        [
-            "brain-gut",
-            "gut-brain",
-            "brain gut axis",
-            "gut brain axis",
-            "microbiome",
-            "microbiota",
-        ],
-    ),
-    (
         "AD / Dementia Diagnosis",
         [
             "Alzheimer",
@@ -987,101 +993,39 @@ TOPIC_RULES = [
         ],
     ),
     (
-        "Synthesis / Restoration",
+        "Parkinson / Lewy Body / FTD",
         [
-            "image synthesis",
-            "medical image synthesis",
-            "denoising",
-            "super resolution",
-            "super-resolution",
-            "enhancement",
-            "reconstruction",
-            "image translation",
-            "unpaired",
+            "Parkinson",
+            "Lewy body",
+            "frontotemporal dementia",
+            "FTD",
+            "Huntington",
         ],
     ),
     (
-        "Generative Methods",
+        "Amyloid / Tau PET",
         [
-            "diffusion model",
-            "conditional diffusion",
-            "latent diffusion",
-            "flow matching",
-            "flow model",
-            "invertible flow",
-            "normalizing flow",
-            "GAN",
-            "VAE",
-            "generative",
+            "amyloid",
+            "tau",
+            "FDG",
+            "PET",
         ],
     ),
     (
-        "Agentic Neuroimaging",
+        "Brain MRI / PET",
         [
-            "AI agent",
-            "artificial intelligence agent",
-            "agentic AI",
-            "LLM agent",
-            "large language model agent",
-            "multi-agent",
-            "autonomous agent",
-            "neuroimaging agent",
-            "radiology agent",
+            "brain MRI",
+            "brain imaging",
+            "neuroimaging",
+            "neuroimage",
+            "MRI",
+            "fMRI",
+            "PET",
         ],
     ),
     (
-        "BCI / EEG",
+        "Whole-body PET/MRI",
         [
-            "brain-computer interface",
-            "brain computer interface",
-            "BCI",
-            "EEG",
-            "electroencephalography",
-            "electroencephalographic",
-            "neural decoding",
-            "brain signal",
-            "motor imagery",
-            "motor imagery EEG",
-        ],
-    ),
-    (
-        "Foundation / VLM",
-        [
-            "foundation model",
-            "vision-language",
-            "vision language",
-            "large multimodal model",
-            "large language model",
-            "Segment Anything",
-            "report generation",
-            "multimodal",
-        ],
-    ),
-    (
-        "Generalization / Learning",
-        [
-            "self-supervised",
-            "contrastive learning",
-            "representation learning",
-            "domain adaptation",
-            "domain generalization",
-            "federated learning",
-            "transfer learning",
-            "pretraining",
-            "masked autoencoder",
-            "uncertainty",
-            "calibration",
-        ],
-    ),
-    (
-        "Whole-body / Multi-organ Imaging",
-        [
-            "multi-organ",
-            "multi organ",
-            "whole-body",
-            "whole body",
-            "total-body",
-            "total body",
             "whole-body PET",
             "whole body PET",
             "total-body PET",
@@ -1090,26 +1034,31 @@ TOPIC_RULES = [
             "whole body MRI",
             "PET/MRI",
             "PET-MRI",
-            "radiology",
-            "diagnosis",
-            "classification",
-            "prediction",
         ],
     ),
     (
-        "Neuroimaging Methods",
+        "Deep / Foundation Learning",
         [
-            "neuroimaging",
-            "neuroimage",
-            "brain MRI",
-            "brain imaging",
-            "MRI",
-            "fMRI",
-            "PET",
-            "connectome",
-            "segmentation",
-            "registration",
-            "quality assessment",
+            "foundation model",
+            "large multimodal model",
+            "transformer",
+            "self-supervised",
+            "contrastive learning",
+            "representation learning",
+            "domain adaptation",
+            "domain generalization",
+            "federated learning",
+        ],
+    ),
+    (
+        "Brain-Gut / Microbiome",
+        [
+            "brain-gut",
+            "gut-brain",
+            "brain gut axis",
+            "gut brain axis",
+            "microbiome",
+            "microbiota",
         ],
     ),
 ]
@@ -1269,10 +1218,24 @@ def save_state(path: str, state: Dict[str, Any]) -> None:
     state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def state_keys_from_records(state: Dict[str, Any]) -> set[str]:
-    sent_keys = set(state.get("sent_keys", {}).keys())
+def state_namespace(cfg: Dict[str, Any]) -> str:
+    return clean_text(cfg.get("state_namespace"))
+
+
+def scoped_state_key(value: str, namespace: str = "") -> str:
+    return f"{namespace}|{value}" if namespace else value
+
+
+def state_keys_from_records(state: Dict[str, Any], namespace: str = "") -> set[str]:
+    if namespace:
+        prefix = f"{namespace}|"
+        sent_keys = {key for key in state.get("sent_keys", {}).keys() if str(key).startswith(prefix)}
+    else:
+        sent_keys = set(state.get("sent_keys", {}).keys())
     for record in state.get("sent_ids", {}).values():
         if not isinstance(record, dict):
+            continue
+        if namespace and clean_text(record.get("state_namespace")) != namespace:
             continue
         temp_paper = Paper(
             source=str(record.get("source") or ""),
@@ -1286,23 +1249,27 @@ def state_keys_from_records(state: Dict[str, Any]) -> set[str]:
             doi=str(record.get("doi") or ""),
             pmid=str(record.get("pmid") or ""),
         )
-        sent_keys.update(temp_paper.dedupe_keys())
+        sent_keys.update(scoped_state_key(key, namespace) for key in temp_paper.dedupe_keys())
     return sent_keys
 
 
-def already_sent(paper: Paper, state: Dict[str, Any], sent_keys: set[str]) -> bool:
+def already_sent(paper: Paper, state: Dict[str, Any], sent_keys: set[str], namespace: str = "") -> bool:
     sent_ids = state.get("sent_ids", {})
-    return paper.uid() in sent_ids or any(key in sent_keys for key in paper.dedupe_keys())
+    uid = scoped_state_key(paper.uid(), namespace)
+    return uid in sent_ids or any(scoped_state_key(key, namespace) in sent_keys for key in paper.dedupe_keys())
 
 
-def mark_sent(papers: List[Paper], state: Dict[str, Any]) -> None:
+def mark_sent(papers: List[Paper], state: Dict[str, Any], namespace: str = "") -> None:
     sent_ids = state.setdefault("sent_ids", {})
     sent_keys = state.setdefault("sent_keys", {})
     now = dt.datetime.now(dt.timezone.utc).isoformat()
 
     for paper in papers:
-        uid = paper.uid()
+        raw_uid = paper.uid()
+        uid = scoped_state_key(raw_uid, namespace)
         sent_ids[uid] = {
+            "paper_uid": raw_uid,
+            "state_namespace": namespace,
             "title": paper.title,
             "url": paper.url,
             "doi": normalize_doi(paper.doi),
@@ -1312,7 +1279,7 @@ def mark_sent(papers: List[Paper], state: Dict[str, Any]) -> None:
             "sent_at": now,
         }
         for key in paper.dedupe_keys():
-            sent_keys[key] = uid
+            sent_keys[scoped_state_key(key, namespace)] = uid
 
     if len(sent_ids) > STATE_KEEP_LIMIT:
         keep_ids = dict(list(sent_ids.items())[-STATE_KEEP_LIMIT:])
@@ -1464,19 +1431,15 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         topic_counts[topic] = topic_counts.get(topic, 0) + 1
 
     focus_terms = [
-        "medical imaging + deep learning",
-        "neuroimaging / brain MRI / PET",
-        "brain-computer interface / EEG",
-        "agentic AI for neuroimaging",
-        "whole-body PET / MRI",
-        "multi-organ imaging diagnosis",
-        "image quality assessment",
-        "unpaired image translation",
+        "deep learning for neurodegenerative disease",
         "Alzheimer / dementia / MCI",
-        "image synthesis / enhancement",
-        "conditional diffusion / flow models",
-        "foundation & vision-language models",
-        "top journals, conferences, and arXiv",
+        "Parkinson / Lewy body / FTD",
+        "brain MRI / fMRI",
+        "brain PET / amyloid / tau / FDG",
+        "whole-body / total-body PET",
+        "PET/MRI multimodal biomarkers",
+        "foundation / self-supervised neuroimaging",
+        "Nature / Science / Cell / npj family",
     ]
 
     source_badges = "".join(
@@ -1597,7 +1560,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
-  <meta name="description" content="Daily Medical Imaging deep learning paper radar for neuroimaging, brain-gut axis, dementia, synthesis, and foundation models.">
+  <meta name="description" content="Daily deep learning paper radar for neurodegenerative disease applications using brain or whole-body PET and MRI.">
   <style>
     :root {{
       color-scheme: light;
@@ -1864,7 +1827,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers in neuroimaging, brain MRI/PET, brain-computer interfaces, EEG, agentic AI for imaging, whole-body PET/MRI, multi-organ diagnosis, image synthesis, Alzheimer diagnosis, and radiology foundation models.</p>
+        <p class="subtitle">Daily radar for deep learning papers in neurodegenerative disease applications, focused on Alzheimer/dementia/MCI, Parkinson/Lewy body/FTD, and brain or whole-body PET/MRI biomarkers, with extra priority for Nature, Science, Cell, and npj-family journals.</p>
       </header>
     </div>
   </div>
@@ -1994,12 +1957,13 @@ def main() -> int:
     if args.web:
         site_cfg = cfg.get("site", {})
         output_dir = args.output_dir or site_cfg.get("output_dir", "site")
+        namespace = state_namespace(cfg)
         if bool(site_cfg.get("use_sent_state", True)):
             state_path = cfg.get("state_path", "data/sent_papers.json")
             state = load_state(state_path)
-            sent_keys = state_keys_from_records(state)
+            sent_keys = state_keys_from_records(state, namespace)
             before_count = len(papers)
-            papers = [paper for paper in papers if not already_sent(paper, state, sent_keys)]
+            papers = [paper for paper in papers if not already_sent(paper, state, sent_keys, namespace)]
             print(f"[info] Web mode sent-state filter: {before_count} candidates, {len(papers)} new papers.")
         else:
             state_path = ""
@@ -2007,7 +1971,7 @@ def main() -> int:
         papers = select_diverse_papers(papers, cfg)
         write_site(papers, cfg, output_dir)
         if bool(site_cfg.get("use_sent_state", True)) and papers:
-            mark_sent(papers, state)
+            mark_sent(papers, state, namespace)
             save_state(state_path, state)
             print(f"[info] Updated sent-paper state with {len(papers)} web papers.")
         print(f"[info] Wrote static site with {len(papers)} papers to {output_dir}.")
@@ -2016,8 +1980,9 @@ def main() -> int:
     state_path = cfg.get("state_path", "data/sent_papers.json")
     state = load_state(state_path)
 
-    sent_keys = state_keys_from_records(state)
-    papers = [paper for paper in papers if not already_sent(paper, state, sent_keys)]
+    namespace = state_namespace(cfg)
+    sent_keys = state_keys_from_records(state, namespace)
+    papers = [paper for paper in papers if not already_sent(paper, state, sent_keys, namespace)]
     max_papers = int(cfg.get("email", {}).get("max_papers", 15))
     papers = papers[:max_papers]
 
@@ -2046,7 +2011,7 @@ def main() -> int:
         return 1
 
     print(f"[info] Sent email with {len(papers)} papers.")
-    mark_sent(papers, state)
+    mark_sent(papers, state, namespace)
     save_state(state_path, state)
     return 0
 
