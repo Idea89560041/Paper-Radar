@@ -3419,6 +3419,72 @@
       "venue": "Imaging Neurosci (Camb)",
       "source": "PubMed",
       "sent_at": "2026-07-30T10:35:41.062031+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|e1cab94c65e76085": {
+      "paper_uid": "e1cab94c65e76085",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Development and Validation of a Machine Learning Classification Algorithm for Differentiating Frontotemporal Dementia from Alzheimer's Disease Using Automated Brain MRI Volumetry.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42498651/",
+      "doi": "10.3174/ajnr.a9546",
+      "pmid": "42498651",
+      "venue": "AJNR Am J Neuroradiol",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|021283083c1548c4": {
+      "paper_uid": "021283083c1548c4",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "PatientSpace: A multimodal graph-based latent representation framework for modeling neurodegenerative disease heterogeneity.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42471130/",
+      "doi": "10.1016/j.neuroimage.2026.122136",
+      "pmid": "42471130",
+      "venue": "Neuroimage",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|b55768706cff20a9": {
+      "paper_uid": "b55768706cff20a9",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Brain Region-Centered MultiModal Hypergraph Fusion for MCI Conversion Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42475211/",
+      "doi": "10.1109/jbhi.2026.3715131",
+      "pmid": "42475211",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|9a79a3754231ff8f": {
+      "paper_uid": "9a79a3754231ff8f",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "MRI-free amyloid PET quantification using a deep learning model and white matter reference.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42489532/",
+      "doi": "10.1177/13872877261470021",
+      "pmid": "42489532",
+      "venue": "J Alzheimers Dis",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|42576473ea193f8b": {
+      "paper_uid": "42576473ea193f8b",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A comparative evaluation of multiple enlarged perivascular space segmentation tools.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42486379/",
+      "doi": "10.1016/j.mri.2026.110749",
+      "pmid": "42486379",
+      "venue": "Magn Reson Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|a81865183cab52f2": {
+      "paper_uid": "a81865183cab52f2",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A deep learning model for speech-based prediction of clinical scores in people with Huntington's disease: a longitudinal study with cross-sectional replication.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42493284/",
+      "doi": "10.1016/j.landig.2026.101025",
+      "pmid": "42493284",
+      "venue": "Lancet Digit Health",
+      "source": "PubMed",
+      "sent_at": "2026-07-31T02:54:20.116691+00:00"
     }
   },
   "sent_keys": {
@@ -4765,7 +4831,31 @@
     "doi:10.1162/imag.a.1317": "8d3723c874008374",
     "pmid:42524206": "8d3723c874008374",
     "url:https://pubmed.ncbi.nlm.nih.gov/42524206": "8d3723c874008374",
-    "title:bayesian insights into exchange and restriction in gray matter diffusion mri": "8d3723c874008374"
+    "title:bayesian insights into exchange and restriction in gray matter diffusion mri": "8d3723c874008374",
+    "neurodegenerative_pet_mri_v1|doi:10.3174/ajnr.a9546": "neurodegenerative_pet_mri_v1|e1cab94c65e76085",
+    "neurodegenerative_pet_mri_v1|pmid:42498651": "neurodegenerative_pet_mri_v1|e1cab94c65e76085",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42498651": "neurodegenerative_pet_mri_v1|e1cab94c65e76085",
+    "neurodegenerative_pet_mri_v1|title:development and validation of a machine learning classification algorithm for differentiating frontotemporal dementia from alzheimer s disease using automated brain mri volumetry": "neurodegenerative_pet_mri_v1|e1cab94c65e76085",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.neuroimage.2026.122136": "neurodegenerative_pet_mri_v1|021283083c1548c4",
+    "neurodegenerative_pet_mri_v1|pmid:42471130": "neurodegenerative_pet_mri_v1|021283083c1548c4",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42471130": "neurodegenerative_pet_mri_v1|021283083c1548c4",
+    "neurodegenerative_pet_mri_v1|title:patientspace a multimodal graph based latent representation framework for modeling neurodegenerative disease heterogeneity": "neurodegenerative_pet_mri_v1|021283083c1548c4",
+    "neurodegenerative_pet_mri_v1|doi:10.1109/jbhi.2026.3715131": "neurodegenerative_pet_mri_v1|b55768706cff20a9",
+    "neurodegenerative_pet_mri_v1|pmid:42475211": "neurodegenerative_pet_mri_v1|b55768706cff20a9",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42475211": "neurodegenerative_pet_mri_v1|b55768706cff20a9",
+    "neurodegenerative_pet_mri_v1|title:brain region centered multimodal hypergraph fusion for mci conversion prediction": "neurodegenerative_pet_mri_v1|b55768706cff20a9",
+    "neurodegenerative_pet_mri_v1|doi:10.1177/13872877261470021": "neurodegenerative_pet_mri_v1|9a79a3754231ff8f",
+    "neurodegenerative_pet_mri_v1|pmid:42489532": "neurodegenerative_pet_mri_v1|9a79a3754231ff8f",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42489532": "neurodegenerative_pet_mri_v1|9a79a3754231ff8f",
+    "neurodegenerative_pet_mri_v1|title:mri free amyloid pet quantification using a deep learning model and white matter reference": "neurodegenerative_pet_mri_v1|9a79a3754231ff8f",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.mri.2026.110749": "neurodegenerative_pet_mri_v1|42576473ea193f8b",
+    "neurodegenerative_pet_mri_v1|pmid:42486379": "neurodegenerative_pet_mri_v1|42576473ea193f8b",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42486379": "neurodegenerative_pet_mri_v1|42576473ea193f8b",
+    "neurodegenerative_pet_mri_v1|title:a comparative evaluation of multiple enlarged perivascular space segmentation tools": "neurodegenerative_pet_mri_v1|42576473ea193f8b",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.landig.2026.101025": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
+    "neurodegenerative_pet_mri_v1|pmid:42493284": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42493284": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
+    "neurodegenerative_pet_mri_v1|title:a deep learning model for speech based prediction of clinical scores in people with huntington s disease a longitudinal study with cross sectional replication": "neurodegenerative_pet_mri_v1|a81865183cab52f2"
   },
-  "updated_at": "2026-07-30T10:35:41.062454+00:00"
+  "updated_at": "2026-07-31T02:54:20.117091+00:00"
 }
