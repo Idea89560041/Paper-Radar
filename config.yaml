@@ -15,6 +15,10 @@ site:
   max_per_topic: 50
   max_per_source: 50
   max_per_venue_category: 50
+  allowed_venue_categories:
+    - flagship_main
+    - flagship_subjournal
+    - top_imaging_ai
 
 research_profile:
   name: "Neurodegenerative Disease PET/MRI Deep Learning"

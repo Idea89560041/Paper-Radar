@@ -1144,6 +1144,9 @@ def select_diverse_papers(papers: List[Paper], cfg: Dict[str, Any]) -> List[Pape
     max_per_topic = int(site_cfg.get("max_per_topic", 7))
     max_per_source = int(site_cfg.get("max_per_source", 18))
     max_per_venue_category = int(site_cfg.get("max_per_venue_category", 14))
+    allowed_categories = {str(category) for category in site_cfg.get("allowed_venue_categories", [])}
+    if allowed_categories:
+        papers = [paper for paper in papers if classify_venue_category(paper, cfg) in allowed_categories]
 
     selected: List[Paper] = []
     selected_ids: set[str] = set()
@@ -1975,6 +1978,11 @@ def main() -> int:
         default=None,
         help="Override site.max_per_venue_category for --web mode.",
     )
+    parser.add_argument(
+        "--site-allowed-venue-categories",
+        default=None,
+        help="Comma-separated venue categories to publish in --web mode, such as flagship_main,flagship_subjournal.",
+    )
     args = parser.parse_args()
 
     cfg = load_config(args.config)
@@ -1991,6 +1999,10 @@ def main() -> int:
         site_cfg["max_per_source"] = max(1, args.site_max_per_source)
     if args.site_max_per_venue_category is not None:
         site_cfg["max_per_venue_category"] = max(1, args.site_max_per_venue_category)
+    if args.site_allowed_venue_categories is not None:
+        site_cfg["allowed_venue_categories"] = [
+            category.strip() for category in args.site_allowed_venue_categories.split(",") if category.strip()
+        ]
     if args.ignore_sent_state:
         site_cfg["use_sent_state"] = False
 
