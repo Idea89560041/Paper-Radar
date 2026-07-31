@@ -2,7 +2,7 @@
 
 This repository powers a daily GitHub Pages dashboard for recent deep learning papers related to neurodegenerative disease imaging research.
 
-The radar focuses on deep learning applications in Alzheimer disease, dementia, MCI, Parkinson disease, Lewy body disease, frontotemporal dementia, and related neurodegenerative disorders. Imaging emphasis is brain MRI/fMRI, brain PET including amyloid, tau, and FDG PET, and whole-body or total-body PET/MRI. Nature, Science, Cell, and npj-family journals are prioritized.
+The radar focuses on deep learning applications in Alzheimer disease, dementia, MCI, Parkinson disease, Lewy body disease, frontotemporal dementia, and related neurodegenerative disorders. Imaging emphasis is brain MRI/fMRI, brain PET including Aβ-PET / amyloid-beta PET, tau PET, and FDG PET, and whole-body or total-body PET/MRI. Nature, Science, Cell, and npj-family journals are prioritized.
 
 The site is updated automatically every day at about 08:00 China/Hong Kong/Singapore time:
 

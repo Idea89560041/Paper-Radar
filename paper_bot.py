@@ -1003,9 +1003,23 @@ TOPIC_RULES = [
         ],
     ),
     (
-        "Amyloid / Tau PET",
+        "Aβ / Amyloid / Tau PET",
         [
+            "Aβ PET",
+            "Aβ-PET",
+            "A beta PET",
+            "Abeta PET",
+            "amyloid beta PET",
+            "amyloid-beta PET",
+            "beta-amyloid PET",
+            "amyloid PET",
             "amyloid",
+            "amyloid beta",
+            "amyloid-beta",
+            "beta-amyloid",
+            "Abeta",
+            "A beta",
+            "Aβ",
             "tau",
             "FDG",
             "PET",
@@ -1435,7 +1449,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "Alzheimer / dementia / MCI",
         "Parkinson / Lewy body / FTD",
         "brain MRI / fMRI",
-        "brain PET / amyloid / tau / FDG",
+        "brain PET / Aβ-PET / amyloid / tau / FDG",
         "whole-body / total-body PET",
         "PET/MRI multimodal biomarkers",
         "foundation / self-supervised neuroimaging",
@@ -1827,7 +1841,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers in neurodegenerative disease applications, focused on Alzheimer/dementia/MCI, Parkinson/Lewy body/FTD, and brain or whole-body PET/MRI biomarkers, with extra priority for Nature, Science, Cell, and npj-family journals.</p>
+        <p class="subtitle">Daily radar for deep learning papers in neurodegenerative disease applications, focused on Alzheimer/dementia/MCI, Parkinson/Lewy body/FTD, brain PET including Aβ-PET, and brain or whole-body PET/MRI biomarkers, with extra priority for Nature, Science, Cell, and npj-family journals.</p>
       </header>
     </div>
   </div>

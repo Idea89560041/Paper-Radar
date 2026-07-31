@@ -22,6 +22,8 @@ research_profile:
   queries:
     - "Alzheimer disease dementia MCI brain MRI PET deep learning"
     - "neurodegenerative disease brain MRI PET artificial intelligence"
+    - "Aβ-PET amyloid beta PET Alzheimer dementia deep learning"
+    - "amyloid-beta PET Abeta PET MCI machine learning"
     - "amyloid tau FDG PET MRI deep learning"
     - "Parkinson disease brain MRI PET machine learning"
     - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
@@ -33,7 +35,8 @@ research_profile:
     - "brain gut microbiome Alzheimer dementia neuroimaging machine learning"
 
   pubmed_queries:
-    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
+    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR "amyloid beta"[Title/Abstract] OR "amyloid-beta"[Title/Abstract] OR "beta-amyloid"[Title/Abstract] OR Abeta[Title/Abstract] OR Aβ[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
+    - '("Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "beta-amyloid PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "A beta PET"[Title/Abstract] OR "amyloid PET"[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
     - '(Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR Huntington*[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
     - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegeneration[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract])'
@@ -43,6 +46,8 @@ research_profile:
     - "Alzheimer disease MRI PET deep learning"
     - "dementia MCI brain MRI PET transformer"
     - "neurodegenerative disease neuroimaging deep learning"
+    - "Aβ PET amyloid beta PET Alzheimer deep learning"
+    - "amyloid-beta PET Abeta PET dementia machine learning"
     - "amyloid tau FDG PET MRI artificial intelligence"
     - "Parkinson disease brain MRI PET machine learning"
     - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
@@ -57,6 +62,8 @@ research_profile:
     - "Alzheimer's disease diagnosis MRI PET deep learning"
     - "dementia mild cognitive impairment brain MRI PET artificial intelligence"
     - "neurodegenerative disease neuroimaging deep learning"
+    - "Aβ PET amyloid beta PET Alzheimer's deep learning"
+    - "amyloid-beta PET Abeta PET MCI machine learning"
     - "amyloid tau FDG PET MRI machine learning"
     - "Parkinson disease brain MRI PET deep learning"
     - "Lewy body dementia frontotemporal dementia MRI PET machine learning"
@@ -152,7 +159,7 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '((Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR radiomics[Title/Abstract]))'
+  pubmed_topic_block: '((Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract] OR amyloid[Title/Abstract] OR "amyloid beta"[Title/Abstract] OR "amyloid-beta"[Title/Abstract] OR "beta-amyloid"[Title/Abstract] OR Abeta[Title/Abstract] OR Aβ[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR radiomics[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
@@ -191,6 +198,8 @@ top_journal_families:
   crossref_topic_queries:
     - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
     - "neurodegenerative disease brain MRI PET artificial intelligence"
+    - "Aβ PET amyloid beta PET Alzheimer dementia deep learning"
+    - "amyloid-beta PET Abeta PET MCI machine learning"
     - "amyloid tau FDG PET MRI machine learning"
     - "Parkinson Lewy body frontotemporal dementia MRI PET deep learning"
     - "whole-body total-body PET neurodegenerative disease deep learning"
@@ -375,6 +384,12 @@ scoring:
     - FTD
     - Huntington
     - amyloid
+    - amyloid beta
+    - amyloid-beta
+    - beta-amyloid
+    - Abeta
+    - A beta
+    - Aβ
     - tau
     - FDG
 
@@ -385,6 +400,13 @@ scoring:
     - PET/MRI
     - PET-MRI
     - amyloid PET
+    - amyloid beta PET
+    - amyloid-beta PET
+    - beta-amyloid PET
+    - Abeta PET
+    - A beta PET
+    - Aβ PET
+    - Aβ-PET
     - tau PET
     - FDG PET
     - neuroimaging
@@ -407,6 +429,12 @@ scoring:
     - fMRI
     - PET
     - amyloid
+    - amyloid beta
+    - amyloid-beta
+    - beta-amyloid
+    - Abeta
+    - A beta
+    - Aβ
     - tau
     - Alzheimer
     - dementia
@@ -435,6 +463,14 @@ scoring:
     "whole body PET": 8
     "total-body PET": 8
     "total body PET": 8
+    "amyloid PET": 8
+    "amyloid beta PET": 10
+    "amyloid-beta PET": 10
+    "beta-amyloid PET": 10
+    "Abeta PET": 10
+    "A beta PET": 10
+    "Aβ PET": 10
+    "Aβ-PET": 10
     "whole-body MRI": 7
     "whole body MRI": 7
     PET/MRI: 6
@@ -465,6 +501,14 @@ scoring:
     MRI: 4
     fMRI: 5
     PET: 4
+    "amyloid PET": 7
+    "amyloid beta PET": 10
+    "amyloid-beta PET": 10
+    "beta-amyloid PET": 10
+    "Abeta PET": 10
+    "A beta PET": 10
+    "Aβ PET": 10
+    "Aβ-PET": 10
     "brain MRI": 7
     "brain imaging": 6
     "structural MRI": 5
@@ -492,6 +536,12 @@ scoring:
     "total body PET": 7
     hippocampus: 5
     amyloid: 4
+    "amyloid beta": 6
+    "amyloid-beta": 6
+    "beta-amyloid": 6
+    Abeta: 6
+    "A beta": 6
+    Aβ: 6
     tau: 4
 
   top_venue_boosts:
