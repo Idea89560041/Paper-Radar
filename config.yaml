@@ -1,20 +1,20 @@
 # Daily Medical Imaging AI Paper Radar configuration
-# Use a 14-day search window plus data/sent_papers.json dedupe to reduce misses
-# caused by delayed indexing in PubMed, Semantic Scholar, Crossref, and arXiv.
+# Temporary one-off historical backfill for recent-years field mapping.
+# This commit is reverted with [skip ci] after the site is deployed.
 
-lookback_days: 14
+lookback_days: 1825
 state_path: data/sent_papers.json
-state_namespace: neurodegenerative_pet_mri_v1
+state_namespace: manual_backfill_recent_years_v1
 
 site:
   title: "Neurodegenerative PET/MRI Deep Learning Paper Radar"
   output_dir: site
-  max_papers: 25
-  use_sent_state: true
+  max_papers: 50
+  use_sent_state: false
   min_preprints: 0
-  max_per_topic: 8
-  max_per_source: 18
-  max_per_venue_category: 18
+  max_per_topic: 50
+  max_per_source: 50
+  max_per_venue_category: 50
 
 research_profile:
   name: "Neurodegenerative Disease PET/MRI Deep Learning"
@@ -77,10 +77,10 @@ sources:
   pubmed:
     enabled: true
     max_queries: 14
-    max_results_per_query: 30
+    max_results_per_query: 80
     sleep_seconds: 0.55
     timeout_seconds: 12
-    max_runtime_seconds: 90
+    max_runtime_seconds: 180
     top_journal_family_search: true
     top_journal_chunk_size: 18
     tool: "medical-ai-paper-digest-bot"
@@ -112,11 +112,11 @@ sources:
 
   crossref_top_journals:
     enabled: true
-    rows_per_query: 2
-    max_calls: 80
+    rows_per_query: 3
+    max_calls: 320
     sleep_seconds: 0.3
     timeout_seconds: 8
-    max_runtime_seconds: 120
+    max_runtime_seconds: 300
 
 top_journal_families:
   pubmed_journals:
