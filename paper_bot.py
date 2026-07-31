@@ -572,7 +572,7 @@ def fetch_semantic_scholar(cfg: Dict[str, Any]) -> List[Paper]:
 
     lookback_days = int(cfg.get("lookback_days", 14))
     today_utc = dt.datetime.now(dt.timezone.utc).date()
-    start_year = today_utc.year - (1 if today_utc.timetuple().tm_yday <= lookback_days + 2 else 0)
+    start_year = (today_utc - dt.timedelta(days=lookback_days)).year
     year_param = f"{start_year}-"
     sleep_seconds = float(source_cfg.get("sleep_seconds", 1.2))
     timeout_seconds = int(source_cfg.get("timeout_seconds", 30))
