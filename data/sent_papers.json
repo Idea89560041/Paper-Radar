@@ -3485,6 +3485,17 @@
       "venue": "Lancet Digit Health",
       "source": "PubMed",
       "sent_at": "2026-07-31T02:54:20.116691+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1": {
+      "paper_uid": "27cab9d6cbc43ff1",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Spatial Normalization for Cross-Domain Retinal Layer Segmentation in Optical Coherence Tomography",
+      "url": "https://arxiv.org/abs/2607.16065v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-07-31T03:20:09.416482+00:00"
     }
   },
   "sent_keys": {
@@ -4855,7 +4866,9 @@
     "neurodegenerative_pet_mri_v1|doi:10.1016/j.landig.2026.101025": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
     "neurodegenerative_pet_mri_v1|pmid:42493284": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42493284": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
-    "neurodegenerative_pet_mri_v1|title:a deep learning model for speech based prediction of clinical scores in people with huntington s disease a longitudinal study with cross sectional replication": "neurodegenerative_pet_mri_v1|a81865183cab52f2"
+    "neurodegenerative_pet_mri_v1|title:a deep learning model for speech based prediction of clinical scores in people with huntington s disease a longitudinal study with cross sectional replication": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
+    "neurodegenerative_pet_mri_v1|url:https://arxiv.org/abs/2607.16065v1": "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1",
+    "neurodegenerative_pet_mri_v1|title:spatial normalization for cross domain retinal layer segmentation in optical coherence tomography": "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1"
   },
-  "updated_at": "2026-07-31T02:54:20.117091+00:00"
+  "updated_at": "2026-07-31T03:20:09.416590+00:00"
 }
