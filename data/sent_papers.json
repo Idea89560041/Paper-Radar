@@ -3496,6 +3496,72 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-07-31T03:20:09.416482+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|a6d95c8c52a4ede1": {
+      "paper_uid": "a6d95c8c52a4ede1",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A lightweight vision transformer with context-aware convolution and uniformity normalization for Alzheimer's Disease diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42070480/",
+      "doi": "10.1016/j.cmpb.2026.109413",
+      "pmid": "42070480",
+      "venue": "Comput Methods Programs Biomed",
+      "source": "PubMed",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|9e54d42354aabc23": {
+      "paper_uid": "9e54d42354aabc23",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Magnetic resonance imaging-based Alzheimer's disease detection using an EfficientNet-CMSACCN framework.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42375925/",
+      "doi": "10.1007/s10616-026-01015-6",
+      "pmid": "42375925",
+      "venue": "Cytotechnology",
+      "source": "PubMed",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|cdbc87416cd8f301": {
+      "paper_uid": "cdbc87416cd8f301",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A voyage on computer aided intelligent algorithms for the segmentation of brain tissues for neurodisorder diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42190614/",
+      "doi": "10.1080/00207454.2026.2680936",
+      "pmid": "42190614",
+      "venue": "Int J Neurosci",
+      "source": "PubMed",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|cad2339809fb0427": {
+      "paper_uid": "cad2339809fb0427",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "TractoMFormer: A novel streamline-level tractography analysis framework for group classification using deep graph and multi-scale ViT.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42134459/",
+      "doi": "10.1016/j.neuroimage.2026.121992",
+      "pmid": "42134459",
+      "venue": "Neuroimage",
+      "source": "PubMed",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|269cf874eaf4f207": {
+      "paper_uid": "269cf874eaf4f207",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Association of somatosensory evoked potentials with cervical spinal cord atrophy and disability progression in multiple sclerosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42276021/",
+      "doi": "10.1016/j.msard.2026.107304",
+      "pmid": "42276021",
+      "venue": "Mult Scler Relat Disord",
+      "source": "PubMed",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|79d7480064a98dce": {
+      "paper_uid": "79d7480064a98dce",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Deep learning framework integrating 18F-FDG PET/CT and clinical data for early prediction of chemotherapy response in advanced breast cancer",
+      "url": "https://doi.org/10.1016/j.bspc.2026.110254",
+      "doi": "10.1016/j.bspc.2026.110254",
+      "pmid": "",
+      "venue": "Biomedical Signal Processing and Control",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-01T01:25:42.480188+00:00"
     }
   },
   "sent_keys": {
@@ -4868,7 +4934,30 @@
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42493284": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
     "neurodegenerative_pet_mri_v1|title:a deep learning model for speech based prediction of clinical scores in people with huntington s disease a longitudinal study with cross sectional replication": "neurodegenerative_pet_mri_v1|a81865183cab52f2",
     "neurodegenerative_pet_mri_v1|url:https://arxiv.org/abs/2607.16065v1": "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1",
-    "neurodegenerative_pet_mri_v1|title:spatial normalization for cross domain retinal layer segmentation in optical coherence tomography": "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1"
+    "neurodegenerative_pet_mri_v1|title:spatial normalization for cross domain retinal layer segmentation in optical coherence tomography": "neurodegenerative_pet_mri_v1|27cab9d6cbc43ff1",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.cmpb.2026.109413": "neurodegenerative_pet_mri_v1|a6d95c8c52a4ede1",
+    "neurodegenerative_pet_mri_v1|pmid:42070480": "neurodegenerative_pet_mri_v1|a6d95c8c52a4ede1",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42070480": "neurodegenerative_pet_mri_v1|a6d95c8c52a4ede1",
+    "neurodegenerative_pet_mri_v1|title:a lightweight vision transformer with context aware convolution and uniformity normalization for alzheimer s disease diagnosis": "neurodegenerative_pet_mri_v1|a6d95c8c52a4ede1",
+    "neurodegenerative_pet_mri_v1|doi:10.1007/s10616-026-01015-6": "neurodegenerative_pet_mri_v1|9e54d42354aabc23",
+    "neurodegenerative_pet_mri_v1|pmid:42375925": "neurodegenerative_pet_mri_v1|9e54d42354aabc23",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42375925": "neurodegenerative_pet_mri_v1|9e54d42354aabc23",
+    "neurodegenerative_pet_mri_v1|title:magnetic resonance imaging based alzheimer s disease detection using an efficientnet cmsaccn framework": "neurodegenerative_pet_mri_v1|9e54d42354aabc23",
+    "neurodegenerative_pet_mri_v1|doi:10.1080/00207454.2026.2680936": "neurodegenerative_pet_mri_v1|cdbc87416cd8f301",
+    "neurodegenerative_pet_mri_v1|pmid:42190614": "neurodegenerative_pet_mri_v1|cdbc87416cd8f301",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42190614": "neurodegenerative_pet_mri_v1|cdbc87416cd8f301",
+    "neurodegenerative_pet_mri_v1|title:a voyage on computer aided intelligent algorithms for the segmentation of brain tissues for neurodisorder diagnosis": "neurodegenerative_pet_mri_v1|cdbc87416cd8f301",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.neuroimage.2026.121992": "neurodegenerative_pet_mri_v1|cad2339809fb0427",
+    "neurodegenerative_pet_mri_v1|pmid:42134459": "neurodegenerative_pet_mri_v1|cad2339809fb0427",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42134459": "neurodegenerative_pet_mri_v1|cad2339809fb0427",
+    "neurodegenerative_pet_mri_v1|title:tractomformer a novel streamline level tractography analysis framework for group classification using deep graph and multi scale vit": "neurodegenerative_pet_mri_v1|cad2339809fb0427",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.msard.2026.107304": "neurodegenerative_pet_mri_v1|269cf874eaf4f207",
+    "neurodegenerative_pet_mri_v1|pmid:42276021": "neurodegenerative_pet_mri_v1|269cf874eaf4f207",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42276021": "neurodegenerative_pet_mri_v1|269cf874eaf4f207",
+    "neurodegenerative_pet_mri_v1|title:association of somatosensory evoked potentials with cervical spinal cord atrophy and disability progression in multiple sclerosis": "neurodegenerative_pet_mri_v1|269cf874eaf4f207",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.bspc.2026.110254": "neurodegenerative_pet_mri_v1|79d7480064a98dce",
+    "neurodegenerative_pet_mri_v1|url:https://doi.org/10.1016/j.bspc.2026.110254": "neurodegenerative_pet_mri_v1|79d7480064a98dce",
+    "neurodegenerative_pet_mri_v1|title:deep learning framework integrating 18f fdg pet ct and clinical data for early prediction of chemotherapy response in advanced breast cancer": "neurodegenerative_pet_mri_v1|79d7480064a98dce"
   },
-  "updated_at": "2026-07-31T03:20:09.416590+00:00"
+  "updated_at": "2026-08-01T01:25:42.480447+00:00"
 }
