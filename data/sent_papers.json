@@ -3562,6 +3562,28 @@
       "venue": "Biomedical Signal Processing and Control",
       "source": "Crossref Top Journals",
       "sent_at": "2026-08-01T01:25:42.480188+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|e2437eff27aad457": {
+      "paper_uid": "e2437eff27aad457",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "What Do Persistent Misclassifications Tell Us About Alzheimer's Disease Detection using Structural MRI?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42539013/",
+      "doi": "10.64898/2026.07.17.26358326",
+      "pmid": "42539013",
+      "venue": "medRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-08-02T01:23:17.486628+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|047f230d28f34b68": {
+      "paper_uid": "047f230d28f34b68",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "When does more data help? Spectral Geometry and Scaling Laws in MRI Transformers.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42539283/",
+      "doi": "10.64898/2026.07.14.738571",
+      "pmid": "42539283",
+      "venue": "bioRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-08-02T01:23:17.486628+00:00"
     }
   },
   "sent_keys": {
@@ -4957,7 +4979,15 @@
     "neurodegenerative_pet_mri_v1|title:association of somatosensory evoked potentials with cervical spinal cord atrophy and disability progression in multiple sclerosis": "neurodegenerative_pet_mri_v1|269cf874eaf4f207",
     "neurodegenerative_pet_mri_v1|doi:10.1016/j.bspc.2026.110254": "neurodegenerative_pet_mri_v1|79d7480064a98dce",
     "neurodegenerative_pet_mri_v1|url:https://doi.org/10.1016/j.bspc.2026.110254": "neurodegenerative_pet_mri_v1|79d7480064a98dce",
-    "neurodegenerative_pet_mri_v1|title:deep learning framework integrating 18f fdg pet ct and clinical data for early prediction of chemotherapy response in advanced breast cancer": "neurodegenerative_pet_mri_v1|79d7480064a98dce"
+    "neurodegenerative_pet_mri_v1|title:deep learning framework integrating 18f fdg pet ct and clinical data for early prediction of chemotherapy response in advanced breast cancer": "neurodegenerative_pet_mri_v1|79d7480064a98dce",
+    "neurodegenerative_pet_mri_v1|doi:10.64898/2026.07.17.26358326": "neurodegenerative_pet_mri_v1|e2437eff27aad457",
+    "neurodegenerative_pet_mri_v1|pmid:42539013": "neurodegenerative_pet_mri_v1|e2437eff27aad457",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42539013": "neurodegenerative_pet_mri_v1|e2437eff27aad457",
+    "neurodegenerative_pet_mri_v1|title:what do persistent misclassifications tell us about alzheimer s disease detection using structural mri": "neurodegenerative_pet_mri_v1|e2437eff27aad457",
+    "neurodegenerative_pet_mri_v1|doi:10.64898/2026.07.14.738571": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
+    "neurodegenerative_pet_mri_v1|pmid:42539283": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42539283": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
+    "neurodegenerative_pet_mri_v1|title:when does more data help spectral geometry and scaling laws in mri transformers": "neurodegenerative_pet_mri_v1|047f230d28f34b68"
   },
-  "updated_at": "2026-08-01T01:25:42.480447+00:00"
+  "updated_at": "2026-08-02T01:23:17.486788+00:00"
 }
