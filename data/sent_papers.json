@@ -3584,6 +3584,17 @@
       "venue": "bioRxiv",
       "source": "PubMed",
       "sent_at": "2026-08-02T01:23:17.486628+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|bc977a884a65d532": {
+      "paper_uid": "bc977a884a65d532",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Genome-wide analysis of subcortical aging identifies a spatially structured pattern of genetic associations.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42541656/",
+      "doi": "10.1007/s11357-026-02453-y",
+      "pmid": "42541656",
+      "venue": "Geroscience",
+      "source": "PubMed",
+      "sent_at": "2026-08-03T01:24:36.774113+00:00"
     }
   },
   "sent_keys": {
@@ -4987,7 +4998,11 @@
     "neurodegenerative_pet_mri_v1|doi:10.64898/2026.07.14.738571": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
     "neurodegenerative_pet_mri_v1|pmid:42539283": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42539283": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
-    "neurodegenerative_pet_mri_v1|title:when does more data help spectral geometry and scaling laws in mri transformers": "neurodegenerative_pet_mri_v1|047f230d28f34b68"
+    "neurodegenerative_pet_mri_v1|title:when does more data help spectral geometry and scaling laws in mri transformers": "neurodegenerative_pet_mri_v1|047f230d28f34b68",
+    "neurodegenerative_pet_mri_v1|doi:10.1007/s11357-026-02453-y": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
+    "neurodegenerative_pet_mri_v1|pmid:42541656": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42541656": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
+    "neurodegenerative_pet_mri_v1|title:genome wide analysis of subcortical aging identifies a spatially structured pattern of genetic associations": "neurodegenerative_pet_mri_v1|bc977a884a65d532"
   },
-  "updated_at": "2026-08-02T01:23:17.486788+00:00"
+  "updated_at": "2026-08-03T01:24:36.774220+00:00"
 }
