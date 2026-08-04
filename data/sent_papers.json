@@ -3595,6 +3595,28 @@
       "venue": "Geroscience",
       "source": "PubMed",
       "sent_at": "2026-08-03T01:24:36.774113+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|d951a5bebf20d40a": {
+      "paper_uid": "d951a5bebf20d40a",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A hybrid CNN-GCN framework for interpretable Alzheimer's disease diagnosis from MRI scans.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42167674/",
+      "doi": "10.1016/j.neuroscience.2026.05.017",
+      "pmid": "42167674",
+      "venue": "Neuroscience",
+      "source": "PubMed",
+      "sent_at": "2026-08-04T01:15:33.279938+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054": {
+      "paper_uid": "df11f9b7b7d3f054",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "EIGNN: An Explainable Imaging-Genetic Neural Network for Robust Alzheimer's Disease Risk Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42308083/",
+      "doi": "10.1109/tmi.2026.3704478",
+      "pmid": "42308083",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-04T01:15:33.279938+00:00"
     }
   },
   "sent_keys": {
@@ -5002,7 +5024,15 @@
     "neurodegenerative_pet_mri_v1|doi:10.1007/s11357-026-02453-y": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
     "neurodegenerative_pet_mri_v1|pmid:42541656": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42541656": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
-    "neurodegenerative_pet_mri_v1|title:genome wide analysis of subcortical aging identifies a spatially structured pattern of genetic associations": "neurodegenerative_pet_mri_v1|bc977a884a65d532"
+    "neurodegenerative_pet_mri_v1|title:genome wide analysis of subcortical aging identifies a spatially structured pattern of genetic associations": "neurodegenerative_pet_mri_v1|bc977a884a65d532",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.neuroscience.2026.05.017": "neurodegenerative_pet_mri_v1|d951a5bebf20d40a",
+    "neurodegenerative_pet_mri_v1|pmid:42167674": "neurodegenerative_pet_mri_v1|d951a5bebf20d40a",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42167674": "neurodegenerative_pet_mri_v1|d951a5bebf20d40a",
+    "neurodegenerative_pet_mri_v1|title:a hybrid cnn gcn framework for interpretable alzheimer s disease diagnosis from mri scans": "neurodegenerative_pet_mri_v1|d951a5bebf20d40a",
+    "neurodegenerative_pet_mri_v1|doi:10.1109/tmi.2026.3704478": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
+    "neurodegenerative_pet_mri_v1|pmid:42308083": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42308083": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
+    "neurodegenerative_pet_mri_v1|title:eignn an explainable imaging genetic neural network for robust alzheimer s disease risk prediction": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054"
   },
-  "updated_at": "2026-08-03T01:24:36.774220+00:00"
+  "updated_at": "2026-08-04T01:15:33.280077+00:00"
 }
