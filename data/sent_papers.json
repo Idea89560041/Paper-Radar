@@ -3617,6 +3617,61 @@
       "venue": "IEEE Trans Med Imaging",
       "source": "PubMed",
       "sent_at": "2026-08-04T01:15:33.279938+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|291fece45a4d0cf0": {
+      "paper_uid": "291fece45a4d0cf0",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Deep Cross-Branch Multi-Modal Fusion Network for early Alzheimer's diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42551144/",
+      "doi": "10.1016/j.artmed.2026.103497",
+      "pmid": "42551144",
+      "venue": "Artif Intell Med",
+      "source": "PubMed",
+      "sent_at": "2026-08-06T01:14:43.256370+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|7eff11489ee9221a": {
+      "paper_uid": "7eff11489ee9221a",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "A Comparative Analysis of Gradient-Based, Edge-Based, and Segmentation-Based Data Augmentation Methods for Early Diagnosis of Alzheimer’s Disease Using Neuroimaging Modalities and Deep Learning",
+      "url": "https://www.semanticscholar.org/paper/cd42d96c44f7cbc1bddf426b0f922326c1a8a518",
+      "doi": "10.3390/sym18081254",
+      "pmid": "",
+      "venue": "Symmetry",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-06T01:14:43.256370+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|151b40544fbddce5": {
+      "paper_uid": "151b40544fbddce5",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Improving Alzheimer’s Disease Detection Based Deep Learning and Magnetic Resonance Imaging",
+      "url": "https://www.semanticscholar.org/paper/566455ae130137d582afa61f1b9c36dea3924449",
+      "doi": "10.65542/djei.v2i3.62",
+      "pmid": "",
+      "venue": "Dasinya Journal for Engineering and Informatics",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-06T01:14:43.256370+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|a7f5b07b2f07e0fd": {
+      "paper_uid": "a7f5b07b2f07e0fd",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Multimodal deep learning neuroimaging approach to enhance CT-based diagnosis of Alzheimer's disease.",
+      "url": "https://www.semanticscholar.org/paper/7154212a92884d808f8d3fcef128b1e1bdd47942",
+      "doi": "10.1016/j.pscychresns.2026.112234",
+      "pmid": "",
+      "venue": "Psychiatry research. Neuroimaging",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-06T01:14:43.256370+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5": {
+      "paper_uid": "1aa055ca7f0c8ed5",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Two-stage deep learning framework for the restoration of incomplete-ring PET images.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42554922/",
+      "doi": "10.1007/s11517-026-03641-w",
+      "pmid": "42554922",
+      "venue": "Med Biol Eng Comput",
+      "source": "PubMed",
+      "sent_at": "2026-08-06T01:14:43.256370+00:00"
     }
   },
   "sent_keys": {
@@ -5032,7 +5087,24 @@
     "neurodegenerative_pet_mri_v1|doi:10.1109/tmi.2026.3704478": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
     "neurodegenerative_pet_mri_v1|pmid:42308083": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42308083": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
-    "neurodegenerative_pet_mri_v1|title:eignn an explainable imaging genetic neural network for robust alzheimer s disease risk prediction": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054"
+    "neurodegenerative_pet_mri_v1|title:eignn an explainable imaging genetic neural network for robust alzheimer s disease risk prediction": "neurodegenerative_pet_mri_v1|df11f9b7b7d3f054",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.artmed.2026.103497": "neurodegenerative_pet_mri_v1|291fece45a4d0cf0",
+    "neurodegenerative_pet_mri_v1|pmid:42551144": "neurodegenerative_pet_mri_v1|291fece45a4d0cf0",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42551144": "neurodegenerative_pet_mri_v1|291fece45a4d0cf0",
+    "neurodegenerative_pet_mri_v1|title:deep cross branch multi modal fusion network for early alzheimer s diagnosis": "neurodegenerative_pet_mri_v1|291fece45a4d0cf0",
+    "neurodegenerative_pet_mri_v1|doi:10.3390/sym18081254": "neurodegenerative_pet_mri_v1|7eff11489ee9221a",
+    "neurodegenerative_pet_mri_v1|url:https://www.semanticscholar.org/paper/cd42d96c44f7cbc1bddf426b0f922326c1a8a518": "neurodegenerative_pet_mri_v1|7eff11489ee9221a",
+    "neurodegenerative_pet_mri_v1|title:a comparative analysis of gradient based edge based and segmentation based data augmentation methods for early diagnosis of alzheimer s disease using neuroimaging modalities and de": "neurodegenerative_pet_mri_v1|7eff11489ee9221a",
+    "neurodegenerative_pet_mri_v1|doi:10.65542/djei.v2i3.62": "neurodegenerative_pet_mri_v1|151b40544fbddce5",
+    "neurodegenerative_pet_mri_v1|url:https://www.semanticscholar.org/paper/566455ae130137d582afa61f1b9c36dea3924449": "neurodegenerative_pet_mri_v1|151b40544fbddce5",
+    "neurodegenerative_pet_mri_v1|title:improving alzheimer s disease detection based deep learning and magnetic resonance imaging": "neurodegenerative_pet_mri_v1|151b40544fbddce5",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.pscychresns.2026.112234": "neurodegenerative_pet_mri_v1|a7f5b07b2f07e0fd",
+    "neurodegenerative_pet_mri_v1|url:https://www.semanticscholar.org/paper/7154212a92884d808f8d3fcef128b1e1bdd47942": "neurodegenerative_pet_mri_v1|a7f5b07b2f07e0fd",
+    "neurodegenerative_pet_mri_v1|title:multimodal deep learning neuroimaging approach to enhance ct based diagnosis of alzheimer s disease": "neurodegenerative_pet_mri_v1|a7f5b07b2f07e0fd",
+    "neurodegenerative_pet_mri_v1|doi:10.1007/s11517-026-03641-w": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
+    "neurodegenerative_pet_mri_v1|pmid:42554922": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42554922": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
+    "neurodegenerative_pet_mri_v1|title:two stage deep learning framework for the restoration of incomplete ring pet images": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5"
   },
-  "updated_at": "2026-08-04T01:15:33.280077+00:00"
+  "updated_at": "2026-08-06T01:14:43.256674+00:00"
 }
