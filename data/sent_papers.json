@@ -3672,6 +3672,17 @@
       "venue": "Med Biol Eng Comput",
       "source": "PubMed",
       "sent_at": "2026-08-06T01:14:43.256370+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8": {
+      "paper_uid": "1e5f38f2b1fc70f8",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Temporalis muscle biomarkers from routine brain MRI and risk of dementia in two independent cohorts.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42559821/",
+      "doi": "10.1002/alz.71622",
+      "pmid": "42559821",
+      "venue": "Alzheimers Dement",
+      "source": "PubMed",
+      "sent_at": "2026-08-07T01:57:55.479170+00:00"
     }
   },
   "sent_keys": {
@@ -5104,7 +5115,11 @@
     "neurodegenerative_pet_mri_v1|doi:10.1007/s11517-026-03641-w": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
     "neurodegenerative_pet_mri_v1|pmid:42554922": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42554922": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
-    "neurodegenerative_pet_mri_v1|title:two stage deep learning framework for the restoration of incomplete ring pet images": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5"
+    "neurodegenerative_pet_mri_v1|title:two stage deep learning framework for the restoration of incomplete ring pet images": "neurodegenerative_pet_mri_v1|1aa055ca7f0c8ed5",
+    "neurodegenerative_pet_mri_v1|doi:10.1002/alz.71622": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
+    "neurodegenerative_pet_mri_v1|pmid:42559821": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42559821": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
+    "neurodegenerative_pet_mri_v1|title:temporalis muscle biomarkers from routine brain mri and risk of dementia in two independent cohorts": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8"
   },
-  "updated_at": "2026-08-06T01:14:43.256674+00:00"
+  "updated_at": "2026-08-07T01:57:55.479273+00:00"
 }
