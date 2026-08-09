@@ -3683,6 +3683,17 @@
       "venue": "Alzheimers Dement",
       "source": "PubMed",
       "sent_at": "2026-08-07T01:57:55.479170+00:00"
+    },
+    "neurodegenerative_pet_mri_v1|7667e81d8c287108": {
+      "paper_uid": "7667e81d8c287108",
+      "state_namespace": "neurodegenerative_pet_mri_v1",
+      "title": "Differentiating behavioural variant frontotemporal dementia from misdiagnoses by deriving atrophy through deep-learning-based CT to MRI synthesis: A proof-of-concept study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42566955/",
+      "doi": "10.1016/j.ejrad.2026.113128",
+      "pmid": "42566955",
+      "venue": "Eur J Radiol",
+      "source": "PubMed",
+      "sent_at": "2026-08-09T00:43:04.095005+00:00"
     }
   },
   "sent_keys": {
@@ -5119,7 +5130,11 @@
     "neurodegenerative_pet_mri_v1|doi:10.1002/alz.71622": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
     "neurodegenerative_pet_mri_v1|pmid:42559821": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
     "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42559821": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
-    "neurodegenerative_pet_mri_v1|title:temporalis muscle biomarkers from routine brain mri and risk of dementia in two independent cohorts": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8"
+    "neurodegenerative_pet_mri_v1|title:temporalis muscle biomarkers from routine brain mri and risk of dementia in two independent cohorts": "neurodegenerative_pet_mri_v1|1e5f38f2b1fc70f8",
+    "neurodegenerative_pet_mri_v1|doi:10.1016/j.ejrad.2026.113128": "neurodegenerative_pet_mri_v1|7667e81d8c287108",
+    "neurodegenerative_pet_mri_v1|pmid:42566955": "neurodegenerative_pet_mri_v1|7667e81d8c287108",
+    "neurodegenerative_pet_mri_v1|url:https://pubmed.ncbi.nlm.nih.gov/42566955": "neurodegenerative_pet_mri_v1|7667e81d8c287108",
+    "neurodegenerative_pet_mri_v1|title:differentiating behavioural variant frontotemporal dementia from misdiagnoses by deriving atrophy through deep learning based ct to mri synthesis a proof of concept study": "neurodegenerative_pet_mri_v1|7667e81d8c287108"
   },
-  "updated_at": "2026-08-07T01:57:55.479273+00:00"
+  "updated_at": "2026-08-09T00:43:04.095118+00:00"
 }
