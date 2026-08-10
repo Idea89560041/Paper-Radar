@@ -12,4 +12,4 @@ For exploratory browsing, the GitHub Actions manual run can temporarily backfill
 
 It searches PubMed, arXiv preprints, Semantic Scholar, and Crossref metadata from flagship journal families, top medical-imaging journals, and major AI conferences. It scores papers against the research profile in `config.yaml`, filters out papers already shown in previous runs, and publishes a static web page plus `papers.json`.
 
-The page groups papers into flagship main journals, flagship-family subjournals, top medical-imaging / AI venues, preprints, and other relevant journals. Traditional neuroscience papers without AI/imaging methods, BCI/EEG-only papers, broad review papers, and low-priority venues such as Scientific Reports or Frontiers journals are filtered out.
+The page focuses on flagship main journals, flagship-family subjournals, top medical-imaging / AI venues, and selected preprints. Traditional neuroscience papers without AI/imaging methods, BCI/EEG-only papers, broad review papers, and low-priority venues such as Scientific Reports or Frontiers journals are filtered out.

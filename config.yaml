@@ -15,6 +15,11 @@ site:
   max_per_topic: 12
   max_per_source: 24
   max_per_venue_category: 24
+  allowed_venue_categories:
+    - flagship_main
+    - flagship_subjournal
+    - top_imaging_ai
+    - preprint
 
 research_profile:
   name: "Brain / Neuroimage Medical AI"
