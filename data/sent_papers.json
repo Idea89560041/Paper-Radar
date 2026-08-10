@@ -4574,6 +4574,39 @@
       "venue": "Lancet Rheumatol",
       "source": "PubMed",
       "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v3|23b38db6866e5304": {
+      "paper_uid": "23b38db6866e5304",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "MotionDPS: Motion-Compensated 3-D Brain MRI Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42329942/",
+      "doi": "10.1109/tmi.2026.3705847",
+      "pmid": "42329942",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:33:37.328565+00:00"
+    },
+    "brain_image_all_methods_v3|98732442eed346e4": {
+      "paper_uid": "98732442eed346e4",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "LIGHT: Learning Image-text Grounding for Hierarchical Tumor Localization and Subtype Classification in Multimodal Brain MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42536472/",
+      "doi": "10.1109/tmi.2026.3718445",
+      "pmid": "42536472",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:33:37.328565+00:00"
+    },
+    "brain_image_all_methods_v3|038871afa9050a49": {
+      "paper_uid": "038871afa9050a49",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Hierarchical Disentanglement Guided Diffusion for Multimodal Brain Tumor Segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42560908/",
+      "doi": "10.1109/jbhi.2026.3721110",
+      "pmid": "42560908",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:33:37.328565+00:00"
     }
   },
   "sent_keys": {
@@ -6332,7 +6365,19 @@
     "brain_image_all_methods_v2|doi:10.1016/s2665-9913(26)00071-8": "brain_image_all_methods_v2|61384a308346b646",
     "brain_image_all_methods_v2|pmid:42105782": "brain_image_all_methods_v2|61384a308346b646",
     "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42105782": "brain_image_all_methods_v2|61384a308346b646",
-    "brain_image_all_methods_v2|title:prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in germany a population based cross sectional study": "brain_image_all_methods_v2|61384a308346b646"
+    "brain_image_all_methods_v2|title:prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in germany a population based cross sectional study": "brain_image_all_methods_v2|61384a308346b646",
+    "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3705847": "brain_image_all_methods_v3|23b38db6866e5304",
+    "brain_image_all_methods_v3|pmid:42329942": "brain_image_all_methods_v3|23b38db6866e5304",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42329942": "brain_image_all_methods_v3|23b38db6866e5304",
+    "brain_image_all_methods_v3|title:motiondps motion compensated 3 d brain mri reconstruction": "brain_image_all_methods_v3|23b38db6866e5304",
+    "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3718445": "brain_image_all_methods_v3|98732442eed346e4",
+    "brain_image_all_methods_v3|pmid:42536472": "brain_image_all_methods_v3|98732442eed346e4",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42536472": "brain_image_all_methods_v3|98732442eed346e4",
+    "brain_image_all_methods_v3|title:light learning image text grounding for hierarchical tumor localization and subtype classification in multimodal brain mri": "brain_image_all_methods_v3|98732442eed346e4",
+    "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3721110": "brain_image_all_methods_v3|038871afa9050a49",
+    "brain_image_all_methods_v3|pmid:42560908": "brain_image_all_methods_v3|038871afa9050a49",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42560908": "brain_image_all_methods_v3|038871afa9050a49",
+    "brain_image_all_methods_v3|title:hierarchical disentanglement guided diffusion for multimodal brain tumor segmentation": "brain_image_all_methods_v3|038871afa9050a49"
   },
-  "updated_at": "2026-08-10T03:25:44.201883+00:00"
+  "updated_at": "2026-08-10T03:33:37.328788+00:00"
 }
