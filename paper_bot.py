@@ -909,8 +909,8 @@ VENUE_CATEGORY_LABELS = {
 
 VENUE_CATEGORY_DESCRIPTIONS = {
     "flagship_main": "Nature, Science, and Cell main journals.",
-    "flagship_subjournal": "Nature, npj, Science, Cell, and Lancet family journals.",
-    "flagship": "Nature, npj, Science, Cell, and Lancet family journals.",
+    "flagship_subjournal": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
+    "flagship": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
     "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
     "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
     "other": "Relevant deep-learning papers from broader indexed journals.",
@@ -925,6 +925,7 @@ DEFAULT_VENUE_CATEGORIES = {
     ],
     "flagship_family_prefixes": [
         "Nature",
+        "Communications",
         "npj",
         "Science",
         "Cell",
@@ -1209,6 +1210,10 @@ def venue_prefix_match(venue: str | None, terms: Iterable[str]) -> bool:
         return False
     for term in terms:
         prefix = normalize_venue_name(term)
+        if prefix == "communications" and (
+            venue_name.startswith("communications in ") or venue_name.startswith("communications of ")
+        ):
+            continue
         if prefix and (venue_name == prefix or venue_name.startswith(f"{prefix} ")):
             return True
     return False

@@ -99,6 +99,10 @@ jobs:
             ARGS+=(--ignore-sent-state)
           fi
 
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            ARGS+=(--ignore-sent-state)
+          fi
+
           python paper_bot.py "${ARGS[@]}"
 
       - name: Commit sent paper state
