@@ -4497,6 +4497,83 @@
       "venue": "Lancet Rheumatol",
       "source": "PubMed",
       "sent_at": "2026-08-10T03:14:09.051871+00:00"
+    },
+    "brain_image_all_methods_v2|23b38db6866e5304": {
+      "paper_uid": "23b38db6866e5304",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "MotionDPS: Motion-Compensated 3-D Brain MRI Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42329942/",
+      "doi": "10.1109/tmi.2026.3705847",
+      "pmid": "42329942",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|98732442eed346e4": {
+      "paper_uid": "98732442eed346e4",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "LIGHT: Learning Image-text Grounding for Hierarchical Tumor Localization and Subtype Classification in Multimodal Brain MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42536472/",
+      "doi": "10.1109/tmi.2026.3718445",
+      "pmid": "42536472",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|038871afa9050a49": {
+      "paper_uid": "038871afa9050a49",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "Hierarchical Disentanglement Guided Diffusion for Multimodal Brain Tumor Segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42560908/",
+      "doi": "10.1109/jbhi.2026.3721110",
+      "pmid": "42560908",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|37e544f67de190e5": {
+      "paper_uid": "37e544f67de190e5",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "Self-supervised reconstruction framework via motion- and physics-informed learning for four-dimensional magnetic resonance fingerprinting.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42566941/",
+      "doi": "10.1016/j.media.2026.104240",
+      "pmid": "42566941",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|284981501a33fdf9": {
+      "paper_uid": "284981501a33fdf9",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "Self-Supervised T2WI-Bridged Framework for Liver Segmentation and PDFF Prediction From US Images.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42213564/",
+      "doi": "10.1109/tmi.2026.3698415",
+      "pmid": "42213564",
+      "venue": "IEEE Trans Med Imaging",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|03125acdb0b06614": {
+      "paper_uid": "03125acdb0b06614",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "Compositional recombination is facilitated by a distributed cortico-cerebellar network.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42313562/",
+      "doi": "10.1016/j.celrep.2026.117572",
+      "pmid": "42313562",
+      "venue": "Cell Rep",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
+    },
+    "brain_image_all_methods_v2|61384a308346b646": {
+      "paper_uid": "61384a308346b646",
+      "state_namespace": "brain_image_all_methods_v2",
+      "title": "Prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in Germany: a population-based cross-sectional study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42105782/",
+      "doi": "10.1016/s2665-9913(26)00071-8",
+      "pmid": "42105782",
+      "venue": "Lancet Rheumatol",
+      "source": "PubMed",
+      "sent_at": "2026-08-10T03:25:44.201476+00:00"
     }
   },
   "sent_keys": {
@@ -6227,7 +6304,35 @@
     "brain_image_all_methods_v1|doi:10.1016/s2665-9913(26)00071-8": "brain_image_all_methods_v1|61384a308346b646",
     "brain_image_all_methods_v1|pmid:42105782": "brain_image_all_methods_v1|61384a308346b646",
     "brain_image_all_methods_v1|url:https://pubmed.ncbi.nlm.nih.gov/42105782": "brain_image_all_methods_v1|61384a308346b646",
-    "brain_image_all_methods_v1|title:prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in germany a population based cross sectional study": "brain_image_all_methods_v1|61384a308346b646"
+    "brain_image_all_methods_v1|title:prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in germany a population based cross sectional study": "brain_image_all_methods_v1|61384a308346b646",
+    "brain_image_all_methods_v2|doi:10.1109/tmi.2026.3705847": "brain_image_all_methods_v2|23b38db6866e5304",
+    "brain_image_all_methods_v2|pmid:42329942": "brain_image_all_methods_v2|23b38db6866e5304",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42329942": "brain_image_all_methods_v2|23b38db6866e5304",
+    "brain_image_all_methods_v2|title:motiondps motion compensated 3 d brain mri reconstruction": "brain_image_all_methods_v2|23b38db6866e5304",
+    "brain_image_all_methods_v2|doi:10.1109/tmi.2026.3718445": "brain_image_all_methods_v2|98732442eed346e4",
+    "brain_image_all_methods_v2|pmid:42536472": "brain_image_all_methods_v2|98732442eed346e4",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42536472": "brain_image_all_methods_v2|98732442eed346e4",
+    "brain_image_all_methods_v2|title:light learning image text grounding for hierarchical tumor localization and subtype classification in multimodal brain mri": "brain_image_all_methods_v2|98732442eed346e4",
+    "brain_image_all_methods_v2|doi:10.1109/jbhi.2026.3721110": "brain_image_all_methods_v2|038871afa9050a49",
+    "brain_image_all_methods_v2|pmid:42560908": "brain_image_all_methods_v2|038871afa9050a49",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42560908": "brain_image_all_methods_v2|038871afa9050a49",
+    "brain_image_all_methods_v2|title:hierarchical disentanglement guided diffusion for multimodal brain tumor segmentation": "brain_image_all_methods_v2|038871afa9050a49",
+    "brain_image_all_methods_v2|doi:10.1016/j.media.2026.104240": "brain_image_all_methods_v2|37e544f67de190e5",
+    "brain_image_all_methods_v2|pmid:42566941": "brain_image_all_methods_v2|37e544f67de190e5",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42566941": "brain_image_all_methods_v2|37e544f67de190e5",
+    "brain_image_all_methods_v2|title:self supervised reconstruction framework via motion and physics informed learning for four dimensional magnetic resonance fingerprinting": "brain_image_all_methods_v2|37e544f67de190e5",
+    "brain_image_all_methods_v2|doi:10.1109/tmi.2026.3698415": "brain_image_all_methods_v2|284981501a33fdf9",
+    "brain_image_all_methods_v2|pmid:42213564": "brain_image_all_methods_v2|284981501a33fdf9",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42213564": "brain_image_all_methods_v2|284981501a33fdf9",
+    "brain_image_all_methods_v2|title:self supervised t2wi bridged framework for liver segmentation and pdff prediction from us images": "brain_image_all_methods_v2|284981501a33fdf9",
+    "brain_image_all_methods_v2|doi:10.1016/j.celrep.2026.117572": "brain_image_all_methods_v2|03125acdb0b06614",
+    "brain_image_all_methods_v2|pmid:42313562": "brain_image_all_methods_v2|03125acdb0b06614",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42313562": "brain_image_all_methods_v2|03125acdb0b06614",
+    "brain_image_all_methods_v2|title:compositional recombination is facilitated by a distributed cortico cerebellar network": "brain_image_all_methods_v2|03125acdb0b06614",
+    "brain_image_all_methods_v2|doi:10.1016/s2665-9913(26)00071-8": "brain_image_all_methods_v2|61384a308346b646",
+    "brain_image_all_methods_v2|pmid:42105782": "brain_image_all_methods_v2|61384a308346b646",
+    "brain_image_all_methods_v2|url:https://pubmed.ncbi.nlm.nih.gov/42105782": "brain_image_all_methods_v2|61384a308346b646",
+    "brain_image_all_methods_v2|title:prevalence and determinants of sacroiliac joint bone marrow oedema in the general population in germany a population based cross sectional study": "brain_image_all_methods_v2|61384a308346b646"
   },
-  "updated_at": "2026-08-10T03:14:09.053266+00:00"
+  "updated_at": "2026-08-10T03:25:44.201883+00:00"
 }
