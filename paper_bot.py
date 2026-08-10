@@ -1223,7 +1223,12 @@ def classify_venue_category(paper: Paper, cfg: Dict[str, Any]) -> str:
         return "flagship_main"
     if venue_prefix_match(paper.venue, cfg_venue_terms(cfg, "flagship_family_prefixes")):
         return "flagship_subjournal"
-    for term in cfg_venue_terms(cfg, "flagship_subjournal") + cfg_venue_terms(cfg, "flagship"):
+    subjournal_terms = cfg_venue_terms(cfg, "flagship_subjournal") + cfg_venue_terms(cfg, "flagship")
+    if venue_exact_match(paper.venue, subjournal_terms):
+        return "flagship_subjournal"
+    for term in subjournal_terms:
+        if len(normalize_venue_name(term)) <= 4:
+            continue
         if contains_term(text, term):
             return "flagship_subjournal"
     for term in cfg_venue_terms(cfg, "top_imaging_ai"):
