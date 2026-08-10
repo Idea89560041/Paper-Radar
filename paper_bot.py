@@ -909,8 +909,8 @@ VENUE_CATEGORY_LABELS = {
 
 VENUE_CATEGORY_DESCRIPTIONS = {
     "flagship_main": "Nature, Science, and Cell main journals.",
-    "flagship_subjournal": "Nature, Science, Cell, and npj-family journals such as Nature Medicine, Nature Aging, Nature Communications, and npj Parkinson's Disease.",
-    "flagship": "Nature, Science, Cell, and npj-family journals such as Nature Medicine, Nature Aging, Nature Communications, and npj Parkinson's Disease.",
+    "flagship_subjournal": "Nature, npj, Science, Cell, and Lancet family journals.",
+    "flagship": "Nature, npj, Science, Cell, and Lancet family journals.",
     "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
     "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
     "other": "Relevant deep-learning papers from broader indexed journals.",
@@ -922,6 +922,13 @@ DEFAULT_VENUE_CATEGORIES = {
         "Science",
         "Cell",
         "The Lancet",
+    ],
+    "flagship_family_prefixes": [
+        "Nature",
+        "npj",
+        "Science",
+        "Cell",
+        "Lancet",
     ],
     "flagship_subjournal": [
         "Nature Medicine",
@@ -1022,7 +1029,6 @@ TOPIC_RULES = [
             "Aβ",
             "tau",
             "FDG",
-            "PET",
         ],
     ),
     (
@@ -1036,6 +1042,63 @@ TOPIC_RULES = [
             "cortex",
             "cortical",
             "connectome",
+        ],
+    ),
+    (
+        "Segmentation / Registration",
+        [
+            "segmentation",
+            "registration",
+            "parcellation",
+            "atlas",
+            "landmark",
+            "correspondence",
+        ],
+    ),
+    (
+        "Reconstruction / Restoration",
+        [
+            "reconstruction",
+            "denoising",
+            "noise correction",
+            "enhancement",
+            "restoration",
+            "super-resolution",
+            "super resolution",
+            "motion correction",
+            "harmonization",
+            "image quality",
+            "quality assessment",
+        ],
+    ),
+    (
+        "Synthesis / Generation",
+        [
+            "synthesis",
+            "image synthesis",
+            "image translation",
+            "image generation",
+            "generative model",
+            "generative AI",
+            "diffusion model",
+            "latent diffusion",
+            "conditional diffusion",
+            "flow matching",
+            "normalizing flow",
+            "GAN",
+        ],
+    ),
+    (
+        "Agent / VLM / Foundation",
+        [
+            "agentic",
+            "AI agent",
+            "autonomous agent",
+            "foundation model",
+            "large language model",
+            "large multimodal model",
+            "vision-language model",
+            "vision language model",
         ],
     ),
     (
@@ -1140,16 +1203,29 @@ def venue_exact_match(venue: str | None, terms: Iterable[str]) -> bool:
     return any(venue_name == normalize_venue_name(term) for term in terms)
 
 
+def venue_prefix_match(venue: str | None, terms: Iterable[str]) -> bool:
+    venue_name = normalize_venue_name(venue)
+    if not venue_name:
+        return False
+    for term in terms:
+        prefix = normalize_venue_name(term)
+        if prefix and (venue_name == prefix or venue_name.startswith(f"{prefix} ")):
+            return True
+    return False
+
+
 def classify_venue_category(paper: Paper, cfg: Dict[str, Any]) -> str:
     text = " ".join([paper.source or "", paper.venue or "", paper.url or ""]).lower()
     for term in cfg_venue_terms(cfg, "preprint"):
         if contains_term(text, term):
             return "preprint"
+    if venue_exact_match(paper.venue, cfg_venue_terms(cfg, "flagship_main")):
+        return "flagship_main"
+    if venue_prefix_match(paper.venue, cfg_venue_terms(cfg, "flagship_family_prefixes")):
+        return "flagship_subjournal"
     for term in cfg_venue_terms(cfg, "flagship_subjournal") + cfg_venue_terms(cfg, "flagship"):
         if contains_term(text, term):
             return "flagship_subjournal"
-    if venue_exact_match(paper.venue, cfg_venue_terms(cfg, "flagship_main")):
-        return "flagship_main"
     for term in cfg_venue_terms(cfg, "top_imaging_ai"):
         if contains_term(text, term):
             return "top_imaging_ai"
@@ -1488,14 +1564,14 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 
     focus_terms = [
         "brain image / neuroimage first",
-        "deep learning for medical imaging",
-        "Alzheimer / dementia / MCI",
+        "any brain image task or method",
+        "segmentation / registration / reconstruction",
+        "denoising / super-resolution / harmonization",
+        "synthesis / translation / generative models",
+        "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",
-        "brain tumor / stroke / epilepsy",
-        "foundation / VLM / self-supervised neuroimaging",
+        "AD / dementia / brain tumor / stroke / epilepsy",
         "whole-body / multi-organ medical imaging as secondary",
-        "Nature / Science / Cell / Lancet / npj families",
-        "MIA / TMI / Radiology / MICCAI / MIDL / CVPR",
     ]
 
     source_badges = "".join(
@@ -1883,7 +1959,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers led by brain image and neuroimage research, especially MRI/fMRI/PET/Aβ-PET, with secondary coverage of high-value whole-body and multi-organ medical imaging papers from flagship journal families and top imaging/AI venues.</p>
+        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction, with secondary coverage of high-value whole-body and multi-organ medical imaging papers.</p>
       </header>
     </div>
   </div>

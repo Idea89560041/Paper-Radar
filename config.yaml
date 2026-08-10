@@ -4,10 +4,10 @@
 
 lookback_days: 14
 state_path: data/sent_papers.json
-state_namespace: brain_neuroimage_medical_ai_v1
+state_namespace: brain_image_all_methods_v1
 
 site:
-  title: "Brain / Neuroimage Medical AI Paper Radar"
+  title: "Brain Image / Neuroimage Paper Radar"
   output_dir: site
   max_papers: 35
   use_sent_state: true
@@ -22,12 +22,16 @@ site:
     - preprint
 
 research_profile:
-  name: "Brain / Neuroimage Medical AI"
+  name: "Brain Image / Neuroimage"
 
   queries:
     - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain image analysis segmentation registration reconstruction MRI PET"
+    - "brain MRI PET denoising super-resolution harmonization deep learning"
+    - "neuroimage image synthesis image translation image generation diffusion model"
     - "brain imaging MRI fMRI PET artificial intelligence"
     - "foundation model neuroimaging brain MRI PET"
+    - "agentic AI agent brain image neuroimaging radiology"
     - "vision language model radiology brain MRI PET"
     - "self-supervised representation learning neuroimaging MRI PET"
     - "brain PET amyloid beta tau FDG deep learning"
@@ -41,6 +45,9 @@ research_profile:
 
   pubmed_queries:
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract] OR radiomics[Title/Abstract])'
+    - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR synthesis[Title/Abstract] OR harmonization[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR restoration[Title/Abstract])'
+    - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR "brain PET"[Title/Abstract]) AND ("diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR "generative AI"[Title/Abstract] OR GAN[Title/Abstract] OR "latent diffusion"[Title/Abstract] OR "conditional diffusion"[Title/Abstract] OR "flow matching"[Title/Abstract] OR "normalizing flow"[Title/Abstract])'
+    - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "large language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
     - '("Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "beta-amyloid PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "amyloid PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
     - '(Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
@@ -50,6 +57,10 @@ research_profile:
 
   arxiv_queries:
     - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain image analysis segmentation registration reconstruction MRI PET"
+    - "brain MRI PET denoising super-resolution harmonization deep learning"
+    - "neuroimage image synthesis image translation image generation diffusion model"
+    - "agentic AI agent brain image neuroimaging radiology"
     - "brain MRI fMRI PET transformer artificial intelligence"
     - "foundation model neuroimaging brain MRI PET"
     - "vision language model radiology brain MRI PET"
@@ -65,6 +76,10 @@ research_profile:
 
   semantic_scholar_queries:
     - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain image analysis segmentation registration reconstruction MRI PET"
+    - "brain MRI PET denoising super-resolution harmonization deep learning"
+    - "neuroimage image synthesis image translation image generation diffusion model"
+    - "agentic AI agent brain image neuroimaging radiology"
     - "brain imaging MRI fMRI PET artificial intelligence"
     - "foundation model neuroimaging brain MRI PET"
     - "vision-language model radiology brain MRI PET"
@@ -205,7 +220,7 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract]))'
+  pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR DWI[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR "diffusion-weighted"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract] OR segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR harmonization[Title/Abstract] OR synthesis[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "image analysis"[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
@@ -255,6 +270,10 @@ top_journal_families:
 
   crossref_topic_queries:
     - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain image analysis segmentation registration reconstruction MRI PET"
+    - "brain MRI PET denoising super-resolution harmonization deep learning"
+    - "neuroimage image synthesis image translation image generation diffusion model"
+    - "agentic AI agent brain image neuroimaging radiology"
     - "foundation model neuroimaging brain MRI PET"
     - "Aβ PET amyloid beta tau FDG Alzheimer deep learning"
     - "Alzheimer dementia MCI brain MRI PET machine learning"
@@ -272,6 +291,13 @@ venue_categories:
     - "Science"
     - "Cell"
     - "The Lancet"
+
+  flagship_family_prefixes:
+    - "Nature"
+    - "npj"
+    - "Science"
+    - "Cell"
+    - "Lancet"
 
   flagship_subjournal:
     - "Nature Medicine"
@@ -404,13 +430,6 @@ scoring:
     - protocol
     - guideline
     - consensus
-    - MRI harmonization
-    - harmonization
-    - DWI
-    - q-space
-    - diffusion-weighted
-    - diffusion weighted
-    - noise correction
     - brain-computer interface
     - brain computer interface
     - BCI
@@ -419,15 +438,6 @@ scoring:
     - electroencephalographic
     - neural decoding
     - motor imagery
-    - medical image quality assessment
-    - image quality assessment
-    - quality assessment
-    - no-reference image quality
-    - conditional diffusion
-    - flow matching
-    - flow model
-    - normalizing flow
-    - invertible flow
 
   hard_exclude_venues:
     - Scientific Reports
@@ -472,6 +482,34 @@ scoring:
     - uncertainty estimation
     - masked image modeling
     - pretraining
+    - segmentation
+    - registration
+    - reconstruction
+    - denoising
+    - super-resolution
+    - super resolution
+    - enhancement
+    - restoration
+    - harmonization
+    - image synthesis
+    - synthesis
+    - image translation
+    - image generation
+    - generative model
+    - generative AI
+    - diffusion model
+    - conditional diffusion
+    - flow matching
+    - flow model
+    - normalizing flow
+    - invertible flow
+    - image quality
+    - quality assessment
+    - agentic
+    - AI agent
+    - autonomous agent
+    - medical image analysis
+    - image analysis
 
   disease_must_have_any:
     - brain
@@ -645,6 +683,36 @@ scoring:
     prediction: 2
     biomarker: 3
     segmentation: 2
+    registration: 3
+    reconstruction: 3
+    denoising: 3
+    enhancement: 3
+    restoration: 3
+    harmonization: 3
+    "super-resolution": 4
+    "super resolution": 4
+    synthesis: 4
+    "image synthesis": 4
+    "image translation": 4
+    "image generation": 4
+    "generative model": 4
+    "generative AI": 4
+    "diffusion model": 5
+    "latent diffusion": 5
+    "conditional diffusion": 4
+    "flow matching": 4
+    "normalizing flow": 4
+    "image quality": 3
+    "quality assessment": 3
+    DWI: 3
+    "diffusion MRI": 4
+    "diffusion-weighted": 3
+    "diffusion weighted": 3
+    q-space: 3
+    agentic: 4
+    "AI agent": 4
+    "autonomous agent": 4
+    "large language model": 4
     transformer: 3
     "self-supervised": 4
     "contrastive learning": 4
@@ -691,6 +759,11 @@ scoring:
     "brain PET": 10
     "structural MRI": 5
     "functional MRI": 5
+    "diffusion MRI": 5
+    DWI: 4
+    "diffusion-weighted": 4
+    "diffusion weighted": 4
+    q-space: 4
     connectome: 5
     cortex: 4
     cortical: 4
@@ -715,6 +788,30 @@ scoring:
     stroke: 5
     epilepsy: 4
     "multiple sclerosis": 4
+    segmentation: 4
+    registration: 4
+    reconstruction: 4
+    denoising: 4
+    enhancement: 4
+    restoration: 4
+    harmonization: 4
+    "super-resolution": 5
+    "super resolution": 5
+    synthesis: 5
+    "image synthesis": 5
+    "image translation": 5
+    "image generation": 5
+    "diffusion model": 6
+    "latent diffusion": 6
+    "conditional diffusion": 5
+    "flow matching": 5
+    "normalizing flow": 5
+    "image quality": 3
+    "quality assessment": 3
+    agentic: 4
+    "AI agent": 4
+    "autonomous agent": 4
+    "large language model": 4
     "whole-body PET": 7
     "whole body PET": 7
     "total-body PET": 7
