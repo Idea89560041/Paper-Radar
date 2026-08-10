@@ -4,83 +4,83 @@
 
 lookback_days: 14
 state_path: data/sent_papers.json
-state_namespace: neurodegenerative_pet_mri_v1
+state_namespace: brain_neuroimage_medical_ai_v1
 
 site:
-  title: "Neurodegenerative PET/MRI Deep Learning Paper Radar"
+  title: "Brain / Neuroimage Medical AI Paper Radar"
   output_dir: site
-  max_papers: 25
+  max_papers: 35
   use_sent_state: true
-  min_preprints: 0
-  max_per_topic: 8
-  max_per_source: 18
-  max_per_venue_category: 18
+  min_preprints: 2
+  max_per_topic: 12
+  max_per_source: 24
+  max_per_venue_category: 24
 
 research_profile:
-  name: "Neurodegenerative Disease PET/MRI Deep Learning"
+  name: "Brain / Neuroimage Medical AI"
 
   queries:
-    - "Alzheimer disease dementia MCI brain MRI PET deep learning"
-    - "neurodegenerative disease brain MRI PET artificial intelligence"
-    - "Aβ-PET amyloid beta PET Alzheimer dementia deep learning"
-    - "amyloid-beta PET Abeta PET MCI machine learning"
-    - "amyloid tau FDG PET MRI deep learning"
-    - "Parkinson disease brain MRI PET machine learning"
-    - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
-    - "whole-body PET neurodegenerative disease deep learning"
-    - "total-body PET brain neurodegeneration artificial intelligence"
-    - "PET/MRI Alzheimer dementia deep learning"
-    - "foundation model neuroimaging dementia MRI PET"
-    - "self-supervised representation learning neuroimaging MRI PET dementia"
+    - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain imaging MRI fMRI PET artificial intelligence"
+    - "foundation model neuroimaging brain MRI PET"
+    - "vision language model radiology brain MRI PET"
+    - "self-supervised representation learning neuroimaging MRI PET"
+    - "brain PET amyloid beta tau FDG deep learning"
+    - "Alzheimer dementia MCI brain MRI PET deep learning"
+    - "Parkinson Lewy body frontotemporal dementia neuroimaging machine learning"
+    - "brain tumor glioma stroke epilepsy MRI CT deep learning"
+    - "medical image analysis brain MRI PET transformer"
+    - "whole-body PET MRI multi-organ medical imaging deep learning"
+    - "radiology medical imaging foundation model multi-organ MRI PET CT"
     - "brain gut microbiome Alzheimer dementia neuroimaging machine learning"
 
   pubmed_queries:
-    - '("Alzheimer Disease"[MeSH Terms] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR "amyloid beta"[Title/Abstract] OR "amyloid-beta"[Title/Abstract] OR "beta-amyloid"[Title/Abstract] OR Abeta[Title/Abstract] OR Aβ[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
-    - '("Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "beta-amyloid PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "A beta PET"[Title/Abstract] OR "amyloid PET"[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
-    - '(Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR Huntington*[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR amyloid[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract])'
-    - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegeneration[Title/Abstract] OR "neurodegenerative disease"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract])'
-    - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND (MRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract])'
-    - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR brain[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
+    - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract] OR radiomics[Title/Abstract])'
+    - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
+    - '("Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "beta-amyloid PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "amyloid PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
+    - '(Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
+    - '("brain tumor"[Title/Abstract] OR glioma[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "multiple sclerosis"[Title/Abstract] OR connectome[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract])'
+    - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract])'
+    - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR neurodegenerative[Title/Abstract] OR brain[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
 
   arxiv_queries:
-    - "Alzheimer disease MRI PET deep learning"
-    - "dementia MCI brain MRI PET transformer"
-    - "neurodegenerative disease neuroimaging deep learning"
-    - "Aβ PET amyloid beta PET Alzheimer deep learning"
-    - "amyloid-beta PET Abeta PET dementia machine learning"
-    - "amyloid tau FDG PET MRI artificial intelligence"
-    - "Parkinson disease brain MRI PET machine learning"
-    - "Lewy body dementia frontotemporal dementia MRI PET deep learning"
-    - "whole body PET neurodegenerative deep learning"
-    - "total body PET brain neurodegeneration artificial intelligence"
-    - "PET MRI dementia foundation model"
-    - "self supervised neuroimaging dementia MRI PET"
-    - "multimodal brain MRI PET Alzheimer deep learning"
+    - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain MRI fMRI PET transformer artificial intelligence"
+    - "foundation model neuroimaging brain MRI PET"
+    - "vision language model radiology brain MRI PET"
+    - "self supervised representation learning neuroimaging MRI PET"
+    - "medical image analysis brain MRI PET transformer"
+    - "brain PET amyloid beta tau FDG deep learning"
+    - "Alzheimer dementia MCI brain MRI PET deep learning"
+    - "Parkinson Lewy body frontotemporal dementia neuroimaging machine learning"
+    - "brain tumor glioma stroke epilepsy MRI CT deep learning"
+    - "whole body PET MRI multi-organ medical imaging deep learning"
+    - "radiology medical imaging foundation model multi-organ MRI PET CT"
     - "brain gut microbiome Alzheimer neuroimaging machine learning"
 
   semantic_scholar_queries:
-    - "Alzheimer's disease diagnosis MRI PET deep learning"
-    - "dementia mild cognitive impairment brain MRI PET artificial intelligence"
-    - "neurodegenerative disease neuroimaging deep learning"
-    - "Aβ PET amyloid beta PET Alzheimer's deep learning"
-    - "amyloid-beta PET Abeta PET MCI machine learning"
-    - "amyloid tau FDG PET MRI machine learning"
-    - "Parkinson disease brain MRI PET deep learning"
-    - "Lewy body dementia frontotemporal dementia MRI PET machine learning"
-    - "whole-body PET neurodegenerative disease deep learning"
-    - "total-body PET brain neurodegeneration artificial intelligence"
-    - "foundation model neuroimaging dementia MRI PET"
-    - "self-supervised representation learning neuroimaging dementia MRI PET"
+    - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain imaging MRI fMRI PET artificial intelligence"
+    - "foundation model neuroimaging brain MRI PET"
+    - "vision-language model radiology brain MRI PET"
+    - "self-supervised representation learning neuroimaging MRI PET"
+    - "medical image analysis brain MRI PET transformer"
+    - "brain PET amyloid beta tau FDG deep learning"
+    - "Alzheimer's disease dementia MCI brain MRI PET deep learning"
+    - "Parkinson disease Lewy body frontotemporal dementia neuroimaging machine learning"
+    - "brain tumor glioma stroke epilepsy MRI CT deep learning"
+    - "whole-body PET MRI multi-organ medical imaging deep learning"
+    - "radiology medical imaging foundation model multi-organ MRI PET CT"
     - "brain-gut microbiome Alzheimer's neuroimaging machine learning"
 
 sources:
   pubmed:
     enabled: true
-    max_queries: 14
-    max_results_per_query: 30
+    max_queries: 28
+    max_results_per_query: 45
     sleep_seconds: 0.55
     timeout_seconds: 12
-    max_runtime_seconds: 90
+    max_runtime_seconds: 150
     top_journal_family_search: true
     top_journal_chunk_size: 18
     tool: "medical-ai-paper-digest-bot"
@@ -103,20 +103,20 @@ sources:
 
   semantic_scholar:
     enabled: true
-    max_queries: 21
+    max_queries: 30
     max_queries_without_api_key: 10
     max_results_per_query: 20
     sleep_seconds: 1.0
     timeout_seconds: 12
-    max_runtime_seconds: 90
+    max_runtime_seconds: 120
 
   crossref_top_journals:
     enabled: true
     rows_per_query: 2
-    max_calls: 80
+    max_calls: 240
     sleep_seconds: 0.3
     timeout_seconds: 8
-    max_runtime_seconds: 120
+    max_runtime_seconds: 300
 
 top_journal_families:
   pubmed_journals:
@@ -129,11 +129,93 @@ top_journal_families:
     - "Nature Computational Science"
     - "Nature Methods"
     - "Nature Communications"
+    - "Nature Biotechnology"
+    - "Nature Genetics"
+    - "Nature Human Behaviour"
+    - "Nature Mental Health"
+    - "Nature Cardiovascular Research"
+    - "Nature Cancer"
+    - "Nature Metabolism"
+    - "Nature Microbiology"
+    - "Nature Electronics"
+    - "Nature Nanotechnology"
+    - "Nature Health"
+    - "Communications"
     - "Communications Medicine"
     - "Communications Biology"
+    - "Communications Engineering"
+    - "Communications Psychology"
     - "npj Digital Medicine"
+    - "npj Imaging"
+    - "npj Artificial Intelligence"
+    - "npj Dementia"
     - "npj Parkinson's Disease"
     - "npj Aging"
+    - "npj Mental Health Research"
+    - "npj Precision Oncology"
+    - "npj Breast Cancer"
+    - "npj Cardiovascular Health"
+    - "npj Genomic Medicine"
+    - "npj Biomedical Innovations"
+    - "npj Digital Public Health"
+    - "npj"
+    - "Science"
+    - "Science Translational Medicine"
+    - "Science Advances"
+    - "Science Robotics"
+    - "Science Signaling"
+    - "Science Immunology"
+    - "Cell"
+    - "Neuron"
+    - "Cell Reports"
+    - "Cell Reports Medicine"
+    - "Cell Reports Methods"
+    - "Patterns"
+    - "iScience"
+    - "Med"
+    - "Cell Systems"
+    - "Cell Genomics"
+    - "Cancer Cell"
+    - "Cell Stem Cell"
+    - "Immunity"
+    - "Current Biology"
+    - "Structure"
+    - "Advanced Science"
+    - "Advanced Science (Weinh)"
+    - "The Lancet"
+    - "Lancet Digital Health"
+    - "The Lancet Digital Health"
+    - "The Lancet Neurology"
+    - "Lancet Neurology"
+    - "The Lancet Medical Imaging & Theranostics"
+    - "The Lancet Oncology"
+    - "Lancet Oncology"
+    - "The Lancet Psychiatry"
+    - "Lancet Psychiatry"
+    - "The Lancet Healthy Longevity"
+    - "eBioMedicine"
+    - "eClinicalMedicine"
+    - "Medical Image Analysis"
+    - "IEEE Transactions on Medical Imaging"
+    - "Radiology"
+    - "Radiology: Artificial Intelligence"
+
+  pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract]))'
+
+  crossref_journals:
+    - "Nature"
+    - "Nature Portfolio"
+    - "Nature Medicine"
+    - "Nature Machine Intelligence"
+    - "Nature Neuroscience"
+    - "Nature Biomedical Engineering"
+    - "Nature Computational Science"
+    - "Nature Communications"
+    - "Communications"
+    - "npj"
+    - "npj Digital Medicine"
+    - "npj Imaging"
+    - "npj Dementia"
     - "Science"
     - "Science Translational Medicine"
     - "Science Advances"
@@ -142,69 +224,42 @@ top_journal_families:
     - "Neuron"
     - "Cell Reports"
     - "Cell Reports Medicine"
-    - "Cell Reports Methods"
     - "Patterns"
     - "iScience"
+    - "Med"
+    - "Cell Systems"
     - "Advanced Science"
-    - "Advanced Science (Weinh)"
     - "The Lancet"
+    - "Lancet"
     - "Lancet Digital Health"
-    - "The Lancet Digital Health"
-    - "The Lancet Neurology"
-    - "The Lancet Healthy Longevity"
+    - "Lancet Neurology"
+    - "The Lancet Medical Imaging & Theranostics"
     - "eBioMedicine"
     - "eClinicalMedicine"
     - "Medical Image Analysis"
     - "IEEE Transactions on Medical Imaging"
     - "Radiology"
     - "Radiology: Artificial Intelligence"
-
-  pubmed_topic_block: '((Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract] OR amyloid[Title/Abstract] OR "amyloid beta"[Title/Abstract] OR "amyloid-beta"[Title/Abstract] OR "beta-amyloid"[Title/Abstract] OR Abeta[Title/Abstract] OR Aβ[Title/Abstract] OR tau[Title/Abstract] OR FDG[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR radiomics[Title/Abstract]))'
-
-  crossref_journals:
-    - "Nature"
-    - "Nature Medicine"
-    - "Nature Aging"
-    - "Nature Machine Intelligence"
-    - "Nature Neuroscience"
-    - "Nature Biomedical Engineering"
-    - "Nature Computational Science"
-    - "Nature Methods"
-    - "Nature Communications"
-    - "Communications Medicine"
-    - "npj Digital Medicine"
-    - "npj Parkinson's Disease"
-    - "npj Aging"
-    - "Science"
-    - "Science Translational Medicine"
-    - "Science Advances"
-    - "Cell"
-    - "Neuron"
-    - "Cell Reports Medicine"
-    - "Patterns"
-    - "Advanced Science"
-    - "The Lancet"
-    - "Lancet Digital Health"
-    - "The Lancet Digital Health"
-    - "The Lancet Neurology"
-    - "The Lancet Healthy Longevity"
-    - "eBioMedicine"
-    - "eClinicalMedicine"
-    - "Medical Image Analysis"
-    - "IEEE Transactions on Medical Imaging"
-    - "Radiology"
-    - "Radiology: Artificial Intelligence"
+    - "MICCAI"
+    - "MIDL"
+    - "ISBI"
+    - "NeurIPS"
+    - "ICLR"
+    - "ICML"
+    - "CVPR"
 
   crossref_topic_queries:
-    - "Alzheimer dementia MCI MRI PET amyloid tau deep learning"
-    - "neurodegenerative disease brain MRI PET artificial intelligence"
-    - "Aβ PET amyloid beta PET Alzheimer dementia deep learning"
-    - "amyloid-beta PET Abeta PET MCI machine learning"
-    - "amyloid tau FDG PET MRI machine learning"
-    - "Parkinson Lewy body frontotemporal dementia MRI PET deep learning"
-    - "whole-body total-body PET neurodegenerative disease deep learning"
-    - "foundation model self-supervised neuroimaging dementia MRI PET"
-    - "brain-gut microbiome Alzheimer dementia neuroimaging machine learning"
+    - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "foundation model neuroimaging brain MRI PET"
+    - "Aβ PET amyloid beta tau FDG Alzheimer deep learning"
+    - "Alzheimer dementia MCI brain MRI PET machine learning"
+    - "brain imaging MRI fMRI PET artificial intelligence"
+    - "medical image analysis brain MRI PET transformer"
+    - "vision language model radiology brain MRI PET"
+    - "self-supervised representation learning neuroimaging MRI PET"
+    - "brain tumor glioma stroke epilepsy MRI CT deep learning"
+    - "whole-body total-body PET MRI multi-organ medical imaging deep learning"
+    - "radiology medical imaging foundation model multi-organ MRI PET CT"
 
 venue_categories:
   flagship_main:
@@ -222,23 +277,62 @@ venue_categories:
     - "Nature Computational Science"
     - "Nature Methods"
     - "Nature Communications"
+    - "Nature Biotechnology"
+    - "Nature Genetics"
+    - "Nature Human Behaviour"
+    - "Nature Mental Health"
+    - "Nature Cardiovascular Research"
+    - "Nature Cancer"
+    - "Nature Metabolism"
+    - "Nature Microbiology"
+    - "Nature Electronics"
+    - "Nature Nanotechnology"
+    - "Nature Health"
     - "Communications Medicine"
     - "Communications Biology"
+    - "Communications Engineering"
+    - "Communications Psychology"
     - "npj Digital Medicine"
+    - "npj Imaging"
+    - "npj Artificial Intelligence"
+    - "npj Dementia"
     - "npj Parkinson's Disease"
     - "npj Aging"
+    - "npj Mental Health Research"
+    - "npj Precision Oncology"
+    - "npj Breast Cancer"
+    - "npj Cardiovascular Health"
+    - "npj Genomic Medicine"
+    - "npj Biomedical Innovations"
+    - "npj Digital Public Health"
     - "Science Translational Medicine"
     - "Science Advances"
     - "Science Robotics"
+    - "Science Signaling"
+    - "Science Immunology"
     - "Neuron"
     - "Cell Reports"
     - "Cell Reports Medicine"
     - "Cell Reports Methods"
     - "Patterns"
     - "iScience"
+    - "Med"
+    - "Cell Systems"
+    - "Cell Genomics"
+    - "Cancer Cell"
+    - "Cell Stem Cell"
+    - "Immunity"
+    - "Current Biology"
+    - "Structure"
     - "The Lancet Digital Health"
     - "Lancet Digital Health"
     - "The Lancet Neurology"
+    - "Lancet Neurology"
+    - "The Lancet Medical Imaging & Theranostics"
+    - "The Lancet Oncology"
+    - "Lancet Oncology"
+    - "The Lancet Psychiatry"
+    - "Lancet Psychiatry"
     - "The Lancet Healthy Longevity"
     - "eBioMedicine"
     - "eClinicalMedicine"
@@ -252,9 +346,16 @@ venue_categories:
     - "IEEE Trans Med Imaging"
     - "Radiology"
     - "Radiology: Artificial Intelligence"
+    - "Radiology Advances"
+    - "IEEE Journal of Biomedical and Health Informatics"
+    - "IEEE J Biomed Health Inform"
+    - "IEEE Transactions on Neural Networks and Learning Systems"
+    - "IEEE Trans Neural Netw Learn Syst"
     - "Pattern Recognition"
     - "IEEE Transactions on Pattern Analysis and Machine Intelligence"
     - "IEEE Trans Pattern Anal Mach Intell"
+    - "Information Processing in Medical Imaging"
+    - "IPMI"
     - "MICCAI"
     - "Medical Image Computing and Computer Assisted Intervention"
     - "MIDL"
@@ -313,9 +414,6 @@ scoring:
     - electroencephalographic
     - neural decoding
     - motor imagery
-    - multi-organ imaging diagnosis
-    - multi-organ diagnosis
-    - multi organ diagnosis
     - medical image quality assessment
     - image quality assessment
     - quality assessment
@@ -371,6 +469,18 @@ scoring:
     - pretraining
 
   disease_must_have_any:
+    - brain
+    - brain image
+    - brain imaging
+    - neuroimage
+    - neuroimaging
+    - connectome
+    - cortex
+    - cortical
+    - hippocampus
+    - neurological
+    - neurologic
+    - neuro
     - Alzheimer
     - Alzheimer's
     - dementia
@@ -392,13 +502,50 @@ scoring:
     - Aβ
     - tau
     - FDG
+    - brain tumor
+    - glioma
+    - stroke
+    - epilepsy
+    - multiple sclerosis
+    - radiology
+    - medical imaging
+    - whole-body
+    - whole body
+    - total-body
+    - total body
+    - multi-organ
+    - multi organ
+    - cardiac
+    - heart
+    - lung
+    - liver
+    - kidney
+    - pancreas
+    - prostate
+    - breast
+    - abdominal
+    - abdomen
+    - oncology
+    - tumor
+    - cancer
 
   imaging_must_have_any:
     - MRI
     - fMRI
     - PET
+    - CT
+    - computed tomography
+    - medical imaging
+    - radiology
+    - ultrasound
+    - X-ray
+    - Xray
+    - radiograph
     - PET/MRI
     - PET-MRI
+    - PET/CT
+    - PET-CT
+    - SPECT
     - amyloid PET
     - amyloid beta PET
     - amyloid-beta PET
@@ -454,7 +601,16 @@ scoring:
     radiomics: 3
     "foundation model": 6
     "large multimodal model": 6
+    "vision-language model": 6
+    "vision language model": 6
     multimodal: 4
+    "brain image": 8
+    "brain images": 8
+    "brain imaging": 8
+    neuroimage: 8
+    neuroimaging: 8
+    "brain MRI": 9
+    "brain PET": 9
     "whole-body": 6
     "whole body": 6
     "total-body": 6
@@ -473,6 +629,10 @@ scoring:
     "Aβ-PET": 10
     "whole-body MRI": 7
     "whole body MRI": 7
+    CT: 3
+    "computed tomography": 3
+    PET/CT: 4
+    PET-CT: 4
     PET/MRI: 6
     PET-MRI: 6
     diagnosis: 3
@@ -492,15 +652,28 @@ scoring:
     "uncertainty estimation": 4
     "masked image modeling": 4
     pretraining: 3
+    "medical image analysis": 5
+    "medical imaging": 4
+    "multi-organ": 3
+    "multi organ": 3
+    cardiac: 2
+    lung: 2
+    liver: 2
+    kidney: 2
+    prostate: 2
+    breast: 2
 
   brain_neuro_focus_weights:
-    brain: 4
-    neuro: 4
-    neuroimaging: 7
-    neuroimage: 7
-    MRI: 4
+    brain: 7
+    neuro: 5
+    neuroimaging: 10
+    neuroimage: 10
+    "brain image": 10
+    "brain images": 10
+    "brain imaging": 10
+    MRI: 5
     fMRI: 5
-    PET: 4
+    PET: 5
     "amyloid PET": 7
     "amyloid beta PET": 10
     "amyloid-beta PET": 10
@@ -509,11 +682,13 @@ scoring:
     "A beta PET": 10
     "Aβ PET": 10
     "Aβ-PET": 10
-    "brain MRI": 7
-    "brain imaging": 6
+    "brain MRI": 10
+    "brain PET": 10
     "structural MRI": 5
     "functional MRI": 5
     connectome: 5
+    cortex: 4
+    cortical: 4
     "brain-gut": 9
     "gut-brain": 9
     microbiome: 6
@@ -530,6 +705,11 @@ scoring:
     "Lewy body": 7
     "frontotemporal dementia": 7
     FTD: 5
+    "brain tumor": 6
+    glioma: 6
+    stroke: 5
+    epilepsy: 4
+    "multiple sclerosis": 4
     "whole-body PET": 7
     "whole body PET": 7
     "total-body PET": 7
@@ -543,6 +723,16 @@ scoring:
     "A beta": 6
     Aβ: 6
     tau: 4
+    CT: 2
+    "computed tomography": 2
+    "multi-organ": 3
+    "multi organ": 3
+    cardiac: 2
+    lung: 2
+    liver: 2
+    kidney: 2
+    prostate: 2
+    breast: 2
 
   top_venue_boosts:
     "Nature Medicine": 14
@@ -553,23 +743,66 @@ scoring:
     "Nature Computational Science": 8
     "Nature Methods": 8
     "Nature Communications": 12
+    "Nature Biotechnology": 10
+    "Nature Genetics": 9
+    "Nature Human Behaviour": 9
+    "Nature Mental Health": 9
+    "Nature Cardiovascular Research": 7
+    "Nature Cancer": 7
+    "Nature Metabolism": 7
+    "Nature Microbiology": 6
+    "Nature Electronics": 7
+    "Nature Nanotechnology": 7
+    "Nature Health": 9
     "Communications Medicine": 7
+    "Communications Biology": 6
+    "Communications Engineering": 6
+    "Communications Psychology": 6
     "npj Digital Medicine": 12
+    "npj Imaging": 10
+    "npj Artificial Intelligence": 10
+    "npj Dementia": 12
     "npj Parkinson's Disease": 12
     "npj Aging": 12
+    "npj Mental Health Research": 8
+    "npj Precision Oncology": 6
+    "npj Breast Cancer": 5
+    "npj Cardiovascular Health": 5
+    "npj Genomic Medicine": 5
+    "npj Biomedical Innovations": 7
+    "npj Digital Public Health": 5
     "Nature": 15
     "Science Translational Medicine": 12
     "Science Advances": 11
+    "Science Robotics": 8
+    "Science Signaling": 7
+    "Science Immunology": 6
     "Science": 15
     "Cell Reports Medicine": 11
+    "Cell Reports Methods": 7
     "Cell Reports": 6
     "Patterns": 7
+    "iScience": 5
+    "Med": 8
+    "Cell Systems": 7
+    "Cell Genomics": 7
+    "Cancer Cell": 6
+    "Cell Stem Cell": 6
+    "Immunity": 5
+    "Current Biology": 5
+    "Structure": 5
     "Neuron": 10
     "Cell": 15
     "The Lancet Digital Health": 9
     "Lancet Digital Health": 9
     "The Lancet Neurology": 10
     "Lancet Neurology": 10
+    "The Lancet Medical Imaging & Theranostics": 10
+    "The Lancet Oncology": 6
+    "Lancet Oncology": 6
+    "The Lancet Psychiatry": 6
+    "Lancet Psychiatry": 6
+    "The Lancet Healthy Longevity": 6
     "The Lancet": 10
     "eBioMedicine": 7
     "eClinicalMedicine": 7
@@ -584,7 +817,14 @@ scoring:
     "IEEE Trans Pattern Anal Mach Intell": 8
     "Radiology: Artificial Intelligence": 8
     "Radiology": 7
+    "Radiology Advances": 6
+    "IEEE Journal of Biomedical and Health Informatics": 6
+    "IEEE J Biomed Health Inform": 6
+    "IEEE Transactions on Neural Networks and Learning Systems": 6
+    "IEEE Trans Neural Netw Learn Syst": 6
     "arXiv": 4
+    "IPMI": 7
+    "Information Processing in Medical Imaging": 7
     "MICCAI": 8
     "Medical Image Computing and Computer Assisted Intervention": 8
     "MIDL": 7

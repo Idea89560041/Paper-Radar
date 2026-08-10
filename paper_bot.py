@@ -672,8 +672,8 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
 
     papers: List[Paper] = []
     calls = 0
-    for journal in journals:
-        for topic_query in topic_queries:
+    for topic_query in topic_queries:
+        for journal in journals:
             if source_budget_exhausted("Crossref", deadline):
                 return papers
             if calls >= max_calls:
@@ -816,7 +816,7 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
         return paper
     if disease_must_have_any and not any(contains_term(text_content, keyword) for keyword in disease_must_have_any):
         paper.score = -999.0
-        paper.reasons = ["missing-neurodegenerative-focus"]
+        paper.reasons = ["missing-brain-or-medical-imaging-focus"]
         return paper
     if imaging_must_have_any and not any(contains_term(text_content, keyword) for keyword in imaging_must_have_any):
         paper.score = -999.0
@@ -1026,9 +1026,25 @@ TOPIC_RULES = [
         ],
     ),
     (
+        "Brain Tumor / Stroke / Epilepsy",
+        [
+            "brain tumor",
+            "glioma",
+            "stroke",
+            "epilepsy",
+            "multiple sclerosis",
+            "cortex",
+            "cortical",
+            "connectome",
+        ],
+    ),
+    (
         "Brain MRI / PET",
         [
+            "brain image",
+            "brain images",
             "brain MRI",
+            "brain PET",
             "brain imaging",
             "neuroimaging",
             "neuroimage",
@@ -1048,6 +1064,29 @@ TOPIC_RULES = [
             "whole body MRI",
             "PET/MRI",
             "PET-MRI",
+        ],
+    ),
+    (
+        "Other Organ Medical Imaging",
+        [
+            "multi-organ",
+            "multi organ",
+            "medical imaging",
+            "radiology",
+            "cardiac",
+            "heart",
+            "lung",
+            "liver",
+            "kidney",
+            "pancreas",
+            "prostate",
+            "breast",
+            "abdominal",
+            "abdomen",
+            "CT",
+            "computed tomography",
+            "PET/CT",
+            "PET-CT",
         ],
     ),
     (
@@ -1448,15 +1487,15 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         topic_counts[topic] = topic_counts.get(topic, 0) + 1
 
     focus_terms = [
-        "deep learning for neurodegenerative disease",
+        "brain image / neuroimage first",
+        "deep learning for medical imaging",
         "Alzheimer / dementia / MCI",
-        "Parkinson / Lewy body / FTD",
-        "brain MRI / fMRI",
-        "brain PET / Aβ-PET / amyloid / tau / FDG",
-        "whole-body / total-body PET",
-        "PET/MRI multimodal biomarkers",
-        "foundation / self-supervised neuroimaging",
-        "Nature / Science / Cell / npj family",
+        "brain MRI / fMRI / PET / Aβ-PET",
+        "brain tumor / stroke / epilepsy",
+        "foundation / VLM / self-supervised neuroimaging",
+        "whole-body / multi-organ medical imaging as secondary",
+        "Nature / Science / Cell / Lancet / npj families",
+        "MIA / TMI / Radiology / MICCAI / MIDL / CVPR",
     ]
 
     source_badges = "".join(
@@ -1577,7 +1616,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
-  <meta name="description" content="Daily deep learning paper radar for neurodegenerative disease applications using brain or whole-body PET and MRI.">
+  <meta name="description" content="Daily deep learning paper radar for brain image, neuroimage, PET/MRI, and selected high-value medical imaging papers.">
   <style>
     :root {{
       color-scheme: light;
@@ -1844,7 +1883,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for deep learning papers in neurodegenerative disease applications, focused on Alzheimer/dementia/MCI, Parkinson/Lewy body/FTD, brain PET including Aβ-PET, and brain or whole-body PET/MRI biomarkers, with extra priority for Nature, Science, Cell, and npj-family journals.</p>
+        <p class="subtitle">Daily radar for deep learning papers led by brain image and neuroimage research, especially MRI/fMRI/PET/Aβ-PET, with secondary coverage of high-value whole-body and multi-organ medical imaging papers from flagship journal families and top imaging/AI venues.</p>
       </header>
     </div>
   </div>
