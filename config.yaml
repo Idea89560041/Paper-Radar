@@ -4,7 +4,7 @@
 
 lookback_days: 14
 state_path: data/sent_papers.json
-state_namespace: brain_image_all_methods_v1
+state_namespace: brain_image_all_methods_v2
 
 site:
   title: "Brain Image / Neuroimage Paper Radar"
