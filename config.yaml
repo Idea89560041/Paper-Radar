@@ -4,7 +4,7 @@
 
 lookback_days: 14
 state_path: data/sent_papers.json
-state_namespace: brain_image_all_methods_v2
+state_namespace: brain_image_all_methods_v3
 
 site:
   title: "Brain Image / Neuroimage Paper Radar"
@@ -406,7 +406,7 @@ venue_categories:
     - "medRxiv"
 
 scoring:
-  min_score: 8
+  min_score: 30
 
   fresh_0_3_days_boost: 2
   fresh_4_14_days_boost: 1
@@ -550,27 +550,6 @@ scoring:
     - stroke
     - epilepsy
     - multiple sclerosis
-    - radiology
-    - medical imaging
-    - whole-body
-    - whole body
-    - total-body
-    - total body
-    - multi-organ
-    - multi organ
-    - cardiac
-    - heart
-    - lung
-    - liver
-    - kidney
-    - pancreas
-    - prostate
-    - breast
-    - abdominal
-    - abdomen
-    - oncology
-    - tumor
-    - cancer
 
   imaging_must_have_any:
     - MRI

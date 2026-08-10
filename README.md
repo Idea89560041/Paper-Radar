@@ -2,7 +2,7 @@
 
 This repository powers a daily GitHub Pages dashboard for recent brain image, neuroimage, and high-value medical imaging papers.
 
-The radar prioritizes computational imaging and AI papers involving Brain image / Neuroimage data, not only disease diagnosis or large models. MRI, fMRI, PET, Aβ-PET / amyloid-beta PET, segmentation, registration, reconstruction, denoising, super-resolution, harmonization, synthesis, image translation, image generation, diffusion or generative models, AI agents, vision-language models, foundation models, diagnosis, prognosis, and prediction are all in scope. Whole-body PET/MRI and other organ medical imaging papers are included as secondary signals when they appear in strong venues.
+The radar prioritizes computational imaging and AI papers involving Brain image / Neuroimage data, not only disease diagnosis or large models. MRI, fMRI, PET, Aβ-PET / amyloid-beta PET, segmentation, registration, reconstruction, denoising, super-resolution, harmonization, synthesis, image translation, image generation, diffusion or generative models, AI agents, vision-language models, foundation models, diagnosis, prognosis, and prediction are all in scope. Whole-body PET/MRI and multi-organ imaging papers are included only when they carry a clear brain or neuroimaging signal.
 
 The site is updated automatically every day at about 08:00 China/Hong Kong/Singapore time:
 

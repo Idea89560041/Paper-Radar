@@ -1576,7 +1576,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",
         "AD / dementia / brain tumor / stroke / epilepsy",
-        "whole-body / multi-organ medical imaging as secondary",
+        "whole-body / multi-organ imaging only with brain signal",
     ]
 
     source_badges = "".join(
@@ -1964,7 +1964,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction, with secondary coverage of high-value whole-body and multi-organ medical imaging papers.</p>
+        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. Whole-body and multi-organ imaging papers are included only when they carry a clear brain or neuroimaging signal.</p>
       </header>
     </div>
   </div>
