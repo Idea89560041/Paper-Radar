@@ -4607,6 +4607,17 @@
       "venue": "IEEE J Biomed Health Inform",
       "source": "PubMed",
       "sent_at": "2026-08-10T03:33:37.328565+00:00"
+    },
+    "brain_image_all_methods_v3|77a846f2a2d8ca8c": {
+      "paper_uid": "77a846f2a2d8ca8c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Topology-constrained graph transformer network for structural and functional brain organization.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42574814/",
+      "doi": "10.1016/j.media.2026.104250",
+      "pmid": "42574814",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-08-11T00:46:12.774892+00:00"
     }
   },
   "sent_keys": {
@@ -6377,7 +6388,11 @@
     "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3721110": "brain_image_all_methods_v3|038871afa9050a49",
     "brain_image_all_methods_v3|pmid:42560908": "brain_image_all_methods_v3|038871afa9050a49",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42560908": "brain_image_all_methods_v3|038871afa9050a49",
-    "brain_image_all_methods_v3|title:hierarchical disentanglement guided diffusion for multimodal brain tumor segmentation": "brain_image_all_methods_v3|038871afa9050a49"
+    "brain_image_all_methods_v3|title:hierarchical disentanglement guided diffusion for multimodal brain tumor segmentation": "brain_image_all_methods_v3|038871afa9050a49",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104250": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
+    "brain_image_all_methods_v3|pmid:42574814": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42574814": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
+    "brain_image_all_methods_v3|title:topology constrained graph transformer network for structural and functional brain organization": "brain_image_all_methods_v3|77a846f2a2d8ca8c"
   },
-  "updated_at": "2026-08-10T03:33:37.328788+00:00"
+  "updated_at": "2026-08-11T00:46:12.774995+00:00"
 }
