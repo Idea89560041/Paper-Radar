@@ -4618,6 +4618,17 @@
       "venue": "Med Image Anal",
       "source": "PubMed",
       "sent_at": "2026-08-11T00:46:12.774892+00:00"
+    },
+    "brain_image_all_methods_v3|a19e010b2f10e586": {
+      "paper_uid": "a19e010b2f10e586",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Dual-contrastive modality recovery for incomplete multi-modal brain disease diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42579974/",
+      "doi": "10.1016/j.media.2026.104259",
+      "pmid": "42579974",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-08-13T00:56:04.613399+00:00"
     }
   },
   "sent_keys": {
@@ -6392,7 +6403,11 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104250": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
     "brain_image_all_methods_v3|pmid:42574814": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42574814": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
-    "brain_image_all_methods_v3|title:topology constrained graph transformer network for structural and functional brain organization": "brain_image_all_methods_v3|77a846f2a2d8ca8c"
+    "brain_image_all_methods_v3|title:topology constrained graph transformer network for structural and functional brain organization": "brain_image_all_methods_v3|77a846f2a2d8ca8c",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104259": "brain_image_all_methods_v3|a19e010b2f10e586",
+    "brain_image_all_methods_v3|pmid:42579974": "brain_image_all_methods_v3|a19e010b2f10e586",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42579974": "brain_image_all_methods_v3|a19e010b2f10e586",
+    "brain_image_all_methods_v3|title:dual contrastive modality recovery for incomplete multi modal brain disease diagnosis": "brain_image_all_methods_v3|a19e010b2f10e586"
   },
-  "updated_at": "2026-08-11T00:46:12.774995+00:00"
+  "updated_at": "2026-08-13T00:56:04.613503+00:00"
 }
