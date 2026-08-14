@@ -4629,6 +4629,17 @@
       "venue": "Med Image Anal",
       "source": "PubMed",
       "sent_at": "2026-08-13T00:56:04.613399+00:00"
+    },
+    "brain_image_all_methods_v3|e0267048fe50bdef": {
+      "paper_uid": "e0267048fe50bdef",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "From voxel discovery to regional interaction: A multi-level interpretable framework for Alzheimer's disease diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42585730/",
+      "doi": "10.1016/j.media.2026.104243",
+      "pmid": "42585730",
+      "venue": "Med Image Anal",
+      "source": "PubMed",
+      "sent_at": "2026-08-14T00:53:42.129450+00:00"
     }
   },
   "sent_keys": {
@@ -6407,7 +6418,11 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104259": "brain_image_all_methods_v3|a19e010b2f10e586",
     "brain_image_all_methods_v3|pmid:42579974": "brain_image_all_methods_v3|a19e010b2f10e586",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42579974": "brain_image_all_methods_v3|a19e010b2f10e586",
-    "brain_image_all_methods_v3|title:dual contrastive modality recovery for incomplete multi modal brain disease diagnosis": "brain_image_all_methods_v3|a19e010b2f10e586"
+    "brain_image_all_methods_v3|title:dual contrastive modality recovery for incomplete multi modal brain disease diagnosis": "brain_image_all_methods_v3|a19e010b2f10e586",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104243": "brain_image_all_methods_v3|e0267048fe50bdef",
+    "brain_image_all_methods_v3|pmid:42585730": "brain_image_all_methods_v3|e0267048fe50bdef",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42585730": "brain_image_all_methods_v3|e0267048fe50bdef",
+    "brain_image_all_methods_v3|title:from voxel discovery to regional interaction a multi level interpretable framework for alzheimer s disease diagnosis": "brain_image_all_methods_v3|e0267048fe50bdef"
   },
-  "updated_at": "2026-08-13T00:56:04.613503+00:00"
+  "updated_at": "2026-08-14T00:53:42.129561+00:00"
 }
