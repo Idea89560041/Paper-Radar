@@ -1,8 +1,9 @@
 # Daily Medical Imaging AI Paper Radar configuration
-# Use a 14-day search window plus data/sent_papers.json dedupe to reduce misses
-# caused by delayed indexing in PubMed, Semantic Scholar, Crossref, and arXiv.
+# Use a 180-day search window plus data/sent_papers.json dedupe. Brain imaging
+# papers update daily, while total-body PET / multi-organ trajectory papers are
+# sparse and benefit from a longer rolling window.
 
-lookback_days: 14
+lookback_days: 180
 state_path: data/sent_papers.json
 state_namespace: brain_image_all_methods_v3
 

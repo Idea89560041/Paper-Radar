@@ -8,7 +8,7 @@ The site is updated automatically every day at about 08:00 China/Hong Kong/Singa
 
 https://idea89560041.github.io/Paper-Radar/
 
-For exploratory browsing, the GitHub Actions manual run can temporarily backfill recent years; the scheduled daily run still uses the latest 14-day window.
+For exploratory browsing, the GitHub Actions manual run can temporarily backfill recent years; the scheduled daily run uses a 180-day rolling window with sent-state deduplication.
 
 It searches PubMed, arXiv preprints, Semantic Scholar, and Crossref metadata from flagship journal families, top medical-imaging journals, and major AI conferences. It scores papers against the research profile in `config.yaml`, filters out papers already shown in previous runs, and publishes a static web page plus `papers.json`.
 
