@@ -833,7 +833,13 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
 
     for pattern, boost in venue_boosts.items():
         pattern_l = str(pattern).lower()
-        if pattern_l in venue_text or pattern_l in text_title:
+        pattern_norm = normalize_venue_name(pattern_l)
+        venue_norm = normalize_venue_name(venue_text)
+        if len(pattern_norm) <= 4:
+            venue_match = venue_norm == pattern_norm
+        else:
+            venue_match = pattern_l in venue_text
+        if venue_match or pattern_l in text_title:
             score += float(boost)
             reasons.append(f"venue:{pattern}")
 
@@ -911,7 +917,7 @@ VENUE_CATEGORY_DESCRIPTIONS = {
     "flagship_main": "Nature, Science, and Cell main journals.",
     "flagship_subjournal": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
     "flagship": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
-    "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, MICCAI, MIDL, ISBI and major AI/CV venues.",
+    "top_imaging_ai": "Medical Image Analysis, IEEE TMI, Radiology, JNM, EJNMMI, MICCAI, MIDL, ISBI and major AI/CV venues.",
     "preprint": "arXiv and other preprint servers, useful for earlier idea scouting.",
     "other": "Relevant deep-learning papers from broader indexed journals.",
 }
@@ -967,6 +973,14 @@ DEFAULT_VENUE_CATEGORIES = {
         "IEEE Trans Med Imaging",
         "Radiology",
         "Radiology: Artificial Intelligence",
+        "Journal of Nuclear Medicine",
+        "J Nucl Med",
+        "European Journal of Nuclear Medicine and Molecular Imaging",
+        "Eur J Nucl Med Mol Imaging",
+        "EJNMMI Physics",
+        "EJNMMI Research",
+        "Molecular Imaging and Biology",
+        "Mol Imaging Biol",
         "Pattern Recognition",
         "IEEE Transactions on Pattern Analysis and Machine Intelligence",
         "IEEE Trans Pattern Anal Mach Intell",
@@ -1008,6 +1022,30 @@ TOPIC_RULES = [
             "frontotemporal dementia",
             "FTD",
             "Huntington",
+        ],
+    ),
+    (
+        "Longitudinal / Multi-organ PET",
+        [
+            "total-body PET",
+            "total body PET",
+            "whole-body PET",
+            "whole body PET",
+            "long axial field-of-view PET",
+            "long axial field of view PET",
+            "LAFOV PET",
+            "dynamic PET",
+            "parametric PET",
+            "multi-organ trajectory",
+            "multi organ trajectory",
+            "longitudinal",
+            "trajectory",
+            "trajectories",
+            "kinetic modeling",
+            "parametric imaging",
+            "organ interaction",
+            "organ crosstalk",
+            "metabolic network",
         ],
     ),
     (
@@ -1581,7 +1619,8 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",
         "AD / dementia / brain tumor / stroke / epilepsy",
-        "whole-body / multi-organ imaging only with brain signal",
+        "whole-body / total-body PET multi-organ trajectories",
+        "longitudinal PET / dynamic PET / kinetic modeling",
     ]
 
     source_badges = "".join(
@@ -1969,7 +2008,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. Whole-body and multi-organ imaging papers are included only when they carry a clear brain or neuroimaging signal.</p>
+        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks whole-body and total-body PET/MRI papers on multi-organ change, longitudinal trajectories, dynamic PET, and kinetic or parametric imaging.</p>
       </header>
     </div>
   </div>
