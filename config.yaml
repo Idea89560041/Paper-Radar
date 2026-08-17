@@ -237,14 +237,6 @@ top_journal_families:
     - "IEEE Transactions on Medical Imaging"
     - "Radiology"
     - "Radiology: Artificial Intelligence"
-    - "Journal of Nuclear Medicine"
-    - "J Nucl Med"
-    - "European Journal of Nuclear Medicine and Molecular Imaging"
-    - "Eur J Nucl Med Mol Imaging"
-    - "EJNMMI Physics"
-    - "EJNMMI Research"
-    - "Molecular Imaging and Biology"
-    - "Mol Imaging Biol"
 
   pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR DWI[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR "diffusion-weighted"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract] OR segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR harmonization[Title/Abstract] OR synthesis[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "image analysis"[Title/Abstract] OR longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "kinetic modeling"[Title/Abstract] OR "parametric imaging"[Title/Abstract] OR quantification[Title/Abstract] OR "organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "metabolic network"[Title/Abstract]))'
 
@@ -286,14 +278,6 @@ top_journal_families:
     - "IEEE Transactions on Medical Imaging"
     - "Radiology"
     - "Radiology: Artificial Intelligence"
-    - "Journal of Nuclear Medicine"
-    - "J Nucl Med"
-    - "European Journal of Nuclear Medicine and Molecular Imaging"
-    - "Eur J Nucl Med Mol Imaging"
-    - "EJNMMI Physics"
-    - "EJNMMI Research"
-    - "Molecular Imaging and Biology"
-    - "Mol Imaging Biol"
     - "MICCAI"
     - "MIDL"
     - "ISBI"
@@ -418,14 +402,6 @@ venue_categories:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
     - "Radiology Advances"
-    - "Journal of Nuclear Medicine"
-    - "J Nucl Med"
-    - "European Journal of Nuclear Medicine and Molecular Imaging"
-    - "Eur J Nucl Med Mol Imaging"
-    - "EJNMMI Physics"
-    - "EJNMMI Research"
-    - "Molecular Imaging and Biology"
-    - "Mol Imaging Biol"
     - "IEEE Journal of Biomedical and Health Informatics"
     - "IEEE J Biomed Health Inform"
     - "IEEE Transactions on Neural Networks and Learning Systems"
@@ -499,6 +475,16 @@ scoring:
     - Heliyon
     - PLOS ONE
     - IEEE Access
+    - Journal of Nuclear Medicine
+    - J Nucl Med
+    - American Journal of Nuclear Medicine and Molecular Imaging
+    - Am J Nucl Med Mol Imaging
+    - European Journal of Nuclear Medicine and Molecular Imaging
+    - Eur J Nucl Med Mol Imaging
+    - EJNMMI Physics
+    - EJNMMI Research
+    - Molecular Imaging and Biology
+    - Mol Imaging Biol
 
   hard_must_have_any:
     - deep learning
@@ -1023,14 +1009,6 @@ scoring:
     "eClinicalMedicine": 7
     "Advanced Science": 7
     "Advanced Science (Weinh)": 7
-    "Journal of Nuclear Medicine": 8
-    "J Nucl Med": 8
-    "European Journal of Nuclear Medicine and Molecular Imaging": 8
-    "Eur J Nucl Med Mol Imaging": 8
-    "EJNMMI Physics": 6
-    "EJNMMI Research": 5
-    "Molecular Imaging and Biology": 5
-    "Mol Imaging Biol": 5
     "Medical Image Analysis": 8
     "Med Image Anal": 8
     "IEEE Transactions on Medical Imaging": 8
