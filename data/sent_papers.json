@@ -4948,6 +4948,50 @@
       "venue": "medRxiv",
       "source": "PubMed",
       "sent_at": "2026-08-15T00:33:38.908015+00:00"
+    },
+    "brain_image_all_methods_v3|fbd8709a8ade7989": {
+      "paper_uid": "fbd8709a8ade7989",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep learning-based image denoising can improve the signal-to-noise ratio of the T2-weighted image in brain imaging",
+      "url": "https://www.semanticscholar.org/paper/c40fe6cb495e84f20536455c88d115984e00375f",
+      "doi": "10.1186/s43055-026-01795-z",
+      "pmid": "",
+      "venue": "The Egyptian Journal of Radiology and Nuclear Medicine",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-17T00:34:19.704624+00:00"
+    },
+    "brain_image_all_methods_v3|13ad7ec87c0ff3f0": {
+      "paper_uid": "13ad7ec87c0ff3f0",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep Learning-Based Image Enhancement of Low-Field Brain MRI: A Multicenter Validation of Diagnostic Image Quality and Lesion Detection",
+      "url": "https://www.semanticscholar.org/paper/fcdd47e062bd23b4cf149f5166ff1fe4e54ac9be",
+      "doi": "10.59345/sjrir.v3i2.288",
+      "pmid": "",
+      "venue": "Sriwijaya Journal of Radiology and Imaging Research",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-17T00:34:19.704624+00:00"
+    },
+    "brain_image_all_methods_v3|830146157bd82a9f": {
+      "paper_uid": "830146157bd82a9f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep learning improves image quality in motion-robust and sedation-free pediatric brain MRI",
+      "url": "https://www.semanticscholar.org/paper/2ff43c938ec8bb6e3972e23595e7bbf9124f9f6b",
+      "doi": "10.1007/s00330-026-12482-y",
+      "pmid": "",
+      "venue": "European Radiology",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-08-17T00:34:19.704624+00:00"
+    },
+    "brain_image_all_methods_v3|1788a1aa504dd5ee": {
+      "paper_uid": "1788a1aa504dd5ee",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "AI-assisted [18F]FDG PET/CT quantification: a time-saving approach in large B-cell lymphoma?",
+      "url": "https://doi.org/10.1186/s40658-026-00923-y",
+      "doi": "10.1186/s40658-026-00923-y",
+      "pmid": "",
+      "venue": "EJNMMI Physics",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-17T00:34:19.704624+00:00"
     }
   },
   "sent_keys": {
@@ -6837,7 +6881,19 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.07.15.26357954": "brain_image_all_methods_v3|cda53a16542b6154",
     "brain_image_all_methods_v3|pmid:42528535": "brain_image_all_methods_v3|cda53a16542b6154",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42528535": "brain_image_all_methods_v3|cda53a16542b6154",
-    "brain_image_all_methods_v3|title:portable ultra low field mri deep learning algorithms for white matter lesion segmentation improve accuracy and reflect clinical disability in multiple sclerosis": "brain_image_all_methods_v3|cda53a16542b6154"
+    "brain_image_all_methods_v3|title:portable ultra low field mri deep learning algorithms for white matter lesion segmentation improve accuracy and reflect clinical disability in multiple sclerosis": "brain_image_all_methods_v3|cda53a16542b6154",
+    "brain_image_all_methods_v3|doi:10.1186/s43055-026-01795-z": "brain_image_all_methods_v3|fbd8709a8ade7989",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/c40fe6cb495e84f20536455c88d115984e00375f": "brain_image_all_methods_v3|fbd8709a8ade7989",
+    "brain_image_all_methods_v3|title:deep learning based image denoising can improve the signal to noise ratio of the t2 weighted image in brain imaging": "brain_image_all_methods_v3|fbd8709a8ade7989",
+    "brain_image_all_methods_v3|doi:10.59345/sjrir.v3i2.288": "brain_image_all_methods_v3|13ad7ec87c0ff3f0",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/fcdd47e062bd23b4cf149f5166ff1fe4e54ac9be": "brain_image_all_methods_v3|13ad7ec87c0ff3f0",
+    "brain_image_all_methods_v3|title:deep learning based image enhancement of low field brain mri a multicenter validation of diagnostic image quality and lesion detection": "brain_image_all_methods_v3|13ad7ec87c0ff3f0",
+    "brain_image_all_methods_v3|doi:10.1007/s00330-026-12482-y": "brain_image_all_methods_v3|830146157bd82a9f",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/2ff43c938ec8bb6e3972e23595e7bbf9124f9f6b": "brain_image_all_methods_v3|830146157bd82a9f",
+    "brain_image_all_methods_v3|title:deep learning improves image quality in motion robust and sedation free pediatric brain mri": "brain_image_all_methods_v3|830146157bd82a9f",
+    "brain_image_all_methods_v3|doi:10.1186/s40658-026-00923-y": "brain_image_all_methods_v3|1788a1aa504dd5ee",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s40658-026-00923-y": "brain_image_all_methods_v3|1788a1aa504dd5ee",
+    "brain_image_all_methods_v3|title:ai assisted 18f fdg pet ct quantification a time saving approach in large b cell lymphoma": "brain_image_all_methods_v3|1788a1aa504dd5ee"
   },
-  "updated_at": "2026-08-15T00:33:38.909338+00:00"
+  "updated_at": "2026-08-17T00:34:19.704884+00:00"
 }
