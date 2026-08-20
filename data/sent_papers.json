@@ -5256,6 +5256,28 @@
       "venue": "Med Image Anal",
       "source": "PubMed",
       "sent_at": "2026-08-18T00:31:50.461636+00:00"
+    },
+    "brain_image_all_methods_v3|7c622076d9697833": {
+      "paper_uid": "7c622076d9697833",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Baseline clinical features outperform structural MRI in predicting rapid cognitive and motor decline in Parkinson’s disease",
+      "url": "https://doi.org/10.1038/s41531-026-01530-5",
+      "doi": "10.1038/s41531-026-01530-5",
+      "pmid": "",
+      "venue": "npj Parkinson's Disease",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-20T00:32:10.194123+00:00"
+    },
+    "brain_image_all_methods_v3|c23df8e958a2cbdb": {
+      "paper_uid": "c23df8e958a2cbdb",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Evaluation of the usefulness of post-contrast T2-FLAIR sequence MRI in the diagnosis of intracranial pathology",
+      "url": "https://doi.org/10.1186/s43055-026-01843-8",
+      "doi": "10.1186/s43055-026-01843-8",
+      "pmid": "",
+      "venue": "Egyptian Journal of Radiology and Nuclear Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-20T00:32:10.194123+00:00"
     }
   },
   "sent_keys": {
@@ -7253,7 +7275,13 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104100": "brain_image_all_methods_v3|d79fbf276d830c56",
     "brain_image_all_methods_v3|pmid:42035561": "brain_image_all_methods_v3|d79fbf276d830c56",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42035561": "brain_image_all_methods_v3|d79fbf276d830c56",
-    "brain_image_all_methods_v3|title:learning dual scale context with overlap awareness for keypoint driven partial overlap medical image registration": "brain_image_all_methods_v3|d79fbf276d830c56"
+    "brain_image_all_methods_v3|title:learning dual scale context with overlap awareness for keypoint driven partial overlap medical image registration": "brain_image_all_methods_v3|d79fbf276d830c56",
+    "brain_image_all_methods_v3|doi:10.1038/s41531-026-01530-5": "brain_image_all_methods_v3|7c622076d9697833",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41531-026-01530-5": "brain_image_all_methods_v3|7c622076d9697833",
+    "brain_image_all_methods_v3|title:baseline clinical features outperform structural mri in predicting rapid cognitive and motor decline in parkinson s disease": "brain_image_all_methods_v3|7c622076d9697833",
+    "brain_image_all_methods_v3|doi:10.1186/s43055-026-01843-8": "brain_image_all_methods_v3|c23df8e958a2cbdb",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s43055-026-01843-8": "brain_image_all_methods_v3|c23df8e958a2cbdb",
+    "brain_image_all_methods_v3|title:evaluation of the usefulness of post contrast t2 flair sequence mri in the diagnosis of intracranial pathology": "brain_image_all_methods_v3|c23df8e958a2cbdb"
   },
-  "updated_at": "2026-08-18T00:31:50.462482+00:00"
+  "updated_at": "2026-08-20T00:32:10.194289+00:00"
 }
