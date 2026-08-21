@@ -5278,6 +5278,39 @@
       "venue": "Egyptian Journal of Radiology and Nuclear Medicine",
       "source": "Crossref Top Journals",
       "sent_at": "2026-08-20T00:32:10.194123+00:00"
+    },
+    "brain_image_all_methods_v3|59cc376deda05045": {
+      "paper_uid": "59cc376deda05045",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Benchmarking Generalizability in Deep Learning-Based White Matter Tract Segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42620084/",
+      "doi": "10.64898/2026.07.30.741597",
+      "pmid": "42620084",
+      "venue": "bioRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-08-21T00:34:52.619469+00:00"
+    },
+    "brain_image_all_methods_v3|e99bdc0f287004e1": {
+      "paper_uid": "e99bdc0f287004e1",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "ComBatFamQC: Streamlining Interactive Batch-Effect Diagnostics and Harmonization for Neuroimaging Data in R.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42620122/",
+      "doi": "10.64898/2026.07.29.741509",
+      "pmid": "42620122",
+      "venue": "bioRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-08-21T00:34:52.619469+00:00"
+    },
+    "brain_image_all_methods_v3|70b552a4b93af81f": {
+      "paper_uid": "70b552a4b93af81f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Evaluation of harmonization methods to mitigate assay and cohort effects in plasma p-tau217.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42619722/",
+      "doi": "10.64898/2026.07.24.740589",
+      "pmid": "42619722",
+      "venue": "bioRxiv",
+      "source": "PubMed",
+      "sent_at": "2026-08-21T00:34:52.619469+00:00"
     }
   },
   "sent_keys": {
@@ -7281,7 +7314,19 @@
     "brain_image_all_methods_v3|title:baseline clinical features outperform structural mri in predicting rapid cognitive and motor decline in parkinson s disease": "brain_image_all_methods_v3|7c622076d9697833",
     "brain_image_all_methods_v3|doi:10.1186/s43055-026-01843-8": "brain_image_all_methods_v3|c23df8e958a2cbdb",
     "brain_image_all_methods_v3|url:https://doi.org/10.1186/s43055-026-01843-8": "brain_image_all_methods_v3|c23df8e958a2cbdb",
-    "brain_image_all_methods_v3|title:evaluation of the usefulness of post contrast t2 flair sequence mri in the diagnosis of intracranial pathology": "brain_image_all_methods_v3|c23df8e958a2cbdb"
+    "brain_image_all_methods_v3|title:evaluation of the usefulness of post contrast t2 flair sequence mri in the diagnosis of intracranial pathology": "brain_image_all_methods_v3|c23df8e958a2cbdb",
+    "brain_image_all_methods_v3|doi:10.64898/2026.07.30.741597": "brain_image_all_methods_v3|59cc376deda05045",
+    "brain_image_all_methods_v3|pmid:42620084": "brain_image_all_methods_v3|59cc376deda05045",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42620084": "brain_image_all_methods_v3|59cc376deda05045",
+    "brain_image_all_methods_v3|title:benchmarking generalizability in deep learning based white matter tract segmentation": "brain_image_all_methods_v3|59cc376deda05045",
+    "brain_image_all_methods_v3|doi:10.64898/2026.07.29.741509": "brain_image_all_methods_v3|e99bdc0f287004e1",
+    "brain_image_all_methods_v3|pmid:42620122": "brain_image_all_methods_v3|e99bdc0f287004e1",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42620122": "brain_image_all_methods_v3|e99bdc0f287004e1",
+    "brain_image_all_methods_v3|title:combatfamqc streamlining interactive batch effect diagnostics and harmonization for neuroimaging data in r": "brain_image_all_methods_v3|e99bdc0f287004e1",
+    "brain_image_all_methods_v3|doi:10.64898/2026.07.24.740589": "brain_image_all_methods_v3|70b552a4b93af81f",
+    "brain_image_all_methods_v3|pmid:42619722": "brain_image_all_methods_v3|70b552a4b93af81f",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42619722": "brain_image_all_methods_v3|70b552a4b93af81f",
+    "brain_image_all_methods_v3|title:evaluation of harmonization methods to mitigate assay and cohort effects in plasma p tau217": "brain_image_all_methods_v3|70b552a4b93af81f"
   },
-  "updated_at": "2026-08-20T00:32:10.194289+00:00"
+  "updated_at": "2026-08-21T00:34:52.619682+00:00"
 }
