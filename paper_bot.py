@@ -994,6 +994,35 @@ DEFAULT_VENUE_CATEGORIES = {
 
 TOPIC_RULES = [
     (
+        "Brain-centered Multi-organ Trajectory",
+        [
+            "brain-centered",
+            "brain centered",
+            "brain-body",
+            "brain body",
+            "brain-body axis",
+            "brain body axis",
+            "brain-organ",
+            "brain organ",
+            "brain-organ interaction",
+            "brain organ interaction",
+            "brain-heart",
+            "brain heart",
+            "brain-heart-gut",
+            "brain heart gut",
+            "brain-gut",
+            "gut-brain",
+            "brain-body immune axis",
+            "brain body immune axis",
+            "multi-organ longitudinal",
+            "multi organ longitudinal",
+            "organ interaction",
+            "organ crosstalk",
+            "metabolic network",
+            "immune axis",
+        ],
+    ),
+    (
         "AD / Dementia Diagnosis",
         [
             "Alzheimer",
@@ -1611,6 +1640,9 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",
         "AD / dementia / brain tumor / stroke / epilepsy",
+        "brain-centered multi-organ trajectories",
+        "brain-body / brain-organ axis",
+        "brain-heart-gut metabolic networks",
         "whole-body / total-body PET multi-organ trajectories",
         "longitudinal PET / dynamic PET / kinetic modeling",
     ]
@@ -2000,7 +2032,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks whole-body and total-body PET/MRI papers on multi-organ change, longitudinal trajectories, dynamic PET, and kinetic or parametric imaging.</p>
+        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks brain-centered multi-organ longitudinal trajectories, brain-body / brain-organ axes, whole-body and total-body PET/MRI, dynamic PET, and kinetic or parametric imaging.</p>
       </header>
     </div>
   </div>

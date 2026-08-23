@@ -1,7 +1,7 @@
 # Daily Medical Imaging AI Paper Radar configuration
 # Use a 180-day search window plus data/sent_papers.json dedupe. Brain imaging
-# papers update daily, while total-body PET / multi-organ trajectory papers are
-# sparse and benefit from a longer rolling window.
+# papers update daily, while brain-centered multi-organ trajectory and
+# total-body PET papers are sparse and benefit from a longer rolling window.
 
 lookback_days: 180
 state_path: data/sent_papers.json
@@ -30,6 +30,12 @@ research_profile:
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
     - "neuroimage image synthesis image translation image generation diffusion model"
+    - "brain-centered multi-organ longitudinal trajectory PET MRI"
+    - "brain-body axis multi-organ imaging longitudinal trajectory"
+    - "brain-organ interaction longitudinal imaging PET MRI"
+    - "brain-heart-gut metabolic network whole-body PET neuroimaging"
+    - "brain-body immune axis total-body PET longitudinal"
+    - "neurodegeneration multi-organ trajectory PET MRI brain body"
     - "total-body PET multi-organ longitudinal trajectory metabolic imaging"
     - "whole-body PET multi-organ change trajectory dynamic PET"
     - "long axial field-of-view PET multi-organ disease progression"
@@ -54,6 +60,8 @@ research_profile:
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR synthesis[Title/Abstract] OR harmonization[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR restoration[Title/Abstract])'
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR "brain PET"[Title/Abstract]) AND ("diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR "generative AI"[Title/Abstract] OR GAN[Title/Abstract] OR "latent diffusion"[Title/Abstract] OR "conditional diffusion"[Title/Abstract] OR "flow matching"[Title/Abstract] OR "normalizing flow"[Title/Abstract])'
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "large language model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract])'
+    - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain PET"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR dementia[Title/Abstract] OR Alzheimer*[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND ("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR "brain-body"[Title/Abstract] OR "brain body"[Title/Abstract] OR "brain-organ"[Title/Abstract] OR "brain organ"[Title/Abstract] OR "brain-heart"[Title/Abstract] OR "brain heart"[Title/Abstract] OR "brain-gut"[Title/Abstract] OR "gut-brain"[Title/Abstract] OR "brain-heart-gut"[Title/Abstract] OR "organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "metabolic network"[Title/Abstract] OR "immune axis"[Title/Abstract]) AND (longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR progression[Title/Abstract] OR aging[Title/Abstract] OR "disease progression"[Title/Abstract] OR "disease course"[Title/Abstract])'
+    - '(brain[Title/Abstract] OR dementia[Title/Abstract] OR Alzheimer*[Title/Abstract] OR neurodegenerative[Title/Abstract]) AND ("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "multi-organ imaging"[Title/Abstract] OR "multi organ imaging"[Title/Abstract]) AND ("brain-body"[Title/Abstract] OR "brain body"[Title/Abstract] OR "brain-organ"[Title/Abstract] OR "brain organ"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR trajectory[Title/Abstract] OR longitudinal[Title/Abstract] OR "metabolic network"[Title/Abstract])'
     - '("total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR organ[Title/Abstract] OR systemic[Title/Abstract]) AND (longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR progression[Title/Abstract] OR dynamic[Title/Abstract] OR kinetic[Title/Abstract] OR quantification[Title/Abstract] OR "parametric imaging"[Title/Abstract])'
     - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract]) AND ("organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR "metabolic network"[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
@@ -68,6 +76,12 @@ research_profile:
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
     - "neuroimage image synthesis image translation image generation diffusion model"
+    - "brain-centered multi-organ longitudinal trajectory PET MRI"
+    - "brain-body axis multi-organ imaging longitudinal trajectory"
+    - "brain-organ interaction longitudinal imaging PET MRI"
+    - "brain-heart-gut metabolic network whole-body PET neuroimaging"
+    - "brain-body immune axis total-body PET longitudinal"
+    - "neurodegeneration multi-organ trajectory PET MRI brain body"
     - "total-body PET multi-organ longitudinal trajectory metabolic imaging"
     - "whole-body PET multi-organ change trajectory dynamic PET"
     - "long axial field-of-view PET multi-organ disease progression"
@@ -92,6 +106,12 @@ research_profile:
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
     - "neuroimage image synthesis image translation image generation diffusion model"
+    - "brain-centered multi-organ longitudinal trajectory PET MRI"
+    - "brain-body axis multi-organ imaging longitudinal trajectory"
+    - "brain-organ interaction longitudinal imaging PET MRI"
+    - "brain-heart-gut metabolic network whole-body PET neuroimaging"
+    - "brain-body immune axis total-body PET longitudinal"
+    - "neurodegeneration multi-organ trajectory PET MRI brain body"
     - "total-body PET multi-organ longitudinal trajectory metabolic imaging"
     - "whole-body PET multi-organ change trajectory dynamic PET"
     - "long axial field-of-view PET multi-organ disease progression"
@@ -238,7 +258,7 @@ top_journal_families:
     - "Radiology"
     - "Radiology: Artificial Intelligence"
 
-  pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR DWI[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR "diffusion-weighted"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract] OR segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR harmonization[Title/Abstract] OR synthesis[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "image analysis"[Title/Abstract] OR longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "kinetic modeling"[Title/Abstract] OR "parametric imaging"[Title/Abstract] OR quantification[Title/Abstract] OR "organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "metabolic network"[Title/Abstract]))'
+  pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR "brain-body"[Title/Abstract] OR "brain body"[Title/Abstract] OR "brain-organ"[Title/Abstract] OR "brain organ"[Title/Abstract] OR "brain-heart"[Title/Abstract] OR "brain heart"[Title/Abstract] OR "brain-heart-gut"[Title/Abstract] OR "brain heart gut"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR DWI[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR "diffusion-weighted"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract] OR segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR harmonization[Title/Abstract] OR synthesis[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "image analysis"[Title/Abstract] OR longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "kinetic modeling"[Title/Abstract] OR "parametric imaging"[Title/Abstract] OR quantification[Title/Abstract] OR "organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "metabolic network"[Title/Abstract] OR "brain-centered"[Title/Abstract] OR "brain centered"[Title/Abstract] OR "brain-organ interaction"[Title/Abstract] OR "brain organ interaction"[Title/Abstract] OR "brain-body axis"[Title/Abstract] OR "brain body axis"[Title/Abstract] OR "brain-body immune axis"[Title/Abstract] OR "brain body immune axis"[Title/Abstract]))'
 
   crossref_journals:
     - "Nature"
@@ -288,6 +308,12 @@ top_journal_families:
 
   crossref_topic_queries:
     - "brain image neuroimage neuroimaging MRI PET deep learning"
+    - "brain-centered multi-organ longitudinal trajectory PET MRI"
+    - "brain-body axis multi-organ imaging longitudinal trajectory"
+    - "brain-organ interaction longitudinal imaging PET MRI"
+    - "brain-heart-gut metabolic network whole-body PET neuroimaging"
+    - "brain-body immune axis total-body PET longitudinal"
+    - "neurodegeneration multi-organ trajectory PET MRI brain body"
     - "total-body PET multi-organ longitudinal trajectory metabolic imaging"
     - "whole-body PET multi-organ change trajectory dynamic PET"
     - "long axial field-of-view PET multi-organ disease progression"
@@ -516,6 +542,22 @@ scoring:
     - uncertainty estimation
     - masked image modeling
     - pretraining
+    - brain-centered
+    - brain centered
+    - brain-body
+    - brain body
+    - brain-body axis
+    - brain body axis
+    - brain-organ
+    - brain organ
+    - brain-organ interaction
+    - brain organ interaction
+    - brain-heart
+    - brain heart
+    - brain-heart-gut
+    - brain heart gut
+    - brain-body immune axis
+    - brain body immune axis
     - longitudinal
     - trajectory
     - trajectories
@@ -528,6 +570,22 @@ scoring:
     - organ interaction
     - organ crosstalk
     - metabolic network
+    - brain-centered
+    - brain centered
+    - brain-body
+    - brain body
+    - brain-body axis
+    - brain body axis
+    - brain-organ
+    - brain organ
+    - brain-organ interaction
+    - brain organ interaction
+    - brain-heart
+    - brain heart
+    - brain-heart-gut
+    - brain heart gut
+    - brain-body immune axis
+    - brain body immune axis
     - multi-organ trajectory
     - multi organ trajectory
     - segmentation
@@ -613,6 +671,22 @@ scoring:
     - multi organ
     - multi-system
     - multi system
+    - brain-centered
+    - brain centered
+    - brain-body
+    - brain body
+    - brain-body axis
+    - brain body axis
+    - brain-organ
+    - brain organ
+    - brain-organ interaction
+    - brain organ interaction
+    - brain-heart
+    - brain heart
+    - brain-heart-gut
+    - brain heart gut
+    - brain-body immune axis
+    - brain body immune axis
 
   imaging_must_have_any:
     - MRI
@@ -679,6 +753,22 @@ scoring:
     - gut-brain
     - brain-gut
     - microbiome
+    - brain-centered
+    - brain centered
+    - brain-body
+    - brain body
+    - brain-body axis
+    - brain body axis
+    - brain-organ
+    - brain organ
+    - brain-organ interaction
+    - brain organ interaction
+    - brain-heart
+    - brain heart
+    - brain-heart-gut
+    - brain heart gut
+    - brain-body immune axis
+    - brain body immune axis
     - whole-body
     - whole body
     - total-body
@@ -710,6 +800,22 @@ scoring:
     neuroimaging: 8
     "brain MRI": 9
     "brain PET": 9
+    "brain-centered": 8
+    "brain centered": 8
+    "brain-body": 9
+    "brain body": 9
+    "brain-body axis": 10
+    "brain body axis": 10
+    "brain-organ": 8
+    "brain organ": 8
+    "brain-organ interaction": 10
+    "brain organ interaction": 10
+    "brain-heart": 9
+    "brain heart": 9
+    "brain-heart-gut": 12
+    "brain heart gut": 12
+    "brain-body immune axis": 10
+    "brain body immune axis": 10
     "whole-body": 6
     "whole body": 6
     "total-body": 6
@@ -757,6 +863,9 @@ scoring:
     "organ interaction": 5
     "organ crosstalk": 5
     "metabolic network": 5
+    "immune axis": 5
+    "multi-organ longitudinal": 7
+    "multi organ longitudinal": 7
     "multi-organ trajectory": 8
     "multi organ trajectory": 8
     "long axial field-of-view PET": 8
@@ -854,6 +963,22 @@ scoring:
     microbiome: 6
     "brain gut axis": 10
     "gut brain axis": 10
+    "brain-centered": 9
+    "brain centered": 9
+    "brain-body": 10
+    "brain body": 10
+    "brain-body axis": 11
+    "brain body axis": 11
+    "brain-organ": 9
+    "brain organ": 9
+    "brain-organ interaction": 11
+    "brain organ interaction": 11
+    "brain-heart": 10
+    "brain heart": 10
+    "brain-heart-gut": 12
+    "brain heart gut": 12
+    "brain-body immune axis": 11
+    "brain body immune axis": 11
     Alzheimer: 8
     Alzheimer's: 8
     dementia: 6
@@ -913,6 +1038,9 @@ scoring:
     "organ interaction": 4
     "organ crosstalk": 4
     "metabolic network": 4
+    "immune axis": 4
+    "multi-organ longitudinal": 6
+    "multi organ longitudinal": 6
     hippocampus: 5
     amyloid: 4
     "amyloid beta": 6
