@@ -5311,6 +5311,39 @@
       "venue": "bioRxiv",
       "source": "PubMed",
       "sent_at": "2026-08-21T00:34:52.619469+00:00"
+    },
+    "brain_image_all_methods_v3|84154817e38ea9aa": {
+      "paper_uid": "84154817e38ea9aa",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A unified deep learning framework for cross-platform harmonization of multi-tracer PET quantification in neurodegenerative disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41912831/",
+      "doi": "10.1038/s41746-026-02570-0",
+      "pmid": "41912831",
+      "venue": "NPJ Digit Med",
+      "source": "PubMed",
+      "sent_at": "2026-08-24T00:33:51.476060+00:00"
+    },
+    "brain_image_all_methods_v3|518bf5411e95f9be": {
+      "paper_uid": "518bf5411e95f9be",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Dopaminergic vulnerability in long COVID: striatal PET imaging at the brain-body interface",
+      "url": "https://doi.org/10.1016/j.ebiom.2026.106369",
+      "doi": "10.1016/j.ebiom.2026.106369",
+      "pmid": "",
+      "venue": "eBioMedicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-24T00:33:51.476060+00:00"
+    },
+    "brain_image_all_methods_v3|e97a794601217e6c": {
+      "paper_uid": "e97a794601217e6c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Frequency-filtered attention for cross-species fMRI time series prediction under small-sample learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42633179/",
+      "doi": "10.1016/j.isci.2026.117173",
+      "pmid": "42633179",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-08-24T00:33:51.476060+00:00"
     }
   },
   "sent_keys": {
@@ -7326,7 +7359,18 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.07.24.740589": "brain_image_all_methods_v3|70b552a4b93af81f",
     "brain_image_all_methods_v3|pmid:42619722": "brain_image_all_methods_v3|70b552a4b93af81f",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42619722": "brain_image_all_methods_v3|70b552a4b93af81f",
-    "brain_image_all_methods_v3|title:evaluation of harmonization methods to mitigate assay and cohort effects in plasma p tau217": "brain_image_all_methods_v3|70b552a4b93af81f"
+    "brain_image_all_methods_v3|title:evaluation of harmonization methods to mitigate assay and cohort effects in plasma p tau217": "brain_image_all_methods_v3|70b552a4b93af81f",
+    "brain_image_all_methods_v3|doi:10.1038/s41746-026-02570-0": "brain_image_all_methods_v3|84154817e38ea9aa",
+    "brain_image_all_methods_v3|pmid:41912831": "brain_image_all_methods_v3|84154817e38ea9aa",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/41912831": "brain_image_all_methods_v3|84154817e38ea9aa",
+    "brain_image_all_methods_v3|title:a unified deep learning framework for cross platform harmonization of multi tracer pet quantification in neurodegenerative disease": "brain_image_all_methods_v3|84154817e38ea9aa",
+    "brain_image_all_methods_v3|doi:10.1016/j.ebiom.2026.106369": "brain_image_all_methods_v3|518bf5411e95f9be",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.ebiom.2026.106369": "brain_image_all_methods_v3|518bf5411e95f9be",
+    "brain_image_all_methods_v3|title:dopaminergic vulnerability in long covid striatal pet imaging at the brain body interface": "brain_image_all_methods_v3|518bf5411e95f9be",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117173": "brain_image_all_methods_v3|e97a794601217e6c",
+    "brain_image_all_methods_v3|pmid:42633179": "brain_image_all_methods_v3|e97a794601217e6c",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42633179": "brain_image_all_methods_v3|e97a794601217e6c",
+    "brain_image_all_methods_v3|title:frequency filtered attention for cross species fmri time series prediction under small sample learning": "brain_image_all_methods_v3|e97a794601217e6c"
   },
-  "updated_at": "2026-08-21T00:34:52.619682+00:00"
+  "updated_at": "2026-08-24T00:33:51.476244+00:00"
 }
