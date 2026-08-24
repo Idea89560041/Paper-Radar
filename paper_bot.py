@@ -994,6 +994,21 @@ DEFAULT_VENUE_CATEGORIES = {
 
 TOPIC_RULES = [
     (
+        "Medical Imaging World Models",
+        [
+            "world model",
+            "world models",
+            "world-model",
+            "latent world model",
+            "neural world model",
+            "predictive world model",
+            "world models for medical imaging",
+            "world model for medical imaging",
+            "world model for radiology",
+            "world models for radiology",
+        ],
+    ),
+    (
         "Brain-centered Multi-organ Trajectory",
         [
             "brain-centered",
@@ -1637,6 +1652,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "segmentation / registration / reconstruction",
         "denoising / super-resolution / harmonization",
         "synthesis / translation / generative models",
+        "medical imaging world models",
         "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",
         "AD / dementia / brain tumor / stroke / epilepsy",
@@ -2032,7 +2048,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks brain-centered multi-organ longitudinal trajectories, brain-body / brain-organ axes, whole-body and total-body PET/MRI, dynamic PET, and kinetic or parametric imaging.</p>
+        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, medical imaging world models, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks brain-centered multi-organ longitudinal trajectories, brain-body / brain-organ axes, whole-body and total-body PET/MRI, dynamic PET, and kinetic or parametric imaging.</p>
       </header>
     </div>
   </div>
