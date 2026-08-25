@@ -5344,6 +5344,28 @@
       "venue": "iScience",
       "source": "PubMed",
       "sent_at": "2026-08-24T00:33:51.476060+00:00"
+    },
+    "brain_image_all_methods_v3|7c87d1d034b44f52": {
+      "paper_uid": "7c87d1d034b44f52",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Low-dose CT for MRI-free quantification of tau PET in Alzheimer’s disease: a multicentre, cross-sectional, comparison study",
+      "url": "https://doi.org/10.1016/j.lanmit.2026.100007",
+      "doi": "10.1016/j.lanmit.2026.100007",
+      "pmid": "",
+      "venue": "The Lancet Medical Imaging & Theranostics",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-25T00:33:42.865389+00:00"
+    },
+    "brain_image_all_methods_v3|80021af78a071e6a": {
+      "paper_uid": "80021af78a071e6a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "VesselSim: learning 3D blood vessel segmentation without expert annotations",
+      "url": "https://arxiv.org/abs/2605.26277v2",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-08-25T00:33:42.865389+00:00"
     }
   },
   "sent_keys": {
@@ -7370,7 +7392,12 @@
     "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117173": "brain_image_all_methods_v3|e97a794601217e6c",
     "brain_image_all_methods_v3|pmid:42633179": "brain_image_all_methods_v3|e97a794601217e6c",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42633179": "brain_image_all_methods_v3|e97a794601217e6c",
-    "brain_image_all_methods_v3|title:frequency filtered attention for cross species fmri time series prediction under small sample learning": "brain_image_all_methods_v3|e97a794601217e6c"
+    "brain_image_all_methods_v3|title:frequency filtered attention for cross species fmri time series prediction under small sample learning": "brain_image_all_methods_v3|e97a794601217e6c",
+    "brain_image_all_methods_v3|doi:10.1016/j.lanmit.2026.100007": "brain_image_all_methods_v3|7c87d1d034b44f52",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.lanmit.2026.100007": "brain_image_all_methods_v3|7c87d1d034b44f52",
+    "brain_image_all_methods_v3|title:low dose ct for mri free quantification of tau pet in alzheimer s disease a multicentre cross sectional comparison study": "brain_image_all_methods_v3|7c87d1d034b44f52",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2605.26277v2": "brain_image_all_methods_v3|80021af78a071e6a",
+    "brain_image_all_methods_v3|title:vesselsim learning 3d blood vessel segmentation without expert annotations": "brain_image_all_methods_v3|80021af78a071e6a"
   },
-  "updated_at": "2026-08-24T00:33:51.476244+00:00"
+  "updated_at": "2026-08-25T00:33:42.865512+00:00"
 }
