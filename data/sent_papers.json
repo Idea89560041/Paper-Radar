@@ -5377,6 +5377,17 @@
       "venue": "IEEE Trans Med Imaging",
       "source": "PubMed",
       "sent_at": "2026-08-27T05:20:18.337745+00:00"
+    },
+    "brain_image_all_methods_v3|763e45e753a49579": {
+      "paper_uid": "763e45e753a49579",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Machine learning in neuroradiology: Recent developments and applications",
+      "url": "https://doi.org/10.4329/wjr.123022",
+      "doi": "10.4329/wjr.123022",
+      "pmid": "",
+      "venue": "World Journal of Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-08-28T07:19:09.350315+00:00"
     }
   },
   "sent_keys": {
@@ -7412,7 +7423,10 @@
     "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3727625": "brain_image_all_methods_v3|bd64b3dd2cc9df80",
     "brain_image_all_methods_v3|pmid:42647690": "brain_image_all_methods_v3|bd64b3dd2cc9df80",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42647690": "brain_image_all_methods_v3|bd64b3dd2cc9df80",
-    "brain_image_all_methods_v3|title:sf disennet self supervised function guided disentanglement for fine tuning free brain representation": "brain_image_all_methods_v3|bd64b3dd2cc9df80"
+    "brain_image_all_methods_v3|title:sf disennet self supervised function guided disentanglement for fine tuning free brain representation": "brain_image_all_methods_v3|bd64b3dd2cc9df80",
+    "brain_image_all_methods_v3|doi:10.4329/wjr.123022": "brain_image_all_methods_v3|763e45e753a49579",
+    "brain_image_all_methods_v3|url:https://doi.org/10.4329/wjr.123022": "brain_image_all_methods_v3|763e45e753a49579",
+    "brain_image_all_methods_v3|title:machine learning in neuroradiology recent developments and applications": "brain_image_all_methods_v3|763e45e753a49579"
   },
-  "updated_at": "2026-08-27T05:20:18.337854+00:00"
+  "updated_at": "2026-08-28T07:19:09.350420+00:00"
 }
