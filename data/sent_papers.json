@@ -5388,6 +5388,17 @@
       "venue": "World Journal of Radiology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-08-28T07:19:09.350315+00:00"
+    },
+    "brain_image_all_methods_v3|4280feb97b00d68a": {
+      "paper_uid": "4280feb97b00d68a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "The effects of action-based predictions in early visual cortex.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42662421/",
+      "doi": "10.1016/j.isci.2026.117074",
+      "pmid": "42662421",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-08-29T04:31:33.855972+00:00"
     }
   },
   "sent_keys": {
@@ -7426,7 +7437,11 @@
     "brain_image_all_methods_v3|title:sf disennet self supervised function guided disentanglement for fine tuning free brain representation": "brain_image_all_methods_v3|bd64b3dd2cc9df80",
     "brain_image_all_methods_v3|doi:10.4329/wjr.123022": "brain_image_all_methods_v3|763e45e753a49579",
     "brain_image_all_methods_v3|url:https://doi.org/10.4329/wjr.123022": "brain_image_all_methods_v3|763e45e753a49579",
-    "brain_image_all_methods_v3|title:machine learning in neuroradiology recent developments and applications": "brain_image_all_methods_v3|763e45e753a49579"
+    "brain_image_all_methods_v3|title:machine learning in neuroradiology recent developments and applications": "brain_image_all_methods_v3|763e45e753a49579",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117074": "brain_image_all_methods_v3|4280feb97b00d68a",
+    "brain_image_all_methods_v3|pmid:42662421": "brain_image_all_methods_v3|4280feb97b00d68a",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42662421": "brain_image_all_methods_v3|4280feb97b00d68a",
+    "brain_image_all_methods_v3|title:the effects of action based predictions in early visual cortex": "brain_image_all_methods_v3|4280feb97b00d68a"
   },
-  "updated_at": "2026-08-28T07:19:09.350420+00:00"
+  "updated_at": "2026-08-29T04:31:33.856068+00:00"
 }
