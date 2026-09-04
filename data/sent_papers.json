@@ -5410,6 +5410,17 @@
       "venue": "EBioMedicine",
       "source": "PubMed",
       "sent_at": "2026-08-31T01:54:35.913795+00:00"
+    },
+    "brain_image_all_methods_v3|0a7caf8ec278e94d": {
+      "paper_uid": "0a7caf8ec278e94d",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Robust State-space Reconstruction of Brain Dynamics via Bootstrap Monte Carlo SSA.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42687864/",
+      "doi": "",
+      "pmid": "42687864",
+      "venue": "ArXiv",
+      "source": "PubMed",
+      "sent_at": "2026-09-04T01:38:23.786456+00:00"
     }
   },
   "sent_keys": {
@@ -7456,7 +7467,10 @@
     "brain_image_all_methods_v3|doi:10.1016/j.ebiom.2026.106457": "brain_image_all_methods_v3|9532e0df52a5842b",
     "brain_image_all_methods_v3|pmid:42667924": "brain_image_all_methods_v3|9532e0df52a5842b",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42667924": "brain_image_all_methods_v3|9532e0df52a5842b",
-    "brain_image_all_methods_v3|title:balancing privacy and performance the impact of facial defacing on ai in medical imaging": "brain_image_all_methods_v3|9532e0df52a5842b"
+    "brain_image_all_methods_v3|title:balancing privacy and performance the impact of facial defacing on ai in medical imaging": "brain_image_all_methods_v3|9532e0df52a5842b",
+    "brain_image_all_methods_v3|pmid:42687864": "brain_image_all_methods_v3|0a7caf8ec278e94d",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42687864": "brain_image_all_methods_v3|0a7caf8ec278e94d",
+    "brain_image_all_methods_v3|title:robust state space reconstruction of brain dynamics via bootstrap monte carlo ssa": "brain_image_all_methods_v3|0a7caf8ec278e94d"
   },
-  "updated_at": "2026-08-31T01:54:35.913915+00:00"
+  "updated_at": "2026-09-04T01:38:23.786567+00:00"
 }
