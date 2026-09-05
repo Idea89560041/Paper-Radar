@@ -5421,6 +5421,17 @@
       "venue": "ArXiv",
       "source": "PubMed",
       "sent_at": "2026-09-04T01:38:23.786456+00:00"
+    },
+    "brain_image_all_methods_v3|d1c19fda916f4676": {
+      "paper_uid": "d1c19fda916f4676",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Attention-Driven Framework for Non-Rigid Medical Image Registration.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42696627/",
+      "doi": "10.1109/jbhi.2026.3730918",
+      "pmid": "42696627",
+      "venue": "IEEE J Biomed Health Inform",
+      "source": "PubMed",
+      "sent_at": "2026-09-05T01:39:47.886326+00:00"
     }
   },
   "sent_keys": {
@@ -7470,7 +7481,11 @@
     "brain_image_all_methods_v3|title:balancing privacy and performance the impact of facial defacing on ai in medical imaging": "brain_image_all_methods_v3|9532e0df52a5842b",
     "brain_image_all_methods_v3|pmid:42687864": "brain_image_all_methods_v3|0a7caf8ec278e94d",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42687864": "brain_image_all_methods_v3|0a7caf8ec278e94d",
-    "brain_image_all_methods_v3|title:robust state space reconstruction of brain dynamics via bootstrap monte carlo ssa": "brain_image_all_methods_v3|0a7caf8ec278e94d"
+    "brain_image_all_methods_v3|title:robust state space reconstruction of brain dynamics via bootstrap monte carlo ssa": "brain_image_all_methods_v3|0a7caf8ec278e94d",
+    "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3730918": "brain_image_all_methods_v3|d1c19fda916f4676",
+    "brain_image_all_methods_v3|pmid:42696627": "brain_image_all_methods_v3|d1c19fda916f4676",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42696627": "brain_image_all_methods_v3|d1c19fda916f4676",
+    "brain_image_all_methods_v3|title:attention driven framework for non rigid medical image registration": "brain_image_all_methods_v3|d1c19fda916f4676"
   },
-  "updated_at": "2026-09-04T01:38:23.786567+00:00"
+  "updated_at": "2026-09-05T01:39:47.886434+00:00"
 }
