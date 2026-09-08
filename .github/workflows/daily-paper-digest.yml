@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "paper_bot.py"
+      - "test_paper_bot.py"
       - "config.yaml"
       - "requirements.txt"
       - "README.md"
@@ -62,6 +63,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check retrieval regressions
+        run: |
+          python -m py_compile paper_bot.py
+          python -m unittest -v test_paper_bot
+
       - name: Build paper radar site
         env:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
@@ -96,10 +102,6 @@ jobs:
           fi
 
           if [[ "$IGNORE_SENT_STATE" == "true" ]]; then
-            ARGS+=(--ignore-sent-state)
-          fi
-
-          if [[ "${{ github.event_name }}" == "push" ]]; then
             ARGS+=(--ignore-sent-state)
           fi
 

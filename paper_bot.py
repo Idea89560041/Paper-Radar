@@ -21,6 +21,7 @@ import sys
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
+from collections import Counter
 from dataclasses import dataclass, field
 from email.message import EmailMessage
 from pathlib import Path
@@ -219,7 +220,13 @@ def requests_get_json(
     params: Dict[str, Any] | None = None,
     timeout: int = 30,
 ) -> Any:
-    response = requests.get(url, headers=headers or {}, params=params or {}, timeout=timeout)
+    # NCBI's long journal/topic expressions exceed the GET URL limit.
+    use_post = "eutils.ncbi.nlm.nih.gov/" in url and len(urllib.parse.urlencode(params or {})) > 1500
+    def request():
+        if use_post:
+            return requests.post(url, headers=headers or {}, data=params or {}, timeout=timeout)
+        return requests.get(url, headers=headers or {}, params=params or {}, timeout=timeout)
+    response = request()
     if response.status_code == 429:
         retry_after = response.headers.get("retry-after", "5")
         try:
@@ -227,7 +234,7 @@ def requests_get_json(
         except ValueError:
             sleep_seconds = 5
         time.sleep(sleep_seconds)
-        response = requests.get(url, headers=headers or {}, params=params or {}, timeout=timeout)
+        response = request()
     response.raise_for_status()
     return response.json()
 
@@ -410,7 +417,7 @@ def fetch_pubmed(cfg: Dict[str, Any]) -> List[Paper]:
 
             journal_title = text_of(art.find("./Journal/Title"))
             iso_abbrev = text_of(art.find("./Journal/ISOAbbreviation"))
-            venue = iso_abbrev or journal_title
+            venue = journal_title or iso_abbrev
 
             article_date = art.find("./ArticleDate")
             if article_date is not None:
@@ -672,8 +679,10 @@ def fetch_crossref_top_journals(cfg: Dict[str, Any]) -> List[Paper]:
 
     papers: List[Paper] = []
     calls = 0
-    for topic_query in topic_queries:
-        for journal in journals:
+    # Interleave topics and journals so a call budget cannot starve later topics.
+    for offset in range(len(topic_queries)):
+        for journal_index, journal in enumerate(journals):
+            topic_query = topic_queries[(journal_index + offset) % len(topic_queries)]
             if source_budget_exhausted("Crossref", deadline):
                 return papers
             if calls >= max_calls:
@@ -2093,6 +2102,7 @@ def write_site(papers: List[Paper], cfg: Dict[str, Any], output_dir: str) -> Non
     payload = {
         "generated_at": generated_at,
         "paper_count": len(papers),
+        "retrieval": cfg.get("_retrieval", {}),
         "papers": [paper_to_dict(paper, cfg) for paper in papers],
     }
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
@@ -2146,17 +2156,32 @@ def env_truthy(name: str) -> bool:
 
 def fetch_score_sort_papers(cfg: Dict[str, Any]) -> List[Paper]:
     papers: List[Paper] = []
+    diagnostics = {"source_counts": {}}
+    cfg["_retrieval"] = diagnostics
     for label, fetcher in [
         ("PubMed", fetch_pubmed),
         ("Crossref top journals", fetch_crossref_top_journals),
         ("arXiv", fetch_arxiv),
         ("Semantic Scholar", fetch_semantic_scholar),
     ]:
-        papers.extend(safe_fetch(label, fetcher, cfg))
+        fetched = safe_fetch(label, fetcher, cfg)
+        diagnostics["source_counts"][label] = len(fetched)
+        papers.extend(fetched)
 
+    diagnostics["raw_count"] = len(papers)
+    if not papers:
+        raise RuntimeError("All sources returned zero records; refusing to publish an empty replacement site.")
     papers = [score_paper(paper, cfg) for paper in dedupe(papers)]
+    diagnostics["unique_count"] = len(papers)
     min_score = float(cfg.get("scoring", {}).get("min_score", 8))
+    diagnostics["rejections"] = dict(Counter(
+        paper.reasons[0] if paper.reasons else "below-min-score"
+        for paper in papers if paper.score < min_score
+    ))
     papers = [paper for paper in papers if paper.score >= min_score]
+    diagnostics["qualified_count"] = len(papers)
+    diagnostics["venue_counts"] = dict(Counter(classify_venue_category(paper, cfg) for paper in papers))
+    print(f"[info] Retrieval diagnostics: {json.dumps(diagnostics, ensure_ascii=False)}", flush=True)
     papers.sort(
         key=lambda paper: (paper.score, parse_date(paper.published_date) or dt.date(1900, 1, 1)),
         reverse=True,
@@ -2221,11 +2246,13 @@ def main() -> int:
             sent_keys = state_keys_from_records(state, namespace)
             before_count = len(papers)
             papers = [paper for paper in papers if not already_sent(paper, state, sent_keys, namespace)]
+            cfg["_retrieval"]["unseen_count"] = len(papers)
             print(f"[info] Web mode sent-state filter: {before_count} candidates, {len(papers)} new papers.")
         else:
             state_path = ""
             state = {}
         papers = select_diverse_papers(papers, cfg)
+        cfg["_retrieval"]["selected_count"] = len(papers)
         write_site(papers, cfg, output_dir)
         if bool(site_cfg.get("use_sent_state", True)) and papers:
             mark_sent(papers, state, namespace)
