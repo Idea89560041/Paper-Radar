@@ -276,6 +276,9 @@ top_journal_families:
 
   pubmed_topic_block: '((brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain image"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract] OR connectome[Title/Abstract] OR hippocampus[Title/Abstract] OR cortex[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract] OR glioma[Title/Abstract] OR "brain tumor"[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR "brain-body"[Title/Abstract] OR "brain body"[Title/Abstract] OR "brain-organ"[Title/Abstract] OR "brain organ"[Title/Abstract] OR "brain-heart"[Title/Abstract] OR "brain heart"[Title/Abstract] OR "brain-heart-gut"[Title/Abstract] OR "brain heart gut"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "computed tomography"[Title/Abstract] OR DWI[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR "diffusion-weighted"[Title/Abstract] OR "Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "neural network"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR radiomics[Title/Abstract] OR segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR harmonization[Title/Abstract] OR synthesis[Title/Abstract] OR "image synthesis"[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR "diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR "world model"[Title/Abstract] OR "world models"[Title/Abstract] OR "world-model"[Title/Abstract] OR "latent world model"[Title/Abstract] OR "neural world model"[Title/Abstract] OR "predictive world model"[Title/Abstract] OR agentic[Title/Abstract] OR "AI agent"[Title/Abstract] OR "autonomous agent"[Title/Abstract] OR "image analysis"[Title/Abstract] OR longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "kinetic modeling"[Title/Abstract] OR "parametric imaging"[Title/Abstract] OR quantification[Title/Abstract] OR "organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "metabolic network"[Title/Abstract] OR "brain-centered"[Title/Abstract] OR "brain centered"[Title/Abstract] OR "brain-organ interaction"[Title/Abstract] OR "brain organ interaction"[Title/Abstract] OR "brain-body axis"[Title/Abstract] OR "brain body axis"[Title/Abstract] OR "brain-body immune axis"[Title/Abstract] OR "brain body immune axis"[Title/Abstract]))'
 
+  # Broad flagship-family safety net: Brain Image papers do not need to use AI buzzwords.
+  pubmed_broad_brain_imaging_block: '((brain[Title/Abstract] OR cerebral[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "white matter"[Title/Abstract] OR connectome[Title/Abstract] OR Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR MCI[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR "diffusion MRI"[Title/Abstract] OR dMRI[Title/Abstract] OR DTI[Title/Abstract] OR tractography[Title/Abstract] OR "brain scan"[Title/Abstract] OR "brain scans"[Title/Abstract] OR "brain chart"[Title/Abstract] OR "brain charts"[Title/Abstract] OR "brain morphometry"[Title/Abstract] OR "brain microstructure"[Title/Abstract] OR "white matter microstructure"[Title/Abstract] OR "white matter macrostructure"[Title/Abstract] OR "normative model"[Title/Abstract] OR "normative modeling"[Title/Abstract] OR "normative modelling"[Title/Abstract]))'
+
   crossref_journals:
     - "Nature"
     - "Nature Portfolio"
@@ -323,6 +326,8 @@ top_journal_families:
     - "CVPR"
 
   crossref_topic_queries:
+    - "white matter brain charts lifespan MRI"
+    - "normative modeling brain microstructure diffusion MRI"
     - "brain image neuroimage neuroimaging MRI PET deep learning"
     - "medical imaging world model MRI PET radiology"
     - "neuroimaging world model brain MRI PET"
@@ -509,6 +514,24 @@ scoring:
     - electroencephalographic
     - neural decoding
     - motor imagery
+
+  # These describe an article type only when they appear in the title. In an
+  # abstract, words such as "scanning protocol" or "reviewed" are ordinary prose.
+  title_only_hard_exclude_keywords:
+    - review
+    - systematic review
+    - scoping review
+    - narrative review
+    - umbrella review
+    - meta-analysis
+    - meta analysis
+    - advances and challenges
+    - perspective
+    - editorial
+    - commentary
+    - protocol
+    - guideline
+    - consensus
 
   hard_exclude_venues:
     - Scientific Reports
@@ -769,6 +792,19 @@ scoring:
     - LAFOV PET
     - whole-body MRI
     - whole body MRI
+    - diffusion MRI
+    - diffusion magnetic resonance imaging
+    - dMRI
+    - DTI
+    - tractography
+    - brain scan
+    - brain scans
+    - brain chart
+    - brain charts
+    - brain morphometry
+    - brain microstructure
+    - white matter microstructure
+    - white matter macrostructure
 
   soft_must_have_any:
     - brain
@@ -824,8 +860,17 @@ scoring:
     - trajectory
     - trajectories
   soft_must_have_penalty: 3
+  priority_brain_imaging_boost: 6
 
   keyword_weights:
+    "brain chart": 9
+    "brain charts": 9
+    "normative model": 9
+    "normative modeling": 9
+    "normative modelling": 9
+    "brain microstructure": 8
+    "white matter microstructure": 8
+    "white matter macrostructure": 8
     "medical imaging": 4
     radiology: 3
     "artificial intelligence": 4
@@ -979,6 +1024,17 @@ scoring:
     breast: 2
 
   brain_neuro_focus_weights:
+    "brain chart": 10
+    "brain charts": 10
+    "normative model": 8
+    "normative modeling": 8
+    "normative modelling": 8
+    "brain microstructure": 9
+    "white matter microstructure": 9
+    "white matter macrostructure": 9
+    dMRI: 5
+    DTI: 5
+    tractography: 5
     brain: 7
     neuro: 5
     neuroimaging: 10

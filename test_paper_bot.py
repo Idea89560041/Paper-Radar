@@ -5,6 +5,71 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_flagship_brain_imaging_without_ai_terms_is_retained(self):
+        cfg = bot.load_config("config.yaml")
+        cases = [
+            bot.Paper(
+                source="Crossref Top Journals",
+                title="White matter micro- and macrostructure brain charts for the human lifespan",
+                authors=[],
+                abstract="By processing and standardizing 35,120 brain scans, we mapped white matter pathways across life.",
+                url="https://doi.org/10.1038/s41586-026-10454-2",
+                published_date="2026-05-13",
+                query="flagship brain imaging",
+                venue="Nature",
+                doi="10.1038/s41586-026-10454-2",
+            ),
+            bot.Paper(
+                source="PubMed",
+                title="Lifespan normative modeling of brain microstructure",
+                authors=[],
+                abstract="A normative model based on diffusion MRI and DTI detects MCI and Alzheimer's disease deviations while accounting for scanning protocol parameters.",
+                url="https://doi.org/10.1038/s41467-026-72875-x",
+                published_date="2026-05-27",
+                query="flagship brain imaging",
+                venue="Nature Communications",
+                doi="10.1038/s41467-026-72875-x",
+            ),
+        ]
+        for paper in cases:
+            scored = bot.score_paper(paper, cfg)
+            self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
+            self.assertIn("priority-brain-imaging-venue", scored.reasons)
+
+    def test_non_flagship_neuroscience_without_ai_is_still_rejected(self):
+        cfg = bot.load_config("config.yaml")
+        paper = bot.Paper(
+            source="PubMed",
+            title="White matter brain charts across the lifespan",
+            authors=[],
+            abstract="Diffusion MRI measurements of normal brain development.",
+            url="https://example.org/paper",
+            published_date="2026-05-13",
+            query="brain imaging",
+            venue="Journal of General Neuroscience",
+        )
+        self.assertEqual(bot.score_paper(paper, cfg).reasons, ["missing-ai-dl-method"])
+
+    def test_protocol_article_is_excluded_by_title(self):
+        cfg = bot.load_config("config.yaml")
+        paper = bot.Paper(
+            source="PubMed",
+            title="Protocol for deep learning analysis of brain MRI",
+            authors=[],
+            abstract="Brain MRI segmentation study.",
+            url="https://example.org/protocol",
+            published_date="2026-09-01",
+            query="brain MRI",
+            venue="Nature Communications",
+        )
+        self.assertEqual(bot.score_paper(paper, cfg).reasons, ["hard-exclude:protocol"])
+
+    def test_top_journal_queries_include_broad_brain_imaging_safety_net(self):
+        cfg = bot.load_config("config.yaml")
+        queries = bot.build_pubmed_top_journal_queries(cfg)
+        self.assertTrue(any('"brain scans"[Title/Abstract]' in query for query in queries))
+        self.assertTrue(any('"normative modeling"[Title/Abstract]' in query for query in queries))
+
     def test_long_ncbi_query_uses_post_and_retries(self):
         limited = Mock(status_code=429, headers={"retry-after": "0"})
         success = Mock(status_code=200)

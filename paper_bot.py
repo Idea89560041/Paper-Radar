@@ -307,16 +307,23 @@ def build_pubmed_top_journal_queries(cfg: Dict[str, Any]) -> List[str]:
         return []
 
     journals = cfg.get("top_journal_families", {}).get("pubmed_journals", [])
-    topic_block = cfg.get("top_journal_families", {}).get("pubmed_topic_block", "")
+    family_cfg = cfg.get("top_journal_families", {})
+    topic_blocks = compact_list(
+        [
+            family_cfg.get("pubmed_topic_block", ""),
+            family_cfg.get("pubmed_broad_brain_imaging_block", ""),
+        ]
+    )
     chunk_size = int(source_cfg.get("top_journal_chunk_size", 18))
-    if not journals or not topic_block:
+    if not journals or not topic_blocks:
         return []
 
     queries = []
-    for i in range(0, len(journals), chunk_size):
-        chunk = journals[i : i + chunk_size]
-        journal_block = " OR ".join(f'"{journal}"[Journal]' for journal in chunk)
-        queries.append(f"({journal_block}) AND ({topic_block})")
+    for topic_block in topic_blocks:
+        for i in range(0, len(journals), chunk_size):
+            chunk = journals[i : i + chunk_size]
+            journal_block = " OR ".join(f'"{journal}"[Journal]' for journal in chunk)
+            queries.append(f"({journal_block}) AND ({topic_block})")
     return queries
 
 
@@ -787,6 +794,9 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
     venue_boosts = scoring.get("top_venue_boosts", {})
     exclude_keywords = [str(keyword).lower() for keyword in scoring.get("exclude_keywords", [])]
     hard_exclude_keywords = [str(keyword).lower() for keyword in scoring.get("hard_exclude_keywords", [])]
+    title_only_hard_excludes = {
+        str(keyword).lower() for keyword in scoring.get("title_only_hard_exclude_keywords", [])
+    }
     hard_exclude_venues = [str(keyword).lower() for keyword in scoring.get("hard_exclude_venues", [])]
     hard_must_have_any = [str(keyword).lower() for keyword in scoring.get("hard_must_have_any", [])]
     disease_must_have_any = [str(keyword).lower() for keyword in scoring.get("disease_must_have_any", [])]
@@ -814,23 +824,37 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
             return paper
 
     for keyword in hard_exclude_keywords:
-        if keyword and contains_term(text_content, keyword):
+        exclusion_text = text_title if keyword in title_only_hard_excludes else text_content
+        if keyword and contains_term(exclusion_text, keyword):
             paper.score = -999.0
             paper.reasons = [f"hard-exclude:{keyword}"]
             return paper
 
-    if hard_must_have_any and not any(contains_term(text_content, keyword) for keyword in hard_must_have_any):
+    has_method_focus = any(contains_term(text_content, keyword) for keyword in hard_must_have_any)
+    has_brain_focus = any(contains_term(text_content, keyword) for keyword in disease_must_have_any)
+    has_imaging_focus = any(contains_term(text_content, keyword) for keyword in imaging_must_have_any)
+    venue_category = classify_venue_category(paper, cfg)
+    priority_brain_imaging = (
+        venue_category in {"flagship_main", "flagship_subjournal", "top_imaging_ai"}
+        and has_brain_focus
+        and has_imaging_focus
+    )
+
+    if hard_must_have_any and not has_method_focus and not priority_brain_imaging:
         paper.score = -999.0
         paper.reasons = ["missing-ai-dl-method"]
         return paper
-    if disease_must_have_any and not any(contains_term(text_content, keyword) for keyword in disease_must_have_any):
+    if disease_must_have_any and not has_brain_focus:
         paper.score = -999.0
         paper.reasons = ["missing-brain-or-medical-imaging-focus"]
         return paper
-    if imaging_must_have_any and not any(contains_term(text_content, keyword) for keyword in imaging_must_have_any):
+    if imaging_must_have_any and not has_imaging_focus:
         paper.score = -999.0
         paper.reasons = ["missing-pet/mri-imaging-focus"]
         return paper
+    if priority_brain_imaging and not has_method_focus:
+        score += float(scoring.get("priority_brain_imaging_boost", 6))
+        reasons.append("priority-brain-imaging-venue")
 
     keyword_score, keyword_reasons = add_keyword_scores(text_title, text_all, keyword_weights)
     score += keyword_score
@@ -1002,6 +1026,22 @@ DEFAULT_VENUE_CATEGORIES = {
 }
 
 TOPIC_RULES = [
+    (
+        "Normative Brain Modeling / Trajectories",
+        [
+            "brain chart",
+            "brain charts",
+            "normative model",
+            "normative modeling",
+            "normative modelling",
+            "lifespan trajectory",
+            "lifespan trajectories",
+            "centile curve",
+            "reference curve",
+            "white matter microstructure",
+            "white matter macrostructure",
+        ],
+    ),
     (
         "Medical Imaging World Models",
         [
