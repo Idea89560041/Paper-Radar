@@ -8116,6 +8116,50 @@
       "venue": "Communications psychology",
       "source": "PubMed",
       "sent_at": "2026-09-18T01:52:41.904985+00:00"
+    },
+    "brain_image_all_methods_v3|0a5d07f11433dc37": {
+      "paper_uid": "0a5d07f11433dc37",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multi-contrast MRI acceleration via post-reconstruction fusion.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42753300/",
+      "doi": "10.1016/j.media.2026.104297",
+      "pmid": "42753300",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-09-19T01:56:51.033401+00:00"
+    },
+    "brain_image_all_methods_v3|7568ec8f4e4a8b95": {
+      "paper_uid": "7568ec8f4e4a8b95",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep learning model for the prediction of lymph node metastasis in esophageal squamous cell carcinoma using MIP FDG-PET images: a retrospective validation study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42758372/",
+      "doi": "10.1007/s11604-026-02084-5",
+      "pmid": "42758372",
+      "venue": "Japanese journal of radiology",
+      "source": "PubMed",
+      "sent_at": "2026-09-19T01:56:51.033401+00:00"
+    },
+    "brain_image_all_methods_v3|25cad607e5637b19": {
+      "paper_uid": "25cad607e5637b19",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Comments on “Shortening MRI scanning time for acute ischemic stroke: analysis of the effect of 3.0T MRI compressed sensing deep learning reconstruction”",
+      "url": "https://doi.org/10.1007/s10140-026-02548-1",
+      "doi": "10.1007/s10140-026-02548-1",
+      "pmid": "",
+      "venue": "Emergency Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-19T01:56:51.033401+00:00"
+    },
+    "brain_image_all_methods_v3|91e576fbaa1f5ec8": {
+      "paper_uid": "91e576fbaa1f5ec8",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Neural correlates of information gain during search revealed by fMRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42755863/",
+      "doi": "10.1016/j.isci.2026.117445",
+      "pmid": "42755863",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-09-19T01:56:51.033401+00:00"
     }
   },
   "sent_keys": {
@@ -11139,7 +11183,22 @@
     "brain_image_all_methods_v3|doi:10.1038/s44271-026-00481-0": "brain_image_all_methods_v3|e40a986d1b2ab96a",
     "brain_image_all_methods_v3|pmid:42243459": "brain_image_all_methods_v3|e40a986d1b2ab96a",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42243459": "brain_image_all_methods_v3|e40a986d1b2ab96a",
-    "brain_image_all_methods_v3|title:natural language processing captures memory content associated with shared neural patterns at encoding and retrieval": "brain_image_all_methods_v3|e40a986d1b2ab96a"
+    "brain_image_all_methods_v3|title:natural language processing captures memory content associated with shared neural patterns at encoding and retrieval": "brain_image_all_methods_v3|e40a986d1b2ab96a",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104297": "brain_image_all_methods_v3|0a5d07f11433dc37",
+    "brain_image_all_methods_v3|pmid:42753300": "brain_image_all_methods_v3|0a5d07f11433dc37",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42753300": "brain_image_all_methods_v3|0a5d07f11433dc37",
+    "brain_image_all_methods_v3|title:multi contrast mri acceleration via post reconstruction fusion": "brain_image_all_methods_v3|0a5d07f11433dc37",
+    "brain_image_all_methods_v3|doi:10.1007/s11604-026-02084-5": "brain_image_all_methods_v3|7568ec8f4e4a8b95",
+    "brain_image_all_methods_v3|pmid:42758372": "brain_image_all_methods_v3|7568ec8f4e4a8b95",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42758372": "brain_image_all_methods_v3|7568ec8f4e4a8b95",
+    "brain_image_all_methods_v3|title:deep learning model for the prediction of lymph node metastasis in esophageal squamous cell carcinoma using mip fdg pet images a retrospective validation study": "brain_image_all_methods_v3|7568ec8f4e4a8b95",
+    "brain_image_all_methods_v3|doi:10.1007/s10140-026-02548-1": "brain_image_all_methods_v3|25cad607e5637b19",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1007/s10140-026-02548-1": "brain_image_all_methods_v3|25cad607e5637b19",
+    "brain_image_all_methods_v3|title:comments on shortening mri scanning time for acute ischemic stroke analysis of the effect of 3 0t mri compressed sensing deep learning reconstruction": "brain_image_all_methods_v3|25cad607e5637b19",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117445": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
+    "brain_image_all_methods_v3|pmid:42755863": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42755863": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
+    "brain_image_all_methods_v3|title:neural correlates of information gain during search revealed by fmri": "brain_image_all_methods_v3|91e576fbaa1f5ec8"
   },
-  "updated_at": "2026-09-18T01:52:41.905352+00:00"
+  "updated_at": "2026-09-19T01:56:51.033553+00:00"
 }
