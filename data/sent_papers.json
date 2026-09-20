@@ -8160,6 +8160,28 @@
       "venue": "iScience",
       "source": "PubMed",
       "sent_at": "2026-09-19T01:56:51.033401+00:00"
+    },
+    "brain_image_all_methods_v3|f252cf07ee162c47": {
+      "paper_uid": "f252cf07ee162c47",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Predicting Response to Somatostatin Analog Therapy in GEP-NET Liver Metastases: A Machine Learning Approach with ⁶⁸Ga-DOTATATE and ¹⁸F-FDG PET/CT.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42760167/",
+      "doi": "10.1016/j.acra.2026.08.115",
+      "pmid": "42760167",
+      "venue": "Academic radiology",
+      "source": "PubMed",
+      "sent_at": "2026-09-20T01:59:43.951427+00:00"
+    },
+    "brain_image_all_methods_v3|f716351148cbcb9e": {
+      "paper_uid": "f716351148cbcb9e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Classification of histology and molecular subtypes of brain gliomas and glioneuronal and neuronal tumors using a deep learning approach",
+      "url": "https://doi.org/10.1007/s00330-026-12857-1",
+      "doi": "10.1007/s00330-026-12857-1",
+      "pmid": "",
+      "venue": "European Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-20T01:59:43.951427+00:00"
     }
   },
   "sent_keys": {
@@ -11198,7 +11220,14 @@
     "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117445": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
     "brain_image_all_methods_v3|pmid:42755863": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42755863": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
-    "brain_image_all_methods_v3|title:neural correlates of information gain during search revealed by fmri": "brain_image_all_methods_v3|91e576fbaa1f5ec8"
+    "brain_image_all_methods_v3|title:neural correlates of information gain during search revealed by fmri": "brain_image_all_methods_v3|91e576fbaa1f5ec8",
+    "brain_image_all_methods_v3|doi:10.1016/j.acra.2026.08.115": "brain_image_all_methods_v3|f252cf07ee162c47",
+    "brain_image_all_methods_v3|pmid:42760167": "brain_image_all_methods_v3|f252cf07ee162c47",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42760167": "brain_image_all_methods_v3|f252cf07ee162c47",
+    "brain_image_all_methods_v3|title:predicting response to somatostatin analog therapy in gep net liver metastases a machine learning approach with ⁶⁸ga dotatate and ¹⁸f fdg pet ct": "brain_image_all_methods_v3|f252cf07ee162c47",
+    "brain_image_all_methods_v3|doi:10.1007/s00330-026-12857-1": "brain_image_all_methods_v3|f716351148cbcb9e",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1007/s00330-026-12857-1": "brain_image_all_methods_v3|f716351148cbcb9e",
+    "brain_image_all_methods_v3|title:classification of histology and molecular subtypes of brain gliomas and glioneuronal and neuronal tumors using a deep learning approach": "brain_image_all_methods_v3|f716351148cbcb9e"
   },
-  "updated_at": "2026-09-19T01:56:51.033553+00:00"
+  "updated_at": "2026-09-20T01:59:43.951622+00:00"
 }
