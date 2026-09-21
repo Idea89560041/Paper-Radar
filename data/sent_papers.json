@@ -8182,6 +8182,28 @@
       "venue": "European Radiology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-09-20T01:59:43.951427+00:00"
+    },
+    "brain_image_all_methods_v3|c71a7ca0ddbf314e": {
+      "paper_uid": "c71a7ca0ddbf314e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Vertex-wise biomechanical sensitivity mapping of subcortical structures under atrophy in Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42762597/",
+      "doi": "10.1016/j.media.2026.104332",
+      "pmid": "42762597",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-09-21T02:00:18.162841+00:00"
+    },
+    "brain_image_all_methods_v3|d82cb56b0d51889c": {
+      "paper_uid": "d82cb56b0d51889c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Sex-related variability of white-matter tracts is robust to tractography methodology.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42762266/",
+      "doi": "10.1007/s00429-026-03198-2",
+      "pmid": "42762266",
+      "venue": "Brain structure & function",
+      "source": "PubMed",
+      "sent_at": "2026-09-21T02:00:18.162841+00:00"
     }
   },
   "sent_keys": {
@@ -11227,7 +11249,15 @@
     "brain_image_all_methods_v3|title:predicting response to somatostatin analog therapy in gep net liver metastases a machine learning approach with ⁶⁸ga dotatate and ¹⁸f fdg pet ct": "brain_image_all_methods_v3|f252cf07ee162c47",
     "brain_image_all_methods_v3|doi:10.1007/s00330-026-12857-1": "brain_image_all_methods_v3|f716351148cbcb9e",
     "brain_image_all_methods_v3|url:https://doi.org/10.1007/s00330-026-12857-1": "brain_image_all_methods_v3|f716351148cbcb9e",
-    "brain_image_all_methods_v3|title:classification of histology and molecular subtypes of brain gliomas and glioneuronal and neuronal tumors using a deep learning approach": "brain_image_all_methods_v3|f716351148cbcb9e"
+    "brain_image_all_methods_v3|title:classification of histology and molecular subtypes of brain gliomas and glioneuronal and neuronal tumors using a deep learning approach": "brain_image_all_methods_v3|f716351148cbcb9e",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104332": "brain_image_all_methods_v3|c71a7ca0ddbf314e",
+    "brain_image_all_methods_v3|pmid:42762597": "brain_image_all_methods_v3|c71a7ca0ddbf314e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42762597": "brain_image_all_methods_v3|c71a7ca0ddbf314e",
+    "brain_image_all_methods_v3|title:vertex wise biomechanical sensitivity mapping of subcortical structures under atrophy in parkinson s disease": "brain_image_all_methods_v3|c71a7ca0ddbf314e",
+    "brain_image_all_methods_v3|doi:10.1007/s00429-026-03198-2": "brain_image_all_methods_v3|d82cb56b0d51889c",
+    "brain_image_all_methods_v3|pmid:42762266": "brain_image_all_methods_v3|d82cb56b0d51889c",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42762266": "brain_image_all_methods_v3|d82cb56b0d51889c",
+    "brain_image_all_methods_v3|title:sex related variability of white matter tracts is robust to tractography methodology": "brain_image_all_methods_v3|d82cb56b0d51889c"
   },
-  "updated_at": "2026-09-20T01:59:43.951622+00:00"
+  "updated_at": "2026-09-21T02:00:18.163014+00:00"
 }
