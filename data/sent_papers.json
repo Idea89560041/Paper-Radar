@@ -8204,6 +8204,28 @@
       "venue": "Brain structure & function",
       "source": "PubMed",
       "sent_at": "2026-09-21T02:00:18.162841+00:00"
+    },
+    "brain_image_all_methods_v3|faf115e2130772fc": {
+      "paper_uid": "faf115e2130772fc",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "T1 mapping in Alzheimer’s disease: a quantitative MRI study with amyloid-PET correlation",
+      "url": "https://doi.org/10.1186/s41747-026-00792-1",
+      "doi": "10.1186/s41747-026-00792-1",
+      "pmid": "",
+      "venue": "European Radiology Experimental",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-22T02:07:28.510537+00:00"
+    },
+    "brain_image_all_methods_v3|065535fb49aeffe2": {
+      "paper_uid": "065535fb49aeffe2",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Ultrasound‐Responsive Piezoelectric Fibrous Membrane Promotes Neurological Recovery After TBI by Modulating Microglial Polarization via Restoring Mitochondrial Dynamic Homeostasis",
+      "url": "https://doi.org/10.1002/advs.202600081",
+      "doi": "10.1002/advs.202600081",
+      "pmid": "",
+      "venue": "Advanced Science",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-22T02:07:28.510537+00:00"
     }
   },
   "sent_keys": {
@@ -11257,7 +11279,13 @@
     "brain_image_all_methods_v3|doi:10.1007/s00429-026-03198-2": "brain_image_all_methods_v3|d82cb56b0d51889c",
     "brain_image_all_methods_v3|pmid:42762266": "brain_image_all_methods_v3|d82cb56b0d51889c",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42762266": "brain_image_all_methods_v3|d82cb56b0d51889c",
-    "brain_image_all_methods_v3|title:sex related variability of white matter tracts is robust to tractography methodology": "brain_image_all_methods_v3|d82cb56b0d51889c"
+    "brain_image_all_methods_v3|title:sex related variability of white matter tracts is robust to tractography methodology": "brain_image_all_methods_v3|d82cb56b0d51889c",
+    "brain_image_all_methods_v3|doi:10.1186/s41747-026-00792-1": "brain_image_all_methods_v3|faf115e2130772fc",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s41747-026-00792-1": "brain_image_all_methods_v3|faf115e2130772fc",
+    "brain_image_all_methods_v3|title:t1 mapping in alzheimer s disease a quantitative mri study with amyloid pet correlation": "brain_image_all_methods_v3|faf115e2130772fc",
+    "brain_image_all_methods_v3|doi:10.1002/advs.202600081": "brain_image_all_methods_v3|065535fb49aeffe2",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1002/advs.202600081": "brain_image_all_methods_v3|065535fb49aeffe2",
+    "brain_image_all_methods_v3|title:ultrasound responsive piezoelectric fibrous membrane promotes neurological recovery after tbi by modulating microglial polarization via restoring mitochondrial dynamic homeostasis": "brain_image_all_methods_v3|065535fb49aeffe2"
   },
-  "updated_at": "2026-09-21T02:00:18.163014+00:00"
+  "updated_at": "2026-09-22T02:07:28.510714+00:00"
 }
