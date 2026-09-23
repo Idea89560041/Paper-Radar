@@ -8226,6 +8226,28 @@
       "venue": "Advanced Science",
       "source": "Crossref Top Journals",
       "sent_at": "2026-09-22T02:07:28.510537+00:00"
+    },
+    "brain_image_all_methods_v3|c9df249ed0499f1d": {
+      "paper_uid": "c9df249ed0499f1d",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep Learning-derived Bone Mineral Density and Longitudinal White Matter Microstructure and Cognitive Decline: Multi-Ethnic Study of Atherosclerosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42770818/",
+      "doi": "10.1148/radiol.260656",
+      "pmid": "42770818",
+      "venue": "Radiology",
+      "source": "PubMed",
+      "sent_at": "2026-09-23T02:07:16.951035+00:00"
+    },
+    "brain_image_all_methods_v3|253b2804f2d8a593": {
+      "paper_uid": "253b2804f2d8a593",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "MRI-based fetal gestational age estimation using a structure-aware self-supervised network.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42768216/",
+      "doi": "10.1007/s00330-026-12845-5",
+      "pmid": "42768216",
+      "venue": "European radiology",
+      "source": "PubMed",
+      "sent_at": "2026-09-23T02:07:16.951035+00:00"
     }
   },
   "sent_keys": {
@@ -11285,7 +11307,15 @@
     "brain_image_all_methods_v3|title:t1 mapping in alzheimer s disease a quantitative mri study with amyloid pet correlation": "brain_image_all_methods_v3|faf115e2130772fc",
     "brain_image_all_methods_v3|doi:10.1002/advs.202600081": "brain_image_all_methods_v3|065535fb49aeffe2",
     "brain_image_all_methods_v3|url:https://doi.org/10.1002/advs.202600081": "brain_image_all_methods_v3|065535fb49aeffe2",
-    "brain_image_all_methods_v3|title:ultrasound responsive piezoelectric fibrous membrane promotes neurological recovery after tbi by modulating microglial polarization via restoring mitochondrial dynamic homeostasis": "brain_image_all_methods_v3|065535fb49aeffe2"
+    "brain_image_all_methods_v3|title:ultrasound responsive piezoelectric fibrous membrane promotes neurological recovery after tbi by modulating microglial polarization via restoring mitochondrial dynamic homeostasis": "brain_image_all_methods_v3|065535fb49aeffe2",
+    "brain_image_all_methods_v3|doi:10.1148/radiol.260656": "brain_image_all_methods_v3|c9df249ed0499f1d",
+    "brain_image_all_methods_v3|pmid:42770818": "brain_image_all_methods_v3|c9df249ed0499f1d",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42770818": "brain_image_all_methods_v3|c9df249ed0499f1d",
+    "brain_image_all_methods_v3|title:deep learning derived bone mineral density and longitudinal white matter microstructure and cognitive decline multi ethnic study of atherosclerosis": "brain_image_all_methods_v3|c9df249ed0499f1d",
+    "brain_image_all_methods_v3|doi:10.1007/s00330-026-12845-5": "brain_image_all_methods_v3|253b2804f2d8a593",
+    "brain_image_all_methods_v3|pmid:42768216": "brain_image_all_methods_v3|253b2804f2d8a593",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42768216": "brain_image_all_methods_v3|253b2804f2d8a593",
+    "brain_image_all_methods_v3|title:mri based fetal gestational age estimation using a structure aware self supervised network": "brain_image_all_methods_v3|253b2804f2d8a593"
   },
-  "updated_at": "2026-09-22T02:07:28.510714+00:00"
+  "updated_at": "2026-09-23T02:07:16.951212+00:00"
 }
