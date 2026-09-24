@@ -5,6 +5,35 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_diffusion_mri_segmentation_topic_is_prioritized(self):
+        cfg = bot.load_config("config.yaml")
+        paper = bot.Paper(
+            source="arXiv",
+            title="Transformer-based diffusion MRI white matter tract segmentation",
+            authors=[],
+            abstract="We parcellate fiber bundles from dMRI tractography using deep learning.",
+            url="https://arxiv.org/abs/2609.12345",
+            published_date="2026-09-20",
+            query="diffusion MRI segmentation parcellation",
+            venue="arXiv",
+        )
+        scored = bot.score_paper(paper, cfg)
+        self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
+        self.assertEqual(bot.infer_topic(scored), "Diffusion MRI Segmentation / Parcellation")
+
+    def test_new_topic_queries_fit_source_limits(self):
+        cfg = bot.load_config("config.yaml")
+        profile = cfg["research_profile"]
+        self.assertLessEqual(
+            len(profile["pubmed_queries"]) + len(bot.build_pubmed_top_journal_queries(cfg)),
+            cfg["sources"]["pubmed"]["max_queries"],
+        )
+        self.assertLessEqual(len(profile["arxiv_queries"]), cfg["sources"]["arxiv"]["max_queries"])
+        self.assertLessEqual(
+            len(profile["semantic_scholar_queries"]),
+            cfg["sources"]["semantic_scholar"]["max_queries"],
+        )
+
     def test_flagship_brain_imaging_without_ai_terms_is_retained(self):
         cfg = bot.load_config("config.yaml")
         cases = [

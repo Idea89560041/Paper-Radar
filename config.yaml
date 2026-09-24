@@ -26,6 +26,8 @@ research_profile:
   name: "Brain Image / Neuroimage"
 
   queries:
+    - "diffusion MRI segmentation parcellation white matter tracts deep learning"
+    - "dMRI DTI tract bundle segmentation brain parcellation"
     - "brain image neuroimage neuroimaging MRI PET deep learning"
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
@@ -61,6 +63,8 @@ research_profile:
     - "brain gut microbiome Alzheimer dementia neuroimaging machine learning"
 
   pubmed_queries:
+    - '("diffusion MRI"[Title/Abstract] OR "diffusion magnetic resonance imaging"[Title/Abstract] OR dMRI[Title/Abstract] OR DTI[Title/Abstract] OR "diffusion tensor imaging"[Title/Abstract]) AND (segmentation[Title/Abstract] OR parcellation[Title/Abstract] OR "tract segmentation"[Title/Abstract] OR "tract parcellation"[Title/Abstract] OR "bundle segmentation"[Title/Abstract] OR "fiber tract segmentation"[Title/Abstract] OR "fibre tract segmentation"[Title/Abstract]) AND (brain[Title/Abstract] OR cerebral[Title/Abstract] OR neuroimaging[Title/Abstract] OR "white matter"[Title/Abstract])'
+    - '(tractography[Title/Abstract] OR "white matter tract"[Title/Abstract] OR "white matter bundle"[Title/Abstract]) AND (segmentation[Title/Abstract] OR parcellation[Title/Abstract] OR delineation[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract] OR "neural network"[Title/Abstract] OR atlas[Title/Abstract])'
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR "medical imaging"[Title/Abstract] OR radiology[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract] OR "neural network"[Title/Abstract] OR radiomics[Title/Abstract])'
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR fMRI[Title/Abstract] OR "brain PET"[Title/Abstract]) AND (segmentation[Title/Abstract] OR registration[Title/Abstract] OR reconstruction[Title/Abstract] OR denoising[Title/Abstract] OR enhancement[Title/Abstract] OR "super-resolution"[Title/Abstract] OR "super resolution"[Title/Abstract] OR synthesis[Title/Abstract] OR harmonization[Title/Abstract] OR "image translation"[Title/Abstract] OR "image generation"[Title/Abstract] OR restoration[Title/Abstract])'
     - '(brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR "brain MRI"[Title/Abstract] OR "brain PET"[Title/Abstract]) AND ("diffusion model"[Title/Abstract] OR "generative model"[Title/Abstract] OR "generative AI"[Title/Abstract] OR GAN[Title/Abstract] OR "latent diffusion"[Title/Abstract] OR "conditional diffusion"[Title/Abstract] OR "flow matching"[Title/Abstract] OR "normalizing flow"[Title/Abstract])'
@@ -78,6 +82,8 @@ research_profile:
     - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR neurodegenerative[Title/Abstract] OR brain[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
 
   arxiv_queries:
+    - "diffusion MRI segmentation parcellation white matter tracts deep learning"
+    - "dMRI DTI tract bundle segmentation brain parcellation transformer"
     - "brain image neuroimage neuroimaging MRI PET deep learning"
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
@@ -113,6 +119,8 @@ research_profile:
     - "brain gut microbiome Alzheimer neuroimaging machine learning"
 
   semantic_scholar_queries:
+    - "diffusion MRI segmentation parcellation white matter tracts deep learning"
+    - "dMRI DTI tract bundle segmentation brain parcellation transformer"
     - "brain image neuroimage neuroimaging MRI PET deep learning"
     - "brain image analysis segmentation registration reconstruction MRI PET"
     - "brain MRI PET denoising super-resolution harmonization deep learning"
@@ -326,6 +334,8 @@ top_journal_families:
     - "CVPR"
 
   crossref_topic_queries:
+    - "diffusion MRI segmentation parcellation white matter tracts"
+    - "dMRI DTI tract bundle segmentation brain parcellation"
     - "white matter brain charts lifespan MRI"
     - "normative modeling brain microstructure diffusion MRI"
     - "brain image neuroimage neuroimaging MRI PET deep learning"
@@ -639,6 +649,10 @@ scoring:
     - multi-organ trajectory
     - multi organ trajectory
     - segmentation
+    - parcellation
+    - tract segmentation
+    - tract parcellation
+    - bundle segmentation
     - registration
     - reconstruction
     - denoising
@@ -675,6 +689,12 @@ scoring:
 
   disease_must_have_any:
     - brain
+    - white matter
+    - tractography
+    - diffusion MRI
+    - diffusion magnetic resonance imaging
+    - dMRI
+    - DTI
     - brain image
     - brain imaging
     - neuroimage
@@ -863,6 +883,17 @@ scoring:
   priority_brain_imaging_boost: 6
 
   keyword_weights:
+    "diffusion MRI segmentation": 10
+    "diffusion MRI parcellation": 10
+    "dMRI segmentation": 9
+    "dMRI parcellation": 9
+    "DTI segmentation": 8
+    "DTI parcellation": 8
+    "white matter tract segmentation": 10
+    "tract segmentation": 8
+    "tract parcellation": 8
+    "bundle segmentation": 8
+    parcellation: 4
     "brain chart": 9
     "brain charts": 9
     "normative model": 9
@@ -1024,6 +1055,17 @@ scoring:
     breast: 2
 
   brain_neuro_focus_weights:
+    "diffusion MRI segmentation": 11
+    "diffusion MRI parcellation": 11
+    "dMRI segmentation": 10
+    "dMRI parcellation": 10
+    "DTI segmentation": 9
+    "DTI parcellation": 9
+    "white matter tract segmentation": 11
+    "tract segmentation": 9
+    "tract parcellation": 9
+    "bundle segmentation": 9
+    parcellation: 5
     "brain chart": 10
     "brain charts": 10
     "normative model": 8

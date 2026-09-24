@@ -1027,6 +1027,24 @@ DEFAULT_VENUE_CATEGORIES = {
 
 TOPIC_RULES = [
     (
+        "Diffusion MRI Segmentation / Parcellation",
+        [
+            "diffusion mri segmentation",
+            "diffusion mri parcellation",
+            "dmri segmentation",
+            "dmri parcellation",
+            "dti segmentation",
+            "dti parcellation",
+            "white matter tract segmentation",
+            "tract segmentation",
+            "tract parcellation",
+            "fiber tract segmentation",
+            "fibre tract segmentation",
+            "bundle segmentation",
+            "bundle parcellation",
+        ],
+    ),
+    (
         "Normative Brain Modeling / Trajectories",
         [
             "brain chart",
@@ -1696,6 +1714,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         topic_counts[topic] = topic_counts.get(topic, 0) + 1
 
     focus_terms = [
+        "diffusion MRI segmentation / parcellation",
         "brain image / neuroimage first",
         "any brain image task or method",
         "segmentation / registration / reconstruction",
