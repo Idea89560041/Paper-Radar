@@ -8248,6 +8248,39 @@
       "venue": "European radiology",
       "source": "PubMed",
       "sent_at": "2026-09-23T02:07:16.951035+00:00"
+    },
+    "brain_image_all_methods_v3|9626d736057681e0": {
+      "paper_uid": "9626d736057681e0",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Medial temporal default mode network selectively encodes autobiographical visual imagery.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42777057/",
+      "doi": "10.1126/sciadv.aee4232",
+      "pmid": "42777057",
+      "venue": "Science advances",
+      "source": "PubMed",
+      "sent_at": "2026-09-24T01:55:06.909137+00:00"
+    },
+    "brain_image_all_methods_v3|a287a157b8c1f43a": {
+      "paper_uid": "a287a157b8c1f43a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Impact of MRI modality selection on glioma sub-region segmentation using 3D U-Net and Attention U-Net: A comparative evaluation across ten MRI sequences.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42774812/",
+      "doi": "10.1016/j.ejro.2026.100817",
+      "pmid": "42774812",
+      "venue": "European journal of radiology open",
+      "source": "PubMed",
+      "sent_at": "2026-09-24T01:55:06.909137+00:00"
+    },
+    "brain_image_all_methods_v3|f4aa162eb090784f": {
+      "paper_uid": "f4aa162eb090784f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Orbital granulomatosis with polyangiitis: MRI discriminators from IgG4-related disease and lymphoma",
+      "url": "https://doi.org/10.1093/bjr/tqag234",
+      "doi": "10.1093/bjr/tqag234",
+      "pmid": "",
+      "venue": "British Journal of Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-24T01:55:06.909137+00:00"
     }
   },
   "sent_keys": {
@@ -11315,7 +11348,18 @@
     "brain_image_all_methods_v3|doi:10.1007/s00330-026-12845-5": "brain_image_all_methods_v3|253b2804f2d8a593",
     "brain_image_all_methods_v3|pmid:42768216": "brain_image_all_methods_v3|253b2804f2d8a593",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42768216": "brain_image_all_methods_v3|253b2804f2d8a593",
-    "brain_image_all_methods_v3|title:mri based fetal gestational age estimation using a structure aware self supervised network": "brain_image_all_methods_v3|253b2804f2d8a593"
+    "brain_image_all_methods_v3|title:mri based fetal gestational age estimation using a structure aware self supervised network": "brain_image_all_methods_v3|253b2804f2d8a593",
+    "brain_image_all_methods_v3|doi:10.1126/sciadv.aee4232": "brain_image_all_methods_v3|9626d736057681e0",
+    "brain_image_all_methods_v3|pmid:42777057": "brain_image_all_methods_v3|9626d736057681e0",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42777057": "brain_image_all_methods_v3|9626d736057681e0",
+    "brain_image_all_methods_v3|title:medial temporal default mode network selectively encodes autobiographical visual imagery": "brain_image_all_methods_v3|9626d736057681e0",
+    "brain_image_all_methods_v3|doi:10.1016/j.ejro.2026.100817": "brain_image_all_methods_v3|a287a157b8c1f43a",
+    "brain_image_all_methods_v3|pmid:42774812": "brain_image_all_methods_v3|a287a157b8c1f43a",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42774812": "brain_image_all_methods_v3|a287a157b8c1f43a",
+    "brain_image_all_methods_v3|title:impact of mri modality selection on glioma sub region segmentation using 3d u net and attention u net a comparative evaluation across ten mri sequences": "brain_image_all_methods_v3|a287a157b8c1f43a",
+    "brain_image_all_methods_v3|doi:10.1093/bjr/tqag234": "brain_image_all_methods_v3|f4aa162eb090784f",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1093/bjr/tqag234": "brain_image_all_methods_v3|f4aa162eb090784f",
+    "brain_image_all_methods_v3|title:orbital granulomatosis with polyangiitis mri discriminators from igg4 related disease and lymphoma": "brain_image_all_methods_v3|f4aa162eb090784f"
   },
-  "updated_at": "2026-09-23T02:07:16.951212+00:00"
+  "updated_at": "2026-09-24T01:55:06.909299+00:00"
 }
