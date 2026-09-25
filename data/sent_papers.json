@@ -8402,6 +8402,61 @@
       "venue": "Medical image analysis",
       "source": "PubMed",
       "sent_at": "2026-09-24T08:46:00.186450+00:00"
+    },
+    "brain_image_all_methods_v3|6b0626425925eb85": {
+      "paper_uid": "6b0626425925eb85",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Beyond statistical thresholds: Mapping sequential ATN cascade transitions via brain structural topography in Alzheimer’s disease",
+      "url": "https://doi.org/10.1126/sciadv.aef3787",
+      "doi": "10.1126/sciadv.aef3787",
+      "pmid": "",
+      "venue": "Science Advances",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-25T02:09:34.358306+00:00"
+    },
+    "brain_image_all_methods_v3|a65c50110132875c": {
+      "paper_uid": "a65c50110132875c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Divergent amyloid trajectories distinguish normal aging from Alzheimer's disease progression.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42779718/",
+      "doi": "10.64898/2026.09.08.748727",
+      "pmid": "42779718",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-09-25T02:09:34.358306+00:00"
+    },
+    "brain_image_all_methods_v3|a3f7c940cbe2c751": {
+      "paper_uid": "a3f7c940cbe2c751",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multiterritory Acute Ischemic Stroke with Bilateral Middle Cerebellar Peduncle T2/FLAIR Hyperintensities in the Setting of a Fatal Systemic Arterial Thrombotic Process: A Case Report.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42780601/",
+      "doi": "10.1016/j.radcr.2026.08.046",
+      "pmid": "42780601",
+      "venue": "Radiology case reports",
+      "source": "PubMed",
+      "sent_at": "2026-09-25T02:09:34.358306+00:00"
+    },
+    "brain_image_all_methods_v3|e6ec216583c8e650": {
+      "paper_uid": "e6ec216583c8e650",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Eigenvalue Signatures Reveal Residual Motion Effects Across Resting-State fMRI Denoising Strategies.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42779620/",
+      "doi": "10.64898/2026.09.08.750194",
+      "pmid": "42779620",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-09-25T02:09:34.358306+00:00"
+    },
+    "brain_image_all_methods_v3|39476413ab3bf04b": {
+      "paper_uid": "39476413ab3bf04b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Voxel-Matching NORDIC: Non-local patch formation by time-series similarity increases tSNR in high-resolution BOLD fMRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42780221/",
+      "doi": "10.1002/mrm.1910250220",
+      "pmid": "42780221",
+      "venue": "ArXiv",
+      "source": "PubMed",
+      "sent_at": "2026-09-25T02:09:34.358306+00:00"
     }
   },
   "sent_keys": {
@@ -11523,7 +11578,26 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104218": "brain_image_all_methods_v3|d1d9df0533bbdf86",
     "brain_image_all_methods_v3|pmid:42470797": "brain_image_all_methods_v3|d1d9df0533bbdf86",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42470797": "brain_image_all_methods_v3|d1d9df0533bbdf86",
-    "brain_image_all_methods_v3|title:enhanced multimodal mri classification of schizophrenia through cross attention graph neural networks": "brain_image_all_methods_v3|d1d9df0533bbdf86"
+    "brain_image_all_methods_v3|title:enhanced multimodal mri classification of schizophrenia through cross attention graph neural networks": "brain_image_all_methods_v3|d1d9df0533bbdf86",
+    "brain_image_all_methods_v3|doi:10.1126/sciadv.aef3787": "brain_image_all_methods_v3|6b0626425925eb85",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1126/sciadv.aef3787": "brain_image_all_methods_v3|6b0626425925eb85",
+    "brain_image_all_methods_v3|title:beyond statistical thresholds mapping sequential atn cascade transitions via brain structural topography in alzheimer s disease": "brain_image_all_methods_v3|6b0626425925eb85",
+    "brain_image_all_methods_v3|doi:10.64898/2026.09.08.748727": "brain_image_all_methods_v3|a65c50110132875c",
+    "brain_image_all_methods_v3|pmid:42779718": "brain_image_all_methods_v3|a65c50110132875c",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42779718": "brain_image_all_methods_v3|a65c50110132875c",
+    "brain_image_all_methods_v3|title:divergent amyloid trajectories distinguish normal aging from alzheimer s disease progression": "brain_image_all_methods_v3|a65c50110132875c",
+    "brain_image_all_methods_v3|doi:10.1016/j.radcr.2026.08.046": "brain_image_all_methods_v3|a3f7c940cbe2c751",
+    "brain_image_all_methods_v3|pmid:42780601": "brain_image_all_methods_v3|a3f7c940cbe2c751",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42780601": "brain_image_all_methods_v3|a3f7c940cbe2c751",
+    "brain_image_all_methods_v3|title:multiterritory acute ischemic stroke with bilateral middle cerebellar peduncle t2 flair hyperintensities in the setting of a fatal systemic arterial thrombotic process a case repor": "brain_image_all_methods_v3|a3f7c940cbe2c751",
+    "brain_image_all_methods_v3|doi:10.64898/2026.09.08.750194": "brain_image_all_methods_v3|e6ec216583c8e650",
+    "brain_image_all_methods_v3|pmid:42779620": "brain_image_all_methods_v3|e6ec216583c8e650",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42779620": "brain_image_all_methods_v3|e6ec216583c8e650",
+    "brain_image_all_methods_v3|title:eigenvalue signatures reveal residual motion effects across resting state fmri denoising strategies": "brain_image_all_methods_v3|e6ec216583c8e650",
+    "brain_image_all_methods_v3|doi:10.1002/mrm.1910250220": "brain_image_all_methods_v3|39476413ab3bf04b",
+    "brain_image_all_methods_v3|pmid:42780221": "brain_image_all_methods_v3|39476413ab3bf04b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42780221": "brain_image_all_methods_v3|39476413ab3bf04b",
+    "brain_image_all_methods_v3|title:voxel matching nordic non local patch formation by time series similarity increases tsnr in high resolution bold fmri": "brain_image_all_methods_v3|39476413ab3bf04b"
   },
-  "updated_at": "2026-09-24T08:46:00.187069+00:00"
+  "updated_at": "2026-09-25T02:09:34.358614+00:00"
 }
