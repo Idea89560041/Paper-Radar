@@ -8556,6 +8556,39 @@
       "venue": "IEEE transactions on medical imaging",
       "source": "PubMed",
       "sent_at": "2026-09-26T02:17:53.060507+00:00"
+    },
+    "brain_image_all_methods_v3|749b8810f1fea70b": {
+      "paper_uid": "749b8810f1fea70b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Accelerating 7T Gradient-Echo Brain MRI With Generative AI Denoising.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42800791/",
+      "doi": "10.1016/j.acra.2026.09.011",
+      "pmid": "42800791",
+      "venue": "Academic radiology",
+      "source": "PubMed",
+      "sent_at": "2026-09-28T02:13:40.510690+00:00"
+    },
+    "brain_image_all_methods_v3|4f696fe96dfd45ab": {
+      "paper_uid": "4f696fe96dfd45ab",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Longitudinal Awake Mouse Brain Imaging Using Functional Ultrasound and Functional Ultrasound Localization Microscopy",
+      "url": "https://doi.org/10.1002/advs.77931",
+      "doi": "10.1002/advs.77931",
+      "pmid": "",
+      "venue": "Advanced Science",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-28T02:13:40.510690+00:00"
+    },
+    "brain_image_all_methods_v3|f5f6dfe9e844e825": {
+      "paper_uid": "f5f6dfe9e844e825",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Thalamocortical white matter microstructure and cognition following mild traumatic brain injury: A fixel-based analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42799906/",
+      "doi": "10.1007/s00429-026-03193-7",
+      "pmid": "42799906",
+      "venue": "Brain structure & function",
+      "source": "PubMed",
+      "sent_at": "2026-09-28T02:13:40.510690+00:00"
     }
   },
   "sent_keys": {
@@ -11731,7 +11764,18 @@
     "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3735891": "brain_image_all_methods_v3|cb025788597bad89",
     "brain_image_all_methods_v3|pmid:42785276": "brain_image_all_methods_v3|cb025788597bad89",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42785276": "brain_image_all_methods_v3|cb025788597bad89",
-    "brain_image_all_methods_v3|title:message in a bottleneck interpretable deep learning for dynamic effective brain connectivity": "brain_image_all_methods_v3|cb025788597bad89"
+    "brain_image_all_methods_v3|title:message in a bottleneck interpretable deep learning for dynamic effective brain connectivity": "brain_image_all_methods_v3|cb025788597bad89",
+    "brain_image_all_methods_v3|doi:10.1016/j.acra.2026.09.011": "brain_image_all_methods_v3|749b8810f1fea70b",
+    "brain_image_all_methods_v3|pmid:42800791": "brain_image_all_methods_v3|749b8810f1fea70b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42800791": "brain_image_all_methods_v3|749b8810f1fea70b",
+    "brain_image_all_methods_v3|title:accelerating 7t gradient echo brain mri with generative ai denoising": "brain_image_all_methods_v3|749b8810f1fea70b",
+    "brain_image_all_methods_v3|doi:10.1002/advs.77931": "brain_image_all_methods_v3|4f696fe96dfd45ab",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1002/advs.77931": "brain_image_all_methods_v3|4f696fe96dfd45ab",
+    "brain_image_all_methods_v3|title:longitudinal awake mouse brain imaging using functional ultrasound and functional ultrasound localization microscopy": "brain_image_all_methods_v3|4f696fe96dfd45ab",
+    "brain_image_all_methods_v3|doi:10.1007/s00429-026-03193-7": "brain_image_all_methods_v3|f5f6dfe9e844e825",
+    "brain_image_all_methods_v3|pmid:42799906": "brain_image_all_methods_v3|f5f6dfe9e844e825",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42799906": "brain_image_all_methods_v3|f5f6dfe9e844e825",
+    "brain_image_all_methods_v3|title:thalamocortical white matter microstructure and cognition following mild traumatic brain injury a fixel based analysis": "brain_image_all_methods_v3|f5f6dfe9e844e825"
   },
-  "updated_at": "2026-09-26T02:17:53.060893+00:00"
+  "updated_at": "2026-09-28T02:13:40.510908+00:00"
 }
