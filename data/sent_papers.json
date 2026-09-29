@@ -8589,6 +8589,50 @@
       "venue": "Brain structure & function",
       "source": "PubMed",
       "sent_at": "2026-09-28T02:13:40.510690+00:00"
+    },
+    "brain_image_all_methods_v3|6d02bde25016dd33": {
+      "paper_uid": "6d02bde25016dd33",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Tractogram foundation model",
+      "url": "https://www.semanticscholar.org/paper/134c1c1584d57fe2d13213f69d0fb08dc56147e0",
+      "doi": "10.48550/arxiv.2606.09893",
+      "pmid": "",
+      "venue": "arXiv.org",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-09-29T03:01:11.659507+00:00"
+    },
+    "brain_image_all_methods_v3|8c9edd9485e90f01": {
+      "paper_uid": "8c9edd9485e90f01",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "AutoATQ: Automating Along-Tract Quantification Without Tractography",
+      "url": "https://www.semanticscholar.org/paper/96255f33d38d621771c1d84162a328046bf77f1f",
+      "doi": "10.1109/isbi61048.2026.11515591",
+      "pmid": "",
+      "venue": "IEEE International Symposium on Biomedical Imaging",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-09-29T03:01:11.659507+00:00"
+    },
+    "brain_image_all_methods_v3|9756b0fb11581ccf": {
+      "paper_uid": "9756b0fb11581ccf",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Cross-Modality Structural Guidance in 3D Latent Diffusion for Robust FLAIR Super-Resolution",
+      "url": "https://www.semanticscholar.org/paper/0601583aad64860f30a02fc4e827c8fae148dec2",
+      "doi": "10.48550/arxiv.2606.25255",
+      "pmid": "",
+      "venue": "arXiv.org",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-09-29T03:01:11.659507+00:00"
+    },
+    "brain_image_all_methods_v3|ae44b146b236c2ee": {
+      "paper_uid": "ae44b146b236c2ee",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Toward CT-based Tractography: Presurgical White Matter Tract Mapping in Intracerebral Hemorrhage",
+      "url": "https://www.semanticscholar.org/paper/02322002af9baff9eb1b01248a1f278eb1a07726",
+      "doi": "10.64898/2026.05.18.724202",
+      "pmid": "",
+      "venue": "bioRxiv",
+      "source": "Semantic Scholar",
+      "sent_at": "2026-09-29T03:01:11.659507+00:00"
     }
   },
   "sent_keys": {
@@ -11775,7 +11819,19 @@
     "brain_image_all_methods_v3|doi:10.1007/s00429-026-03193-7": "brain_image_all_methods_v3|f5f6dfe9e844e825",
     "brain_image_all_methods_v3|pmid:42799906": "brain_image_all_methods_v3|f5f6dfe9e844e825",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42799906": "brain_image_all_methods_v3|f5f6dfe9e844e825",
-    "brain_image_all_methods_v3|title:thalamocortical white matter microstructure and cognition following mild traumatic brain injury a fixel based analysis": "brain_image_all_methods_v3|f5f6dfe9e844e825"
+    "brain_image_all_methods_v3|title:thalamocortical white matter microstructure and cognition following mild traumatic brain injury a fixel based analysis": "brain_image_all_methods_v3|f5f6dfe9e844e825",
+    "brain_image_all_methods_v3|doi:10.48550/arxiv.2606.09893": "brain_image_all_methods_v3|6d02bde25016dd33",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/134c1c1584d57fe2d13213f69d0fb08dc56147e0": "brain_image_all_methods_v3|6d02bde25016dd33",
+    "brain_image_all_methods_v3|title:tractogram foundation model": "brain_image_all_methods_v3|6d02bde25016dd33",
+    "brain_image_all_methods_v3|doi:10.1109/isbi61048.2026.11515591": "brain_image_all_methods_v3|8c9edd9485e90f01",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/96255f33d38d621771c1d84162a328046bf77f1f": "brain_image_all_methods_v3|8c9edd9485e90f01",
+    "brain_image_all_methods_v3|title:autoatq automating along tract quantification without tractography": "brain_image_all_methods_v3|8c9edd9485e90f01",
+    "brain_image_all_methods_v3|doi:10.48550/arxiv.2606.25255": "brain_image_all_methods_v3|9756b0fb11581ccf",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/0601583aad64860f30a02fc4e827c8fae148dec2": "brain_image_all_methods_v3|9756b0fb11581ccf",
+    "brain_image_all_methods_v3|title:cross modality structural guidance in 3d latent diffusion for robust flair super resolution": "brain_image_all_methods_v3|9756b0fb11581ccf",
+    "brain_image_all_methods_v3|doi:10.64898/2026.05.18.724202": "brain_image_all_methods_v3|ae44b146b236c2ee",
+    "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/02322002af9baff9eb1b01248a1f278eb1a07726": "brain_image_all_methods_v3|ae44b146b236c2ee",
+    "brain_image_all_methods_v3|title:toward ct based tractography presurgical white matter tract mapping in intracerebral hemorrhage": "brain_image_all_methods_v3|ae44b146b236c2ee"
   },
-  "updated_at": "2026-09-28T02:13:40.510908+00:00"
+  "updated_at": "2026-09-29T03:01:11.659747+00:00"
 }
