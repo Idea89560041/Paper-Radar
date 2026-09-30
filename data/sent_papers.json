@@ -8633,6 +8633,39 @@
       "venue": "bioRxiv",
       "source": "Semantic Scholar",
       "sent_at": "2026-09-29T03:01:11.659507+00:00"
+    },
+    "brain_image_all_methods_v3|b742f9ace1bab092": {
+      "paper_uid": "b742f9ace1bab092",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Generalizable CT vision-language modeling for population health and disease risk",
+      "url": "https://doi.org/10.1038/s41746-026-03257-2",
+      "doi": "10.1038/s41746-026-03257-2",
+      "pmid": "",
+      "venue": "npj Digital Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-30T02:41:38.824722+00:00"
+    },
+    "brain_image_all_methods_v3|a8c88590d9862d2a": {
+      "paper_uid": "a8c88590d9862d2a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Neurolymphomatosis Involving the Brachial Plexus: Correlative MRI and FDG PET-CT Findings",
+      "url": "https://doi.org/10.1055/s-0046-1829089",
+      "doi": "10.1055/s-0046-1829089",
+      "pmid": "",
+      "venue": "Indian Journal of Radiology and Imaging",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-30T02:41:38.824722+00:00"
+    },
+    "brain_image_all_methods_v3|bbf523e1f69c9a51": {
+      "paper_uid": "bbf523e1f69c9a51",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "MRI findings of chondroblastomas of the knee: preferential physeal involvement with tibial lesions",
+      "url": "https://doi.org/10.1007/s00256-026-05377-y",
+      "doi": "10.1007/s00256-026-05377-y",
+      "pmid": "",
+      "venue": "Skeletal Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-09-30T02:41:38.824722+00:00"
     }
   },
   "sent_keys": {
@@ -11831,7 +11864,16 @@
     "brain_image_all_methods_v3|title:cross modality structural guidance in 3d latent diffusion for robust flair super resolution": "brain_image_all_methods_v3|9756b0fb11581ccf",
     "brain_image_all_methods_v3|doi:10.64898/2026.05.18.724202": "brain_image_all_methods_v3|ae44b146b236c2ee",
     "brain_image_all_methods_v3|url:https://www.semanticscholar.org/paper/02322002af9baff9eb1b01248a1f278eb1a07726": "brain_image_all_methods_v3|ae44b146b236c2ee",
-    "brain_image_all_methods_v3|title:toward ct based tractography presurgical white matter tract mapping in intracerebral hemorrhage": "brain_image_all_methods_v3|ae44b146b236c2ee"
+    "brain_image_all_methods_v3|title:toward ct based tractography presurgical white matter tract mapping in intracerebral hemorrhage": "brain_image_all_methods_v3|ae44b146b236c2ee",
+    "brain_image_all_methods_v3|doi:10.1038/s41746-026-03257-2": "brain_image_all_methods_v3|b742f9ace1bab092",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41746-026-03257-2": "brain_image_all_methods_v3|b742f9ace1bab092",
+    "brain_image_all_methods_v3|title:generalizable ct vision language modeling for population health and disease risk": "brain_image_all_methods_v3|b742f9ace1bab092",
+    "brain_image_all_methods_v3|doi:10.1055/s-0046-1829089": "brain_image_all_methods_v3|a8c88590d9862d2a",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1055/s-0046-1829089": "brain_image_all_methods_v3|a8c88590d9862d2a",
+    "brain_image_all_methods_v3|title:neurolymphomatosis involving the brachial plexus correlative mri and fdg pet ct findings": "brain_image_all_methods_v3|a8c88590d9862d2a",
+    "brain_image_all_methods_v3|doi:10.1007/s00256-026-05377-y": "brain_image_all_methods_v3|bbf523e1f69c9a51",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1007/s00256-026-05377-y": "brain_image_all_methods_v3|bbf523e1f69c9a51",
+    "brain_image_all_methods_v3|title:mri findings of chondroblastomas of the knee preferential physeal involvement with tibial lesions": "brain_image_all_methods_v3|bbf523e1f69c9a51"
   },
-  "updated_at": "2026-09-29T03:01:11.659747+00:00"
+  "updated_at": "2026-09-30T02:41:38.824893+00:00"
 }
