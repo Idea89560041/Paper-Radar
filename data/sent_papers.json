@@ -8666,6 +8666,50 @@
       "venue": "Skeletal Radiology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-09-30T02:41:38.824722+00:00"
+    },
+    "brain_image_all_methods_v3|ec0f6bfd3810c1ef": {
+      "paper_uid": "ec0f6bfd3810c1ef",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Neuroimaging in the era of biologically defined Alzheimer's disease and disease-modifying therapy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42716046/",
+      "doi": "10.1016/s1474-4422(26)00285-1",
+      "pmid": "42716046",
+      "venue": "The Lancet. Neurology",
+      "source": "PubMed",
+      "sent_at": "2026-10-01T02:44:25.947584+00:00"
+    },
+    "brain_image_all_methods_v3|a14910f83c6d1b3a": {
+      "paper_uid": "a14910f83c6d1b3a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "“No meat no treat” Comment on: 18F-FDG PET/CT in pediatric langerhans cell histiocytosis: Relation to BRAFv600e mutation and risk stratification",
+      "url": "https://doi.org/10.1016/j.ejrad.2026.112977",
+      "doi": "10.1016/j.ejrad.2026.112977",
+      "pmid": "",
+      "venue": "European Journal of Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-01T02:44:25.947584+00:00"
+    },
+    "brain_image_all_methods_v3|bec2215ab24259c7": {
+      "paper_uid": "bec2215ab24259c7",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "FPGL: A meta-learned implicit neural representation framework for medical image segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42809994/",
+      "doi": "10.1016/j.media.2026.104316",
+      "pmid": "42809994",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-01T02:44:25.947584+00:00"
+    },
+    "brain_image_all_methods_v3|6d09ead81ad53268": {
+      "paper_uid": "6d09ead81ad53268",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "AI Latency, Report Turnaround Time, and Adoption in a Multi-Vendor AI Ecosystem: A Multi-Site Observational Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42810607/",
+      "doi": "10.1016/j.jacr.2026.09.026",
+      "pmid": "42810607",
+      "venue": "Journal of the American College of Radiology : JACR",
+      "source": "PubMed",
+      "sent_at": "2026-10-01T02:44:25.947584+00:00"
     }
   },
   "sent_keys": {
@@ -11873,7 +11917,22 @@
     "brain_image_all_methods_v3|title:neurolymphomatosis involving the brachial plexus correlative mri and fdg pet ct findings": "brain_image_all_methods_v3|a8c88590d9862d2a",
     "brain_image_all_methods_v3|doi:10.1007/s00256-026-05377-y": "brain_image_all_methods_v3|bbf523e1f69c9a51",
     "brain_image_all_methods_v3|url:https://doi.org/10.1007/s00256-026-05377-y": "brain_image_all_methods_v3|bbf523e1f69c9a51",
-    "brain_image_all_methods_v3|title:mri findings of chondroblastomas of the knee preferential physeal involvement with tibial lesions": "brain_image_all_methods_v3|bbf523e1f69c9a51"
+    "brain_image_all_methods_v3|title:mri findings of chondroblastomas of the knee preferential physeal involvement with tibial lesions": "brain_image_all_methods_v3|bbf523e1f69c9a51",
+    "brain_image_all_methods_v3|doi:10.1016/s1474-4422(26)00285-1": "brain_image_all_methods_v3|ec0f6bfd3810c1ef",
+    "brain_image_all_methods_v3|pmid:42716046": "brain_image_all_methods_v3|ec0f6bfd3810c1ef",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42716046": "brain_image_all_methods_v3|ec0f6bfd3810c1ef",
+    "brain_image_all_methods_v3|title:neuroimaging in the era of biologically defined alzheimer s disease and disease modifying therapy": "brain_image_all_methods_v3|ec0f6bfd3810c1ef",
+    "brain_image_all_methods_v3|doi:10.1016/j.ejrad.2026.112977": "brain_image_all_methods_v3|a14910f83c6d1b3a",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.ejrad.2026.112977": "brain_image_all_methods_v3|a14910f83c6d1b3a",
+    "brain_image_all_methods_v3|title:no meat no treat comment on 18f fdg pet ct in pediatric langerhans cell histiocytosis relation to brafv600e mutation and risk stratification": "brain_image_all_methods_v3|a14910f83c6d1b3a",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104316": "brain_image_all_methods_v3|bec2215ab24259c7",
+    "brain_image_all_methods_v3|pmid:42809994": "brain_image_all_methods_v3|bec2215ab24259c7",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42809994": "brain_image_all_methods_v3|bec2215ab24259c7",
+    "brain_image_all_methods_v3|title:fpgl a meta learned implicit neural representation framework for medical image segmentation": "brain_image_all_methods_v3|bec2215ab24259c7",
+    "brain_image_all_methods_v3|doi:10.1016/j.jacr.2026.09.026": "brain_image_all_methods_v3|6d09ead81ad53268",
+    "brain_image_all_methods_v3|pmid:42810607": "brain_image_all_methods_v3|6d09ead81ad53268",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42810607": "brain_image_all_methods_v3|6d09ead81ad53268",
+    "brain_image_all_methods_v3|title:ai latency report turnaround time and adoption in a multi vendor ai ecosystem a multi site observational study": "brain_image_all_methods_v3|6d09ead81ad53268"
   },
-  "updated_at": "2026-09-30T02:41:38.824893+00:00"
+  "updated_at": "2026-10-01T02:44:25.947922+00:00"
 }
