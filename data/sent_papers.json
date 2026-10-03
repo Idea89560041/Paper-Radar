@@ -8842,6 +8842,61 @@
       "venue": "npj Parkinson's Disease",
       "source": "Crossref Top Journals",
       "sent_at": "2026-10-02T02:47:48.727308+00:00"
+    },
+    "brain_image_all_methods_v3|0f9b25e0d5f22800": {
+      "paper_uid": "0f9b25e0d5f22800",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A model of brain function to predict tau across Alzheimer’s disease and related disorders",
+      "url": "https://doi.org/10.1038/s41467-026-78300-7",
+      "doi": "10.1038/s41467-026-78300-7",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-03T02:35:02.141745+00:00"
+    },
+    "brain_image_all_methods_v3|2ce3ca29b6aa4f7d": {
+      "paper_uid": "2ce3ca29b6aa4f7d",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Diffusion bridge networks simulate clinical-grade PET from MRI for dementia diagnostics: a retrospective cohort study",
+      "url": "https://doi.org/10.1016/j.lanmit.2026.100021",
+      "doi": "10.1016/j.lanmit.2026.100021",
+      "pmid": "",
+      "venue": "The Lancet Medical Imaging & Theranostics",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-03T02:35:02.141745+00:00"
+    },
+    "brain_image_all_methods_v3|b05920ef3458493e": {
+      "paper_uid": "b05920ef3458493e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Synthetic PET for dementia diagnosis: raising the bar on evaluation beyond image similarity",
+      "url": "https://doi.org/10.1016/j.lanmit.2026.100026",
+      "doi": "10.1016/j.lanmit.2026.100026",
+      "pmid": "",
+      "venue": "The Lancet Medical Imaging & Theranostics",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-03T02:35:02.141745+00:00"
+    },
+    "brain_image_all_methods_v3|af81c285fd9a43e4": {
+      "paper_uid": "af81c285fd9a43e4",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Erratum: Visual versus automated CT perfusion for outcome prediction in anterior circulation stroke treated with mechanical thrombectomy",
+      "url": "https://doi.org/10.2478/raon-2026-0056",
+      "doi": "10.2478/raon-2026-0056",
+      "pmid": "",
+      "venue": "Radiology and Oncology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-03T02:35:02.141745+00:00"
+    },
+    "brain_image_all_methods_v3|f069ff1491ee8f64": {
+      "paper_uid": "f069ff1491ee8f64",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Real-time fMRI feedback guides self-generated cognition toward upregulation of hippocampal activity.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42822456/",
+      "doi": "10.1016/j.cub.2026.09.015",
+      "pmid": "42822456",
+      "venue": "Current biology : CB",
+      "source": "PubMed",
+      "sent_at": "2026-10-03T02:35:02.141745+00:00"
     }
   },
   "sent_keys": {
@@ -12108,7 +12163,23 @@
     "brain_image_all_methods_v3|title:a foundation model approach to pediatric headache classification from rs fmri": "brain_image_all_methods_v3|cb86528c27a2be83",
     "brain_image_all_methods_v3|doi:10.1038/s41531-026-01584-5": "brain_image_all_methods_v3|7f417cb428bea70b",
     "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41531-026-01584-5": "brain_image_all_methods_v3|7f417cb428bea70b",
-    "brain_image_all_methods_v3|title:resting state fmri network topographies in preclinical and early parkinson s disease stages": "brain_image_all_methods_v3|7f417cb428bea70b"
+    "brain_image_all_methods_v3|title:resting state fmri network topographies in preclinical and early parkinson s disease stages": "brain_image_all_methods_v3|7f417cb428bea70b",
+    "brain_image_all_methods_v3|doi:10.1038/s41467-026-78300-7": "brain_image_all_methods_v3|0f9b25e0d5f22800",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41467-026-78300-7": "brain_image_all_methods_v3|0f9b25e0d5f22800",
+    "brain_image_all_methods_v3|title:a model of brain function to predict tau across alzheimer s disease and related disorders": "brain_image_all_methods_v3|0f9b25e0d5f22800",
+    "brain_image_all_methods_v3|doi:10.1016/j.lanmit.2026.100021": "brain_image_all_methods_v3|2ce3ca29b6aa4f7d",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.lanmit.2026.100021": "brain_image_all_methods_v3|2ce3ca29b6aa4f7d",
+    "brain_image_all_methods_v3|title:diffusion bridge networks simulate clinical grade pet from mri for dementia diagnostics a retrospective cohort study": "brain_image_all_methods_v3|2ce3ca29b6aa4f7d",
+    "brain_image_all_methods_v3|doi:10.1016/j.lanmit.2026.100026": "brain_image_all_methods_v3|b05920ef3458493e",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.lanmit.2026.100026": "brain_image_all_methods_v3|b05920ef3458493e",
+    "brain_image_all_methods_v3|title:synthetic pet for dementia diagnosis raising the bar on evaluation beyond image similarity": "brain_image_all_methods_v3|b05920ef3458493e",
+    "brain_image_all_methods_v3|doi:10.2478/raon-2026-0056": "brain_image_all_methods_v3|af81c285fd9a43e4",
+    "brain_image_all_methods_v3|url:https://doi.org/10.2478/raon-2026-0056": "brain_image_all_methods_v3|af81c285fd9a43e4",
+    "brain_image_all_methods_v3|title:erratum visual versus automated ct perfusion for outcome prediction in anterior circulation stroke treated with mechanical thrombectomy": "brain_image_all_methods_v3|af81c285fd9a43e4",
+    "brain_image_all_methods_v3|doi:10.1016/j.cub.2026.09.015": "brain_image_all_methods_v3|f069ff1491ee8f64",
+    "brain_image_all_methods_v3|pmid:42822456": "brain_image_all_methods_v3|f069ff1491ee8f64",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42822456": "brain_image_all_methods_v3|f069ff1491ee8f64",
+    "brain_image_all_methods_v3|title:real time fmri feedback guides self generated cognition toward upregulation of hippocampal activity": "brain_image_all_methods_v3|f069ff1491ee8f64"
   },
-  "updated_at": "2026-10-02T02:47:48.727864+00:00"
+  "updated_at": "2026-10-03T02:35:02.141945+00:00"
 }
