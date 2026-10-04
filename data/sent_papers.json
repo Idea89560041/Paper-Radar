@@ -8897,6 +8897,72 @@
       "venue": "Current biology : CB",
       "source": "PubMed",
       "sent_at": "2026-10-03T02:35:02.141745+00:00"
+    },
+    "brain_image_all_methods_v3|5b52f008fc0aea80": {
+      "paper_uid": "5b52f008fc0aea80",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multimodal neuroimaging in dementia and neurodegenerative disorders: complementary roles of clinically available nuclear medicine and MRI in the era of disease-modifying therapies",
+      "url": "https://doi.org/10.1007/s11604-026-02080-9",
+      "doi": "10.1007/s11604-026-02080-9",
+      "pmid": "",
+      "venue": "Japanese Journal of Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|203e50919b2bc8e3": {
+      "paper_uid": "203e50919b2bc8e3",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "MSRepaint: Multiple Sclerosis Repaint with conditional denoising diffusion implicit model for bidirectional lesion filling and synthesis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42826585/",
+      "doi": "10.1016/j.media.2026.104338",
+      "pmid": "42826585",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|41e03470a196c6c2": {
+      "paper_uid": "41e03470a196c6c2",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Long-term clinical and biomarker observations following rituximab exposure in two siblings with CSF1R-related leukoencephalopathy: a preliminary familial case series.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42827143/",
+      "doi": "10.1038/s43856-026-01936-5",
+      "pmid": "42827143",
+      "venue": "Communications medicine",
+      "source": "PubMed",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|1ee4780ac3dbd0bd": {
+      "paper_uid": "1ee4780ac3dbd0bd",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Brain signatures of body mass index predict cardiometabolic and respiratory disease status",
+      "url": "https://doi.org/10.1038/s41746-026-03227-8",
+      "doi": "10.1038/s41746-026-03227-8",
+      "pmid": "",
+      "venue": "npj Digital Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|45ae3d021221dd76": {
+      "paper_uid": "45ae3d021221dd76",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Choroid plexus enlargement in Post-COVID-19 syndrome is linked to Serum-Induced cytokine secretion in human hippocampal progenitors.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42826923/",
+      "doi": "10.1016/j.bbi.2026.107038",
+      "pmid": "42826923",
+      "venue": "Brain, behavior, and immunity",
+      "source": "PubMed",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|e30cd4bc02a2092f": {
+      "paper_uid": "e30cd4bc02a2092f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Alterations of subcortical structures are associated with anxiety in early Parkinson’s disease patients: a cross-sectional 7T MRI study",
+      "url": "https://doi.org/10.1038/s41531-026-01532-3",
+      "doi": "10.1038/s41531-026-01532-3",
+      "pmid": "",
+      "venue": "npj Parkinson's Disease",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-04T03:05:07.554544+00:00"
     }
   },
   "sent_keys": {
@@ -12179,7 +12245,28 @@
     "brain_image_all_methods_v3|doi:10.1016/j.cub.2026.09.015": "brain_image_all_methods_v3|f069ff1491ee8f64",
     "brain_image_all_methods_v3|pmid:42822456": "brain_image_all_methods_v3|f069ff1491ee8f64",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42822456": "brain_image_all_methods_v3|f069ff1491ee8f64",
-    "brain_image_all_methods_v3|title:real time fmri feedback guides self generated cognition toward upregulation of hippocampal activity": "brain_image_all_methods_v3|f069ff1491ee8f64"
+    "brain_image_all_methods_v3|title:real time fmri feedback guides self generated cognition toward upregulation of hippocampal activity": "brain_image_all_methods_v3|f069ff1491ee8f64",
+    "brain_image_all_methods_v3|doi:10.1007/s11604-026-02080-9": "brain_image_all_methods_v3|5b52f008fc0aea80",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1007/s11604-026-02080-9": "brain_image_all_methods_v3|5b52f008fc0aea80",
+    "brain_image_all_methods_v3|title:multimodal neuroimaging in dementia and neurodegenerative disorders complementary roles of clinically available nuclear medicine and mri in the era of disease modifying therapies": "brain_image_all_methods_v3|5b52f008fc0aea80",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104338": "brain_image_all_methods_v3|203e50919b2bc8e3",
+    "brain_image_all_methods_v3|pmid:42826585": "brain_image_all_methods_v3|203e50919b2bc8e3",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42826585": "brain_image_all_methods_v3|203e50919b2bc8e3",
+    "brain_image_all_methods_v3|title:msrepaint multiple sclerosis repaint with conditional denoising diffusion implicit model for bidirectional lesion filling and synthesis": "brain_image_all_methods_v3|203e50919b2bc8e3",
+    "brain_image_all_methods_v3|doi:10.1038/s43856-026-01936-5": "brain_image_all_methods_v3|41e03470a196c6c2",
+    "brain_image_all_methods_v3|pmid:42827143": "brain_image_all_methods_v3|41e03470a196c6c2",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42827143": "brain_image_all_methods_v3|41e03470a196c6c2",
+    "brain_image_all_methods_v3|title:long term clinical and biomarker observations following rituximab exposure in two siblings with csf1r related leukoencephalopathy a preliminary familial case series": "brain_image_all_methods_v3|41e03470a196c6c2",
+    "brain_image_all_methods_v3|doi:10.1038/s41746-026-03227-8": "brain_image_all_methods_v3|1ee4780ac3dbd0bd",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41746-026-03227-8": "brain_image_all_methods_v3|1ee4780ac3dbd0bd",
+    "brain_image_all_methods_v3|title:brain signatures of body mass index predict cardiometabolic and respiratory disease status": "brain_image_all_methods_v3|1ee4780ac3dbd0bd",
+    "brain_image_all_methods_v3|doi:10.1016/j.bbi.2026.107038": "brain_image_all_methods_v3|45ae3d021221dd76",
+    "brain_image_all_methods_v3|pmid:42826923": "brain_image_all_methods_v3|45ae3d021221dd76",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42826923": "brain_image_all_methods_v3|45ae3d021221dd76",
+    "brain_image_all_methods_v3|title:choroid plexus enlargement in post covid 19 syndrome is linked to serum induced cytokine secretion in human hippocampal progenitors": "brain_image_all_methods_v3|45ae3d021221dd76",
+    "brain_image_all_methods_v3|doi:10.1038/s41531-026-01532-3": "brain_image_all_methods_v3|e30cd4bc02a2092f",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41531-026-01532-3": "brain_image_all_methods_v3|e30cd4bc02a2092f",
+    "brain_image_all_methods_v3|title:alterations of subcortical structures are associated with anxiety in early parkinson s disease patients a cross sectional 7t mri study": "brain_image_all_methods_v3|e30cd4bc02a2092f"
   },
-  "updated_at": "2026-10-03T02:35:02.141945+00:00"
+  "updated_at": "2026-10-04T03:05:07.554938+00:00"
 }
