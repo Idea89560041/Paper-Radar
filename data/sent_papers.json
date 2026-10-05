@@ -8963,6 +8963,28 @@
       "venue": "npj Parkinson's Disease",
       "source": "Crossref Top Journals",
       "sent_at": "2026-10-04T03:05:07.554544+00:00"
+    },
+    "brain_image_all_methods_v3|43bc35451a789b0e": {
+      "paper_uid": "43bc35451a789b0e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Cortex-grounded diffusion models for brain image generation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42828866/",
+      "doi": "10.1016/j.media.2026.104339",
+      "pmid": "42828866",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-05T02:38:40.793655+00:00"
+    },
+    "brain_image_all_methods_v3|2e4d4caf9e2d3470": {
+      "paper_uid": "2e4d4caf9e2d3470",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Trimodal ultrasound imaging of brain-tumor interaction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42828291/",
+      "doi": "10.1016/j.isci.2026.117572",
+      "pmid": "42828291",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-10-05T02:38:40.793655+00:00"
     }
   },
   "sent_keys": {
@@ -12266,7 +12288,15 @@
     "brain_image_all_methods_v3|title:choroid plexus enlargement in post covid 19 syndrome is linked to serum induced cytokine secretion in human hippocampal progenitors": "brain_image_all_methods_v3|45ae3d021221dd76",
     "brain_image_all_methods_v3|doi:10.1038/s41531-026-01532-3": "brain_image_all_methods_v3|e30cd4bc02a2092f",
     "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41531-026-01532-3": "brain_image_all_methods_v3|e30cd4bc02a2092f",
-    "brain_image_all_methods_v3|title:alterations of subcortical structures are associated with anxiety in early parkinson s disease patients a cross sectional 7t mri study": "brain_image_all_methods_v3|e30cd4bc02a2092f"
+    "brain_image_all_methods_v3|title:alterations of subcortical structures are associated with anxiety in early parkinson s disease patients a cross sectional 7t mri study": "brain_image_all_methods_v3|e30cd4bc02a2092f",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104339": "brain_image_all_methods_v3|43bc35451a789b0e",
+    "brain_image_all_methods_v3|pmid:42828866": "brain_image_all_methods_v3|43bc35451a789b0e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42828866": "brain_image_all_methods_v3|43bc35451a789b0e",
+    "brain_image_all_methods_v3|title:cortex grounded diffusion models for brain image generation": "brain_image_all_methods_v3|43bc35451a789b0e",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117572": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
+    "brain_image_all_methods_v3|pmid:42828291": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42828291": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
+    "brain_image_all_methods_v3|title:trimodal ultrasound imaging of brain tumor interaction": "brain_image_all_methods_v3|2e4d4caf9e2d3470"
   },
-  "updated_at": "2026-10-04T03:05:07.554938+00:00"
+  "updated_at": "2026-10-05T02:38:40.793839+00:00"
 }
