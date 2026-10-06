@@ -8985,6 +8985,50 @@
       "venue": "iScience",
       "source": "PubMed",
       "sent_at": "2026-10-05T02:38:40.793655+00:00"
+    },
+    "brain_image_all_methods_v3|449cc7e3c2eb1e57": {
+      "paper_uid": "449cc7e3c2eb1e57",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Neurofibrillary tangle deposition in primary idiotypic isocortices using flortaucipir PET in histopathologically confirmed Alzheimer's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42830961/",
+      "doi": "10.1016/j.isci.2026.117530",
+      "pmid": "42830961",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-10-06T03:32:18.553632+00:00"
+    },
+    "brain_image_all_methods_v3|a114e6053072d3ab": {
+      "paper_uid": "a114e6053072d3ab",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Motifs of brain cortical folding from birth to adulthood.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42830337/",
+      "doi": "10.1038/s41467-026-77314-5",
+      "pmid": "42830337",
+      "venue": "Nature communications",
+      "source": "PubMed",
+      "sent_at": "2026-10-06T03:32:18.553632+00:00"
+    },
+    "brain_image_all_methods_v3|e33c85f79f6c43ab": {
+      "paper_uid": "e33c85f79f6c43ab",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Fear learning–induced brain dynamics predict individual extinction memory expression following transcranial magnetic stimulation",
+      "url": "https://doi.org/10.1038/s41467-026-78345-8",
+      "doi": "10.1038/s41467-026-78345-8",
+      "pmid": "",
+      "venue": "Nature Communications",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-06T03:32:18.553632+00:00"
+    },
+    "brain_image_all_methods_v3|16351392660e4bd4": {
+      "paper_uid": "16351392660e4bd4",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Reproducible human reward imaging phenotypes exhibit differential sensitivity to dopamine D2 receptor antagonism.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42830297/",
+      "doi": "10.1038/s41467-026-77317-2",
+      "pmid": "42830297",
+      "venue": "Nature communications",
+      "source": "PubMed",
+      "sent_at": "2026-10-06T03:32:18.553632+00:00"
     }
   },
   "sent_keys": {
@@ -12296,7 +12340,22 @@
     "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117572": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
     "brain_image_all_methods_v3|pmid:42828291": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42828291": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
-    "brain_image_all_methods_v3|title:trimodal ultrasound imaging of brain tumor interaction": "brain_image_all_methods_v3|2e4d4caf9e2d3470"
+    "brain_image_all_methods_v3|title:trimodal ultrasound imaging of brain tumor interaction": "brain_image_all_methods_v3|2e4d4caf9e2d3470",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117530": "brain_image_all_methods_v3|449cc7e3c2eb1e57",
+    "brain_image_all_methods_v3|pmid:42830961": "brain_image_all_methods_v3|449cc7e3c2eb1e57",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42830961": "brain_image_all_methods_v3|449cc7e3c2eb1e57",
+    "brain_image_all_methods_v3|title:neurofibrillary tangle deposition in primary idiotypic isocortices using flortaucipir pet in histopathologically confirmed alzheimer s disease": "brain_image_all_methods_v3|449cc7e3c2eb1e57",
+    "brain_image_all_methods_v3|doi:10.1038/s41467-026-77314-5": "brain_image_all_methods_v3|a114e6053072d3ab",
+    "brain_image_all_methods_v3|pmid:42830337": "brain_image_all_methods_v3|a114e6053072d3ab",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42830337": "brain_image_all_methods_v3|a114e6053072d3ab",
+    "brain_image_all_methods_v3|title:motifs of brain cortical folding from birth to adulthood": "brain_image_all_methods_v3|a114e6053072d3ab",
+    "brain_image_all_methods_v3|doi:10.1038/s41467-026-78345-8": "brain_image_all_methods_v3|e33c85f79f6c43ab",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41467-026-78345-8": "brain_image_all_methods_v3|e33c85f79f6c43ab",
+    "brain_image_all_methods_v3|title:fear learning induced brain dynamics predict individual extinction memory expression following transcranial magnetic stimulation": "brain_image_all_methods_v3|e33c85f79f6c43ab",
+    "brain_image_all_methods_v3|doi:10.1038/s41467-026-77317-2": "brain_image_all_methods_v3|16351392660e4bd4",
+    "brain_image_all_methods_v3|pmid:42830297": "brain_image_all_methods_v3|16351392660e4bd4",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42830297": "brain_image_all_methods_v3|16351392660e4bd4",
+    "brain_image_all_methods_v3|title:reproducible human reward imaging phenotypes exhibit differential sensitivity to dopamine d2 receptor antagonism": "brain_image_all_methods_v3|16351392660e4bd4"
   },
-  "updated_at": "2026-10-05T02:38:40.793839+00:00"
+  "updated_at": "2026-10-06T03:32:18.553890+00:00"
 }
