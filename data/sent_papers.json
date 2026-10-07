@@ -9029,6 +9029,72 @@
       "venue": "Nature communications",
       "source": "PubMed",
       "sent_at": "2026-10-06T03:32:18.553632+00:00"
+    },
+    "brain_image_all_methods_v3|f2c957de28387367": {
+      "paper_uid": "f2c957de28387367",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Predicting brain tumour enhancement from non-contrast MRI with artificial intelligence: a multicohort, retrospective, diagnostic accuracy study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42836157/",
+      "doi": "10.1016/j.lanmit.2026.100012",
+      "pmid": "42836157",
+      "venue": "The Lancet medical imaging & theranostics",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|229b84717f4198c4": {
+      "paper_uid": "229b84717f4198c4",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multiparameter Uncertainty Mapping in Quantitative Molecular MRI using a Physics-Structured Variational Autoencoder (PS-VAE).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42837229/",
+      "doi": "10.1109/tmi.2026.3740952",
+      "pmid": "42837229",
+      "venue": "IEEE transactions on medical imaging",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|4d470be8697dc9ad": {
+      "paper_uid": "4d470be8697dc9ad",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Contrastive Learning-Based Multi-Atlas Feature Fusion for Brain Disorder Diagnosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42837235/",
+      "doi": "10.1109/jbhi.2026.3740889",
+      "pmid": "42837235",
+      "venue": "IEEE journal of biomedical and health informatics",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|9b33e72c651c869a": {
+      "paper_uid": "9b33e72c651c869a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Representational structure of perceived food attributes in human occipitotemporal cortex.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42835606/",
+      "doi": "10.1016/j.isci.2026.117660",
+      "pmid": "42835606",
+      "venue": "iScience",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|26a8320f81fd169b": {
+      "paper_uid": "26a8320f81fd169b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "STEREOTACTIC RADIOSURGERY OF BRAIN MENINGIOMAS: A SERIES OF CLINICAL CASES",
+      "url": "https://doi.org/10.52532/3135-3940-2026-3-753",
+      "doi": "10.52532/3135-3940-2026-3-753",
+      "pmid": "",
+      "venue": "Eurasian Journal of Oncology and Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|00ad9920ae9192c0": {
+      "paper_uid": "00ad9920ae9192c0",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Topology-Aware Co-Domain Learning for Ultra-Low-Field MRI Enhancement.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42837234/",
+      "doi": "10.1109/jbhi.2026.3740158",
+      "pmid": "42837234",
+      "venue": "IEEE journal of biomedical and health informatics",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T02:57:54.048091+00:00"
     }
   },
   "sent_keys": {
@@ -12355,7 +12421,30 @@
     "brain_image_all_methods_v3|doi:10.1038/s41467-026-77317-2": "brain_image_all_methods_v3|16351392660e4bd4",
     "brain_image_all_methods_v3|pmid:42830297": "brain_image_all_methods_v3|16351392660e4bd4",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42830297": "brain_image_all_methods_v3|16351392660e4bd4",
-    "brain_image_all_methods_v3|title:reproducible human reward imaging phenotypes exhibit differential sensitivity to dopamine d2 receptor antagonism": "brain_image_all_methods_v3|16351392660e4bd4"
+    "brain_image_all_methods_v3|title:reproducible human reward imaging phenotypes exhibit differential sensitivity to dopamine d2 receptor antagonism": "brain_image_all_methods_v3|16351392660e4bd4",
+    "brain_image_all_methods_v3|doi:10.1016/j.lanmit.2026.100012": "brain_image_all_methods_v3|f2c957de28387367",
+    "brain_image_all_methods_v3|pmid:42836157": "brain_image_all_methods_v3|f2c957de28387367",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42836157": "brain_image_all_methods_v3|f2c957de28387367",
+    "brain_image_all_methods_v3|title:predicting brain tumour enhancement from non contrast mri with artificial intelligence a multicohort retrospective diagnostic accuracy study": "brain_image_all_methods_v3|f2c957de28387367",
+    "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3740952": "brain_image_all_methods_v3|229b84717f4198c4",
+    "brain_image_all_methods_v3|pmid:42837229": "brain_image_all_methods_v3|229b84717f4198c4",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42837229": "brain_image_all_methods_v3|229b84717f4198c4",
+    "brain_image_all_methods_v3|title:multiparameter uncertainty mapping in quantitative molecular mri using a physics structured variational autoencoder ps vae": "brain_image_all_methods_v3|229b84717f4198c4",
+    "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3740889": "brain_image_all_methods_v3|4d470be8697dc9ad",
+    "brain_image_all_methods_v3|pmid:42837235": "brain_image_all_methods_v3|4d470be8697dc9ad",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42837235": "brain_image_all_methods_v3|4d470be8697dc9ad",
+    "brain_image_all_methods_v3|title:contrastive learning based multi atlas feature fusion for brain disorder diagnosis": "brain_image_all_methods_v3|4d470be8697dc9ad",
+    "brain_image_all_methods_v3|doi:10.1016/j.isci.2026.117660": "brain_image_all_methods_v3|9b33e72c651c869a",
+    "brain_image_all_methods_v3|pmid:42835606": "brain_image_all_methods_v3|9b33e72c651c869a",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42835606": "brain_image_all_methods_v3|9b33e72c651c869a",
+    "brain_image_all_methods_v3|title:representational structure of perceived food attributes in human occipitotemporal cortex": "brain_image_all_methods_v3|9b33e72c651c869a",
+    "brain_image_all_methods_v3|doi:10.52532/3135-3940-2026-3-753": "brain_image_all_methods_v3|26a8320f81fd169b",
+    "brain_image_all_methods_v3|url:https://doi.org/10.52532/3135-3940-2026-3-753": "brain_image_all_methods_v3|26a8320f81fd169b",
+    "brain_image_all_methods_v3|title:stereotactic radiosurgery of brain meningiomas a series of clinical cases": "brain_image_all_methods_v3|26a8320f81fd169b",
+    "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3740158": "brain_image_all_methods_v3|00ad9920ae9192c0",
+    "brain_image_all_methods_v3|pmid:42837234": "brain_image_all_methods_v3|00ad9920ae9192c0",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42837234": "brain_image_all_methods_v3|00ad9920ae9192c0",
+    "brain_image_all_methods_v3|title:topology aware co domain learning for ultra low field mri enhancement": "brain_image_all_methods_v3|00ad9920ae9192c0"
   },
-  "updated_at": "2026-10-06T03:32:18.553890+00:00"
+  "updated_at": "2026-10-07T02:57:54.048433+00:00"
 }
