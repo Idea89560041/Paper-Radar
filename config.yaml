@@ -253,7 +253,6 @@ top_journal_families:
     - "Cell Reports Medicine"
     - "Cell Reports Methods"
     - "Patterns"
-    - "iScience"
     - "Med"
     - "Cell Systems"
     - "Cell Genomics"
@@ -310,7 +309,6 @@ top_journal_families:
     - "Cell Reports"
     - "Cell Reports Medicine"
     - "Patterns"
-    - "iScience"
     - "Med"
     - "Cell Systems"
     - "Advanced Science"
@@ -432,7 +430,6 @@ venue_categories:
     - "Cell Reports Medicine"
     - "Cell Reports Methods"
     - "Patterns"
-    - "iScience"
     - "Med"
     - "Cell Systems"
     - "Cell Genomics"
@@ -544,6 +541,7 @@ scoring:
     - consensus
 
   hard_exclude_venues:
+    - iScience
     - Scientific Reports
     - Frontiers
     - Frontiers in
@@ -1266,7 +1264,6 @@ scoring:
     "Cell Reports Methods": 7
     "Cell Reports": 6
     "Patterns": 7
-    "iScience": 5
     "Med": 8
     "Cell Systems": 7
     "Cell Genomics": 7

@@ -990,7 +990,6 @@ DEFAULT_VENUE_CATEGORIES = {
         "Cell Reports Medicine",
         "Cell Reports Methods",
         "Patterns",
-        "iScience",
         "Lancet Digital Health",
         "The Lancet Digital Health",
         "Lancet Neurology",

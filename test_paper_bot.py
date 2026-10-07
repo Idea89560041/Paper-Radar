@@ -5,6 +5,29 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_iscience_is_always_excluded(self):
+        cfg = bot.load_config("config.yaml")
+        paper = bot.Paper(
+            source="PubMed",
+            title="Deep learning segmentation of brain MRI",
+            authors=[],
+            abstract="A transformer segments neuroimaging data.",
+            url="https://example.org/iscience-paper",
+            published_date="2026-10-01",
+            query="brain MRI deep learning",
+            venue="iScience",
+        )
+        scored = bot.score_paper(paper, cfg)
+        self.assertEqual(scored.score, -999.0)
+        self.assertEqual(scored.reasons, ["hard-exclude-venue:iscience"])
+        self.assertEqual(bot.classify_venue_category(paper, cfg), "other")
+        configured_venues = (
+            cfg["top_journal_families"]["pubmed_journals"]
+            + cfg["top_journal_families"]["crossref_journals"]
+            + cfg["venue_categories"]["flagship_subjournal"]
+        )
+        self.assertNotIn("iScience", configured_venues)
+
     def test_diffusion_mri_segmentation_topic_is_prioritized(self):
         cfg = bot.load_config("config.yaml")
         paper = bot.Paper(
