@@ -9095,6 +9095,50 @@
       "venue": "IEEE journal of biomedical and health informatics",
       "source": "PubMed",
       "sent_at": "2026-10-07T02:57:54.048091+00:00"
+    },
+    "brain_image_all_methods_v3|d47922ca4ff7f9de": {
+      "paper_uid": "d47922ca4ff7f9de",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Miniaturized optically generated Bessel beam ultrasound for volumetric transcranial brain stimulation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41961940/",
+      "doi": "10.1126/sciadv.adz7708",
+      "pmid": "41961940",
+      "venue": "Science advances",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T03:09:59.703114+00:00"
+    },
+    "brain_image_all_methods_v3|ba8ca46db56ca9d6": {
+      "paper_uid": "ba8ca46db56ca9d6",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "An evolutionary conserved neural mechanism for interpersonal coordination in primates.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41996495/",
+      "doi": "10.1126/sciadv.aea1927",
+      "pmid": "41996495",
+      "venue": "Science advances",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T03:09:59.703114+00:00"
+    },
+    "brain_image_all_methods_v3|c8344f3c6bffa460": {
+      "paper_uid": "c8344f3c6bffa460",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Scaffolding human and AI instruction: Neural alignment and learning gains in online education.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42066775/",
+      "doi": "10.1016/j.neuron.2026.04.005",
+      "pmid": "42066775",
+      "venue": "Neuron",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T03:09:59.703114+00:00"
+    },
+    "brain_image_all_methods_v3|2a90a99515f47ea1": {
+      "paper_uid": "2a90a99515f47ea1",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Clinical connectomics: Mapping structural brain networks in disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41887212/",
+      "doi": "10.1016/j.neuron.2026.02.007",
+      "pmid": "41887212",
+      "venue": "Neuron",
+      "source": "PubMed",
+      "sent_at": "2026-10-07T03:09:59.703114+00:00"
     }
   },
   "sent_keys": {
@@ -12444,7 +12488,23 @@
     "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3740158": "brain_image_all_methods_v3|00ad9920ae9192c0",
     "brain_image_all_methods_v3|pmid:42837234": "brain_image_all_methods_v3|00ad9920ae9192c0",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42837234": "brain_image_all_methods_v3|00ad9920ae9192c0",
-    "brain_image_all_methods_v3|title:topology aware co domain learning for ultra low field mri enhancement": "brain_image_all_methods_v3|00ad9920ae9192c0"
+    "brain_image_all_methods_v3|title:topology aware co domain learning for ultra low field mri enhancement": "brain_image_all_methods_v3|00ad9920ae9192c0",
+    "brain_image_all_methods_v3|doi:10.1126/sciadv.adz7708": "brain_image_all_methods_v3|d47922ca4ff7f9de",
+    "brain_image_all_methods_v3|pmid:41961940": "brain_image_all_methods_v3|d47922ca4ff7f9de",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/41961940": "brain_image_all_methods_v3|d47922ca4ff7f9de",
+    "brain_image_all_methods_v3|title:miniaturized optically generated bessel beam ultrasound for volumetric transcranial brain stimulation": "brain_image_all_methods_v3|d47922ca4ff7f9de",
+    "brain_image_all_methods_v3|doi:10.1126/sciadv.aea1927": "brain_image_all_methods_v3|ba8ca46db56ca9d6",
+    "brain_image_all_methods_v3|pmid:41996495": "brain_image_all_methods_v3|ba8ca46db56ca9d6",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/41996495": "brain_image_all_methods_v3|ba8ca46db56ca9d6",
+    "brain_image_all_methods_v3|title:an evolutionary conserved neural mechanism for interpersonal coordination in primates": "brain_image_all_methods_v3|ba8ca46db56ca9d6",
+    "brain_image_all_methods_v3|doi:10.1016/j.neuron.2026.04.005": "brain_image_all_methods_v3|c8344f3c6bffa460",
+    "brain_image_all_methods_v3|pmid:42066775": "brain_image_all_methods_v3|c8344f3c6bffa460",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42066775": "brain_image_all_methods_v3|c8344f3c6bffa460",
+    "brain_image_all_methods_v3|title:scaffolding human and ai instruction neural alignment and learning gains in online education": "brain_image_all_methods_v3|c8344f3c6bffa460",
+    "brain_image_all_methods_v3|doi:10.1016/j.neuron.2026.02.007": "brain_image_all_methods_v3|2a90a99515f47ea1",
+    "brain_image_all_methods_v3|pmid:41887212": "brain_image_all_methods_v3|2a90a99515f47ea1",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/41887212": "brain_image_all_methods_v3|2a90a99515f47ea1",
+    "brain_image_all_methods_v3|title:clinical connectomics mapping structural brain networks in disease": "brain_image_all_methods_v3|2a90a99515f47ea1"
   },
-  "updated_at": "2026-10-07T02:57:54.048433+00:00"
+  "updated_at": "2026-10-07T03:09:59.703357+00:00"
 }
