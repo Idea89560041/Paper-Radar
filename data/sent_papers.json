@@ -9139,6 +9139,72 @@
       "venue": "Neuron",
       "source": "PubMed",
       "sent_at": "2026-10-07T03:09:59.703114+00:00"
+    },
+    "brain_image_all_methods_v3|10d9d783d3475a81": {
+      "paper_uid": "10d9d783d3475a81",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Zero-Shot Brain MRI Inpainting with 2.5D Unconditional Flow Priors",
+      "url": "https://arxiv.org/abs/2610.08983v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|f483f84d5968de36": {
+      "paper_uid": "f483f84d5968de36",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Comparative Performance of Federated and Centralized Learning for Brain Tumor Classification and Segmentation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42841767/",
+      "doi": "10.1148/ryai.260515",
+      "pmid": "42841767",
+      "venue": "Radiology. Artificial intelligence",
+      "source": "PubMed",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|4d088e45d3a0f9f0": {
+      "paper_uid": "4d088e45d3a0f9f0",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Dopamine release-associated striatal blood oxygenation and whole-brain dynamics during associative learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42842683/",
+      "doi": "10.1126/sciadv.aed0935",
+      "pmid": "42842683",
+      "venue": "Science advances",
+      "source": "PubMed",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|4d6dae683804dc61": {
+      "paper_uid": "4d6dae683804dc61",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Spleen-targeted ultrasound restores gut-brain homeostasis in colitis via vagal neuroimmune modulation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42838463/",
+      "doi": "10.1016/j.bbi.2026.107045",
+      "pmid": "42838463",
+      "venue": "Brain, behavior, and immunity",
+      "source": "PubMed",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|974d6d6690085268": {
+      "paper_uid": "974d6d6690085268",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Optimization of PET acquisition time for thoracic lesions in 18F-FDG PET/MRI: a retrospective analysis",
+      "url": "https://doi.org/10.1186/s41747-026-00787-y",
+      "doi": "10.1186/s41747-026-00787-y",
+      "pmid": "",
+      "venue": "European Radiology Experimental",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|9bb32e68094ea4e4": {
+      "paper_uid": "9bb32e68094ea4e4",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Trait-relevant movies amplify neuroticism-associated brain responses",
+      "url": "https://doi.org/10.1038/s44271-026-00541-5",
+      "doi": "10.1038/s44271-026-00541-5",
+      "pmid": "",
+      "venue": "Communications Psychology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-08T03:15:22.515422+00:00"
     }
   },
   "sent_keys": {
@@ -12504,7 +12570,27 @@
     "brain_image_all_methods_v3|doi:10.1016/j.neuron.2026.02.007": "brain_image_all_methods_v3|2a90a99515f47ea1",
     "brain_image_all_methods_v3|pmid:41887212": "brain_image_all_methods_v3|2a90a99515f47ea1",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/41887212": "brain_image_all_methods_v3|2a90a99515f47ea1",
-    "brain_image_all_methods_v3|title:clinical connectomics mapping structural brain networks in disease": "brain_image_all_methods_v3|2a90a99515f47ea1"
+    "brain_image_all_methods_v3|title:clinical connectomics mapping structural brain networks in disease": "brain_image_all_methods_v3|2a90a99515f47ea1",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2610.08983v1": "brain_image_all_methods_v3|10d9d783d3475a81",
+    "brain_image_all_methods_v3|title:zero shot brain mri inpainting with 2 5d unconditional flow priors": "brain_image_all_methods_v3|10d9d783d3475a81",
+    "brain_image_all_methods_v3|doi:10.1148/ryai.260515": "brain_image_all_methods_v3|f483f84d5968de36",
+    "brain_image_all_methods_v3|pmid:42841767": "brain_image_all_methods_v3|f483f84d5968de36",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42841767": "brain_image_all_methods_v3|f483f84d5968de36",
+    "brain_image_all_methods_v3|title:comparative performance of federated and centralized learning for brain tumor classification and segmentation": "brain_image_all_methods_v3|f483f84d5968de36",
+    "brain_image_all_methods_v3|doi:10.1126/sciadv.aed0935": "brain_image_all_methods_v3|4d088e45d3a0f9f0",
+    "brain_image_all_methods_v3|pmid:42842683": "brain_image_all_methods_v3|4d088e45d3a0f9f0",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42842683": "brain_image_all_methods_v3|4d088e45d3a0f9f0",
+    "brain_image_all_methods_v3|title:dopamine release associated striatal blood oxygenation and whole brain dynamics during associative learning": "brain_image_all_methods_v3|4d088e45d3a0f9f0",
+    "brain_image_all_methods_v3|doi:10.1016/j.bbi.2026.107045": "brain_image_all_methods_v3|4d6dae683804dc61",
+    "brain_image_all_methods_v3|pmid:42838463": "brain_image_all_methods_v3|4d6dae683804dc61",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42838463": "brain_image_all_methods_v3|4d6dae683804dc61",
+    "brain_image_all_methods_v3|title:spleen targeted ultrasound restores gut brain homeostasis in colitis via vagal neuroimmune modulation": "brain_image_all_methods_v3|4d6dae683804dc61",
+    "brain_image_all_methods_v3|doi:10.1186/s41747-026-00787-y": "brain_image_all_methods_v3|974d6d6690085268",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s41747-026-00787-y": "brain_image_all_methods_v3|974d6d6690085268",
+    "brain_image_all_methods_v3|title:optimization of pet acquisition time for thoracic lesions in 18f fdg pet mri a retrospective analysis": "brain_image_all_methods_v3|974d6d6690085268",
+    "brain_image_all_methods_v3|doi:10.1038/s44271-026-00541-5": "brain_image_all_methods_v3|9bb32e68094ea4e4",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s44271-026-00541-5": "brain_image_all_methods_v3|9bb32e68094ea4e4",
+    "brain_image_all_methods_v3|title:trait relevant movies amplify neuroticism associated brain responses": "brain_image_all_methods_v3|9bb32e68094ea4e4"
   },
-  "updated_at": "2026-10-07T03:09:59.703357+00:00"
+  "updated_at": "2026-10-08T03:15:22.515699+00:00"
 }
