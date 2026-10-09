@@ -830,19 +830,21 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
             paper.reasons = [f"hard-exclude:{keyword}"]
             return paper
 
-    has_method_focus = any(contains_term(text_content, keyword) for keyword in hard_must_have_any)
+    ai_terms = scoring.get("ai_required_any", hard_must_have_any)
+    method_text = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
+    has_method_focus = any(contains_term(method_text, str(keyword)) for keyword in ai_terms)
     has_brain_focus = any(contains_term(text_content, keyword) for keyword in disease_must_have_any)
     has_imaging_focus = any(contains_term(text_content, keyword) for keyword in imaging_must_have_any)
-    venue_category = classify_venue_category(paper, cfg)
-    priority_brain_imaging = (
-        venue_category in {"flagship_main", "flagship_subjournal", "top_imaging_ai"}
-        and has_brain_focus
-        and has_imaging_focus
-    )
-
-    if hard_must_have_any and not has_method_focus and not priority_brain_imaging:
+    if ai_terms and not has_method_focus:
         paper.score = -999.0
         paper.reasons = ["missing-ai-dl-method"]
+        return paper
+    correlation_title = any(
+        contains_term(text_title, str(term)) for term in scoring.get("correlation_title_terms", [])
+    )
+    if correlation_title and not any(contains_term(text_title, str(term)) for term in ai_terms):
+        paper.score = -999.0
+        paper.reasons = ["correlation-focused-neuroscience"]
         return paper
     if disease_must_have_any and not has_brain_focus:
         paper.score = -999.0
@@ -852,9 +854,6 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
         paper.score = -999.0
         paper.reasons = ["missing-pet/mri-imaging-focus"]
         return paper
-    if priority_brain_imaging and not has_method_focus:
-        score += float(scoring.get("priority_brain_imaging_boost", 6))
-        reasons.append("priority-brain-imaging-venue")
 
     keyword_score, keyword_reasons = add_keyword_scores(text_title, text_all, keyword_weights)
     score += keyword_score
@@ -1715,7 +1714,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     focus_terms = [
         "diffusion MRI segmentation / parcellation",
         "brain image / neuroimage first",
-        "any brain image task or method",
+        "AI methods for brain imaging",
         "segmentation / registration / reconstruction",
         "denoising / super-resolution / harmonization",
         "synthesis / translation / generative models",
@@ -2115,7 +2114,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
     <div class="wrap">
       <header>
         <h1>{html.escape(title)}</h1>
-        <p class="subtitle">Daily radar for brain image and neuroimage papers across computational imaging and AI methods, from segmentation, registration, reconstruction, denoising, harmonization, synthesis, image generation, medical imaging world models, AI agents, VLMs, and foundation models to diagnosis and prediction. It also tracks brain-centered multi-organ longitudinal trajectories, brain-body / brain-organ axes, whole-body and total-body PET/MRI, dynamic PET, and kinetic or parametric imaging.</p>
+        <p class="subtitle">Daily AI research for brain MRI, diffusion MRI segmentation and parcellation, PET and amyloid PET, neuroimaging, medical imaging world models, and brain-centered multi-organ longitudinal trajectories.</p>
       </header>
     </div>
   </div>

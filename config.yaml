@@ -490,6 +490,51 @@ venue_categories:
 
 scoring:
   min_score: 30
+  # AI evidence must come from the paper's own title or abstract.
+  ai_required_any:
+    - artificial intelligence
+    - machine learning
+    - deep learning
+    - deep-learning
+    - learning-based
+    - neural network
+    - neural networks
+    - deep neural
+    - convolutional neural
+    - graph neural
+    - CNN
+    - U-Net
+    - UNet
+    - transformer
+    - autoencoder
+    - foundation model
+    - large language model
+    - large multimodal model
+    - vision-language model
+    - vision language model
+    - self-supervised learning
+    - contrastive learning
+    - representation learning
+    - federated learning
+    - diffusion model
+    - generative adversarial
+    - GAN
+    - generative AI
+    - flow matching
+    - normalizing flow
+    - AI agent
+    - agentic AI
+    - random forest
+    - support vector machine
+    - gradient boosting
+    - XGBoost
+  correlation_title_terms:
+    - correlation
+    - correlations
+    - association
+    - associations
+    - correlates
+    - correlated
 
   fresh_0_3_days_boost: 2
   fresh_4_14_days_boost: 1
@@ -878,7 +923,6 @@ scoring:
     - trajectory
     - trajectories
   soft_must_have_penalty: 3
-  priority_brain_imaging_boost: 6
 
   keyword_weights:
     "diffusion MRI segmentation": 10

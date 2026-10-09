@@ -2,6 +2,8 @@
 
 This repository powers a daily GitHub Pages dashboard for recent brain image, neuroimage, and high-value medical imaging papers.
 
+Only papers with explicit AI or machine-learning methods in their title or abstract are eligible, including papers from flagship journals. Traditional medical-mechanism studies, statistical normative models, and correlation-focused neuroscience papers are excluded. AI papers that use correlation as an evaluation metric remain eligible.
+
 The radar prioritizes computational imaging and AI papers involving Brain image / Neuroimage data, including diffusion MRI segmentation and parcellation, white-matter tract or bundle segmentation, MRI, fMRI, PET, Aβ-PET, medical imaging world models, foundation models, diagnosis, prognosis, and prediction. It also tracks brain-centered multi-organ longitudinal trajectories, brain-body / brain-organ axes, and whole-body or total-body PET/MRI.
 
 The site is updated automatically every day at about 08:00 China/Hong Kong/Singapore time:

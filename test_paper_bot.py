@@ -5,6 +5,24 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_correlation_focus_and_ai_evaluation_are_distinguished(self):
+        cfg = bot.load_config("config.yaml")
+        cases = [
+            ("Correlations between brain MRI volume and inflammation", "Longitudinal regression and quantification.", "missing-ai-dl-method"),
+            ("Associations of brain MRI with medical risk factors", "Machine learning was mentioned for future work.", "correlation-focused-neuroscience"),
+            ("Transformer segmentation of diffusion MRI", "We evaluate predictions using correlation and Dice scores.", None),
+        ]
+        for title, abstract, rejection in cases:
+            with self.subTest(title=title):
+                paper = bot.Paper(source="PubMed", title=title, authors=[], abstract=abstract,
+                                  url="https://example.org/paper", published_date="2026-10-01",
+                                  query="deep learning", venue="Nature Communications")
+                scored = bot.score_paper(paper, cfg)
+                if rejection:
+                    self.assertEqual(scored.reasons, [rejection])
+                else:
+                    self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
+
     def test_iscience_is_always_excluded(self):
         cfg = bot.load_config("config.yaml")
         paper = bot.Paper(
@@ -57,7 +75,7 @@ class RetrievalTests(unittest.TestCase):
             cfg["sources"]["semantic_scholar"]["max_queries"],
         )
 
-    def test_flagship_brain_imaging_without_ai_terms_is_retained(self):
+    def test_flagship_brain_imaging_without_ai_terms_is_rejected(self):
         cfg = bot.load_config("config.yaml")
         cases = [
             bot.Paper(
@@ -85,8 +103,8 @@ class RetrievalTests(unittest.TestCase):
         ]
         for paper in cases:
             scored = bot.score_paper(paper, cfg)
-            self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
-            self.assertIn("priority-brain-imaging-venue", scored.reasons)
+            self.assertEqual(scored.score, -999.0)
+            self.assertEqual(scored.reasons, ["missing-ai-dl-method"])
 
     def test_non_flagship_neuroscience_without_ai_is_still_rejected(self):
         cfg = bot.load_config("config.yaml")
