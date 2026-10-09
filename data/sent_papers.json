@@ -9205,6 +9205,39 @@
       "venue": "Communications Psychology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-10-08T03:15:22.515422+00:00"
+    },
+    "brain_image_all_methods_v3|0e9f14c09aed7b83": {
+      "paper_uid": "0e9f14c09aed7b83",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Machine learning-derived Alzheimer's disease dimensions: neuroanatomical, cognitive, clinical, functional, and genetic risk heterogeneity signatures.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42818797/",
+      "doi": "10.64898/2026.09.02.26361668",
+      "pmid": "42818797",
+      "venue": "medRxiv : the preprint server for health sciences",
+      "source": "PubMed",
+      "sent_at": "2026-10-09T01:51:03.646823+00:00"
+    },
+    "brain_image_all_methods_v3|43a7cd6f540ae362": {
+      "paper_uid": "43a7cd6f540ae362",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Unified Multimodal Model for Brain MRI Imputation and Understanding",
+      "url": "https://arxiv.org/abs/2606.16484v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-10-09T01:51:03.646823+00:00"
+    },
+    "brain_image_all_methods_v3|4432527f45fcc88c": {
+      "paper_uid": "4432527f45fcc88c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Quantifying Uncertainty in Brain Age Predictions via Conformal Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42818324/",
+      "doi": "10.64898/2026.09.04.749442",
+      "pmid": "42818324",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-10-09T01:51:03.646823+00:00"
     }
   },
   "sent_keys": {
@@ -12590,7 +12623,17 @@
     "brain_image_all_methods_v3|title:optimization of pet acquisition time for thoracic lesions in 18f fdg pet mri a retrospective analysis": "brain_image_all_methods_v3|974d6d6690085268",
     "brain_image_all_methods_v3|doi:10.1038/s44271-026-00541-5": "brain_image_all_methods_v3|9bb32e68094ea4e4",
     "brain_image_all_methods_v3|url:https://doi.org/10.1038/s44271-026-00541-5": "brain_image_all_methods_v3|9bb32e68094ea4e4",
-    "brain_image_all_methods_v3|title:trait relevant movies amplify neuroticism associated brain responses": "brain_image_all_methods_v3|9bb32e68094ea4e4"
+    "brain_image_all_methods_v3|title:trait relevant movies amplify neuroticism associated brain responses": "brain_image_all_methods_v3|9bb32e68094ea4e4",
+    "brain_image_all_methods_v3|doi:10.64898/2026.09.02.26361668": "brain_image_all_methods_v3|0e9f14c09aed7b83",
+    "brain_image_all_methods_v3|pmid:42818797": "brain_image_all_methods_v3|0e9f14c09aed7b83",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42818797": "brain_image_all_methods_v3|0e9f14c09aed7b83",
+    "brain_image_all_methods_v3|title:machine learning derived alzheimer s disease dimensions neuroanatomical cognitive clinical functional and genetic risk heterogeneity signatures": "brain_image_all_methods_v3|0e9f14c09aed7b83",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2606.16484v1": "brain_image_all_methods_v3|43a7cd6f540ae362",
+    "brain_image_all_methods_v3|title:unified multimodal model for brain mri imputation and understanding": "brain_image_all_methods_v3|43a7cd6f540ae362",
+    "brain_image_all_methods_v3|doi:10.64898/2026.09.04.749442": "brain_image_all_methods_v3|4432527f45fcc88c",
+    "brain_image_all_methods_v3|pmid:42818324": "brain_image_all_methods_v3|4432527f45fcc88c",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42818324": "brain_image_all_methods_v3|4432527f45fcc88c",
+    "brain_image_all_methods_v3|title:quantifying uncertainty in brain age predictions via conformal prediction": "brain_image_all_methods_v3|4432527f45fcc88c"
   },
-  "updated_at": "2026-10-08T03:15:22.515699+00:00"
+  "updated_at": "2026-10-09T01:51:03.647021+00:00"
 }
