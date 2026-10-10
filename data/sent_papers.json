@@ -9238,6 +9238,28 @@
       "venue": "bioRxiv : the preprint server for biology",
       "source": "PubMed",
       "sent_at": "2026-10-09T01:51:03.646823+00:00"
+    },
+    "brain_image_all_methods_v3|e9ae747b663fa5bc": {
+      "paper_uid": "e9ae747b663fa5bc",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "DeMorph: A Decoupled Deformation Model with Anatomical Guidance for Predicting Longitudinal Brain Atrophy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42853744/",
+      "doi": "10.1109/jbhi.2026.3737688",
+      "pmid": "42853744",
+      "venue": "IEEE journal of biomedical and health informatics",
+      "source": "PubMed",
+      "sent_at": "2026-10-10T03:01:20.467378+00:00"
+    },
+    "brain_image_all_methods_v3|e91a136f58ca5aae": {
+      "paper_uid": "e91a136f58ca5aae",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Pediatric 7 Tesla MRI: Current Applications and Future Opportunities.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42853101/",
+      "doi": "10.1093/bjr/tqag240",
+      "pmid": "42853101",
+      "venue": "The British journal of radiology",
+      "source": "PubMed",
+      "sent_at": "2026-10-10T03:01:20.467378+00:00"
     }
   },
   "sent_keys": {
@@ -12633,7 +12655,15 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.09.04.749442": "brain_image_all_methods_v3|4432527f45fcc88c",
     "brain_image_all_methods_v3|pmid:42818324": "brain_image_all_methods_v3|4432527f45fcc88c",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42818324": "brain_image_all_methods_v3|4432527f45fcc88c",
-    "brain_image_all_methods_v3|title:quantifying uncertainty in brain age predictions via conformal prediction": "brain_image_all_methods_v3|4432527f45fcc88c"
+    "brain_image_all_methods_v3|title:quantifying uncertainty in brain age predictions via conformal prediction": "brain_image_all_methods_v3|4432527f45fcc88c",
+    "brain_image_all_methods_v3|doi:10.1109/jbhi.2026.3737688": "brain_image_all_methods_v3|e9ae747b663fa5bc",
+    "brain_image_all_methods_v3|pmid:42853744": "brain_image_all_methods_v3|e9ae747b663fa5bc",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42853744": "brain_image_all_methods_v3|e9ae747b663fa5bc",
+    "brain_image_all_methods_v3|title:demorph a decoupled deformation model with anatomical guidance for predicting longitudinal brain atrophy": "brain_image_all_methods_v3|e9ae747b663fa5bc",
+    "brain_image_all_methods_v3|doi:10.1093/bjr/tqag240": "brain_image_all_methods_v3|e91a136f58ca5aae",
+    "brain_image_all_methods_v3|pmid:42853101": "brain_image_all_methods_v3|e91a136f58ca5aae",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42853101": "brain_image_all_methods_v3|e91a136f58ca5aae",
+    "brain_image_all_methods_v3|title:pediatric 7 tesla mri current applications and future opportunities": "brain_image_all_methods_v3|e91a136f58ca5aae"
   },
-  "updated_at": "2026-10-09T01:51:03.647021+00:00"
+  "updated_at": "2026-10-10T03:01:20.467470+00:00"
 }
