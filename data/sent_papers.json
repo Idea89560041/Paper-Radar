@@ -9260,6 +9260,17 @@
       "venue": "The British journal of radiology",
       "source": "PubMed",
       "sent_at": "2026-10-10T03:01:20.467378+00:00"
+    },
+    "brain_image_all_methods_v3|c72ebcd2d341e21f": {
+      "paper_uid": "c72ebcd2d341e21f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "UPER: A Unified Polyhedral Representation for universal multi-dimensional diffusion MRI image modeling.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42854624/",
+      "doi": "10.1016/j.media.2026.104336",
+      "pmid": "42854624",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-11T02:29:26.844797+00:00"
     }
   },
   "sent_keys": {
@@ -12663,7 +12674,11 @@
     "brain_image_all_methods_v3|doi:10.1093/bjr/tqag240": "brain_image_all_methods_v3|e91a136f58ca5aae",
     "brain_image_all_methods_v3|pmid:42853101": "brain_image_all_methods_v3|e91a136f58ca5aae",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42853101": "brain_image_all_methods_v3|e91a136f58ca5aae",
-    "brain_image_all_methods_v3|title:pediatric 7 tesla mri current applications and future opportunities": "brain_image_all_methods_v3|e91a136f58ca5aae"
+    "brain_image_all_methods_v3|title:pediatric 7 tesla mri current applications and future opportunities": "brain_image_all_methods_v3|e91a136f58ca5aae",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104336": "brain_image_all_methods_v3|c72ebcd2d341e21f",
+    "brain_image_all_methods_v3|pmid:42854624": "brain_image_all_methods_v3|c72ebcd2d341e21f",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42854624": "brain_image_all_methods_v3|c72ebcd2d341e21f",
+    "brain_image_all_methods_v3|title:uper a unified polyhedral representation for universal multi dimensional diffusion mri image modeling": "brain_image_all_methods_v3|c72ebcd2d341e21f"
   },
-  "updated_at": "2026-10-10T03:01:20.467470+00:00"
+  "updated_at": "2026-10-11T02:29:26.844887+00:00"
 }
