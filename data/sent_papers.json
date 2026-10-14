@@ -9359,6 +9359,17 @@
       "venue": "bioRxiv : the preprint server for biology",
       "source": "PubMed",
       "sent_at": "2026-10-12T02:55:42.273343+00:00"
+    },
+    "brain_image_all_methods_v3|634c56694219d05f": {
+      "paper_uid": "634c56694219d05f",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Automated Structured Reporting of Neurodegenerative Imaging Markers Using Quantitative MRI and Large Language Models.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42864178/",
+      "doi": "10.1016/j.acra.2026.09.056",
+      "pmid": "42864178",
+      "venue": "Academic radiology",
+      "source": "PubMed",
+      "sent_at": "2026-10-14T02:25:40.713905+00:00"
     }
   },
   "sent_keys": {
@@ -12796,7 +12807,11 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.09.24.754231": "brain_image_all_methods_v3|5cd4245ad10ac333",
     "brain_image_all_methods_v3|pmid:42856173": "brain_image_all_methods_v3|5cd4245ad10ac333",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42856173": "brain_image_all_methods_v3|5cd4245ad10ac333",
-    "brain_image_all_methods_v3|title:vrptr prediction of individual language activation and uncertainty from resting state fmri": "brain_image_all_methods_v3|5cd4245ad10ac333"
+    "brain_image_all_methods_v3|title:vrptr prediction of individual language activation and uncertainty from resting state fmri": "brain_image_all_methods_v3|5cd4245ad10ac333",
+    "brain_image_all_methods_v3|doi:10.1016/j.acra.2026.09.056": "brain_image_all_methods_v3|634c56694219d05f",
+    "brain_image_all_methods_v3|pmid:42864178": "brain_image_all_methods_v3|634c56694219d05f",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42864178": "brain_image_all_methods_v3|634c56694219d05f",
+    "brain_image_all_methods_v3|title:automated structured reporting of neurodegenerative imaging markers using quantitative mri and large language models": "brain_image_all_methods_v3|634c56694219d05f"
   },
-  "updated_at": "2026-10-12T02:55:42.273803+00:00"
+  "updated_at": "2026-10-14T02:25:40.713978+00:00"
 }
