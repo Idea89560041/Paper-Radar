@@ -9370,6 +9370,28 @@
       "venue": "Academic radiology",
       "source": "PubMed",
       "sent_at": "2026-10-14T02:25:40.713905+00:00"
+    },
+    "brain_image_all_methods_v3|2533bf7ae33dfee2": {
+      "paper_uid": "2533bf7ae33dfee2",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "ROI-informed cross-modal supervised contrastive learning for multimodal depression classification using rs-fMRI and T1-weighted MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42868928/",
+      "doi": "10.1016/j.media.2026.104350",
+      "pmid": "42868928",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-15T02:06:05.568474+00:00"
+    },
+    "brain_image_all_methods_v3|b463abfce5e31513": {
+      "paper_uid": "b463abfce5e31513",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep learning-based spot weight generation for online adaptive IMPT: implementation and technical feasibility on a clinical delivery system.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42869249/",
+      "doi": "10.1016/j.radonc.2026.111824",
+      "pmid": "42869249",
+      "venue": "Radiotherapy and oncology : journal of the European Society for Therapeutic Radiology and Oncology",
+      "source": "PubMed",
+      "sent_at": "2026-10-15T02:06:05.568474+00:00"
     }
   },
   "sent_keys": {
@@ -12811,7 +12833,15 @@
     "brain_image_all_methods_v3|doi:10.1016/j.acra.2026.09.056": "brain_image_all_methods_v3|634c56694219d05f",
     "brain_image_all_methods_v3|pmid:42864178": "brain_image_all_methods_v3|634c56694219d05f",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42864178": "brain_image_all_methods_v3|634c56694219d05f",
-    "brain_image_all_methods_v3|title:automated structured reporting of neurodegenerative imaging markers using quantitative mri and large language models": "brain_image_all_methods_v3|634c56694219d05f"
+    "brain_image_all_methods_v3|title:automated structured reporting of neurodegenerative imaging markers using quantitative mri and large language models": "brain_image_all_methods_v3|634c56694219d05f",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104350": "brain_image_all_methods_v3|2533bf7ae33dfee2",
+    "brain_image_all_methods_v3|pmid:42868928": "brain_image_all_methods_v3|2533bf7ae33dfee2",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42868928": "brain_image_all_methods_v3|2533bf7ae33dfee2",
+    "brain_image_all_methods_v3|title:roi informed cross modal supervised contrastive learning for multimodal depression classification using rs fmri and t1 weighted mri": "brain_image_all_methods_v3|2533bf7ae33dfee2",
+    "brain_image_all_methods_v3|doi:10.1016/j.radonc.2026.111824": "brain_image_all_methods_v3|b463abfce5e31513",
+    "brain_image_all_methods_v3|pmid:42869249": "brain_image_all_methods_v3|b463abfce5e31513",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42869249": "brain_image_all_methods_v3|b463abfce5e31513",
+    "brain_image_all_methods_v3|title:deep learning based spot weight generation for online adaptive impt implementation and technical feasibility on a clinical delivery system": "brain_image_all_methods_v3|b463abfce5e31513"
   },
-  "updated_at": "2026-10-14T02:25:40.713978+00:00"
+  "updated_at": "2026-10-15T02:06:05.568637+00:00"
 }
