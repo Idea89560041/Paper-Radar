@@ -9392,6 +9392,28 @@
       "venue": "Radiotherapy and oncology : journal of the European Society for Therapeutic Radiology and Oncology",
       "source": "PubMed",
       "sent_at": "2026-10-15T02:06:05.568474+00:00"
+    },
+    "brain_image_all_methods_v3|003def36ac7be54e": {
+      "paper_uid": "003def36ac7be54e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Modality-Aware and Anatomical Vector-Quantized Autoencoding for Multimodal Brain MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42877170/",
+      "doi": "10.1109/cvprf71909.2026.00121",
+      "pmid": "42877170",
+      "venue": "Proceedings. IEEE Computer Society Conference on Computer Vision and Pattern Recognition",
+      "source": "PubMed",
+      "sent_at": "2026-10-16T01:56:05.487570+00:00"
+    },
+    "brain_image_all_methods_v3|7ad54731ea04730b": {
+      "paper_uid": "7ad54731ea04730b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "CoilDrop-MRI: Self-supervised physics-guided MRI reconstruction with coil dropout.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42874157/",
+      "doi": "10.1016/j.media.2026.104337",
+      "pmid": "42874157",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-16T01:56:05.487570+00:00"
     }
   },
   "sent_keys": {
@@ -12841,7 +12863,15 @@
     "brain_image_all_methods_v3|doi:10.1016/j.radonc.2026.111824": "brain_image_all_methods_v3|b463abfce5e31513",
     "brain_image_all_methods_v3|pmid:42869249": "brain_image_all_methods_v3|b463abfce5e31513",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42869249": "brain_image_all_methods_v3|b463abfce5e31513",
-    "brain_image_all_methods_v3|title:deep learning based spot weight generation for online adaptive impt implementation and technical feasibility on a clinical delivery system": "brain_image_all_methods_v3|b463abfce5e31513"
+    "brain_image_all_methods_v3|title:deep learning based spot weight generation for online adaptive impt implementation and technical feasibility on a clinical delivery system": "brain_image_all_methods_v3|b463abfce5e31513",
+    "brain_image_all_methods_v3|doi:10.1109/cvprf71909.2026.00121": "brain_image_all_methods_v3|003def36ac7be54e",
+    "brain_image_all_methods_v3|pmid:42877170": "brain_image_all_methods_v3|003def36ac7be54e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42877170": "brain_image_all_methods_v3|003def36ac7be54e",
+    "brain_image_all_methods_v3|title:modality aware and anatomical vector quantized autoencoding for multimodal brain mri": "brain_image_all_methods_v3|003def36ac7be54e",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104337": "brain_image_all_methods_v3|7ad54731ea04730b",
+    "brain_image_all_methods_v3|pmid:42874157": "brain_image_all_methods_v3|7ad54731ea04730b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42874157": "brain_image_all_methods_v3|7ad54731ea04730b",
+    "brain_image_all_methods_v3|title:coildrop mri self supervised physics guided mri reconstruction with coil dropout": "brain_image_all_methods_v3|7ad54731ea04730b"
   },
-  "updated_at": "2026-10-15T02:06:05.568637+00:00"
+  "updated_at": "2026-10-16T01:56:05.487707+00:00"
 }
