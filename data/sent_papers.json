@@ -9414,6 +9414,17 @@
       "venue": "Medical image analysis",
       "source": "PubMed",
       "sent_at": "2026-10-16T01:56:05.487570+00:00"
+    },
+    "brain_image_all_methods_v3|8aeef9186465b5de": {
+      "paper_uid": "8aeef9186465b5de",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Improving the fairness and robustness of deep learning classification models through bias mitigation and post hoc calibration",
+      "url": "https://doi.org/10.1007/s11548-026-03805-x",
+      "doi": "10.1007/s11548-026-03805-x",
+      "pmid": "",
+      "venue": "International Journal of Computer Assisted Radiology and Surgery",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-10-18T01:47:28.474385+00:00"
     }
   },
   "sent_keys": {
@@ -12871,7 +12882,10 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104337": "brain_image_all_methods_v3|7ad54731ea04730b",
     "brain_image_all_methods_v3|pmid:42874157": "brain_image_all_methods_v3|7ad54731ea04730b",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42874157": "brain_image_all_methods_v3|7ad54731ea04730b",
-    "brain_image_all_methods_v3|title:coildrop mri self supervised physics guided mri reconstruction with coil dropout": "brain_image_all_methods_v3|7ad54731ea04730b"
+    "brain_image_all_methods_v3|title:coildrop mri self supervised physics guided mri reconstruction with coil dropout": "brain_image_all_methods_v3|7ad54731ea04730b",
+    "brain_image_all_methods_v3|doi:10.1007/s11548-026-03805-x": "brain_image_all_methods_v3|8aeef9186465b5de",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1007/s11548-026-03805-x": "brain_image_all_methods_v3|8aeef9186465b5de",
+    "brain_image_all_methods_v3|title:improving the fairness and robustness of deep learning classification models through bias mitigation and post hoc calibration": "brain_image_all_methods_v3|8aeef9186465b5de"
   },
-  "updated_at": "2026-10-16T01:56:05.487707+00:00"
+  "updated_at": "2026-10-18T01:47:28.474481+00:00"
 }
