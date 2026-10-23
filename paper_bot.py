@@ -1386,6 +1386,11 @@ def venue_category_label(category: str) -> str:
 
 
 def infer_topic(paper: Paper) -> str:
+    content = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
+    if any(contains_term(content, term) for term in ["world model", "world models", "world-model"]) and any(
+        contains_term(content, term) for term in ["brain", "neuroimaging", "fMRI", "brain dynamics"]
+    ):
+        return "Brain World Models"
     text = " ".join(
         [
             paper.title or "",
@@ -1718,6 +1723,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "segmentation / registration / reconstruction",
         "denoising / super-resolution / harmonization",
         "synthesis / translation / generative models",
+        "brain world models",
         "medical imaging world models",
         "AI agent / VLM / foundation models",
         "brain MRI / fMRI / PET / Aβ-PET",

@@ -5,6 +5,19 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_brain_world_model_passes_ai_filter_and_has_own_topic(self):
+        cfg = bot.load_config("config.yaml")
+        paper = bot.Paper(source="arXiv", title="Brain world models for brain activity prediction",
+                          authors=[], abstract="A neural world model learns brain dynamics from fMRI.",
+                          url="https://example.org/brain-world-model", published_date="2026-10-20",
+                          query="brain world model", venue="arXiv")
+        scored = bot.score_paper(paper, cfg)
+        self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
+        self.assertEqual(bot.infer_topic(scored), "Brain World Models")
+        paper.title = "Radiology world models for CT"
+        paper.abstract = "A transformer predicts lung CT images."
+        self.assertEqual(bot.infer_topic(paper), "Medical Imaging World Models")
+
     def test_correlation_focus_and_ai_evaluation_are_distinguished(self):
         cfg = bot.load_config("config.yaml")
         cases = [
