@@ -9425,6 +9425,28 @@
       "venue": "International Journal of Computer Assisted Radiology and Surgery",
       "source": "Crossref Top Journals",
       "sent_at": "2026-10-18T01:47:28.474385+00:00"
+    },
+    "brain_image_all_methods_v3|bd984619a86fed85": {
+      "paper_uid": "bd984619a86fed85",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Agentic Automation of BT-RADS Scoring Using an End-to-End System for Standardized Glioma Follow-up Assessment.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42905016/",
+      "doi": "10.1148/ryai.260234",
+      "pmid": "42905016",
+      "venue": "Radiology. Artificial intelligence",
+      "source": "PubMed",
+      "sent_at": "2026-10-23T02:15:20.277021+00:00"
+    },
+    "brain_image_all_methods_v3|db08aed7c448b335": {
+      "paper_uid": "db08aed7c448b335",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Machine Learning-driven Prognostic Stratification in Metastatic Breast Cancer Using Dynamic 18 F-FDG PET/CT: A Multidimensional Study Integrating Pathomics and Plasma Proteomics.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42904330/",
+      "doi": "10.1016/j.acra.2026.07.055",
+      "pmid": "42904330",
+      "venue": "Academic radiology",
+      "source": "PubMed",
+      "sent_at": "2026-10-23T02:15:20.277021+00:00"
     }
   },
   "sent_keys": {
@@ -12885,7 +12907,15 @@
     "brain_image_all_methods_v3|title:coildrop mri self supervised physics guided mri reconstruction with coil dropout": "brain_image_all_methods_v3|7ad54731ea04730b",
     "brain_image_all_methods_v3|doi:10.1007/s11548-026-03805-x": "brain_image_all_methods_v3|8aeef9186465b5de",
     "brain_image_all_methods_v3|url:https://doi.org/10.1007/s11548-026-03805-x": "brain_image_all_methods_v3|8aeef9186465b5de",
-    "brain_image_all_methods_v3|title:improving the fairness and robustness of deep learning classification models through bias mitigation and post hoc calibration": "brain_image_all_methods_v3|8aeef9186465b5de"
+    "brain_image_all_methods_v3|title:improving the fairness and robustness of deep learning classification models through bias mitigation and post hoc calibration": "brain_image_all_methods_v3|8aeef9186465b5de",
+    "brain_image_all_methods_v3|doi:10.1148/ryai.260234": "brain_image_all_methods_v3|bd984619a86fed85",
+    "brain_image_all_methods_v3|pmid:42905016": "brain_image_all_methods_v3|bd984619a86fed85",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42905016": "brain_image_all_methods_v3|bd984619a86fed85",
+    "brain_image_all_methods_v3|title:agentic automation of bt rads scoring using an end to end system for standardized glioma follow up assessment": "brain_image_all_methods_v3|bd984619a86fed85",
+    "brain_image_all_methods_v3|doi:10.1016/j.acra.2026.07.055": "brain_image_all_methods_v3|db08aed7c448b335",
+    "brain_image_all_methods_v3|pmid:42904330": "brain_image_all_methods_v3|db08aed7c448b335",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42904330": "brain_image_all_methods_v3|db08aed7c448b335",
+    "brain_image_all_methods_v3|title:machine learning driven prognostic stratification in metastatic breast cancer using dynamic 18 f fdg pet ct a multidimensional study integrating pathomics and plasma proteomics": "brain_image_all_methods_v3|db08aed7c448b335"
   },
-  "updated_at": "2026-10-18T01:47:28.474481+00:00"
+  "updated_at": "2026-10-23T02:15:20.277216+00:00"
 }
