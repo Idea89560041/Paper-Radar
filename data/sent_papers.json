@@ -9568,6 +9568,17 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-10-23T14:19:16.256656+00:00"
+    },
+    "brain_image_all_methods_v3|dab8e6a946d6b3c8": {
+      "paper_uid": "dab8e6a946d6b3c8",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Stochastic Siamese MAE Pretraining for Longitudinal Medical Images.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42911836/",
+      "doi": "10.1109/tmi.2026.3745973",
+      "pmid": "42911836",
+      "venue": "IEEE transactions on medical imaging",
+      "source": "PubMed",
+      "sent_at": "2026-10-24T02:13:17.376214+00:00"
     }
   },
   "sent_keys": {
@@ -13064,7 +13075,11 @@
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42907266": "brain_image_all_methods_v3|a76270d4060fc45c",
     "brain_image_all_methods_v3|title:machine learning model using clinical and contrast enhanced mri features differentiates cerebral tuberculoma from lung cancer brain metastasis": "brain_image_all_methods_v3|a76270d4060fc45c",
     "brain_image_all_methods_v3|url:https://arxiv.org/abs/2610.15628v1": "brain_image_all_methods_v3|da1b87e83682525f",
-    "brain_image_all_methods_v3|title:robust detection of directional adversarial attacks in deep neural networks for radiological imaging": "brain_image_all_methods_v3|da1b87e83682525f"
+    "brain_image_all_methods_v3|title:robust detection of directional adversarial attacks in deep neural networks for radiological imaging": "brain_image_all_methods_v3|da1b87e83682525f",
+    "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3745973": "brain_image_all_methods_v3|dab8e6a946d6b3c8",
+    "brain_image_all_methods_v3|pmid:42911836": "brain_image_all_methods_v3|dab8e6a946d6b3c8",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42911836": "brain_image_all_methods_v3|dab8e6a946d6b3c8",
+    "brain_image_all_methods_v3|title:stochastic siamese mae pretraining for longitudinal medical images": "brain_image_all_methods_v3|dab8e6a946d6b3c8"
   },
-  "updated_at": "2026-10-23T14:19:16.257253+00:00"
+  "updated_at": "2026-10-24T02:13:17.376318+00:00"
 }
