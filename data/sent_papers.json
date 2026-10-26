@@ -9711,6 +9711,17 @@
       "venue": "bioRxiv : the preprint server for biology",
       "source": "PubMed",
       "sent_at": "2026-10-26T02:02:35.742272+00:00"
+    },
+    "brain_image_all_methods_v3|0a63aa09d318c66a": {
+      "paper_uid": "0a63aa09d318c66a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Predicting Autopsy-Confirmed Neuropathology across Clinical, Neuroimaging, and CSF Biomarkers using Machine Learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42239211/",
+      "doi": "10.64898/2026.05.20.726332",
+      "pmid": "42239211",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-10-26T02:41:33.870262+00:00"
     }
   },
   "sent_keys": {
@@ -13259,7 +13270,11 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.10.03.751882": "brain_image_all_methods_v3|9a87d2c2027a39ad",
     "brain_image_all_methods_v3|pmid:42926513": "brain_image_all_methods_v3|9a87d2c2027a39ad",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42926513": "brain_image_all_methods_v3|9a87d2c2027a39ad",
-    "brain_image_all_methods_v3|title:widely used calculations of intracranial volume provide inaccurate estimates in developmental cohorts evidence and recommendations for the neuroimaging community": "brain_image_all_methods_v3|9a87d2c2027a39ad"
+    "brain_image_all_methods_v3|title:widely used calculations of intracranial volume provide inaccurate estimates in developmental cohorts evidence and recommendations for the neuroimaging community": "brain_image_all_methods_v3|9a87d2c2027a39ad",
+    "brain_image_all_methods_v3|doi:10.64898/2026.05.20.726332": "brain_image_all_methods_v3|0a63aa09d318c66a",
+    "brain_image_all_methods_v3|pmid:42239211": "brain_image_all_methods_v3|0a63aa09d318c66a",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42239211": "brain_image_all_methods_v3|0a63aa09d318c66a",
+    "brain_image_all_methods_v3|title:predicting autopsy confirmed neuropathology across clinical neuroimaging and csf biomarkers using machine learning": "brain_image_all_methods_v3|0a63aa09d318c66a"
   },
-  "updated_at": "2026-10-26T02:02:35.742657+00:00"
+  "updated_at": "2026-10-26T02:41:33.870333+00:00"
 }
