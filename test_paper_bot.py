@@ -5,6 +5,27 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_diffusion_mri_diagnosis_and_removed_disease_topics(self):
+        cfg = bot.load_config("config.yaml")
+        cases = [
+            ("Deep learning diagnosis of Parkinson disease from diffusion MRI", "Brain DTI patient classification.", True),
+            ("Alzheimer classification using diffusion tensor imaging", "A neural network uses brain white matter features.", True),
+            ("Diffusion MRI tract segmentation with a transformer", "White matter bundle segmentation.", False),
+            ("Diffusion model for brain MRI synthesis", "Deep learning image generation for disease imaging.", False),
+            ("Alzheimer diagnosis with amyloid PET", "A transformer analyses brain PET.", False),
+        ]
+        removed = {"AD / Dementia Diagnosis", "Aβ / Amyloid / Tau PET", "Parkinson / Lewy Body / FTD"}
+        self.assertFalse(removed.intersection(label for label, _ in bot.TOPIC_RULES))
+        for title, abstract, expected in cases:
+            with self.subTest(title=title):
+                paper = bot.Paper(source="PubMed", title=title, authors=[], abstract=abstract,
+                                  url="https://example.org/paper", published_date="2026-10-20",
+                                  query="dMRI disease diagnosis", venue="Medical Image Analysis")
+                scored = bot.score_paper(paper, cfg)
+                self.assertGreaterEqual(scored.score, cfg["scoring"]["min_score"])
+                self.assertEqual(bot.infer_topic(scored) == "Diffusion MRI Disease Diagnosis", expected)
+                self.assertNotIn(bot.infer_topic(scored), removed)
+
     def test_brain_world_model_passes_ai_filter_and_has_own_topic(self):
         cfg = bot.load_config("config.yaml")
         paper = bot.Paper(source="arXiv", title="Brain world models for brain activity prediction",

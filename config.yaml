@@ -26,6 +26,8 @@ research_profile:
   name: "Brain Image / Neuroimage"
 
   queries:
+    - 'diffusion MRI brain disease diagnosis machine learning'
+    - 'diffusion tensor imaging brain disease classification deep learning'
     - 'brain world model'
     - 'world model brain fMRI'
     - 'neural world model brain'
@@ -54,9 +56,6 @@ research_profile:
     - "agentic AI agent brain image neuroimaging radiology"
     - "vision language model radiology brain MRI PET"
     - "self-supervised representation learning neuroimaging MRI PET"
-    - "brain PET amyloid beta tau FDG deep learning"
-    - "Alzheimer dementia MCI brain MRI PET deep learning"
-    - "Parkinson Lewy body frontotemporal dementia neuroimaging machine learning"
     - "brain tumor glioma stroke epilepsy MRI CT deep learning"
     - "medical image analysis brain MRI PET transformer"
     - "whole-body PET MRI multi-organ medical imaging deep learning"
@@ -66,6 +65,7 @@ research_profile:
     - "brain gut microbiome Alzheimer dementia neuroimaging machine learning"
 
   pubmed_queries:
+    - '("diffusion MRI"[Title/Abstract] OR "diffusion magnetic resonance imaging"[Title/Abstract] OR dMRI[Title/Abstract] OR DTI[Title/Abstract] OR "diffusion tensor imaging"[Title/Abstract] OR "diffusion kurtosis imaging"[Title/Abstract] OR NODDI[Title/Abstract]) AND (diagnosis[Title/Abstract] OR diagnostic[Title/Abstract] OR classification[Title/Abstract] OR prediction[Title/Abstract] OR prognosis[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract] OR "neural network"[Title/Abstract] OR "artificial intelligence"[Title/Abstract]) AND (brain[Title/Abstract] OR cerebral[Title/Abstract] OR neuroimaging[Title/Abstract] OR "white matter"[Title/Abstract] OR neurological[Title/Abstract])'
     - '("world model"[Title/Abstract] OR "world models"[Title/Abstract] OR "world-model"[Title/Abstract]) AND (brain[Title/Abstract] OR neural[Title/Abstract] OR neuroimaging[Title/Abstract] OR fMRI[Title/Abstract])'
     - '("diffusion MRI"[Title/Abstract] OR "diffusion magnetic resonance imaging"[Title/Abstract] OR dMRI[Title/Abstract] OR DTI[Title/Abstract] OR "diffusion tensor imaging"[Title/Abstract]) AND (segmentation[Title/Abstract] OR parcellation[Title/Abstract] OR "tract segmentation"[Title/Abstract] OR "tract parcellation"[Title/Abstract] OR "bundle segmentation"[Title/Abstract] OR "fiber tract segmentation"[Title/Abstract] OR "fibre tract segmentation"[Title/Abstract]) AND (brain[Title/Abstract] OR cerebral[Title/Abstract] OR neuroimaging[Title/Abstract] OR "white matter"[Title/Abstract])'
     - '(tractography[Title/Abstract] OR "white matter tract"[Title/Abstract] OR "white matter bundle"[Title/Abstract]) AND (segmentation[Title/Abstract] OR parcellation[Title/Abstract] OR delineation[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract] OR "neural network"[Title/Abstract] OR atlas[Title/Abstract])'
@@ -79,13 +79,13 @@ research_profile:
     - '("total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "long axial field-of-view PET"[Title/Abstract] OR "long axial field of view PET"[Title/Abstract] OR "LAFOV PET"[Title/Abstract]) AND ("multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR organ[Title/Abstract] OR systemic[Title/Abstract]) AND (longitudinal[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract] OR progression[Title/Abstract] OR dynamic[Title/Abstract] OR kinetic[Title/Abstract] OR quantification[Title/Abstract] OR "parametric imaging"[Title/Abstract])'
     - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "dynamic PET"[Title/Abstract] OR "parametric PET"[Title/Abstract]) AND ("organ interaction"[Title/Abstract] OR "organ crosstalk"[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract] OR "metabolic network"[Title/Abstract] OR trajectory[Title/Abstract] OR trajectories[Title/Abstract])'
     - '("foundation model"[Title/Abstract] OR "large multimodal model"[Title/Abstract] OR "vision-language model"[Title/Abstract] OR "vision language model"[Title/Abstract] OR "self-supervised"[Title/Abstract] OR "representation learning"[Title/Abstract] OR transformer[Title/Abstract]) AND (brain[Title/Abstract] OR neuroimaging[Title/Abstract] OR neuroimage[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract])'
-    - '("Aβ PET"[Title/Abstract] OR "Aβ-PET"[Title/Abstract] OR "amyloid beta PET"[Title/Abstract] OR "amyloid-beta PET"[Title/Abstract] OR "beta-amyloid PET"[Title/Abstract] OR "Abeta PET"[Title/Abstract] OR "amyloid PET"[Title/Abstract] OR "tau PET"[Title/Abstract] OR "FDG PET"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
-    - '(Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR "mild cognitive impairment"[Title/Abstract] OR MCI[Title/Abstract] OR Parkinson*[Title/Abstract] OR "Lewy body"[Title/Abstract] OR "frontotemporal dementia"[Title/Abstract] OR neurodegenerative[Title/Abstract] OR neurodegeneration[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract] OR "foundation model"[Title/Abstract])'
     - '("brain tumor"[Title/Abstract] OR glioma[Title/Abstract] OR stroke[Title/Abstract] OR epilepsy[Title/Abstract] OR "multiple sclerosis"[Title/Abstract] OR connectome[Title/Abstract]) AND (MRI[Title/Abstract] OR fMRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract] OR neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR transformer[Title/Abstract])'
     - '("whole-body PET"[Title/Abstract] OR "whole body PET"[Title/Abstract] OR "total-body PET"[Title/Abstract] OR "total body PET"[Title/Abstract] OR "whole-body MRI"[Title/Abstract] OR "whole body MRI"[Title/Abstract] OR PET/MRI[Title/Abstract] OR PET-MRI[Title/Abstract] OR "multi-organ"[Title/Abstract] OR "multi organ"[Title/Abstract]) AND ("medical imaging"[Title/Abstract] OR radiology[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract] OR CT[Title/Abstract]) AND ("deep learning"[Title/Abstract] OR "artificial intelligence"[Title/Abstract] OR "machine learning"[Title/Abstract] OR transformer[Title/Abstract])'
     - '("brain-gut axis"[Title/Abstract] OR "gut-brain axis"[Title/Abstract] OR microbiome[Title/Abstract]) AND (Alzheimer*[Title/Abstract] OR dementia[Title/Abstract] OR neurodegenerative[Title/Abstract] OR brain[Title/Abstract]) AND (neuroimaging[Title/Abstract] OR "brain imaging"[Title/Abstract] OR MRI[Title/Abstract] OR PET[Title/Abstract]) AND ("artificial intelligence"[Title/Abstract] OR "deep learning"[Title/Abstract] OR "machine learning"[Title/Abstract])'
 
   arxiv_queries:
+    - 'diffusion MRI brain disease diagnosis learning'
+    - 'diffusion tensor imaging brain disease classification'
     - 'brain world model'
     - 'world model brain fMRI'
     - 'neural world model brain'
@@ -115,9 +115,6 @@ research_profile:
     - "vision language model radiology brain MRI PET"
     - "self supervised representation learning neuroimaging MRI PET"
     - "medical image analysis brain MRI PET transformer"
-    - "brain PET amyloid beta tau FDG deep learning"
-    - "Alzheimer dementia MCI brain MRI PET deep learning"
-    - "Parkinson Lewy body frontotemporal dementia neuroimaging machine learning"
     - "brain tumor glioma stroke epilepsy MRI CT deep learning"
     - "whole body PET MRI multi-organ medical imaging deep learning"
     - "total-body PET longitudinal multi-organ trajectory machine learning"
@@ -126,6 +123,8 @@ research_profile:
     - "brain gut microbiome Alzheimer neuroimaging machine learning"
 
   semantic_scholar_queries:
+    - 'diffusion MRI brain disease diagnosis machine learning'
+    - 'diffusion tensor imaging brain disease classification deep learning'
     - 'brain world model'
     - 'world model brain fMRI dynamics prediction'
     - 'neural world model brain activity simulation'
@@ -155,9 +154,6 @@ research_profile:
     - "vision-language model radiology brain MRI PET"
     - "self-supervised representation learning neuroimaging MRI PET"
     - "medical image analysis brain MRI PET transformer"
-    - "brain PET amyloid beta tau FDG deep learning"
-    - "Alzheimer's disease dementia MCI brain MRI PET deep learning"
-    - "Parkinson disease Lewy body frontotemporal dementia neuroimaging machine learning"
     - "brain tumor glioma stroke epilepsy MRI CT deep learning"
     - "whole-body PET MRI multi-organ medical imaging deep learning"
     - "total-body PET longitudinal multi-organ trajectory machine learning"
@@ -342,6 +338,8 @@ top_journal_families:
     - "CVPR"
 
   crossref_topic_queries:
+    - 'diffusion MRI brain disease diagnosis machine learning'
+    - 'diffusion tensor imaging brain disease classification deep learning'
     - 'brain world model neural dynamics prediction'
     - 'brain world model fMRI neuroimaging simulation'
     - "diffusion MRI segmentation parcellation white matter tracts"
@@ -369,8 +367,6 @@ top_journal_families:
     - "neuroimage image synthesis image translation image generation diffusion model"
     - "agentic AI agent brain image neuroimaging radiology"
     - "foundation model neuroimaging brain MRI PET"
-    - "Aβ PET amyloid beta tau FDG Alzheimer deep learning"
-    - "Alzheimer dementia MCI brain MRI PET machine learning"
     - "brain imaging MRI fMRI PET artificial intelligence"
     - "medical image analysis brain MRI PET transformer"
     - "vision language model radiology brain MRI PET"
@@ -502,6 +498,7 @@ venue_categories:
 
 scoring:
   min_score: 30
+  diffusion_mri_diagnosis_boost: 12
   # AI evidence must come from the paper's own title or abstract.
   ai_required_any:
     - brain world model
@@ -830,6 +827,9 @@ scoring:
     - predictive world model
 
   imaging_must_have_any:
+    - diffusion tensor imaging
+    - diffusion kurtosis imaging
+    - NODDI
     - brain world model
     - brain world models
     - brain activity
@@ -1015,14 +1015,6 @@ scoring:
     "LAFOV PET": 8
     "dynamic PET": 6
     "parametric PET": 6
-    "amyloid PET": 8
-    "amyloid beta PET": 10
-    "amyloid-beta PET": 10
-    "beta-amyloid PET": 10
-    "Abeta PET": 10
-    "A beta PET": 10
-    "Aβ PET": 10
-    "Aβ-PET": 10
     "whole-body MRI": 7
     "whole body MRI": 7
     CT: 3
@@ -1154,14 +1146,6 @@ scoring:
     MRI: 5
     fMRI: 5
     PET: 5
-    "amyloid PET": 7
-    "amyloid beta PET": 10
-    "amyloid-beta PET": 10
-    "beta-amyloid PET": 10
-    "Abeta PET": 10
-    "A beta PET": 10
-    "Aβ PET": 10
-    "Aβ-PET": 10
     "brain MRI": 10
     "brain PET": 10
     "structural MRI": 5
@@ -1195,17 +1179,6 @@ scoring:
     "brain heart gut": 12
     "brain-body immune axis": 11
     "brain body immune axis": 11
-    Alzheimer: 8
-    Alzheimer's: 8
-    dementia: 6
-    "mild cognitive impairment": 6
-    MCI: 5
-    neurodegenerative: 8
-    neurodegeneration: 8
-    Parkinson: 7
-    "Lewy body": 7
-    "frontotemporal dementia": 7
-    FTD: 5
     "brain tumor": 6
     glioma: 6
     stroke: 5
@@ -1264,14 +1237,6 @@ scoring:
     "multi-organ longitudinal": 6
     "multi organ longitudinal": 6
     hippocampus: 5
-    amyloid: 4
-    "amyloid beta": 6
-    "amyloid-beta": 6
-    "beta-amyloid": 6
-    Abeta: 6
-    "A beta": 6
-    Aβ: 6
-    tau: 4
     CT: 2
     "computed tomography": 2
     "multi-organ": 3

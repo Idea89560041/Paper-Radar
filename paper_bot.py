@@ -855,6 +855,10 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
         paper.reasons = ["missing-pet/mri-imaging-focus"]
         return paper
 
+    if is_diffusion_mri_diagnosis(paper):
+        score += float(scoring.get("diffusion_mri_diagnosis_boost", 12))
+        reasons.append("focus:diffusion-mri-disease-diagnosis")
+
     keyword_score, keyword_reasons = add_keyword_scores(text_title, text_all, keyword_weights)
     score += keyword_score
     reasons.extend(keyword_reasons)
@@ -1103,29 +1107,6 @@ TOPIC_RULES = [
         ],
     ),
     (
-        "AD / Dementia Diagnosis",
-        [
-            "Alzheimer",
-            "Alzheimer's",
-            "dementia",
-            "mild cognitive impairment",
-            "MCI",
-            "amyloid",
-            "tau",
-            "neurodegenerative",
-        ],
-    ),
-    (
-        "Parkinson / Lewy Body / FTD",
-        [
-            "Parkinson",
-            "Lewy body",
-            "frontotemporal dementia",
-            "FTD",
-            "Huntington",
-        ],
-    ),
-    (
         "Longitudinal / Multi-organ PET",
         [
             "total-body PET",
@@ -1147,28 +1128,6 @@ TOPIC_RULES = [
             "organ interaction",
             "organ crosstalk",
             "metabolic network",
-        ],
-    ),
-    (
-        "Aβ / Amyloid / Tau PET",
-        [
-            "Aβ PET",
-            "Aβ-PET",
-            "A beta PET",
-            "Abeta PET",
-            "amyloid beta PET",
-            "amyloid-beta PET",
-            "beta-amyloid PET",
-            "amyloid PET",
-            "amyloid",
-            "amyloid beta",
-            "amyloid-beta",
-            "beta-amyloid",
-            "Abeta",
-            "A beta",
-            "Aβ",
-            "tau",
-            "FDG",
         ],
     ),
     (
@@ -1385,12 +1344,31 @@ def venue_category_label(category: str) -> str:
     return VENUE_CATEGORY_LABELS.get(category, VENUE_CATEGORY_LABELS["other"])
 
 
+def is_diffusion_mri_diagnosis(paper: Paper) -> bool:
+    content = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
+    modalities = ["diffusion MRI", "diffusion magnetic resonance imaging", "dMRI", "DTI",
+                  "diffusion tensor imaging", "diffusion-weighted imaging", "diffusion weighted imaging",
+                  "diffusion kurtosis imaging", "NODDI", "diffusion tractography"]
+    tasks = ["diagnosis", "diagnostic", "diagnoses", "diagnosing", "disease classification",
+             "disease prediction", "disease detection", "differential diagnosis", "prognosis",
+             "prognostic", "risk prediction", "patient classification", "disease progression"]
+    disease_context = ["disease", "disorder", "patients", "patient", "Alzheimer", "dementia",
+                       "Parkinson", "MCI", "multiple sclerosis", "stroke", "epilepsy", "glioma"]
+    has_task = any(contains_term(content, term) for term in tasks) or (
+        any(contains_term(content, term) for term in ["classification", "prediction", "detection"])
+        and any(contains_term(content, term) for term in disease_context)
+    )
+    return has_task and any(contains_term(content, term) for term in modalities)
+
+
 def infer_topic(paper: Paper) -> str:
     content = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
     if any(contains_term(content, term) for term in ["world model", "world models", "world-model"]) and any(
         contains_term(content, term) for term in ["brain", "neuroimaging", "fMRI", "brain dynamics"]
     ):
         return "Brain World Models"
+    if is_diffusion_mri_diagnosis(paper):
+        return "Diffusion MRI Disease Diagnosis"
     text = " ".join(
         [
             paper.title or "",
@@ -1726,8 +1704,9 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
         "brain world models",
         "medical imaging world models",
         "AI agent / VLM / foundation models",
-        "brain MRI / fMRI / PET / Aβ-PET",
-        "AD / dementia / brain tumor / stroke / epilepsy",
+        "brain MRI / fMRI / PET",
+        "diffusion MRI disease diagnosis",
+        "brain tumor / stroke / epilepsy",
         "brain-centered multi-organ trajectories",
         "brain-body / brain-organ axis",
         "brain-heart-gut metabolic networks",
