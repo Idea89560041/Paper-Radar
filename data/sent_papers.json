@@ -9722,6 +9722,39 @@
       "venue": "bioRxiv : the preprint server for biology",
       "source": "PubMed",
       "sent_at": "2026-10-26T02:41:33.870262+00:00"
+    },
+    "brain_image_all_methods_v3|dd5c8487fc25736b": {
+      "paper_uid": "dd5c8487fc25736b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "4DLoG: Generative modeling of neurodegenerative brain anatomy with 4D longitudinal diffusion model.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42950384/",
+      "doi": "10.1016/j.media.2026.104368",
+      "pmid": "42950384",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-10-30T03:13:05.393986+00:00"
+    },
+    "brain_image_all_methods_v3|a031df2bd0ff2945": {
+      "paper_uid": "a031df2bd0ff2945",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A generalizable structural brain MRI foundation model via dual-priority federated pretraining",
+      "url": "https://arxiv.org/abs/2609.27611v2",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-10-30T03:13:05.393986+00:00"
+    },
+    "brain_image_all_methods_v3|6932548a6bb56b3b": {
+      "paper_uid": "6932548a6bb56b3b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "SalientNet: mechanistic and reliable saliency maps for medical image classification via unsupervised learning.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42955617/",
+      "doi": "10.1007/s11548-026-03812-y",
+      "pmid": "42955617",
+      "venue": "International journal of computer assisted radiology and surgery",
+      "source": "PubMed",
+      "sent_at": "2026-10-30T03:13:05.393986+00:00"
     }
   },
   "sent_keys": {
@@ -13274,7 +13307,17 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.05.20.726332": "brain_image_all_methods_v3|0a63aa09d318c66a",
     "brain_image_all_methods_v3|pmid:42239211": "brain_image_all_methods_v3|0a63aa09d318c66a",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42239211": "brain_image_all_methods_v3|0a63aa09d318c66a",
-    "brain_image_all_methods_v3|title:predicting autopsy confirmed neuropathology across clinical neuroimaging and csf biomarkers using machine learning": "brain_image_all_methods_v3|0a63aa09d318c66a"
+    "brain_image_all_methods_v3|title:predicting autopsy confirmed neuropathology across clinical neuroimaging and csf biomarkers using machine learning": "brain_image_all_methods_v3|0a63aa09d318c66a",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104368": "brain_image_all_methods_v3|dd5c8487fc25736b",
+    "brain_image_all_methods_v3|pmid:42950384": "brain_image_all_methods_v3|dd5c8487fc25736b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42950384": "brain_image_all_methods_v3|dd5c8487fc25736b",
+    "brain_image_all_methods_v3|title:4dlog generative modeling of neurodegenerative brain anatomy with 4d longitudinal diffusion model": "brain_image_all_methods_v3|dd5c8487fc25736b",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2609.27611v2": "brain_image_all_methods_v3|a031df2bd0ff2945",
+    "brain_image_all_methods_v3|title:a generalizable structural brain mri foundation model via dual priority federated pretraining": "brain_image_all_methods_v3|a031df2bd0ff2945",
+    "brain_image_all_methods_v3|doi:10.1007/s11548-026-03812-y": "brain_image_all_methods_v3|6932548a6bb56b3b",
+    "brain_image_all_methods_v3|pmid:42955617": "brain_image_all_methods_v3|6932548a6bb56b3b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42955617": "brain_image_all_methods_v3|6932548a6bb56b3b",
+    "brain_image_all_methods_v3|title:salientnet mechanistic and reliable saliency maps for medical image classification via unsupervised learning": "brain_image_all_methods_v3|6932548a6bb56b3b"
   },
-  "updated_at": "2026-10-26T02:41:33.870333+00:00"
+  "updated_at": "2026-10-30T03:13:05.394118+00:00"
 }
