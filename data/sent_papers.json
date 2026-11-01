@@ -9755,6 +9755,17 @@
       "venue": "International journal of computer assisted radiology and surgery",
       "source": "PubMed",
       "sent_at": "2026-10-30T03:13:05.393986+00:00"
+    },
+    "brain_image_all_methods_v3|a647aba974360eca": {
+      "paper_uid": "a647aba974360eca",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multimodal deep learning model based on CT perfusion-defined infarct core for predicting parenchymal hematoma type 2 after endovascular therapy in acute ischemic stroke",
+      "url": "https://doi.org/10.1016/j.ejrad.2026.113070",
+      "doi": "10.1016/j.ejrad.2026.113070",
+      "pmid": "",
+      "venue": "European Journal of Radiology",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-11-01T02:52:01.859565+00:00"
     }
   },
   "sent_keys": {
@@ -13317,7 +13328,10 @@
     "brain_image_all_methods_v3|doi:10.1007/s11548-026-03812-y": "brain_image_all_methods_v3|6932548a6bb56b3b",
     "brain_image_all_methods_v3|pmid:42955617": "brain_image_all_methods_v3|6932548a6bb56b3b",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42955617": "brain_image_all_methods_v3|6932548a6bb56b3b",
-    "brain_image_all_methods_v3|title:salientnet mechanistic and reliable saliency maps for medical image classification via unsupervised learning": "brain_image_all_methods_v3|6932548a6bb56b3b"
+    "brain_image_all_methods_v3|title:salientnet mechanistic and reliable saliency maps for medical image classification via unsupervised learning": "brain_image_all_methods_v3|6932548a6bb56b3b",
+    "brain_image_all_methods_v3|doi:10.1016/j.ejrad.2026.113070": "brain_image_all_methods_v3|a647aba974360eca",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.ejrad.2026.113070": "brain_image_all_methods_v3|a647aba974360eca",
+    "brain_image_all_methods_v3|title:multimodal deep learning model based on ct perfusion defined infarct core for predicting parenchymal hematoma type 2 after endovascular therapy in acute ischemic stroke": "brain_image_all_methods_v3|a647aba974360eca"
   },
-  "updated_at": "2026-10-30T03:13:05.394118+00:00"
+  "updated_at": "2026-11-01T02:52:01.859662+00:00"
 }
