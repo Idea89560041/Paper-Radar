@@ -9766,6 +9766,39 @@
       "venue": "European Journal of Radiology",
       "source": "Crossref Top Journals",
       "sent_at": "2026-11-01T02:52:01.859565+00:00"
+    },
+    "brain_image_all_methods_v3|a86c7c74d3cbbb7e": {
+      "paper_uid": "a86c7c74d3cbbb7e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Ultrafast brain MRI at 3 T for suspected acute ischemic stroke: interchangeability of the ultrafast and standard protocols.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42965773/",
+      "doi": "10.1007/s11604-026-02103-5",
+      "pmid": "42965773",
+      "venue": "Japanese journal of radiology",
+      "source": "PubMed",
+      "sent_at": "2026-11-02T03:03:48.093033+00:00"
+    },
+    "brain_image_all_methods_v3|7813d1f849fa5716": {
+      "paper_uid": "7813d1f849fa5716",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "VGGT: Visual Geometry Grounded Transformer",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html",
+      "doi": "",
+      "pmid": "",
+      "venue": "CVPR 2025",
+      "source": "CVF Hot Ideas",
+      "sent_at": "2026-11-02T03:03:48.093033+00:00"
+    },
+    "brain_image_all_methods_v3|f6f88a33ed0e0b22": {
+      "paper_uid": "f6f88a33ed0e0b22",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html",
+      "doi": "",
+      "pmid": "",
+      "venue": "CVPR 2025",
+      "source": "CVF Hot Ideas",
+      "sent_at": "2026-11-02T03:03:48.093033+00:00"
     }
   },
   "sent_keys": {
@@ -13331,7 +13364,15 @@
     "brain_image_all_methods_v3|title:salientnet mechanistic and reliable saliency maps for medical image classification via unsupervised learning": "brain_image_all_methods_v3|6932548a6bb56b3b",
     "brain_image_all_methods_v3|doi:10.1016/j.ejrad.2026.113070": "brain_image_all_methods_v3|a647aba974360eca",
     "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.ejrad.2026.113070": "brain_image_all_methods_v3|a647aba974360eca",
-    "brain_image_all_methods_v3|title:multimodal deep learning model based on ct perfusion defined infarct core for predicting parenchymal hematoma type 2 after endovascular therapy in acute ischemic stroke": "brain_image_all_methods_v3|a647aba974360eca"
+    "brain_image_all_methods_v3|title:multimodal deep learning model based on ct perfusion defined infarct core for predicting parenchymal hematoma type 2 after endovascular therapy in acute ischemic stroke": "brain_image_all_methods_v3|a647aba974360eca",
+    "brain_image_all_methods_v3|doi:10.1007/s11604-026-02103-5": "brain_image_all_methods_v3|a86c7c74d3cbbb7e",
+    "brain_image_all_methods_v3|pmid:42965773": "brain_image_all_methods_v3|a86c7c74d3cbbb7e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42965773": "brain_image_all_methods_v3|a86c7c74d3cbbb7e",
+    "brain_image_all_methods_v3|title:ultrafast brain mri at 3 t for suspected acute ischemic stroke interchangeability of the ultrafast and standard protocols": "brain_image_all_methods_v3|a86c7c74d3cbbb7e",
+    "brain_image_all_methods_v3|url:https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html": "brain_image_all_methods_v3|7813d1f849fa5716",
+    "brain_image_all_methods_v3|title:vggt visual geometry grounded transformer": "brain_image_all_methods_v3|7813d1f849fa5716",
+    "brain_image_all_methods_v3|url:https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html": "brain_image_all_methods_v3|f6f88a33ed0e0b22",
+    "brain_image_all_methods_v3|title:molmo and pixmo open weights and open data for state of the art vision language models": "brain_image_all_methods_v3|f6f88a33ed0e0b22"
   },
-  "updated_at": "2026-11-01T02:52:01.859662+00:00"
+  "updated_at": "2026-11-02T03:03:48.093241+00:00"
 }
