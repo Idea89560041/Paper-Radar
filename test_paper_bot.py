@@ -5,6 +5,49 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_cv_hotspots_are_capped_even_when_other_filters_relax(self):
+        cfg = bot.load_config("config.yaml")
+        papers = []
+        for index in range(6):
+            paper = bot.Paper(
+                source="CVF Hot Ideas", title=f"Visual geometry transformer {index}", authors=[],
+                abstract="A visual geometry model for natural images.",
+                url=f"https://openaccess.thecvf.com/content/CVPR2026/html/Author_{index}_CVPR_2026_paper.html",
+                published_date="2026-06-01", query="3D geometry", venue="CVPR 2026",
+                cv_hotspot=True, popularity_evidence="OpenAlex citations=90: https://openalex.org/W123",
+                citation_count=90,
+            )
+            self.assertGreaterEqual(bot.score_paper(paper, cfg).score, cfg["scoring"]["min_score"])
+            papers.append(paper)
+        self.assertEqual(len(bot.select_diverse_papers(papers, cfg)), 2)
+        cfg["site"]["max_cv_hotspots"] = 0
+        self.assertEqual(bot.select_diverse_papers(papers, cfg), [])
+        papers[0].popularity_evidence = ""
+        self.assertEqual(bot.score_paper(papers[0], cfg).reasons, ["unverified-cv-hotspot"])
+
+    def test_official_cv_proceedings_parser(self):
+        from cv_hotspots import ProceedingsParser, is_official_paper
+        parser = ProceedingsParser()
+        parser.feed('<meta name="citation_author" content="A. Researcher">'
+                    '<a href="/content/CVPR2026/html/Author_CVPR_2026_paper.html">A <b>Visual</b> Model</a>'
+                    '<div id="abstract">A transformer <i>method</i> for vision.</div>')
+        self.assertEqual(parser.meta["citation_author"], ["A. Researcher"])
+        self.assertIn("method", parser.abstract)
+        self.assertEqual(parser.links[0][1], "A Visual Model")
+        self.assertFalse(is_official_paper("https://example.org/content/CVPR2026/html/paper.html"))
+
+    def test_cv_daily_limit_uses_existing_sent_state(self):
+        from cv_hotspots import fetch_cv_hotspots
+        cfg = bot.load_config("config.yaml")
+        now = bot.dt.datetime.now(bot.dt.timezone.utc).isoformat()
+        state = {"sent_ids": {str(i): {"source": "CVF Hot Ideas",
+                 "state_namespace": bot.state_namespace(cfg), "sent_at": now} for i in range(2)}}
+        with patch.object(bot, "load_state", return_value=state), \
+                patch.object(bot, "requests_get_text") as get:
+            self.assertEqual(fetch_cv_hotspots(cfg), [])
+            get.assert_not_called()
+        self.assertEqual(cfg["_cv_remaining_today"], 0)
+
     def test_diffusion_mri_diagnosis_and_removed_disease_topics(self):
         cfg = bot.load_config("config.yaml")
         cases = [

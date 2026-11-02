@@ -11,6 +11,7 @@ site:
   title: "Brain Image / Neuroimage Paper Radar"
   output_dir: site
   max_papers: 35
+  max_cv_hotspots: 2
   use_sent_state: true
   min_preprints: 2
   max_per_topic: 12
@@ -21,6 +22,35 @@ site:
     - flagship_subjournal
     - top_imaging_ai
     - preprint
+    - cv_hotspot
+
+cv_hotspots:
+  enabled: true
+  lookback_days: 730
+  max_runtime_seconds: 160
+  max_candidates: 12
+  min_citations: 100
+  award_sources:
+    - https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers
+    - https://cvpr.thecvf.com/Conferences/2025/BestPapersDemos
+    - https://www.thecvf.com/?page_id=413
+    - https://www.ecva.net/awards.php
+  topics:
+    - name: Promptable segmentation
+      terms: ["segment anything", "promptable", "open-vocabulary segmentation", "open vocabulary segmentation"]
+      medical_transfer: "尝试用点、框或文本提示分割脑区与病灶，评估少标注和跨医院泛化。"
+    - name: 3D geometry and representation
+      terms: ["geometry grounded", "3d reconstruction", "4d reconstruction", "dynamic scenes", "gaussian splatting", "pointmap"]
+      medical_transfer: "探索 MRI/PET 三维或纵向表征；需重新验证解剖一致性，不能直接假设自然图像几何适用。"
+    - name: Generative and world models
+      terms: ["world model", "diffusion transformer", "flow matching", "video generation", "image generation"]
+      medical_transfer: "探索纵向脑影像预测、缺失模态补全或低剂量重建，并检查病灶保真及不确定性。"
+    - name: Vision-language reasoning
+      terms: ["vision-language", "vision language", "visual reasoning", "multimodal reasoning", "visual grounding"]
+      medical_transfer: "探索脑影像与报告对齐、病灶定位及可核验的影像推理。"
+    - name: Efficient adaptation and learning
+      terms: ["test-time", "test time", "self-supervised", "self supervised", "parameter-efficient", "visual foundation"]
+      medical_transfer: "探索跨中心和跨扫描协议适配，重点验证数据泄漏及患者级泛化。"
 
 research_profile:
   name: "Brain Image / Neuroimage"

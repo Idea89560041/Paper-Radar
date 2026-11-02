@@ -60,6 +60,8 @@ class Paper:
     ai_summary: Optional[str] = None
     pmid: Optional[str] = None
     doi: Optional[str] = None
+    cv_hotspot: bool = False
+    popularity_evidence: str = ""
 
     def uid(self) -> str:
         for key in self.dedupe_keys():
@@ -832,6 +834,15 @@ def score_paper(paper: Paper, cfg: Dict[str, Any]) -> Paper:
 
     ai_terms = scoring.get("ai_required_any", hard_must_have_any)
     method_text = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
+    if paper.cv_hotspot:
+        from cv_hotspots import is_official_paper
+        if not is_official_paper(paper.url) or not paper.popularity_evidence:
+            paper.score = -999.0
+            paper.reasons = ["unverified-cv-hotspot"]
+            return paper
+        paper.score = round(35.0 + min(20.0, (paper.citation_count or 0) / 30.0), 2)
+        paper.reasons = [f"CV hotspot: {paper.query}", paper.popularity_evidence]
+        return paper
     has_method_focus = any(contains_term(method_text, str(keyword)) for keyword in ai_terms)
     has_brain_focus = any(contains_term(text_content, keyword) for keyword in disease_must_have_any)
     has_imaging_focus = any(contains_term(text_content, keyword) for keyword in imaging_must_have_any)
@@ -941,6 +952,7 @@ def dedupe(papers: Iterable[Paper]) -> List[Paper]:
 
 
 VENUE_CATEGORY_LABELS = {
+    "cv_hotspot": "CV Hot Ideas for Medical Imaging",
     "flagship_main": "Flagship Main Journals",
     "flagship_subjournal": "Flagship Family Journals",
     "flagship": "Flagship Family Journals",
@@ -950,6 +962,7 @@ VENUE_CATEGORY_LABELS = {
 }
 
 VENUE_CATEGORY_DESCRIPTIONS = {
+    "cv_hotspot": "Selected CVPR / ICCV / ECCV methods with award or citation evidence. Medical transfer ideas are hypotheses to test.",
     "flagship_main": "Nature, Science, and Cell main journals.",
     "flagship_subjournal": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
     "flagship": "Nature, Communications, npj, Science, Cell, and Lancet family journals.",
@@ -1318,6 +1331,8 @@ def venue_prefix_match(venue: str | None, terms: Iterable[str]) -> bool:
 
 
 def classify_venue_category(paper: Paper, cfg: Dict[str, Any]) -> str:
+    if paper.cv_hotspot:
+        return "cv_hotspot"
     text = " ".join([paper.source or "", paper.venue or "", paper.url or ""]).lower()
     for term in cfg_venue_terms(cfg, "preprint"):
         if contains_term(text, term):
@@ -1362,6 +1377,8 @@ def is_diffusion_mri_diagnosis(paper: Paper) -> bool:
 
 
 def infer_topic(paper: Paper) -> str:
+    if paper.cv_hotspot:
+        return "CV Hot Ideas / Medical Transfer"
     content = " ".join([paper.title or "", paper.abstract or "", paper.tldr or ""]).lower()
     if any(contains_term(content, term) for term in ["world model", "world models", "world-model"]) and any(
         contains_term(content, term) for term in ["brain", "neuroimaging", "fMRI", "brain dynamics"]
@@ -1391,6 +1408,8 @@ def select_diverse_papers(papers: List[Paper], cfg: Dict[str, Any]) -> List[Pape
     max_per_topic = int(site_cfg.get("max_per_topic", 7))
     max_per_source = int(site_cfg.get("max_per_source", 18))
     max_per_venue_category = int(site_cfg.get("max_per_venue_category", 14))
+    cv_cap = max(0, int(site_cfg.get("max_cv_hotspots", 2)))
+    cv_cap = min(cv_cap, int(cfg.get("_cv_remaining_today", cv_cap)))
     allowed_categories = {str(category) for category in site_cfg.get("allowed_venue_categories", [])}
     if allowed_categories:
         papers = [paper for paper in papers if classify_venue_category(paper, cfg) in allowed_categories]
@@ -1410,6 +1429,8 @@ def select_diverse_papers(papers: List[Paper], cfg: Dict[str, Any]) -> List[Pape
         topic = infer_topic(paper)
         source = paper.source or "Unknown"
         category = classify_venue_category(paper, cfg)
+        if category == "cv_hotspot" and category_counts.get(category, 0) >= cv_cap:
+            return False
         if enforce_topic_cap and topic_counts.get(topic, 0) >= max_per_topic:
             return False
         if strict:
@@ -1423,6 +1444,9 @@ def select_diverse_papers(papers: List[Paper], cfg: Dict[str, Any]) -> List[Pape
         source_counts[source] = source_counts.get(source, 0) + 1
         category_counts[category] = category_counts.get(category, 0) + 1
         return True
+
+    for paper in [item for item in papers if item.cv_hotspot]:
+        add(paper, strict=False)
 
     preprints = [paper for paper in papers if classify_venue_category(paper, cfg) == "preprint"]
     for paper in preprints:
@@ -1782,7 +1806,7 @@ def make_site_html(papers: List[Paper], cfg: Dict[str, Any]) -> str:
 
     indexed_papers = list(enumerate(papers, 1))
     rows = []
-    section_order = ["flagship_main", "flagship_subjournal", "top_imaging_ai", "preprint", "other"]
+    section_order = ["flagship_main", "flagship_subjournal", "top_imaging_ai", "preprint", "other", "cv_hotspot"]
     for category in section_order:
         grouped = [(index, paper) for index, paper in indexed_papers if classify_venue_category(paper, cfg) == category]
         if not grouped:
@@ -2197,6 +2221,7 @@ def env_truthy(name: str) -> bool:
 
 
 def fetch_score_sort_papers(cfg: Dict[str, Any]) -> List[Paper]:
+    from cv_hotspots import fetch_cv_hotspots
     papers: List[Paper] = []
     diagnostics = {"source_counts": {}}
     cfg["_retrieval"] = diagnostics
@@ -2205,6 +2230,7 @@ def fetch_score_sort_papers(cfg: Dict[str, Any]) -> List[Paper]:
         ("Crossref top journals", fetch_crossref_top_journals),
         ("arXiv", fetch_arxiv),
         ("Semantic Scholar", fetch_semantic_scholar),
+        ("CV conference hot ideas", fetch_cv_hotspots),
     ]:
         fetched = safe_fetch(label, fetcher, cfg)
         diagnostics["source_counts"][label] = len(fetched)

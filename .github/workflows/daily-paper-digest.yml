@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "paper_bot.py"
+      - "cv_hotspots.py"
       - "test_paper_bot.py"
       - "config.yaml"
       - "requirements.txt"

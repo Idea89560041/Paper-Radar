@@ -2,6 +2,8 @@
 
 This repository powers a daily GitHub Pages dashboard for recent brain image, neuroimage, and high-value medical imaging papers.
 
+A separate CV Hot Ideas section adds at most two previously unseen CVPR/ICCV/ECCV papers per Hong Kong calendar day in normal daily mode. It uses official proceedings, official awards or at least 100 OpenAlex citations, and selected transferable method topics. This discovery channel uses a two-year window; citation count is a popularity proxy, not a real-time trend ranking. Each paper includes a medical-imaging transfer hypothesis. If no qualifying paper is found, the section stays empty.
+
 Brain World Models is a dedicated topic covering AI models for brain-state prediction, brain activity simulation, neural dynamics, and fMRI or other neuroimaging time series.
 
 Diffusion MRI Disease Diagnosis covers AI diagnosis, disease classification, and prognosis using dMRI, DTI, and related diffusion imaging. AD/dementia, amyloid/tau PET, and Parkinson/Lewy-body/FTD are no longer standalone topics or dedicated searches.
