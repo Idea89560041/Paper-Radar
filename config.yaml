@@ -26,13 +26,11 @@ site:
 
 cv_hotspots:
   enabled: true
-  lookback_days: 730
   max_runtime_seconds: 160
   max_candidates: 12
   min_citations: 100
   award_sources:
-    - https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers
-    - https://cvpr.thecvf.com/Conferences/2025/BestPapersDemos
+    - https://cvpr.thecvf.com/Conferences/{year}/News/Best_Papers
     - https://www.thecvf.com/?page_id=413
     - https://www.ecva.net/awards.php
   topics:

@@ -72,6 +72,15 @@ def matching_topic(title, topics):
     return None
 
 
+def current_conference_catalogs(year):
+    catalogs = [(f"CVPR {year}", f"https://openaccess.thecvf.com/CVPR{year}?day=all")]
+    if year % 2:
+        catalogs.append((f"ICCV {year}", f"https://openaccess.thecvf.com/ICCV{year}?day=all"))
+    else:
+        catalogs.append((f"ECCV {year}", "https://www.ecva.net/papers.php"))
+    return catalogs
+
+
 def fetch_cv_hotspots(cfg):
     # Lazy import keeps the main bot's Paper and HTTP helpers shared.
     import paper_bot as bot
@@ -80,7 +89,7 @@ def fetch_cv_hotspots(cfg):
     if not settings.get("enabled", False):
         return []
     deadline = time.monotonic() + int(settings.get("max_runtime_seconds", 160))
-    today = dt.datetime.now(dt.timezone.utc).date()
+    today = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date()
     namespace = bot.state_namespace(cfg)
     state = {}
     sent_keys = set()
@@ -102,16 +111,10 @@ def fetch_cv_hotspots(cfg):
         if not remaining:
             return []
     year = today.year
-    iccv_year = year if year % 2 else year - 1
-    eccv_year = year if year % 2 == 0 else year - 1
-    catalogs = [
-        (f"CVPR {year}", f"https://openaccess.thecvf.com/CVPR{year}?day=all"),
-        (f"CVPR {year - 1}", f"https://openaccess.thecvf.com/CVPR{year - 1}?day=all"),
-        (f"ICCV {iccv_year}", f"https://openaccess.thecvf.com/ICCV{iccv_year}?day=all"),
-        (f"ECCV {eccv_year}", f"https://www.ecva.net/papers.php"),
-    ]
+    catalogs = current_conference_catalogs(year)
     awards = []
     for award_url in settings.get("award_sources", []):
+        award_url = award_url.format(year=year)
         if time.monotonic() >= deadline:
             break
         try:
@@ -178,7 +181,7 @@ def fetch_cv_hotspots(cfg):
             authors = parser.meta.get("citation_author", [])[:8]
             date_value = (parser.meta.get("citation_publication_date") or [f"{venue.split()[-1]}-01-01"])[0].replace("/", "-")
             date = bot.parse_date(date_value)
-            if not date or date > today or (today - date).days > int(settings.get("lookback_days", 730)):
+            if not date or date > today or date.year != year:
                 continue
             paper = bot.Paper(
                 source="CVF Hot Ideas", title=title, authors=authors, abstract=abstract,

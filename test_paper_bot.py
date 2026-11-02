@@ -5,6 +5,11 @@ import paper_bot as bot
 
 
 class RetrievalTests(unittest.TestCase):
+    def test_cv_catalogs_use_current_year_only(self):
+        from cv_hotspots import current_conference_catalogs
+        self.assertEqual([venue for venue, _ in current_conference_catalogs(2026)], ["CVPR 2026", "ECCV 2026"])
+        self.assertEqual([venue for venue, _ in current_conference_catalogs(2027)], ["CVPR 2027", "ICCV 2027"])
+
     def test_cv_hotspots_are_capped_even_when_other_filters_relax(self):
         cfg = bot.load_config("config.yaml")
         papers = []
