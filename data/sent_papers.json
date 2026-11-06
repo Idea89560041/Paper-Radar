@@ -9810,6 +9810,17 @@
       "venue": "CVPR 2026",
       "source": "CVF Hot Ideas",
       "sent_at": "2026-11-03T04:17:00.530621+00:00"
+    },
+    "brain_image_all_methods_v3|734943fa25990a79": {
+      "paper_uid": "734943fa25990a79",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Deep Learning for AD Risk Screening and Progression Prediction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42985795/",
+      "doi": "10.1002/advs.78537",
+      "pmid": "42985795",
+      "venue": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+      "source": "PubMed",
+      "sent_at": "2026-11-06T03:56:15.382819+00:00"
     }
   },
   "sent_keys": {
@@ -13385,7 +13396,11 @@
     "brain_image_all_methods_v3|url:https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html": "brain_image_all_methods_v3|f6f88a33ed0e0b22",
     "brain_image_all_methods_v3|title:molmo and pixmo open weights and open data for state of the art vision language models": "brain_image_all_methods_v3|f6f88a33ed0e0b22",
     "brain_image_all_methods_v3|url:https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Efficiently_Reconstructing_Dynamic_Scenes_One_D4RT_at_a_Time_CVPR_2026_paper.html": "brain_image_all_methods_v3|41386c88b90ee5d9",
-    "brain_image_all_methods_v3|title:efficiently reconstructing dynamic scenes one d4rt at a time": "brain_image_all_methods_v3|41386c88b90ee5d9"
+    "brain_image_all_methods_v3|title:efficiently reconstructing dynamic scenes one d4rt at a time": "brain_image_all_methods_v3|41386c88b90ee5d9",
+    "brain_image_all_methods_v3|doi:10.1002/advs.78537": "brain_image_all_methods_v3|734943fa25990a79",
+    "brain_image_all_methods_v3|pmid:42985795": "brain_image_all_methods_v3|734943fa25990a79",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42985795": "brain_image_all_methods_v3|734943fa25990a79",
+    "brain_image_all_methods_v3|title:deep learning for ad risk screening and progression prediction": "brain_image_all_methods_v3|734943fa25990a79"
   },
-  "updated_at": "2026-11-03T04:17:00.530722+00:00"
+  "updated_at": "2026-11-06T03:56:15.382901+00:00"
 }
