@@ -9821,6 +9821,72 @@
       "venue": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
       "source": "PubMed",
       "sent_at": "2026-11-06T03:56:15.382819+00:00"
+    },
+    "brain_image_all_methods_v3|1f48fd104bd0903b": {
+      "paper_uid": "1f48fd104bd0903b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Biopsy-Validated Deep Learning Mapping of Glioma Infiltration Beyond Contrast Enhancement Using Multiparametric MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990485/",
+      "doi": "10.64898/2026.10.26.26366551",
+      "pmid": "42990485",
+      "venue": "medRxiv : the preprint server for health sciences",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|16d0b19c8c7dc2f6": {
+      "paper_uid": "16d0b19c8c7dc2f6",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "NeCS-Flow: Necrosis-Guided Contrast-Enhanced MRI Synthesis with Rectified-Flow Refinement.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990172/",
+      "doi": "10.64898/2026.10.21.760821",
+      "pmid": "42990172",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|2293f5efec7a1522": {
+      "paper_uid": "2293f5efec7a1522",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Intelligent SEEQPI enables reconstruction of inhibitory neuronal nuclei and dry-mass mapping deep in the living mouse brain.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990236/",
+      "doi": "10.64898/2026.10.25.761694",
+      "pmid": "42990236",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|9b44c246876a0d06": {
+      "paper_uid": "9b44c246876a0d06",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Data Amount Heterogeneity Improves Performance in Federated Learning for Neuroimaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990475/",
+      "doi": "",
+      "pmid": "42990475",
+      "venue": "ArXiv",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|e8761d22f4b17af0": {
+      "paper_uid": "e8761d22f4b17af0",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Joint reconstruction of multi-contrast relaxation-diffusion imaging.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990112/",
+      "doi": "10.64898/2026.10.21.760608",
+      "pmid": "42990112",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|09b63efb40dc172e": {
+      "paper_uid": "09b63efb40dc172e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Estimating glioblastoma migration-to-proliferation ratio from single time-point MRI data via radial density distribution.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990308/",
+      "doi": "10.64898/2026.10.26.761772",
+      "pmid": "42990308",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-07T03:31:24.398472+00:00"
     }
   },
   "sent_keys": {
@@ -13400,7 +13466,30 @@
     "brain_image_all_methods_v3|doi:10.1002/advs.78537": "brain_image_all_methods_v3|734943fa25990a79",
     "brain_image_all_methods_v3|pmid:42985795": "brain_image_all_methods_v3|734943fa25990a79",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42985795": "brain_image_all_methods_v3|734943fa25990a79",
-    "brain_image_all_methods_v3|title:deep learning for ad risk screening and progression prediction": "brain_image_all_methods_v3|734943fa25990a79"
+    "brain_image_all_methods_v3|title:deep learning for ad risk screening and progression prediction": "brain_image_all_methods_v3|734943fa25990a79",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.26.26366551": "brain_image_all_methods_v3|1f48fd104bd0903b",
+    "brain_image_all_methods_v3|pmid:42990485": "brain_image_all_methods_v3|1f48fd104bd0903b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990485": "brain_image_all_methods_v3|1f48fd104bd0903b",
+    "brain_image_all_methods_v3|title:biopsy validated deep learning mapping of glioma infiltration beyond contrast enhancement using multiparametric mri": "brain_image_all_methods_v3|1f48fd104bd0903b",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.21.760821": "brain_image_all_methods_v3|16d0b19c8c7dc2f6",
+    "brain_image_all_methods_v3|pmid:42990172": "brain_image_all_methods_v3|16d0b19c8c7dc2f6",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990172": "brain_image_all_methods_v3|16d0b19c8c7dc2f6",
+    "brain_image_all_methods_v3|title:necs flow necrosis guided contrast enhanced mri synthesis with rectified flow refinement": "brain_image_all_methods_v3|16d0b19c8c7dc2f6",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.25.761694": "brain_image_all_methods_v3|2293f5efec7a1522",
+    "brain_image_all_methods_v3|pmid:42990236": "brain_image_all_methods_v3|2293f5efec7a1522",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990236": "brain_image_all_methods_v3|2293f5efec7a1522",
+    "brain_image_all_methods_v3|title:intelligent seeqpi enables reconstruction of inhibitory neuronal nuclei and dry mass mapping deep in the living mouse brain": "brain_image_all_methods_v3|2293f5efec7a1522",
+    "brain_image_all_methods_v3|pmid:42990475": "brain_image_all_methods_v3|9b44c246876a0d06",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990475": "brain_image_all_methods_v3|9b44c246876a0d06",
+    "brain_image_all_methods_v3|title:data amount heterogeneity improves performance in federated learning for neuroimaging": "brain_image_all_methods_v3|9b44c246876a0d06",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.21.760608": "brain_image_all_methods_v3|e8761d22f4b17af0",
+    "brain_image_all_methods_v3|pmid:42990112": "brain_image_all_methods_v3|e8761d22f4b17af0",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990112": "brain_image_all_methods_v3|e8761d22f4b17af0",
+    "brain_image_all_methods_v3|title:joint reconstruction of multi contrast relaxation diffusion imaging": "brain_image_all_methods_v3|e8761d22f4b17af0",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.26.761772": "brain_image_all_methods_v3|09b63efb40dc172e",
+    "brain_image_all_methods_v3|pmid:42990308": "brain_image_all_methods_v3|09b63efb40dc172e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990308": "brain_image_all_methods_v3|09b63efb40dc172e",
+    "brain_image_all_methods_v3|title:estimating glioblastoma migration to proliferation ratio from single time point mri data via radial density distribution": "brain_image_all_methods_v3|09b63efb40dc172e"
   },
-  "updated_at": "2026-11-06T03:56:15.382901+00:00"
+  "updated_at": "2026-11-07T03:31:24.398790+00:00"
 }
