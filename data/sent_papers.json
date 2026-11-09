@@ -9887,6 +9887,83 @@
       "venue": "bioRxiv : the preprint server for biology",
       "source": "PubMed",
       "sent_at": "2026-11-07T03:31:24.398472+00:00"
+    },
+    "brain_image_all_methods_v3|0ef42f357f51e6a8": {
+      "paper_uid": "0ef42f357f51e6a8",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Aberrant cortical reorganization and astrogliosis underlie memory deficit post-traumatic brain injury: a longitudinal multiscale multimodal study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42995965/",
+      "doi": "10.64898/2026.10.16.759571",
+      "pmid": "42995965",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|835a6d8d13606f22": {
+      "paper_uid": "835a6d8d13606f22",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Understanding Performance Plateaus and Representation Collapse in 3D MRI Transformers Trained to Classify Brain Disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42999062/",
+      "doi": "10.64898/2026.10.15.759510",
+      "pmid": "42999062",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|26691190c0a50237": {
+      "paper_uid": "26691190c0a50237",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A General-Purpose Adaptable Foundation Model for Total-Body PET Kinetic Modelling.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42995738/",
+      "doi": "",
+      "pmid": "42995738",
+      "venue": "ArXiv",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|0eeed660bccc86d9": {
+      "paper_uid": "0eeed660bccc86d9",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "ISLES'24: Final stroke infarct prediction with multimodal imaging and clinical data. Where do we stand?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42998605/",
+      "doi": "10.1016/j.media.2026.104362",
+      "pmid": "42998605",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|10577bf256e6630e": {
+      "paper_uid": "10577bf256e6630e",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Feature harmonization reveals that apparent cross-cohort differences in tau-positivity prediction reflect variable availability and cohort stage structure.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42996279/",
+      "doi": "10.64898/2026.10.16.26365770",
+      "pmid": "42996279",
+      "venue": "medRxiv : the preprint server for health sciences",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|c54d8d29b73a1416": {
+      "paper_uid": "c54d8d29b73a1416",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A brain signature of vaping cue-elicited craving.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42995814/",
+      "doi": "10.64898/2026.10.15.759290",
+      "pmid": "42995814",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|ba0470a7d49453b9": {
+      "paper_uid": "ba0470a7d49453b9",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Exploratory brain-wide analyses predicting binge drinking: A machine learning and targeted causal inference pipeline in two adolescent cohorts.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42996245/",
+      "doi": "10.64898/2026.10.18.26365855",
+      "pmid": "42996245",
+      "venue": "medRxiv : the preprint server for health sciences",
+      "source": "PubMed",
+      "sent_at": "2026-11-09T03:21:23.099126+00:00"
     }
   },
   "sent_keys": {
@@ -13489,7 +13566,34 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.10.26.761772": "brain_image_all_methods_v3|09b63efb40dc172e",
     "brain_image_all_methods_v3|pmid:42990308": "brain_image_all_methods_v3|09b63efb40dc172e",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42990308": "brain_image_all_methods_v3|09b63efb40dc172e",
-    "brain_image_all_methods_v3|title:estimating glioblastoma migration to proliferation ratio from single time point mri data via radial density distribution": "brain_image_all_methods_v3|09b63efb40dc172e"
+    "brain_image_all_methods_v3|title:estimating glioblastoma migration to proliferation ratio from single time point mri data via radial density distribution": "brain_image_all_methods_v3|09b63efb40dc172e",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.16.759571": "brain_image_all_methods_v3|0ef42f357f51e6a8",
+    "brain_image_all_methods_v3|pmid:42995965": "brain_image_all_methods_v3|0ef42f357f51e6a8",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42995965": "brain_image_all_methods_v3|0ef42f357f51e6a8",
+    "brain_image_all_methods_v3|title:aberrant cortical reorganization and astrogliosis underlie memory deficit post traumatic brain injury a longitudinal multiscale multimodal study": "brain_image_all_methods_v3|0ef42f357f51e6a8",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.15.759510": "brain_image_all_methods_v3|835a6d8d13606f22",
+    "brain_image_all_methods_v3|pmid:42999062": "brain_image_all_methods_v3|835a6d8d13606f22",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42999062": "brain_image_all_methods_v3|835a6d8d13606f22",
+    "brain_image_all_methods_v3|title:understanding performance plateaus and representation collapse in 3d mri transformers trained to classify brain disease": "brain_image_all_methods_v3|835a6d8d13606f22",
+    "brain_image_all_methods_v3|pmid:42995738": "brain_image_all_methods_v3|26691190c0a50237",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42995738": "brain_image_all_methods_v3|26691190c0a50237",
+    "brain_image_all_methods_v3|title:a general purpose adaptable foundation model for total body pet kinetic modelling": "brain_image_all_methods_v3|26691190c0a50237",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104362": "brain_image_all_methods_v3|0eeed660bccc86d9",
+    "brain_image_all_methods_v3|pmid:42998605": "brain_image_all_methods_v3|0eeed660bccc86d9",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42998605": "brain_image_all_methods_v3|0eeed660bccc86d9",
+    "brain_image_all_methods_v3|title:isles 24 final stroke infarct prediction with multimodal imaging and clinical data where do we stand": "brain_image_all_methods_v3|0eeed660bccc86d9",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.16.26365770": "brain_image_all_methods_v3|10577bf256e6630e",
+    "brain_image_all_methods_v3|pmid:42996279": "brain_image_all_methods_v3|10577bf256e6630e",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42996279": "brain_image_all_methods_v3|10577bf256e6630e",
+    "brain_image_all_methods_v3|title:feature harmonization reveals that apparent cross cohort differences in tau positivity prediction reflect variable availability and cohort stage structure": "brain_image_all_methods_v3|10577bf256e6630e",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.15.759290": "brain_image_all_methods_v3|c54d8d29b73a1416",
+    "brain_image_all_methods_v3|pmid:42995814": "brain_image_all_methods_v3|c54d8d29b73a1416",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42995814": "brain_image_all_methods_v3|c54d8d29b73a1416",
+    "brain_image_all_methods_v3|title:a brain signature of vaping cue elicited craving": "brain_image_all_methods_v3|c54d8d29b73a1416",
+    "brain_image_all_methods_v3|doi:10.64898/2026.10.18.26365855": "brain_image_all_methods_v3|ba0470a7d49453b9",
+    "brain_image_all_methods_v3|pmid:42996245": "brain_image_all_methods_v3|ba0470a7d49453b9",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42996245": "brain_image_all_methods_v3|ba0470a7d49453b9",
+    "brain_image_all_methods_v3|title:exploratory brain wide analyses predicting binge drinking a machine learning and targeted causal inference pipeline in two adolescent cohorts": "brain_image_all_methods_v3|ba0470a7d49453b9"
   },
-  "updated_at": "2026-11-07T03:31:24.398790+00:00"
+  "updated_at": "2026-11-09T03:21:23.099339+00:00"
 }
