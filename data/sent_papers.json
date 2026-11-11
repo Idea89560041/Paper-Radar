@@ -9964,6 +9964,17 @@
       "venue": "medRxiv : the preprint server for health sciences",
       "source": "PubMed",
       "sent_at": "2026-11-09T03:21:23.099126+00:00"
+    },
+    "brain_image_all_methods_v3|228129a46b667854": {
+      "paper_uid": "228129a46b667854",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "The unfolding symphony: unraveling brain dynamics via data-driven multi-scale functional connectivity in task-state fMRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43003923/",
+      "doi": "10.1007/s00429-026-03230-5",
+      "pmid": "43003923",
+      "venue": "Brain structure & function",
+      "source": "PubMed",
+      "sent_at": "2026-11-11T03:28:14.089330+00:00"
     }
   },
   "sent_keys": {
@@ -13593,7 +13604,11 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.10.18.26365855": "brain_image_all_methods_v3|ba0470a7d49453b9",
     "brain_image_all_methods_v3|pmid:42996245": "brain_image_all_methods_v3|ba0470a7d49453b9",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/42996245": "brain_image_all_methods_v3|ba0470a7d49453b9",
-    "brain_image_all_methods_v3|title:exploratory brain wide analyses predicting binge drinking a machine learning and targeted causal inference pipeline in two adolescent cohorts": "brain_image_all_methods_v3|ba0470a7d49453b9"
+    "brain_image_all_methods_v3|title:exploratory brain wide analyses predicting binge drinking a machine learning and targeted causal inference pipeline in two adolescent cohorts": "brain_image_all_methods_v3|ba0470a7d49453b9",
+    "brain_image_all_methods_v3|doi:10.1007/s00429-026-03230-5": "brain_image_all_methods_v3|228129a46b667854",
+    "brain_image_all_methods_v3|pmid:43003923": "brain_image_all_methods_v3|228129a46b667854",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43003923": "brain_image_all_methods_v3|228129a46b667854",
+    "brain_image_all_methods_v3|title:the unfolding symphony unraveling brain dynamics via data driven multi scale functional connectivity in task state fmri": "brain_image_all_methods_v3|228129a46b667854"
   },
-  "updated_at": "2026-11-09T03:21:23.099339+00:00"
+  "updated_at": "2026-11-11T03:28:14.089424+00:00"
 }
