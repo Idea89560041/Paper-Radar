@@ -9975,6 +9975,28 @@
       "venue": "Brain structure & function",
       "source": "PubMed",
       "sent_at": "2026-11-11T03:28:14.089330+00:00"
+    },
+    "brain_image_all_methods_v3|17fced54e32a46c3": {
+      "paper_uid": "17fced54e32a46c3",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Comprehensive multi-organ and body composition phenotyping identifies metabolic signatures associated with incident type 2 diabetes.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43013090/",
+      "doi": "10.1007/s00330-026-12978-7",
+      "pmid": "43013090",
+      "venue": "European radiology",
+      "source": "PubMed",
+      "sent_at": "2026-11-12T04:37:29.079208+00:00"
+    },
+    "brain_image_all_methods_v3|28d9a1eed86a16ca": {
+      "paper_uid": "28d9a1eed86a16ca",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Evaluation of a Rapid and Practical Deep Learning Framework for T1-weighted MRI-based Brain Age Estimation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43012635/",
+      "doi": "10.1148/ryai.260310",
+      "pmid": "43012635",
+      "venue": "Radiology. Artificial intelligence",
+      "source": "PubMed",
+      "sent_at": "2026-11-12T04:37:29.079208+00:00"
     }
   },
   "sent_keys": {
@@ -13608,7 +13630,15 @@
     "brain_image_all_methods_v3|doi:10.1007/s00429-026-03230-5": "brain_image_all_methods_v3|228129a46b667854",
     "brain_image_all_methods_v3|pmid:43003923": "brain_image_all_methods_v3|228129a46b667854",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43003923": "brain_image_all_methods_v3|228129a46b667854",
-    "brain_image_all_methods_v3|title:the unfolding symphony unraveling brain dynamics via data driven multi scale functional connectivity in task state fmri": "brain_image_all_methods_v3|228129a46b667854"
+    "brain_image_all_methods_v3|title:the unfolding symphony unraveling brain dynamics via data driven multi scale functional connectivity in task state fmri": "brain_image_all_methods_v3|228129a46b667854",
+    "brain_image_all_methods_v3|doi:10.1007/s00330-026-12978-7": "brain_image_all_methods_v3|17fced54e32a46c3",
+    "brain_image_all_methods_v3|pmid:43013090": "brain_image_all_methods_v3|17fced54e32a46c3",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43013090": "brain_image_all_methods_v3|17fced54e32a46c3",
+    "brain_image_all_methods_v3|title:comprehensive multi organ and body composition phenotyping identifies metabolic signatures associated with incident type 2 diabetes": "brain_image_all_methods_v3|17fced54e32a46c3",
+    "brain_image_all_methods_v3|doi:10.1148/ryai.260310": "brain_image_all_methods_v3|28d9a1eed86a16ca",
+    "brain_image_all_methods_v3|pmid:43012635": "brain_image_all_methods_v3|28d9a1eed86a16ca",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43012635": "brain_image_all_methods_v3|28d9a1eed86a16ca",
+    "brain_image_all_methods_v3|title:evaluation of a rapid and practical deep learning framework for t1 weighted mri based brain age estimation": "brain_image_all_methods_v3|28d9a1eed86a16ca"
   },
-  "updated_at": "2026-11-11T03:28:14.089424+00:00"
+  "updated_at": "2026-11-12T04:37:29.079339+00:00"
 }
