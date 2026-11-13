@@ -9997,6 +9997,17 @@
       "venue": "Radiology. Artificial intelligence",
       "source": "PubMed",
       "sent_at": "2026-11-12T04:37:29.079208+00:00"
+    },
+    "brain_image_all_methods_v3|de4e72d5353c51fe": {
+      "paper_uid": "de4e72d5353c51fe",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Layer selection in feature losses affects image quality and microstructural consistency in deep learning super-resolution of brain diffusion MRI",
+      "url": "https://doi.org/10.1016/j.patter.2026.101718",
+      "doi": "10.1016/j.patter.2026.101718",
+      "pmid": "",
+      "venue": "Patterns",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-11-13T03:51:15.999260+00:00"
     }
   },
   "sent_keys": {
@@ -13638,7 +13649,10 @@
     "brain_image_all_methods_v3|doi:10.1148/ryai.260310": "brain_image_all_methods_v3|28d9a1eed86a16ca",
     "brain_image_all_methods_v3|pmid:43012635": "brain_image_all_methods_v3|28d9a1eed86a16ca",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43012635": "brain_image_all_methods_v3|28d9a1eed86a16ca",
-    "brain_image_all_methods_v3|title:evaluation of a rapid and practical deep learning framework for t1 weighted mri based brain age estimation": "brain_image_all_methods_v3|28d9a1eed86a16ca"
+    "brain_image_all_methods_v3|title:evaluation of a rapid and practical deep learning framework for t1 weighted mri based brain age estimation": "brain_image_all_methods_v3|28d9a1eed86a16ca",
+    "brain_image_all_methods_v3|doi:10.1016/j.patter.2026.101718": "brain_image_all_methods_v3|de4e72d5353c51fe",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.patter.2026.101718": "brain_image_all_methods_v3|de4e72d5353c51fe",
+    "brain_image_all_methods_v3|title:layer selection in feature losses affects image quality and microstructural consistency in deep learning super resolution of brain diffusion mri": "brain_image_all_methods_v3|de4e72d5353c51fe"
   },
-  "updated_at": "2026-11-12T04:37:29.079339+00:00"
+  "updated_at": "2026-11-13T03:51:15.999362+00:00"
 }
