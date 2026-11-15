@@ -10008,6 +10008,28 @@
       "venue": "Patterns",
       "source": "Crossref Top Journals",
       "sent_at": "2026-11-13T03:51:15.999260+00:00"
+    },
+    "brain_image_all_methods_v3|cbf510f06cf6b9b8": {
+      "paper_uid": "cbf510f06cf6b9b8",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Variation in infant subcortical brain development from 6 to 12 months in Down syndrome.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43031587/",
+      "doi": "10.64898/2026.06.16.732759",
+      "pmid": "43031587",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-15T03:27:33.893648+00:00"
+    },
+    "brain_image_all_methods_v3|e571ff67e6ae53f9": {
+      "paper_uid": "e571ff67e6ae53f9",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Diagnostic accuracy and reliability of susceptibility map-weighted imaging in patients with clinically uncertain parkinsonian syndromes",
+      "url": "https://doi.org/10.1186/s41747-026-00832-w",
+      "doi": "10.1186/s41747-026-00832-w",
+      "pmid": "",
+      "venue": "European Radiology Experimental",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-11-15T03:27:33.893648+00:00"
     }
   },
   "sent_keys": {
@@ -13652,7 +13674,14 @@
     "brain_image_all_methods_v3|title:evaluation of a rapid and practical deep learning framework for t1 weighted mri based brain age estimation": "brain_image_all_methods_v3|28d9a1eed86a16ca",
     "brain_image_all_methods_v3|doi:10.1016/j.patter.2026.101718": "brain_image_all_methods_v3|de4e72d5353c51fe",
     "brain_image_all_methods_v3|url:https://doi.org/10.1016/j.patter.2026.101718": "brain_image_all_methods_v3|de4e72d5353c51fe",
-    "brain_image_all_methods_v3|title:layer selection in feature losses affects image quality and microstructural consistency in deep learning super resolution of brain diffusion mri": "brain_image_all_methods_v3|de4e72d5353c51fe"
+    "brain_image_all_methods_v3|title:layer selection in feature losses affects image quality and microstructural consistency in deep learning super resolution of brain diffusion mri": "brain_image_all_methods_v3|de4e72d5353c51fe",
+    "brain_image_all_methods_v3|doi:10.64898/2026.06.16.732759": "brain_image_all_methods_v3|cbf510f06cf6b9b8",
+    "brain_image_all_methods_v3|pmid:43031587": "brain_image_all_methods_v3|cbf510f06cf6b9b8",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43031587": "brain_image_all_methods_v3|cbf510f06cf6b9b8",
+    "brain_image_all_methods_v3|title:variation in infant subcortical brain development from 6 to 12 months in down syndrome": "brain_image_all_methods_v3|cbf510f06cf6b9b8",
+    "brain_image_all_methods_v3|doi:10.1186/s41747-026-00832-w": "brain_image_all_methods_v3|e571ff67e6ae53f9",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s41747-026-00832-w": "brain_image_all_methods_v3|e571ff67e6ae53f9",
+    "brain_image_all_methods_v3|title:diagnostic accuracy and reliability of susceptibility map weighted imaging in patients with clinically uncertain parkinsonian syndromes": "brain_image_all_methods_v3|e571ff67e6ae53f9"
   },
-  "updated_at": "2026-11-13T03:51:15.999362+00:00"
+  "updated_at": "2026-11-15T03:27:33.893826+00:00"
 }
