@@ -10030,6 +10030,17 @@
       "venue": "European Radiology Experimental",
       "source": "Crossref Top Journals",
       "sent_at": "2026-11-15T03:27:33.893648+00:00"
+    },
+    "brain_image_all_methods_v3|09ee199063835c86": {
+      "paper_uid": "09ee199063835c86",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "A Tumour-Aware Multimodal Framework for Explainable Prediction of IDH Mutation in Gliomas from Multi-Sequence MRI",
+      "url": "https://arxiv.org/abs/2611.17712v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-11-16T03:30:33.377430+00:00"
     }
   },
   "sent_keys": {
@@ -13681,7 +13692,9 @@
     "brain_image_all_methods_v3|title:variation in infant subcortical brain development from 6 to 12 months in down syndrome": "brain_image_all_methods_v3|cbf510f06cf6b9b8",
     "brain_image_all_methods_v3|doi:10.1186/s41747-026-00832-w": "brain_image_all_methods_v3|e571ff67e6ae53f9",
     "brain_image_all_methods_v3|url:https://doi.org/10.1186/s41747-026-00832-w": "brain_image_all_methods_v3|e571ff67e6ae53f9",
-    "brain_image_all_methods_v3|title:diagnostic accuracy and reliability of susceptibility map weighted imaging in patients with clinically uncertain parkinsonian syndromes": "brain_image_all_methods_v3|e571ff67e6ae53f9"
+    "brain_image_all_methods_v3|title:diagnostic accuracy and reliability of susceptibility map weighted imaging in patients with clinically uncertain parkinsonian syndromes": "brain_image_all_methods_v3|e571ff67e6ae53f9",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.17712v1": "brain_image_all_methods_v3|09ee199063835c86",
+    "brain_image_all_methods_v3|title:a tumour aware multimodal framework for explainable prediction of idh mutation in gliomas from multi sequence mri": "brain_image_all_methods_v3|09ee199063835c86"
   },
-  "updated_at": "2026-11-15T03:27:33.893826+00:00"
+  "updated_at": "2026-11-16T03:30:33.377499+00:00"
 }
