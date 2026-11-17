@@ -10041,6 +10041,28 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-11-16T03:30:33.377430+00:00"
+    },
+    "brain_image_all_methods_v3|1a743517d90fa71b": {
+      "paper_uid": "1a743517d90fa71b",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "ASAM: Adaptive cortical surface representation via dynamic local aggregation and hybrid Attention-Mamba global modeling.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43038679/",
+      "doi": "10.1016/j.media.2026.104394",
+      "pmid": "43038679",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-11-17T05:31:51.199128+00:00"
+    },
+    "brain_image_all_methods_v3|8a0645f741af1541": {
+      "paper_uid": "8a0645f741af1541",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "STBI: dataset of over 12000 brain CT scans for machine learning in traumatic brain injury",
+      "url": "https://doi.org/10.1038/s41746-026-03471-y",
+      "doi": "10.1038/s41746-026-03471-y",
+      "pmid": "",
+      "venue": "npj Digital Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-11-17T05:31:51.199128+00:00"
     }
   },
   "sent_keys": {
@@ -13694,7 +13716,14 @@
     "brain_image_all_methods_v3|url:https://doi.org/10.1186/s41747-026-00832-w": "brain_image_all_methods_v3|e571ff67e6ae53f9",
     "brain_image_all_methods_v3|title:diagnostic accuracy and reliability of susceptibility map weighted imaging in patients with clinically uncertain parkinsonian syndromes": "brain_image_all_methods_v3|e571ff67e6ae53f9",
     "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.17712v1": "brain_image_all_methods_v3|09ee199063835c86",
-    "brain_image_all_methods_v3|title:a tumour aware multimodal framework for explainable prediction of idh mutation in gliomas from multi sequence mri": "brain_image_all_methods_v3|09ee199063835c86"
+    "brain_image_all_methods_v3|title:a tumour aware multimodal framework for explainable prediction of idh mutation in gliomas from multi sequence mri": "brain_image_all_methods_v3|09ee199063835c86",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104394": "brain_image_all_methods_v3|1a743517d90fa71b",
+    "brain_image_all_methods_v3|pmid:43038679": "brain_image_all_methods_v3|1a743517d90fa71b",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43038679": "brain_image_all_methods_v3|1a743517d90fa71b",
+    "brain_image_all_methods_v3|title:asam adaptive cortical surface representation via dynamic local aggregation and hybrid attention mamba global modeling": "brain_image_all_methods_v3|1a743517d90fa71b",
+    "brain_image_all_methods_v3|doi:10.1038/s41746-026-03471-y": "brain_image_all_methods_v3|8a0645f741af1541",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41746-026-03471-y": "brain_image_all_methods_v3|8a0645f741af1541",
+    "brain_image_all_methods_v3|title:stbi dataset of over 12000 brain ct scans for machine learning in traumatic brain injury": "brain_image_all_methods_v3|8a0645f741af1541"
   },
-  "updated_at": "2026-11-16T03:30:33.377499+00:00"
+  "updated_at": "2026-11-17T05:31:51.199245+00:00"
 }
