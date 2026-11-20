@@ -10063,6 +10063,28 @@
       "venue": "npj Digital Medicine",
       "source": "Crossref Top Journals",
       "sent_at": "2026-11-17T05:31:51.199128+00:00"
+    },
+    "brain_image_all_methods_v3|70db75f3079f13d7": {
+      "paper_uid": "70db75f3079f13d7",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Bridging Brain Connectome and Clinical Notes: A Novel Multimodal Framework for MCI Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43056268/",
+      "doi": "10.1109/tmi.2026.3755232",
+      "pmid": "43056268",
+      "venue": "IEEE transactions on medical imaging",
+      "source": "PubMed",
+      "sent_at": "2026-11-20T04:39:46.534289+00:00"
+    },
+    "brain_image_all_methods_v3|e51c08fc94c00530": {
+      "paper_uid": "e51c08fc94c00530",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Understanding mechanistic role of structural and functional connectivity in tau propagation through multilayer modeling.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43052424/",
+      "doi": "10.1038/s41746-026-03057-8",
+      "pmid": "43052424",
+      "venue": "NPJ digital medicine",
+      "source": "PubMed",
+      "sent_at": "2026-11-20T04:39:46.534289+00:00"
     }
   },
   "sent_keys": {
@@ -13723,7 +13745,15 @@
     "brain_image_all_methods_v3|title:asam adaptive cortical surface representation via dynamic local aggregation and hybrid attention mamba global modeling": "brain_image_all_methods_v3|1a743517d90fa71b",
     "brain_image_all_methods_v3|doi:10.1038/s41746-026-03471-y": "brain_image_all_methods_v3|8a0645f741af1541",
     "brain_image_all_methods_v3|url:https://doi.org/10.1038/s41746-026-03471-y": "brain_image_all_methods_v3|8a0645f741af1541",
-    "brain_image_all_methods_v3|title:stbi dataset of over 12000 brain ct scans for machine learning in traumatic brain injury": "brain_image_all_methods_v3|8a0645f741af1541"
+    "brain_image_all_methods_v3|title:stbi dataset of over 12000 brain ct scans for machine learning in traumatic brain injury": "brain_image_all_methods_v3|8a0645f741af1541",
+    "brain_image_all_methods_v3|doi:10.1109/tmi.2026.3755232": "brain_image_all_methods_v3|70db75f3079f13d7",
+    "brain_image_all_methods_v3|pmid:43056268": "brain_image_all_methods_v3|70db75f3079f13d7",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43056268": "brain_image_all_methods_v3|70db75f3079f13d7",
+    "brain_image_all_methods_v3|title:bridging brain connectome and clinical notes a novel multimodal framework for mci study": "brain_image_all_methods_v3|70db75f3079f13d7",
+    "brain_image_all_methods_v3|doi:10.1038/s41746-026-03057-8": "brain_image_all_methods_v3|e51c08fc94c00530",
+    "brain_image_all_methods_v3|pmid:43052424": "brain_image_all_methods_v3|e51c08fc94c00530",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43052424": "brain_image_all_methods_v3|e51c08fc94c00530",
+    "brain_image_all_methods_v3|title:understanding mechanistic role of structural and functional connectivity in tau propagation through multilayer modeling": "brain_image_all_methods_v3|e51c08fc94c00530"
   },
-  "updated_at": "2026-11-17T05:31:51.199245+00:00"
+  "updated_at": "2026-11-20T04:39:46.534460+00:00"
 }
