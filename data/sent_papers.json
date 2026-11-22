@@ -10184,6 +10184,17 @@
       "venue": "medRxiv : the preprint server for health sciences",
       "source": "PubMed",
       "sent_at": "2026-11-21T04:34:18.527382+00:00"
+    },
+    "brain_image_all_methods_v3|a874870ebf3d442c": {
+      "paper_uid": "a874870ebf3d442c",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Preprocessing-driven early-stage brain tumour detection using baseline CNN models on clinical MRI data",
+      "url": "https://doi.org/10.1186/s43055-026-01913-x",
+      "doi": "10.1186/s43055-026-01913-x",
+      "pmid": "",
+      "venue": "Egyptian Journal of Radiology and Nuclear Medicine",
+      "source": "Crossref Top Journals",
+      "sent_at": "2026-11-22T03:49:20.159227+00:00"
     }
   },
   "sent_keys": {
@@ -13887,7 +13898,10 @@
     "brain_image_all_methods_v3|doi:10.64898/2026.11.11.26367656": "brain_image_all_methods_v3|5af34628c6713994",
     "brain_image_all_methods_v3|pmid:43060058": "brain_image_all_methods_v3|5af34628c6713994",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43060058": "brain_image_all_methods_v3|5af34628c6713994",
-    "brain_image_all_methods_v3|title:a multi cohort nnu net for white matter hyperintensity segmentation across 2d and 3d flair acquisitions": "brain_image_all_methods_v3|5af34628c6713994"
+    "brain_image_all_methods_v3|title:a multi cohort nnu net for white matter hyperintensity segmentation across 2d and 3d flair acquisitions": "brain_image_all_methods_v3|5af34628c6713994",
+    "brain_image_all_methods_v3|doi:10.1186/s43055-026-01913-x": "brain_image_all_methods_v3|a874870ebf3d442c",
+    "brain_image_all_methods_v3|url:https://doi.org/10.1186/s43055-026-01913-x": "brain_image_all_methods_v3|a874870ebf3d442c",
+    "brain_image_all_methods_v3|title:preprocessing driven early stage brain tumour detection using baseline cnn models on clinical mri data": "brain_image_all_methods_v3|a874870ebf3d442c"
   },
-  "updated_at": "2026-11-21T04:34:18.527736+00:00"
+  "updated_at": "2026-11-22T03:49:20.159311+00:00"
 }
