@@ -10195,6 +10195,50 @@
       "venue": "Egyptian Journal of Radiology and Nuclear Medicine",
       "source": "Crossref Top Journals",
       "sent_at": "2026-11-22T03:49:20.159227+00:00"
+    },
+    "brain_image_all_methods_v3|4cd0b0ea62cfbcba": {
+      "paper_uid": "4cd0b0ea62cfbcba",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "State of Mind: Learning and Evaluating World Models of Naturalistic Brain Dynamics",
+      "url": "https://arxiv.org/abs/2611.28508v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-11-24T07:22:38.911310+00:00"
+    },
+    "brain_image_all_methods_v3|5df25ce46248ebdd": {
+      "paper_uid": "5df25ce46248ebdd",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "iFeST: An Iterative Motion Correction Framework for Fetal Brain Diffusion MRI via Frequency-Spatial-Temporal Modeling",
+      "url": "https://arxiv.org/abs/2611.30131v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-11-24T07:22:38.911310+00:00"
+    },
+    "brain_image_all_methods_v3|38185a0d6f458ce2": {
+      "paper_uid": "38185a0d6f458ce2",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Foundation model-enhanced multimodal survival prediction in glioblastoma across multi-institutional cohorts.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43069309/",
+      "doi": "10.1038/s41698-026-01641-5",
+      "pmid": "43069309",
+      "venue": "NPJ precision oncology",
+      "source": "PubMed",
+      "sent_at": "2026-11-24T07:22:38.911310+00:00"
+    },
+    "brain_image_all_methods_v3|34e66bf87c81b325": {
+      "paper_uid": "34e66bf87c81b325",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Multi-center validation of DeSURVAE for meningioma tumor segmentation on contrast-enhanced MRI: robustness, domain shift, and performance confounders.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43072287/",
+      "doi": "10.1016/j.media.2026.104408",
+      "pmid": "43072287",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-11-24T07:22:38.911310+00:00"
     }
   },
   "sent_keys": {
@@ -13901,7 +13945,19 @@
     "brain_image_all_methods_v3|title:a multi cohort nnu net for white matter hyperintensity segmentation across 2d and 3d flair acquisitions": "brain_image_all_methods_v3|5af34628c6713994",
     "brain_image_all_methods_v3|doi:10.1186/s43055-026-01913-x": "brain_image_all_methods_v3|a874870ebf3d442c",
     "brain_image_all_methods_v3|url:https://doi.org/10.1186/s43055-026-01913-x": "brain_image_all_methods_v3|a874870ebf3d442c",
-    "brain_image_all_methods_v3|title:preprocessing driven early stage brain tumour detection using baseline cnn models on clinical mri data": "brain_image_all_methods_v3|a874870ebf3d442c"
+    "brain_image_all_methods_v3|title:preprocessing driven early stage brain tumour detection using baseline cnn models on clinical mri data": "brain_image_all_methods_v3|a874870ebf3d442c",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.28508v1": "brain_image_all_methods_v3|4cd0b0ea62cfbcba",
+    "brain_image_all_methods_v3|title:state of mind learning and evaluating world models of naturalistic brain dynamics": "brain_image_all_methods_v3|4cd0b0ea62cfbcba",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.30131v1": "brain_image_all_methods_v3|5df25ce46248ebdd",
+    "brain_image_all_methods_v3|title:ifest an iterative motion correction framework for fetal brain diffusion mri via frequency spatial temporal modeling": "brain_image_all_methods_v3|5df25ce46248ebdd",
+    "brain_image_all_methods_v3|doi:10.1038/s41698-026-01641-5": "brain_image_all_methods_v3|38185a0d6f458ce2",
+    "brain_image_all_methods_v3|pmid:43069309": "brain_image_all_methods_v3|38185a0d6f458ce2",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43069309": "brain_image_all_methods_v3|38185a0d6f458ce2",
+    "brain_image_all_methods_v3|title:foundation model enhanced multimodal survival prediction in glioblastoma across multi institutional cohorts": "brain_image_all_methods_v3|38185a0d6f458ce2",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104408": "brain_image_all_methods_v3|34e66bf87c81b325",
+    "brain_image_all_methods_v3|pmid:43072287": "brain_image_all_methods_v3|34e66bf87c81b325",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43072287": "brain_image_all_methods_v3|34e66bf87c81b325",
+    "brain_image_all_methods_v3|title:multi center validation of desurvae for meningioma tumor segmentation on contrast enhanced mri robustness domain shift and performance confounders": "brain_image_all_methods_v3|34e66bf87c81b325"
   },
-  "updated_at": "2026-11-22T03:49:20.159311+00:00"
+  "updated_at": "2026-11-24T07:22:38.911552+00:00"
 }
