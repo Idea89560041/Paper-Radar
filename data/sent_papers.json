@@ -10239,6 +10239,39 @@
       "venue": "Medical image analysis",
       "source": "PubMed",
       "sent_at": "2026-11-24T07:22:38.911310+00:00"
+    },
+    "brain_image_all_methods_v3|7195156f67c19148": {
+      "paper_uid": "7195156f67c19148",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "The autoPET3 challenge: Automated lesion segmentation in whole-body PET/CT - Multitracer multicenter generalization.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43077934/",
+      "doi": "10.1016/j.media.2026.104400",
+      "pmid": "43077934",
+      "venue": "Medical image analysis",
+      "source": "PubMed",
+      "sent_at": "2026-11-26T05:46:27.733140+00:00"
+    },
+    "brain_image_all_methods_v3|64c60628b686586a": {
+      "paper_uid": "64c60628b686586a",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Predicting follow-up cognition using estimated structural and functional connectivity networks and artificial intelligence in multiple sclerosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43078850/",
+      "doi": "10.1038/s41467-026-75827-7",
+      "pmid": "43078850",
+      "venue": "Nature communications",
+      "source": "PubMed",
+      "sent_at": "2026-11-26T05:46:27.733140+00:00"
+    },
+    "brain_image_all_methods_v3|e713c7a48d7f24c3": {
+      "paper_uid": "e713c7a48d7f24c3",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "Comparative Study of Deep Learning Architectures for Brain Tumour Classification",
+      "url": "https://arxiv.org/abs/2611.34781v1",
+      "doi": "",
+      "pmid": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "sent_at": "2026-11-26T05:46:27.733140+00:00"
     }
   },
   "sent_keys": {
@@ -13957,7 +13990,17 @@
     "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104408": "brain_image_all_methods_v3|34e66bf87c81b325",
     "brain_image_all_methods_v3|pmid:43072287": "brain_image_all_methods_v3|34e66bf87c81b325",
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43072287": "brain_image_all_methods_v3|34e66bf87c81b325",
-    "brain_image_all_methods_v3|title:multi center validation of desurvae for meningioma tumor segmentation on contrast enhanced mri robustness domain shift and performance confounders": "brain_image_all_methods_v3|34e66bf87c81b325"
+    "brain_image_all_methods_v3|title:multi center validation of desurvae for meningioma tumor segmentation on contrast enhanced mri robustness domain shift and performance confounders": "brain_image_all_methods_v3|34e66bf87c81b325",
+    "brain_image_all_methods_v3|doi:10.1016/j.media.2026.104400": "brain_image_all_methods_v3|7195156f67c19148",
+    "brain_image_all_methods_v3|pmid:43077934": "brain_image_all_methods_v3|7195156f67c19148",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43077934": "brain_image_all_methods_v3|7195156f67c19148",
+    "brain_image_all_methods_v3|title:the autopet3 challenge automated lesion segmentation in whole body pet ct multitracer multicenter generalization": "brain_image_all_methods_v3|7195156f67c19148",
+    "brain_image_all_methods_v3|doi:10.1038/s41467-026-75827-7": "brain_image_all_methods_v3|64c60628b686586a",
+    "brain_image_all_methods_v3|pmid:43078850": "brain_image_all_methods_v3|64c60628b686586a",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43078850": "brain_image_all_methods_v3|64c60628b686586a",
+    "brain_image_all_methods_v3|title:predicting follow up cognition using estimated structural and functional connectivity networks and artificial intelligence in multiple sclerosis": "brain_image_all_methods_v3|64c60628b686586a",
+    "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.34781v1": "brain_image_all_methods_v3|e713c7a48d7f24c3",
+    "brain_image_all_methods_v3|title:comparative study of deep learning architectures for brain tumour classification": "brain_image_all_methods_v3|e713c7a48d7f24c3"
   },
-  "updated_at": "2026-11-24T07:22:38.911552+00:00"
+  "updated_at": "2026-11-26T05:46:27.733290+00:00"
 }
