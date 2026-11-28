@@ -10272,6 +10272,39 @@
       "venue": "arXiv",
       "source": "arXiv",
       "sent_at": "2026-11-26T05:46:27.733140+00:00"
+    },
+    "brain_image_all_methods_v3|1246433fd84b7ea7": {
+      "paper_uid": "1246433fd84b7ea7",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "3D segmentation of brain white matter microstructures from sparsely annotated X-ray Nano-Holotomography data.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43102649/",
+      "doi": "10.1007/s00429-026-03210-9",
+      "pmid": "43102649",
+      "venue": "Brain structure & function",
+      "source": "PubMed",
+      "sent_at": "2026-11-28T05:16:04.686996+00:00"
+    },
+    "brain_image_all_methods_v3|7094c3d498eb335d": {
+      "paper_uid": "7094c3d498eb335d",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "ADSMoE: A mixture-of-experts-based transformer autoencoder for discovering multimodal Alzheimer's disease subtypes.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43100441/",
+      "doi": "10.64898/2026.11.16.26368224",
+      "pmid": "43100441",
+      "venue": "medRxiv : the preprint server for health sciences",
+      "source": "PubMed",
+      "sent_at": "2026-11-28T05:16:04.686996+00:00"
+    },
+    "brain_image_all_methods_v3|6864b6d2b3aca278": {
+      "paper_uid": "6864b6d2b3aca278",
+      "state_namespace": "brain_image_all_methods_v3",
+      "title": "PROGMF: Progressive Multimodal Fusion and Representation Learning for Incomplete Neuroimaging Data.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43100617/",
+      "doi": "10.64898/2026.11.17.767205",
+      "pmid": "43100617",
+      "venue": "bioRxiv : the preprint server for biology",
+      "source": "PubMed",
+      "sent_at": "2026-11-28T05:16:04.686996+00:00"
     }
   },
   "sent_keys": {
@@ -14000,7 +14033,19 @@
     "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43078850": "brain_image_all_methods_v3|64c60628b686586a",
     "brain_image_all_methods_v3|title:predicting follow up cognition using estimated structural and functional connectivity networks and artificial intelligence in multiple sclerosis": "brain_image_all_methods_v3|64c60628b686586a",
     "brain_image_all_methods_v3|url:https://arxiv.org/abs/2611.34781v1": "brain_image_all_methods_v3|e713c7a48d7f24c3",
-    "brain_image_all_methods_v3|title:comparative study of deep learning architectures for brain tumour classification": "brain_image_all_methods_v3|e713c7a48d7f24c3"
+    "brain_image_all_methods_v3|title:comparative study of deep learning architectures for brain tumour classification": "brain_image_all_methods_v3|e713c7a48d7f24c3",
+    "brain_image_all_methods_v3|doi:10.1007/s00429-026-03210-9": "brain_image_all_methods_v3|1246433fd84b7ea7",
+    "brain_image_all_methods_v3|pmid:43102649": "brain_image_all_methods_v3|1246433fd84b7ea7",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43102649": "brain_image_all_methods_v3|1246433fd84b7ea7",
+    "brain_image_all_methods_v3|title:3d segmentation of brain white matter microstructures from sparsely annotated x ray nano holotomography data": "brain_image_all_methods_v3|1246433fd84b7ea7",
+    "brain_image_all_methods_v3|doi:10.64898/2026.11.16.26368224": "brain_image_all_methods_v3|7094c3d498eb335d",
+    "brain_image_all_methods_v3|pmid:43100441": "brain_image_all_methods_v3|7094c3d498eb335d",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43100441": "brain_image_all_methods_v3|7094c3d498eb335d",
+    "brain_image_all_methods_v3|title:adsmoe a mixture of experts based transformer autoencoder for discovering multimodal alzheimer s disease subtypes": "brain_image_all_methods_v3|7094c3d498eb335d",
+    "brain_image_all_methods_v3|doi:10.64898/2026.11.17.767205": "brain_image_all_methods_v3|6864b6d2b3aca278",
+    "brain_image_all_methods_v3|pmid:43100617": "brain_image_all_methods_v3|6864b6d2b3aca278",
+    "brain_image_all_methods_v3|url:https://pubmed.ncbi.nlm.nih.gov/43100617": "brain_image_all_methods_v3|6864b6d2b3aca278",
+    "brain_image_all_methods_v3|title:progmf progressive multimodal fusion and representation learning for incomplete neuroimaging data": "brain_image_all_methods_v3|6864b6d2b3aca278"
   },
-  "updated_at": "2026-11-26T05:46:27.733290+00:00"
+  "updated_at": "2026-11-28T05:16:04.687159+00:00"
 }
